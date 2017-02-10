@@ -1,0 +1,6207 @@
+{
+  "when": {
+    "timespan": [
+      "-000015",
+      "0015",
+      "",
+      "0400",
+      "Variously: 'Dated to between 15 BCE and 15 CE'; 'around 200 - 400 CE'"
+    ]
+  },
+  "attributes": {
+    "lp_id":"lp_vicarello",
+    "language": "la",
+    "segmentType": "hroute",
+    "collections": "Latin Tradition",
+    "contributors": "R. Simon",
+    "date": "",
+    "pub_date": "2013",
+    "description": "Dated to between 15 BCE and 15 CE, the Vicarello Beakers are four cylindrical vessels made of silver with heights varying between 95-153 mm. They were discovered in the Roman baths at Vicarello, Italy, apparently deposited as a votive offering. Although differing in the details, on the surface of each beaker is engraved the land route between Gades and Rome. They have traditionally been identified as miniature replicas of a milestone probably erected in Gades, perhaps similar in design to the Miliarium Aureum (the Golden Milestone) in Rome.",
+    "timespan": "[-15,15,,400,Variously,'Dated to between 15 BCE and 15 CE'; 'around 200 - 400 CE']",
+    "date (numeric)": "300",
+    "title": "Vicarello Beakers",
+    "short_title": "Vicarello Beakers",
+    "uri": "[http://commons.pelagios.org/2013/10/iwp2-pelagios-and-the-beakers-of-vicarello/",
+    "places": "places_vicarello.csv",
+    "author": "Anonymous"
+  },
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/256177",
+        "collection": "vb",
+        "toponym": "GADES",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "summary, route1",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "",
+        "gazetteer_label": "Gadeira/Gades/Col. Augusta Gaditana"
+      },
+      "geometry": {
+        "coordinates": [
+          -6.2944,
+          36.5284
+        ],
+        "type": "Point"
+      },
+      "label": "GADES",
+      "id": "vb0106",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/255955",
+        "collection": "vb",
+        "toponym": "AD PORTVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route1",
+        "place_category": "",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Ad Portum/Gaditanus Portus"
+      },
+      "geometry": {
+        "coordinates": [
+          -6.1613,
+          36.6271
+        ],
+        "type": "Point"
+      },
+      "label": "AD PORTVM",
+      "id": "vb0104",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/256193",
+        "collection": "vb",
+        "toponym": "HASTAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route1",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "(H)Asta/Col. Hasta Regia/Ligystine?"
+      },
+      "geometry": {
+        "coordinates": [
+          -6.1815,
+          36.7865
+        ],
+        "type": "Point"
+      },
+      "label": "HASTAM",
+      "id": "vb0103",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/256501",
+        "collection": "vb",
+        "toponym": "VGIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route1",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXVII",
+        "gazetteer_label": "U(r)gia"
+      },
+      "geometry": {
+        "coordinates": [
+          -5.8293,
+          36.9901
+        ],
+        "type": "Point"
+      },
+      "label": "VGIAM",
+      "id": "vb0102",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/256343",
+        "collection": "vb",
+        "toponym": "ORIPPVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route1",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Orippo"
+      },
+      "geometry": {
+        "coordinates": [
+          -6.0045,
+          37.2738
+        ],
+        "type": "Point"
+      },
+      "label": "ORIPPVM",
+      "id": "vb0101",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/256210",
+        "collection": "vb",
+        "toponym": "HISPALIM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route1",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "VIIII",
+        "gazetteer_label": "Hispalis/Col. Romula"
+      },
+      "geometry": {
+        "coordinates": [
+          -5.9963,
+          37.3826
+        ],
+        "type": "Point"
+      },
+      "label": "HISPALIM",
+      "id": "vb0100",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/256058",
+        "collection": "vb",
+        "toponym": "CARMONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route 2",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXII",
+        "gazetteer_label": "Carmo"
+      },
+      "geometry": {
+        "coordinates": [
+          -5.6507,
+          37.4696
+        ],
+        "type": "Point"
+      },
+      "label": "CARMONEM",
+      "id": "vb0099",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/256332",
+        "collection": "vb",
+        "toponym": "OBVCLAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route 2",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Obulcula"
+      },
+      "geometry": {
+        "coordinates": [
+          -5.3163,
+          37.5158
+        ],
+        "type": "Point"
+      },
+      "label": "OBVCLAM",
+      "id": "vb0098",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/255996",
+        "collection": "vb",
+        "toponym": "ASTIGIM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route 2",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Astigi/Col. Augusta Firma"
+      },
+      "geometry": {
+        "coordinates": [
+          -5.08,
+          37.5409
+        ],
+        "type": "Point"
+      },
+      "label": "ASTIGIM",
+      "id": "vb0097",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/257485",
+        "collection": "vb",
+        "toponym": "AD ARAS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item",
+        "place_category": "MAN_MADE_STRUCTURE",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XII",
+        "gazetteer_label": "Untitled"
+      },
+      "geometry": {
+        "coordinates": [
+          -4.9246,
+          37.6786
+        ],
+        "type": "Point"
+      },
+      "label": "AD ARAS",
+      "id": "vb0096",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/256128",
+        "collection": "vb",
+        "toponym": "CORDVBAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route 2",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIII",
+        "gazetteer_label": "Corduba/Col. Patricia"
+      },
+      "geometry": {
+        "coordinates": [
+          -4.7792,
+          37.8847
+        ],
+        "type": "Point"
+      },
+      "label": "CORDVBAM",
+      "id": "vb0095",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/255952",
+        "collection": "vb",
+        "toponym": "AD X",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "X",
+        "gazetteer_label": "Ad Decumum"
+      },
+      "geometry": {
+        "coordinates": [
+          -4.6545,
+          37.9417
+        ],
+        "type": "Point"
+      },
+      "label": "AD X",
+      "id": "vb0094",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265893",
+        "collection": "vb",
+        "toponym": "EPORAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVII",
+        "gazetteer_label": "Epora"
+      },
+      "geometry": {
+        "coordinates": [
+          -4.3819,
+          38.026
+        ],
+        "type": "Point"
+      },
+      "label": "EPORAM",
+      "id": "vb0093",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/266051",
+        "collection": "vb",
+        "toponym": "VCIESEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVIII",
+        "gazetteer_label": "(S)Ucia"
+      },
+      "geometry": {
+        "coordinates": [
+          -4.148,
+          38.0613
+        ],
+        "type": "Point"
+      },
+      "label": "VCIESEM",
+      "id": "vb0092",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265777",
+        "collection": "vb",
+        "toponym": "AD NOVLAS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIII",
+        "gazetteer_label": "Ad Novlas"
+      },
+      "geometry": {
+        "coordinates": [
+          -3.9195,
+          38.005
+        ],
+        "type": "Point"
+      },
+      "label": "AD NOVLAS",
+      "id": "vb0091",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265855",
+        "collection": "vb",
+        "toponym": "CASTVLONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIX",
+        "gazetteer_label": "Castulo"
+      },
+      "geometry": {
+        "coordinates": [
+          -3.6236,
+          38.0358
+        ],
+        "type": "Point"
+      },
+      "label": "CASTVLONEM",
+      "id": "vb0090",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265774",
+        "collection": "vb",
+        "toponym": "AD MORVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Ad Morum"
+      },
+      "geometry": {
+        "coordinates": [
+          -3.3154,
+          38.1847
+        ],
+        "type": "Point"
+      },
+      "label": "AD MORVM",
+      "id": "vb0089",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265769",
+        "collection": "vb",
+        "toponym": "II SOLARIA",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIX",
+        "gazetteer_label": "Ad Duo Solaria"
+      },
+      "geometry": {
+        "coordinates": [
+          -3.1035,
+          38.3422
+        ],
+        "type": "Point"
+      },
+      "label": "II SOLARIA",
+      "id": "vb0088",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265965",
+        "collection": "vb",
+        "toponym": "MARIANA",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Mariana"
+      },
+      "geometry": {
+        "coordinates": [
+          -2.9275,
+          38.5474
+        ],
+        "type": "Point"
+      },
+      "label": "MARIANA",
+      "id": "vb0087",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265969",
+        "collection": "vb",
+        "toponym": "MENTESAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Mentesa"
+      },
+      "geometry": {
+        "coordinates": [
+          -2.6948,
+          38.6922
+        ],
+        "type": "Point"
+      },
+      "label": "MENTESAM",
+      "id": "vb0086",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265949",
+        "collection": "vb",
+        "toponym": "LIBISOSAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Libisosa"
+      },
+      "geometry": {
+        "coordinates": [
+          -2.3551,
+          38.9416
+        ],
+        "type": "Point"
+      },
+      "label": "LIBISOSAM",
+      "id": "vb0085",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265999",
+        "collection": "vb",
+        "toponym": "PARIETINIS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXII",
+        "gazetteer_label": "Parietinae"
+      },
+      "geometry": {
+        "coordinates": [
+          -2.0343,
+          38.9249
+        ],
+        "type": "Point"
+      },
+      "label": "PARIETINIS",
+      "id": "vb0084",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/266025",
+        "collection": "vb",
+        "toponym": "SALTIGIM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Saltigi"
+      },
+      "geometry": {
+        "coordinates": [
+          -1.729,
+          38.9189
+        ],
+        "type": "Point"
+      },
+      "label": "SALTIGIM",
+      "id": "vb0083",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265779",
+        "collection": "vb",
+        "toponym": "AD PALEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXXII",
+        "gazetteer_label": "Ad Palem?"
+      },
+      "geometry": {
+        "coordinates": [
+          -1.2307,
+          38.746
+        ],
+        "type": "Point"
+      },
+      "label": "AD PALEM",
+      "id": "vb0082",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265766",
+        "collection": "vb",
+        "toponym": "AD ARAS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item",
+        "place_category": "",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXII",
+        "gazetteer_label": "Ad Aras"
+      },
+      "geometry": {
+        "coordinates": [
+          -0.9874,
+          38.7087
+        ],
+        "type": "Point"
+      },
+      "label": "AD ARAS",
+      "id": "vb0081",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/266018",
+        "collection": "vb",
+        "toponym": "SAETABIM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXVIII",
+        "gazetteer_label": "Saetabis"
+      },
+      "geometry": {
+        "coordinates": [
+          -0.5156,
+          38.9888
+        ],
+        "type": "Point"
+      },
+      "label": "SAETABIM",
+      "id": "vb0080",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/266052",
+        "collection": "vb",
+        "toponym": "SVCRONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Sucro"
+      },
+      "geometry": {
+        "coordinates": [
+          -0.4356,
+          39.1894
+        ],
+        "type": "Point"
+      },
+      "label": "SVCRONEM",
+      "id": "vb0079",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/266090",
+        "collection": "vb",
+        "toponym": "VALENTIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Valentia"
+      },
+      "geometry": {
+        "coordinates": [
+          -0.3768,
+          39.4702
+        ],
+        "type": "Point"
+      },
+      "label": "VALENTIAM",
+      "id": "vb0078",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/266021",
+        "collection": "vb",
+        "toponym": "SAGYNTVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Saguntum/Arse"
+      },
+      "geometry": {
+        "coordinates": [
+          -0.2759,
+          39.6762
+        ],
+        "type": "Point"
+      },
+      "label": "SAGYNTVM",
+      "id": "vb0077",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265778",
+        "collection": "vb",
+        "toponym": "AD NOVLAS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Ad Novlas"
+      },
+      "geometry": {
+        "coordinates": [
+          -0.1201,
+          39.9675
+        ],
+        "type": "Point"
+      },
+      "label": "AD NOVLAS",
+      "id": "vb0076",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/265920",
+        "collection": "vb",
+        "toponym": "ILDVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXII",
+        "gazetteer_label": "Ildum"
+      },
+      "geometry": {
+        "coordinates": [
+          0.0903,
+          40.2629
+        ],
+        "type": "Point"
+      },
+      "label": "ILDVM",
+      "id": "vb0075",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246439",
+        "collection": "vb",
+        "toponym": "INTIBILIM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Indibilis"
+      },
+      "geometry": {
+        "coordinates": [
+          0.4231,
+          40.4187
+        ],
+        "type": "Point"
+      },
+      "label": "INTIBILIM",
+      "id": "vb0074",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246369",
+        "collection": "vb",
+        "toponym": "DERTOSAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXVII",
+        "gazetteer_label": "Dertosa/Hibera Iulia Ilercavonia"
+      },
+      "geometry": {
+        "coordinates": [
+          0.5238,
+          40.8151
+        ],
+        "type": "Point"
+      },
+      "label": "DERTOSAM",
+      "id": "vb0073",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246665",
+        "collection": "vb",
+        "toponym": "SVB SALTVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXXVII",
+        "gazetteer_label": "Sub Saltu"
+      },
+      "geometry": {
+        "coordinates": [
+          0.8689,
+          40.9661
+        ],
+        "type": "Point"
+      },
+      "label": "SVB SALTVM",
+      "id": "vb0072",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246349",
+        "collection": "vb",
+        "toponym": "TARRACONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route3",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXV",
+        "gazetteer_label": "Col. Tarraco"
+      },
+      "geometry": {
+        "coordinates": [
+          1.2581,
+          41.1192
+        ],
+        "type": "Point"
+      },
+      "label": "TARRACONEM",
+      "id": "vb0071",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246551",
+        "collection": "vb",
+        "toponym": "PALFVRIANAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Palfuriana"
+      },
+      "geometry": {
+        "coordinates": [
+          1.5149,
+          41.204
+        ],
+        "type": "Point"
+      },
+      "label": "PALFVRIANAM",
+      "id": "vb0070",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246166",
+        "collection": "vb",
+        "toponym": "ANTISTIANAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIII",
+        "gazetteer_label": "Antistiana"
+      },
+      "geometry": {
+        "coordinates": [
+          1.6479,
+          41.3106
+        ],
+        "type": "Point"
+      },
+      "label": "ANTISTIANAM",
+      "id": "vb0069",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246135",
+        "collection": "vb",
+        "toponym": "AD FINES",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVII",
+        "gazetteer_label": "(Ad) Fines"
+      },
+      "geometry": {
+        "coordinates": [
+          1.9277,
+          41.4736
+        ],
+        "type": "Point"
+      },
+      "label": "AD FINES",
+      "id": "vb0068",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246192",
+        "collection": "vb",
+        "toponym": "ARRAGONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Arrago(na)"
+      },
+      "geometry": {
+        "coordinates": [
+          2.1229,
+          41.5631
+        ],
+        "type": "Point"
+      },
+      "label": "ARRAGONEM",
+      "id": "vb0067",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246576",
+        "collection": "vb",
+        "toponym": "SEMPRONIANA",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "VIIII",
+        "gazetteer_label": "Praetorium?"
+      },
+      "geometry": {
+        "coordinates": [
+          2.3309,
+          41.5827
+        ],
+        "type": "Point"
+      },
+      "label": "SEMPRONIANA",
+      "id": "vb0066",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246652",
+        "collection": "vb",
+        "toponym": "SETERRAS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Seterrae"
+      },
+      "geometry": {
+        "coordinates": [
+          2.6355,
+          41.7465
+        ],
+        "type": "Point"
+      },
+      "label": "SETERRAS",
+      "id": "vb0065",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246174",
+        "collection": "vb",
+        "toponym": "AQVIS VOCONTIS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Aquae Voconiae"
+      },
+      "geometry": {
+        "coordinates": [
+          2.8083,
+          41.8382
+        ],
+        "type": "Point"
+      },
+      "label": "AQVIS VOCONTIS",
+      "id": "vb0064",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246406",
+        "collection": "vb",
+        "toponym": "GERVNDAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XII",
+        "gazetteer_label": "Gerunda"
+      },
+      "geometry": {
+        "coordinates": [
+          2.8256,
+          41.9873
+        ],
+        "type": "Point"
+      },
+      "label": "GERVNDAM",
+      "id": "vb0063",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246335",
+        "collection": "vb",
+        "toponym": "CILNIANAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XII",
+        "gazetteer_label": "Cinniana"
+      },
+      "geometry": {
+        "coordinates": [
+          2.9048,
+          42.0947
+        ],
+        "type": "Point"
+      },
+      "label": "CILNIANAM",
+      "id": "vb0062",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246449",
+        "collection": "vb",
+        "toponym": "IVNCARIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Iuncaria"
+      },
+      "geometry": {
+        "coordinates": [
+          2.9667,
+          42.2754
+        ],
+        "type": "Point"
+      },
+      "label": "IVNCARIAM",
+      "id": "vb0061",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246139",
+        "collection": "vb",
+        "toponym": "IN PYRAENEVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Ad Pyrenaeum/Summus Pyrenaeus"
+      },
+      "geometry": {
+        "coordinates": [
+          2.869,
+          42.4723
+        ],
+        "type": "Point"
+      },
+      "label": "IN PYRAENEVM",
+      "id": "vb0060",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246348",
+        "collection": "vb",
+        "toponym": "RVSCINONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXV",
+        "gazetteer_label": "Col. Ruscino"
+      },
+      "geometry": {
+        "coordinates": [
+          2.9452,
+          42.7087
+        ],
+        "type": "Point"
+      },
+      "label": "RVSCINONEM",
+      "id": "vb0059",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246351",
+        "collection": "vb",
+        "toponym": "COMBVSTA",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "VI",
+        "gazetteer_label": "Combusta"
+      },
+      "geometry": {
+        "coordinates": [
+          2.8718,
+          42.7687
+        ],
+        "type": "Point"
+      },
+      "label": "COMBVSTA",
+      "id": "vb0058",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/246347",
+        "collection": "vb",
+        "toponym": "NARBONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route4",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXXII",
+        "gazetteer_label": "Col. Narbo Martius"
+      },
+      "geometry": {
+        "coordinates": [
+          3.0036,
+          43.1847
+        ],
+        "type": "Point"
+      },
+      "label": "NARBONEM",
+      "id": "vb0057",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148056",
+        "collection": "vb",
+        "toponym": "BAETERRAS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Col. Baeterrae"
+      },
+      "geometry": {
+        "coordinates": [
+          3.2178,
+          43.3416
+        ],
+        "type": "Point"
+      },
+      "label": "BAETERRAS",
+      "id": "vb0056",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/147997",
+        "collection": "vb",
+        "toponym": "CESSERONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIII",
+        "gazetteer_label": "Araura/Cessero"
+      },
+      "geometry": {
+        "coordinates": [
+          3.4206,
+          43.3951
+        ],
+        "type": "Point"
+      },
+      "label": "CESSERONEM",
+      "id": "vb0055",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148081",
+        "collection": "vb",
+        "toponym": "FORVM DOMITI",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVIII",
+        "gazetteer_label": "Forum Domitii"
+      },
+      "geometry": {
+        "coordinates": [
+          3.7024,
+          43.5115
+        ],
+        "type": "Point"
+      },
+      "label": "FORVM DOMITI",
+      "id": "vb0054",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148202",
+        "collection": "vb",
+        "toponym": "SEXTANTIONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Sextantio"
+      },
+      "geometry": {
+        "coordinates": [
+          3.8967,
+          43.6408
+        ],
+        "type": "Point"
+      },
+      "label": "SEXTANTIONEM",
+      "id": "vb0053",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/147990",
+        "collection": "vb",
+        "toponym": "AMBRVSSVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Ambrussum"
+      },
+      "geometry": {
+        "coordinates": [
+          4.1495,
+          43.7154
+        ],
+        "type": "Point"
+      },
+      "label": "AMBRVSSVM",
+      "id": "vb0052",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148142",
+        "collection": "vb",
+        "toponym": "NEMAVSVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Nemausus"
+      },
+      "geometry": {
+        "coordinates": [
+          4.3596,
+          43.8349
+        ],
+        "type": "Point"
+      },
+      "label": "NEMAVSVM",
+      "id": "vb0051",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148223",
+        "collection": "vb",
+        "toponym": "VGERNVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Ugernum"
+      },
+      "geometry": {
+        "coordinates": [
+          4.6446,
+          43.8099
+        ],
+        "type": "Point"
+      },
+      "label": "VGERNVM",
+      "id": "vb0050",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148217",
+        "collection": "vb",
+        "toponym": "ARELATA",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "VIIII",
+        "gazetteer_label": "Theline/Col. Arelate/Constantina"
+      },
+      "geometry": {
+        "coordinates": [
+          4.6227,
+          43.6759
+        ],
+        "type": "Point"
+      },
+      "label": "ARELATA",
+      "id": "vb0049",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148074",
+        "collection": "vb",
+        "toponym": "ERGNAGINVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "VI",
+        "gazetteer_label": "Ernaginum"
+      },
+      "geometry": {
+        "coordinates": [
+          4.6981,
+          43.7667
+        ],
+        "type": "Point"
+      },
+      "label": "ERGNAGINVM",
+      "id": "vb0048",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148093",
+        "collection": "vb",
+        "toponym": "CLANVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "VIII",
+        "gazetteer_label": "Glanum"
+      },
+      "geometry": {
+        "coordinates": [
+          4.8329,
+          43.7735
+        ],
+        "type": "Point"
+      },
+      "label": "CLANVM",
+      "id": "vb0047",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148027",
+        "collection": "vb",
+        "toponym": "CABELLIONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XII",
+        "gazetteer_label": "Cabellio"
+      },
+      "geometry": {
+        "coordinates": [
+          5.0364,
+          43.8363
+        ],
+        "type": "Point"
+      },
+      "label": "CABELLIONEM",
+      "id": "vb0046",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/147993",
+        "collection": "vb",
+        "toponym": "APTAM IVLIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XII",
+        "gazetteer_label": "Apta Iulia"
+      },
+      "geometry": {
+        "coordinates": [
+          5.3972,
+          43.8761
+        ],
+        "type": "Point"
+      },
+      "label": "APTAM IVLIAM",
+      "id": "vb0045",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/148041",
+        "collection": "vb",
+        "toponym": "CATVIACIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XII",
+        "gazetteer_label": "Catuiacia"
+      },
+      "geometry": {
+        "coordinates": [
+          5.5962,
+          43.8576
+        ],
+        "type": "Point"
+      },
+      "label": "CATVIACIAM",
+      "id": "vb0044",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/157800",
+        "collection": "vb",
+        "toponym": "ALAVNIVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Alaunium"
+      },
+      "geometry": {
+        "coordinates": [
+          5.8672,
+          43.9462
+        ],
+        "type": "Point"
+      },
+      "label": "ALAVNIVM",
+      "id": "vb0043",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/157925",
+        "collection": "vb",
+        "toponym": "SEGVSTERONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Segustero"
+      },
+      "geometry": {
+        "coordinates": [
+          5.9432,
+          44.1947
+        ],
+        "type": "Point"
+      },
+      "label": "SEGVSTERONEM",
+      "id": "vb0042",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/167628",
+        "collection": "vb",
+        "toponym": "ALABONTEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Alabonte"
+      },
+      "geometry": {
+        "coordinates": [
+          5.944,
+          44.386
+        ],
+        "type": "Point"
+      },
+      "label": "ALABONTEM",
+      "id": "vb0041",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/167954",
+        "collection": "vb",
+        "toponym": "VAPPINCVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVIII",
+        "gazetteer_label": "Vappincum"
+      },
+      "geometry": {
+        "coordinates": [
+          6.0798,
+          44.5596
+        ],
+        "type": "Point"
+      },
+      "label": "VAPPINCVM",
+      "id": "vb0040",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/167701",
+        "collection": "vb",
+        "toponym": "CATVRIGOMAGVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XII",
+        "gazetteer_label": "Caturigomagus"
+      },
+      "geometry": {
+        "coordinates": [
+          6.276,
+          44.5444
+        ],
+        "type": "Point"
+      },
+      "label": "CATVRIGOMAGVM",
+      "id": "vb0039",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/167750",
+        "collection": "vb",
+        "toponym": "EBVRODVNVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVIII",
+        "gazetteer_label": "Eburodunum"
+      },
+      "geometry": {
+        "coordinates": [
+          6.4951,
+          44.5623
+        ],
+        "type": "Point"
+      },
+      "label": "EBVRODVNVM",
+      "id": "vb0038",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/167881",
+        "collection": "vb",
+        "toponym": "RAMAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVII",
+        "gazetteer_label": "Rama"
+      },
+      "geometry": {
+        "coordinates": [
+          6.5799,
+          44.7505
+        ],
+        "type": "Point"
+      },
+      "label": "RAMAM",
+      "id": "vb0037",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/167691",
+        "collection": "vb",
+        "toponym": "BRIGANTIVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVIII",
+        "gazetteer_label": "Brigantio"
+      },
+      "geometry": {
+        "coordinates": [
+          6.6342,
+          44.8969
+        ],
+        "type": "Point"
+      },
+      "label": "BRIGANTIVM",
+      "id": "vb0036",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/167743",
+        "collection": "vb",
+        "toponym": "DRVANTIVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XI",
+        "gazetteer_label": "Druantium/*Alpis Cottia/Summae Alpes"
+      },
+      "geometry": {
+        "coordinates": [
+          6.7234,
+          44.931
+        ],
+        "type": "Point"
+      },
+      "label": "DRVANTIVM",
+      "id": "vb0035",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/167919",
+        "collection": "vb",
+        "toponym": "SEGVSIONEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Segusio"
+      },
+      "geometry": {
+        "coordinates": [
+          7.0454,
+          45.1374
+        ],
+        "type": "Point"
+      },
+      "label": "SEGVSIONEM",
+      "id": "vb0034",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383720",
+        "collection": "vb",
+        "toponym": "OCELVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXVII",
+        "gazetteer_label": "Ocelum"
+      },
+      "geometry": {
+        "coordinates": [
+          7.3319,
+          45.1188
+        ],
+        "type": "Point"
+      },
+      "label": "OCELVM",
+      "id": "vb0033",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383580",
+        "collection": "vb",
+        "toponym": "TAVRINIS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item, route5",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Augusta Taurinorum"
+      },
+      "geometry": {
+        "coordinates": [
+          7.6854,
+          45.0734
+        ],
+        "type": "Point"
+      },
+      "label": "TAVRINIS",
+      "id": "vb0032",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383753",
+        "collection": "vb",
+        "toponym": "QVADRATA",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Quadrata"
+      },
+      "geometry": {
+        "coordinates": [
+          7.9694,
+          45.1911
+        ],
+        "type": "Point"
+      },
+      "label": "QVADRATA",
+      "id": "vb0031",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383759",
+        "collection": "vb",
+        "toponym": "RIGOMAGVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Rigomagus"
+      },
+      "geometry": {
+        "coordinates": [
+          8.2974,
+          45.1931
+        ],
+        "type": "Point"
+      },
+      "label": "RIGOMAGVM",
+      "id": "vb0030",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383630",
+        "collection": "vb",
+        "toponym": "CVTTIAS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Cuttiae"
+      },
+      "geometry": {
+        "coordinates": [
+          8.6111,
+          45.1921
+        ],
+        "type": "Point"
+      },
+      "label": "CVTTIAS",
+      "id": "vb0029",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383690",
+        "collection": "vb",
+        "toponym": "LAVMELLVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIII",
+        "gazetteer_label": "Laumellum"
+      },
+      "geometry": {
+        "coordinates": [
+          8.7938,
+          45.1227
+        ],
+        "type": "Point"
+      },
+      "label": "LAVMELLVM",
+      "id": "vb0028",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383798",
+        "collection": "vb",
+        "toponym": "TICINVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXI",
+        "gazetteer_label": "Ticinum"
+      },
+      "geometry": {
+        "coordinates": [
+          9.1566,
+          45.1859
+        ],
+        "type": "Point"
+      },
+      "label": "TICINVM",
+      "id": "vb0027",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383685",
+        "collection": "vb",
+        "toponym": "PLAMBRVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Lambrum"
+      },
+      "geometry": {
+        "coordinates": [
+          9.5266,
+          45.1574
+        ],
+        "type": "Point"
+      },
+      "label": "PLAMBRVM",
+      "id": "vb0026",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383741",
+        "collection": "vb",
+        "toponym": "PLACENTIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Placentia"
+      },
+      "geometry": {
+        "coordinates": [
+          9.6966,
+          45.0528
+        ],
+        "type": "Point"
+      },
+      "label": "PLACENTIAM",
+      "id": "vb0025",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383649",
+        "collection": "vb",
+        "toponym": "FLORENTIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Florenti(ol)a"
+      },
+      "geometry": {
+        "coordinates": [
+          9.911,
+          44.9281
+        ],
+        "type": "Point"
+      },
+      "label": "FLORENTIAM",
+      "id": "vb0024",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383737",
+        "collection": "vb",
+        "toponym": "PARMAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXV",
+        "gazetteer_label": "Parma"
+      },
+      "geometry": {
+        "coordinates": [
+          10.328,
+          44.8015
+        ],
+        "type": "Point"
+      },
+      "label": "PARMAM",
+      "id": "vb0023",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383755",
+        "collection": "vb",
+        "toponym": "LEPIDVM REGIVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVIII",
+        "gazetteer_label": "Regium Lepidum"
+      },
+      "geometry": {
+        "coordinates": [
+          10.6308,
+          44.6977
+        ],
+        "type": "Point"
+      },
+      "label": "LEPIDVM REGIVM",
+      "id": "vb0022",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/383715",
+        "collection": "vb",
+        "toponym": "MVTINAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVII",
+        "gazetteer_label": "Mutina"
+      },
+      "geometry": {
+        "coordinates": [
+          10.9252,
+          44.6471
+        ],
+        "type": "Point"
+      },
+      "label": "MVTINAM",
+      "id": "vb0021",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/393421",
+        "collection": "vb",
+        "toponym": "BONONIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXV",
+        "gazetteer_label": "Felsina/Bononia"
+      },
+      "geometry": {
+        "coordinates": [
+          11.3418,
+          44.4946
+        ],
+        "type": "Point"
+      },
+      "label": "BONONIAM",
+      "id": "vb0020",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/393405",
+        "collection": "vb",
+        "toponym": "CLATERNVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "X",
+        "gazetteer_label": "Claterna"
+      },
+      "geometry": {
+        "coordinates": [
+          11.4747,
+          44.4421
+        ],
+        "type": "Point"
+      },
+      "label": "CLATERNVM",
+      "id": "vb0019",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/393424",
+        "collection": "vb",
+        "toponym": "FORVM CORNELI",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIII",
+        "gazetteer_label": "Forum Cornelii"
+      },
+      "geometry": {
+        "coordinates": [
+          11.7111,
+          44.3535
+        ],
+        "type": "Point"
+      },
+      "label": "FORVM CORNELI",
+      "id": "vb0018",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/393420",
+        "collection": "vb",
+        "toponym": "FAVENTIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "X",
+        "gazetteer_label": "Faventia"
+      },
+      "geometry": {
+        "coordinates": [
+          11.8845,
+          44.2859
+        ],
+        "type": "Point"
+      },
+      "label": "FAVENTIAM",
+      "id": "vb0017",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/393426",
+        "collection": "vb",
+        "toponym": "FORVM LIVI",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "X",
+        "gazetteer_label": "Forum Livii"
+      },
+      "geometry": {
+        "coordinates": [
+          12.0427,
+          44.2212
+        ],
+        "type": "Point"
+      },
+      "label": "FORVM LIVI",
+      "id": "vb0016",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/393397",
+        "collection": "vb",
+        "toponym": "CESENAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIII",
+        "gazetteer_label": "Caesena"
+      },
+      "geometry": {
+        "coordinates": [
+          12.2429,
+          44.1391
+        ],
+        "type": "Point"
+      },
+      "label": "CESENAM",
+      "id": "vb0015",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/393379",
+        "collection": "vb",
+        "toponym": "ARIMINVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Ariminum"
+      },
+      "geometry": {
+        "coordinates": [
+          12.5703,
+          44.0596
+        ],
+        "type": "Point"
+      },
+      "label": "ARIMINVM",
+      "id": "vb0014",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/413256",
+        "collection": "vb",
+        "toponym": "PISAVRVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Pisaurum"
+      },
+      "geometry": {
+        "coordinates": [
+          12.9146,
+          43.911
+        ],
+        "type": "Point"
+      },
+      "label": "PISAVRVM",
+      "id": "vb0013",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/413129",
+        "collection": "vb",
+        "toponym": "FANVM FORTVNAE",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "VIII",
+        "gazetteer_label": "Fanum Fortunae"
+      },
+      "geometry": {
+        "coordinates": [
+          13.0181,
+          43.8443
+        ],
+        "type": "Point"
+      },
+      "label": "FANVM FORTVNAE",
+      "id": "vb0012",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/413149",
+        "collection": "vb",
+        "toponym": "FORVM SEMPRONI",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Forum Sempronii"
+      },
+      "geometry": {
+        "coordinates": [
+          12.8291,
+          43.6974
+        ],
+        "type": "Point"
+      },
+      "label": "FORVM SEMPRONI",
+      "id": "vb0011",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/413058",
+        "collection": "vb",
+        "toponym": "AD CALEM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVIII",
+        "gazetteer_label": "Cales"
+      },
+      "geometry": {
+        "coordinates": [
+          12.6485,
+          43.5468
+        ],
+        "type": "Point"
+      },
+      "label": "AD CALEM",
+      "id": "vb0010",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/412989",
+        "collection": "vb",
+        "toponym": "HESIM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIII",
+        "gazetteer_label": "Ad Aesim"
+      },
+      "geometry": {
+        "coordinates": [
+          12.6693,
+          43.4035
+        ],
+        "type": "Point"
+      },
+      "label": "HESIM",
+      "id": "vb0009",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/413167",
+        "collection": "vb",
+        "toponym": "HELVILLVM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "X",
+        "gazetteer_label": "Helvillum"
+      },
+      "geometry": {
+        "coordinates": [
+          12.7621,
+          43.2957
+        ],
+        "type": "Point"
+      },
+      "label": "HELVILLVM",
+      "id": "vb0008",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/456102",
+        "collection": "vb",
+        "toponym": "NVCERIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XV",
+        "gazetteer_label": "Nuceria"
+      },
+      "geometry": {
+        "coordinates": [
+          12.7915,
+          43.1135
+        ],
+        "type": "Point"
+      },
+      "label": "NVCERIAM",
+      "id": "vb0007",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/413200",
+        "collection": "vb",
+        "toponym": "MEVANIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XIX",
+        "gazetteer_label": "Mevania"
+      },
+      "geometry": {
+        "coordinates": [
+          12.6094,
+          42.9349
+        ],
+        "type": "Point"
+      },
+      "label": "MEVANIAM",
+      "id": "vb0006",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/413380",
+        "collection": "vb",
+        "toponym": "AD MARTIS",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVI",
+        "gazetteer_label": "Vicus Martis"
+      },
+      "geometry": {
+        "coordinates": [
+          12.5318,
+          42.7509
+        ],
+        "type": "Point"
+      },
+      "label": "AD MARTIS",
+      "id": "vb0005",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/413225",
+        "collection": "vb",
+        "toponym": "NARNIAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XVIII",
+        "gazetteer_label": "Nequinum/Narnia"
+      },
+      "geometry": {
+        "coordinates": [
+          12.5156,
+          42.5176
+        ],
+        "type": "Point"
+      },
+      "label": "NARNIAM",
+      "id": "vb0004",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/413231",
+        "collection": "vb",
+        "toponym": "OCRICLO",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XII",
+        "gazetteer_label": "Ocriculum"
+      },
+      "geometry": {
+        "coordinates": [
+          12.4663,
+          42.4136
+        ],
+        "type": "Point"
+      },
+      "label": "OCRICLO",
+      "id": "vb0003",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/412998",
+        "collection": "vb",
+        "toponym": "AD XX",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XXIIII",
+        "gazetteer_label": "Ad Vicesimum"
+      },
+      "geometry": {
+        "coordinates": [
+          12.4768,
+          42.1484
+        ],
+        "type": "Point"
+      },
+      "label": "AD XX",
+      "id": "vb0002",
+      "type": "Feature"
+    },
+    {
+      "properties": {
+        "gazetteer_uri": "http://pleiades.stoa.org/places/423025",
+        "collection": "vb",
+        "toponym": "ROMAM",
+        "document_part": "Vicarello Beaker 1",
+        "tags": "item,route6",
+        "place_category": "SETTLEMENT",
+        "source": "",
+        "status": "VERIFIED",
+        "img_y": "",
+        "img_all": "",
+        "img_x": "",
+        "comment": "XX",
+        "gazetteer_label": "Roma"
+      },
+      "geometry": {
+        "coordinates": [
+          12.4843,
+          41.8926
+        ],
+        "type": "Point"
+      },
+      "label": "ROMAM",
+      "id": "vb0001",
+      "type": "Feature"
+    },
+    {
+      "when": {},
+      "properties": {
+        "route_id": "3001",
+        "collection": "vb"
+      },
+      "geometry": {
+        "geometries": [
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0106",
+              "target": "vb0104",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route1",
+              "label": "GADES <> AD PORTVM",
+              "distance": "24",
+              "segment_id": "3001-1"
+            },
+            "coordinates": [
+              [
+                -6.2944,
+                36.5284
+              ],
+              [
+                -6.1613,
+                36.6271
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0104",
+              "target": "vb0103",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route1",
+              "label": "AD PORTVM <> HASTAM",
+              "distance": "16",
+              "segment_id": "3001-2"
+            },
+            "coordinates": [
+              [
+                -6.1613,
+                36.6271
+              ],
+              [
+                -6.1815,
+                36.7865
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0103",
+              "target": "vb0102",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route1",
+              "label": "HASTAM <> VGIAM",
+              "distance": "27",
+              "segment_id": "3001-3"
+            },
+            "coordinates": [
+              [
+                -6.1815,
+                36.7865
+              ],
+              [
+                -5.8293,
+                36.9901
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0102",
+              "target": "vb0101",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route1",
+              "label": "VGIAM <> ORIPPVM",
+              "distance": "24",
+              "segment_id": "3001-4"
+            },
+            "coordinates": [
+              [
+                -5.8293,
+                36.9901
+              ],
+              [
+                -6.0045,
+                37.2738
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0101",
+              "target": "vb0100",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route1",
+              "label": "ORIPPVM <> HISPALIM",
+              "distance": "9",
+              "segment_id": "3001-5"
+            },
+            "coordinates": [
+              [
+                -6.0045,
+                37.2738
+              ],
+              [
+                -5.9963,
+                37.3826
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0100",
+              "target": "vb0099",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route 2",
+              "label": "HISPALIM <> CARMONEM",
+              "distance": "22",
+              "segment_id": "3001-6"
+            },
+            "coordinates": [
+              [
+                -5.9963,
+                37.3826
+              ],
+              [
+                -5.6507,
+                37.4696
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0099",
+              "target": "vb0098",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route 2",
+              "label": "CARMONEM <> OBVCLAM",
+              "distance": "20",
+              "segment_id": "3001-7"
+            },
+            "coordinates": [
+              [
+                -5.6507,
+                37.4696
+              ],
+              [
+                -5.3163,
+                37.5158
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0098",
+              "target": "vb0097",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route 2",
+              "label": "OBVCLAM <> ASTIGIM",
+              "distance": "15",
+              "segment_id": "3001-8"
+            },
+            "coordinates": [
+              [
+                -5.3163,
+                37.5158
+              ],
+              [
+                -5.08,
+                37.5409
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0097",
+              "target": "vb0096",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item",
+              "label": "ASTIGIM <> AD ARAS",
+              "distance": "12",
+              "segment_id": "3001-9"
+            },
+            "coordinates": [
+              [
+                -5.08,
+                37.5409
+              ],
+              [
+                -4.9246,
+                37.6786
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0096",
+              "target": "vb0095",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route 2",
+              "label": "AD ARAS <> CORDVBAM",
+              "distance": "23",
+              "segment_id": "3001-10"
+            },
+            "coordinates": [
+              [
+                -4.9246,
+                37.6786
+              ],
+              [
+                -4.7792,
+                37.8847
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0095",
+              "target": "vb0094",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "CORDVBAM <> AD X",
+              "distance": "10",
+              "segment_id": "3001-11"
+            },
+            "coordinates": [
+              [
+                -4.7792,
+                37.8847
+              ],
+              [
+                -4.6545,
+                37.9417
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0094",
+              "target": "vb0093",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "AD X <> EPORAM",
+              "distance": "17",
+              "segment_id": "3001-12"
+            },
+            "coordinates": [
+              [
+                -4.6545,
+                37.9417
+              ],
+              [
+                -4.3819,
+                38.026
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0093",
+              "target": "vb0092",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "EPORAM <> VCIESEM",
+              "distance": "18",
+              "segment_id": "3001-13"
+            },
+            "coordinates": [
+              [
+                -4.3819,
+                38.026
+              ],
+              [
+                -4.148,
+                38.0613
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0092",
+              "target": "vb0091",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "VCIESEM <> AD NOVLAS",
+              "distance": "13",
+              "segment_id": "3001-14"
+            },
+            "coordinates": [
+              [
+                -4.148,
+                38.0613
+              ],
+              [
+                -3.9195,
+                38.005
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0091",
+              "target": "vb0090",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item",
+              "label": "AD NOVLAS <> CASTVLONEM",
+              "distance": "19",
+              "segment_id": "3001-15"
+            },
+            "coordinates": [
+              [
+                -3.9195,
+                38.005
+              ],
+              [
+                -3.6236,
+                38.0358
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0090",
+              "target": "vb0089",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "CASTVLONEM <> AD MORVM",
+              "distance": "24",
+              "segment_id": "3001-16"
+            },
+            "coordinates": [
+              [
+                -3.6236,
+                38.0358
+              ],
+              [
+                -3.3154,
+                38.1847
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0089",
+              "target": "vb0088",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "AD MORVM <> II SOLARIA",
+              "distance": "19",
+              "segment_id": "3001-17"
+            },
+            "coordinates": [
+              [
+                -3.3154,
+                38.1847
+              ],
+              [
+                -3.1035,
+                38.3422
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0088",
+              "target": "vb0087",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "II SOLARIA <> MARIANA",
+              "distance": "20",
+              "segment_id": "3001-18"
+            },
+            "coordinates": [
+              [
+                -3.1035,
+                38.3422
+              ],
+              [
+                -2.9275,
+                38.5474
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0087",
+              "target": "vb0086",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "MARIANA <> MENTESAM",
+              "distance": "20",
+              "segment_id": "3001-19"
+            },
+            "coordinates": [
+              [
+                -2.9275,
+                38.5474
+              ],
+              [
+                -2.6948,
+                38.6922
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0086",
+              "target": "vb0085",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "MENTESAM <> LIBISOSAM",
+              "distance": "24",
+              "segment_id": "3001-20"
+            },
+            "coordinates": [
+              [
+                -2.6948,
+                38.6922
+              ],
+              [
+                -2.3551,
+                38.9416
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0085",
+              "target": "vb0084",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "LIBISOSAM <> PARIETINIS",
+              "distance": "22",
+              "segment_id": "3001-21"
+            },
+            "coordinates": [
+              [
+                -2.3551,
+                38.9416
+              ],
+              [
+                -2.0343,
+                38.9249
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0084",
+              "target": "vb0083",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "PARIETINIS <> SALTIGIM",
+              "distance": "16",
+              "segment_id": "3001-22"
+            },
+            "coordinates": [
+              [
+                -2.0343,
+                38.9249
+              ],
+              [
+                -1.729,
+                38.9189
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0083",
+              "target": "vb0082",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "SALTIGIM <> AD PALEM",
+              "distance": "32",
+              "segment_id": "3001-23"
+            },
+            "coordinates": [
+              [
+                -1.729,
+                38.9189
+              ],
+              [
+                -1.2307,
+                38.746
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0082",
+              "target": "vb0081",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item",
+              "label": "AD PALEM <> AD ARAS",
+              "distance": "22",
+              "segment_id": "3001-24"
+            },
+            "coordinates": [
+              [
+                -1.2307,
+                38.746
+              ],
+              [
+                -0.9874,
+                38.7087
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0081",
+              "target": "vb0080",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "AD ARAS <> SAETABIM",
+              "distance": "28",
+              "segment_id": "3001-25"
+            },
+            "coordinates": [
+              [
+                -0.9874,
+                38.7087
+              ],
+              [
+                -0.5156,
+                38.9888
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0080",
+              "target": "vb0079",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "SAETABIM <> SVCRONEM",
+              "distance": "16",
+              "segment_id": "3001-26"
+            },
+            "coordinates": [
+              [
+                -0.5156,
+                38.9888
+              ],
+              [
+                -0.4356,
+                39.1894
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0079",
+              "target": "vb0078",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "SVCRONEM <> VALENTIAM",
+              "distance": "20",
+              "segment_id": "3001-27"
+            },
+            "coordinates": [
+              [
+                -0.4356,
+                39.1894
+              ],
+              [
+                -0.3768,
+                39.4702
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0078",
+              "target": "vb0077",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "VALENTIAM <> SAGYNTVM",
+              "distance": "16",
+              "segment_id": "3001-28"
+            },
+            "coordinates": [
+              [
+                -0.3768,
+                39.4702
+              ],
+              [
+                -0.2759,
+                39.6762
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0077",
+              "target": "vb0076",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "SAGYNTVM <> AD NOVLAS",
+              "distance": "24",
+              "segment_id": "3001-29"
+            },
+            "coordinates": [
+              [
+                -0.2759,
+                39.6762
+              ],
+              [
+                -0.1201,
+                39.9675
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0076",
+              "target": "vb0075",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "AD NOVLAS <> ILDVM",
+              "distance": "22",
+              "segment_id": "3001-30"
+            },
+            "coordinates": [
+              [
+                -0.1201,
+                39.9675
+              ],
+              [
+                0.0903,
+                40.2629
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0075",
+              "target": "vb0074",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "ILDVM <> INTIBILIM",
+              "distance": "24",
+              "segment_id": "3001-31"
+            },
+            "coordinates": [
+              [
+                0.0903,
+                40.2629
+              ],
+              [
+                0.4231,
+                40.4187
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0074",
+              "target": "vb0073",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "INTIBILIM <> DERTOSAM",
+              "distance": "27",
+              "segment_id": "3001-32"
+            },
+            "coordinates": [
+              [
+                0.4231,
+                40.4187
+              ],
+              [
+                0.5238,
+                40.8151
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0073",
+              "target": "vb0072",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "DERTOSAM <> SVB SALTVM",
+              "distance": "37",
+              "segment_id": "3001-33"
+            },
+            "coordinates": [
+              [
+                0.5238,
+                40.8151
+              ],
+              [
+                0.8689,
+                40.9661
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0072",
+              "target": "vb0071",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route3",
+              "label": "SVB SALTVM <> TARRACONEM",
+              "distance": "25",
+              "segment_id": "3001-34"
+            },
+            "coordinates": [
+              [
+                0.8689,
+                40.9661
+              ],
+              [
+                1.2581,
+                41.1192
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0071",
+              "target": "vb0070",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "TARRACONEM <> PALFVRIANAM",
+              "distance": "16",
+              "segment_id": "3001-35"
+            },
+            "coordinates": [
+              [
+                1.2581,
+                41.1192
+              ],
+              [
+                1.5149,
+                41.204
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0070",
+              "target": "vb0069",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "PALFVRIANAM <> ANTISTIANAM",
+              "distance": "13",
+              "segment_id": "3001-36"
+            },
+            "coordinates": [
+              [
+                1.5149,
+                41.204
+              ],
+              [
+                1.6479,
+                41.3106
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0069",
+              "target": "vb0068",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "ANTISTIANAM <> AD FINES",
+              "distance": "17",
+              "segment_id": "3001-37"
+            },
+            "coordinates": [
+              [
+                1.6479,
+                41.3106
+              ],
+              [
+                1.9277,
+                41.4736
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0068",
+              "target": "vb0067",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "AD FINES <> ARRAGONEM",
+              "distance": "20",
+              "segment_id": "3001-38"
+            },
+            "coordinates": [
+              [
+                1.9277,
+                41.4736
+              ],
+              [
+                2.1229,
+                41.5631
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0067",
+              "target": "vb0066",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "ARRAGONEM <> SEMPRONIANA",
+              "distance": "9",
+              "segment_id": "3001-39"
+            },
+            "coordinates": [
+              [
+                2.1229,
+                41.5631
+              ],
+              [
+                2.3309,
+                41.5827
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0066",
+              "target": "vb0065",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "SEMPRONIANA <> SETERRAS",
+              "distance": "24",
+              "segment_id": "3001-40"
+            },
+            "coordinates": [
+              [
+                2.3309,
+                41.5827
+              ],
+              [
+                2.6355,
+                41.7465
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0065",
+              "target": "vb0064",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "SETERRAS <> AQVIS VOCONTIS",
+              "distance": "15",
+              "segment_id": "3001-41"
+            },
+            "coordinates": [
+              [
+                2.6355,
+                41.7465
+              ],
+              [
+                2.8083,
+                41.8382
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0064",
+              "target": "vb0063",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "AQVIS VOCONTIS <> GERVNDAM",
+              "distance": "12",
+              "segment_id": "3001-42"
+            },
+            "coordinates": [
+              [
+                2.8083,
+                41.8382
+              ],
+              [
+                2.8256,
+                41.9873
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0063",
+              "target": "vb0062",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "GERVNDAM <> CILNIANAM",
+              "distance": "12",
+              "segment_id": "3001-43"
+            },
+            "coordinates": [
+              [
+                2.8256,
+                41.9873
+              ],
+              [
+                2.9048,
+                42.0947
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0062",
+              "target": "vb0061",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "CILNIANAM <> IVNCARIAM",
+              "distance": "15",
+              "segment_id": "3001-44"
+            },
+            "coordinates": [
+              [
+                2.9048,
+                42.0947
+              ],
+              [
+                2.9667,
+                42.2754
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0061",
+              "target": "vb0060",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "IVNCARIAM <> IN PYRAENEVM",
+              "distance": "16",
+              "segment_id": "3001-45"
+            },
+            "coordinates": [
+              [
+                2.9667,
+                42.2754
+              ],
+              [
+                2.869,
+                42.4723
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0060",
+              "target": "vb0059",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "IN PYRAENEVM <> RVSCINONEM",
+              "distance": "25",
+              "segment_id": "3001-46"
+            },
+            "coordinates": [
+              [
+                2.869,
+                42.4723
+              ],
+              [
+                2.9452,
+                42.7087
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0059",
+              "target": "vb0058",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "RVSCINONEM <> COMBVSTA",
+              "distance": "6",
+              "segment_id": "3001-47"
+            },
+            "coordinates": [
+              [
+                2.9452,
+                42.7087
+              ],
+              [
+                2.8718,
+                42.7687
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0058",
+              "target": "vb0057",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route4",
+              "label": "COMBVSTA <> NARBONEM",
+              "distance": "32",
+              "segment_id": "3001-48"
+            },
+            "coordinates": [
+              [
+                2.8718,
+                42.7687
+              ],
+              [
+                3.0036,
+                43.1847
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0057",
+              "target": "vb0056",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "NARBONEM <> BAETERRAS",
+              "distance": "16",
+              "segment_id": "3001-49"
+            },
+            "coordinates": [
+              [
+                3.0036,
+                43.1847
+              ],
+              [
+                3.2178,
+                43.3416
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0056",
+              "target": "vb0055",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "BAETERRAS <> CESSERONEM",
+              "distance": "13",
+              "segment_id": "3001-50"
+            },
+            "coordinates": [
+              [
+                3.2178,
+                43.3416
+              ],
+              [
+                3.4206,
+                43.3951
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0055",
+              "target": "vb0054",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "CESSERONEM <> FORVM DOMITI",
+              "distance": "18",
+              "segment_id": "3001-51"
+            },
+            "coordinates": [
+              [
+                3.4206,
+                43.3951
+              ],
+              [
+                3.7024,
+                43.5115
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0054",
+              "target": "vb0053",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "FORVM DOMITI <> SEXTANTIONEM",
+              "distance": "15",
+              "segment_id": "3001-52"
+            },
+            "coordinates": [
+              [
+                3.7024,
+                43.5115
+              ],
+              [
+                3.8967,
+                43.6408
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0053",
+              "target": "vb0052",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "SEXTANTIONEM <> AMBRVSSVM",
+              "distance": "15",
+              "segment_id": "3001-53"
+            },
+            "coordinates": [
+              [
+                3.8967,
+                43.6408
+              ],
+              [
+                4.1495,
+                43.7154
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0052",
+              "target": "vb0051",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "AMBRVSSVM <> NEMAVSVM",
+              "distance": "15",
+              "segment_id": "3001-54"
+            },
+            "coordinates": [
+              [
+                4.1495,
+                43.7154
+              ],
+              [
+                4.3596,
+                43.8349
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0051",
+              "target": "vb0050",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "NEMAVSVM <> VGERNVM",
+              "distance": "15",
+              "segment_id": "3001-55"
+            },
+            "coordinates": [
+              [
+                4.3596,
+                43.8349
+              ],
+              [
+                4.6446,
+                43.8099
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0050",
+              "target": "vb0049",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item",
+              "label": "VGERNVM <> ARELATA",
+              "distance": "9",
+              "segment_id": "3001-56"
+            },
+            "coordinates": [
+              [
+                4.6446,
+                43.8099
+              ],
+              [
+                4.6227,
+                43.6759
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0049",
+              "target": "vb0048",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "ARELATA <> ERGNAGINVM",
+              "distance": "6",
+              "segment_id": "3001-57"
+            },
+            "coordinates": [
+              [
+                4.6227,
+                43.6759
+              ],
+              [
+                4.6981,
+                43.7667
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0048",
+              "target": "vb0047",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "ERGNAGINVM <> CLANVM",
+              "distance": "8",
+              "segment_id": "3001-58"
+            },
+            "coordinates": [
+              [
+                4.6981,
+                43.7667
+              ],
+              [
+                4.8329,
+                43.7735
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0047",
+              "target": "vb0046",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "CLANVM <> CABELLIONEM",
+              "distance": "12",
+              "segment_id": "3001-59"
+            },
+            "coordinates": [
+              [
+                4.8329,
+                43.7735
+              ],
+              [
+                5.0364,
+                43.8363
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0046",
+              "target": "vb0045",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "CABELLIONEM <> APTAM IVLIAM",
+              "distance": "12",
+              "segment_id": "3001-60"
+            },
+            "coordinates": [
+              [
+                5.0364,
+                43.8363
+              ],
+              [
+                5.3972,
+                43.8761
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0045",
+              "target": "vb0044",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "APTAM IVLIAM <> CATVIACIAM",
+              "distance": "12",
+              "segment_id": "3001-61"
+            },
+            "coordinates": [
+              [
+                5.3972,
+                43.8761
+              ],
+              [
+                5.5962,
+                43.8576
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0044",
+              "target": "vb0043",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "CATVIACIAM <> ALAVNIVM",
+              "distance": "16",
+              "segment_id": "3001-62"
+            },
+            "coordinates": [
+              [
+                5.5962,
+                43.8576
+              ],
+              [
+                5.8672,
+                43.9462
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0043",
+              "target": "vb0042",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "ALAVNIVM <> SEGVSTERONEM",
+              "distance": "24",
+              "segment_id": "3001-63"
+            },
+            "coordinates": [
+              [
+                5.8672,
+                43.9462
+              ],
+              [
+                5.9432,
+                44.1947
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0042",
+              "target": "vb0041",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "SEGVSTERONEM <> ALABONTEM",
+              "distance": "16",
+              "segment_id": "3001-64"
+            },
+            "coordinates": [
+              [
+                5.9432,
+                44.1947
+              ],
+              [
+                5.944,
+                44.386
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0041",
+              "target": "vb0040",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "ALABONTEM <> VAPPINCVM",
+              "distance": "18",
+              "segment_id": "3001-65"
+            },
+            "coordinates": [
+              [
+                5.944,
+                44.386
+              ],
+              [
+                6.0798,
+                44.5596
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0040",
+              "target": "vb0039",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "VAPPINCVM <> CATVRIGOMAGVM",
+              "distance": "12",
+              "segment_id": "3001-66"
+            },
+            "coordinates": [
+              [
+                6.0798,
+                44.5596
+              ],
+              [
+                6.276,
+                44.5444
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0039",
+              "target": "vb0038",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "CATVRIGOMAGVM <> EBVRODVNVM",
+              "distance": "18",
+              "segment_id": "3001-67"
+            },
+            "coordinates": [
+              [
+                6.276,
+                44.5444
+              ],
+              [
+                6.4951,
+                44.5623
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0038",
+              "target": "vb0037",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "EBVRODVNVM <> RAMAM",
+              "distance": "17",
+              "segment_id": "3001-68"
+            },
+            "coordinates": [
+              [
+                6.4951,
+                44.5623
+              ],
+              [
+                6.5799,
+                44.7505
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0037",
+              "target": "vb0036",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "RAMAM <> BRIGANTIVM",
+              "distance": "18",
+              "segment_id": "3001-69"
+            },
+            "coordinates": [
+              [
+                6.5799,
+                44.7505
+              ],
+              [
+                6.6342,
+                44.8969
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0036",
+              "target": "vb0035",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "BRIGANTIVM <> DRVANTIVM",
+              "distance": "11",
+              "segment_id": "3001-70"
+            },
+            "coordinates": [
+              [
+                6.6342,
+                44.8969
+              ],
+              [
+                6.7234,
+                44.931
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0035",
+              "target": "vb0034",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item",
+              "label": "DRVANTIVM <> SEGVSIONEM",
+              "distance": "24",
+              "segment_id": "3001-71"
+            },
+            "coordinates": [
+              [
+                6.7234,
+                44.931
+              ],
+              [
+                7.0454,
+                45.1374
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0034",
+              "target": "vb0033",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "SEGVSIONEM <> OCELVM",
+              "distance": "27",
+              "segment_id": "3001-72"
+            },
+            "coordinates": [
+              [
+                7.0454,
+                45.1374
+              ],
+              [
+                7.3319,
+                45.1188
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0033",
+              "target": "vb0032",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item, route5",
+              "label": "OCELVM <> TAVRINIS",
+              "distance": "20",
+              "segment_id": "3001-73"
+            },
+            "coordinates": [
+              [
+                7.3319,
+                45.1188
+              ],
+              [
+                7.6854,
+                45.0734
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0032",
+              "target": "vb0031",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "TAVRINIS <> QVADRATA",
+              "distance": "20",
+              "segment_id": "3001-74"
+            },
+            "coordinates": [
+              [
+                7.6854,
+                45.0734
+              ],
+              [
+                7.9694,
+                45.1911
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0031",
+              "target": "vb0030",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "QVADRATA <> RIGOMAGVM",
+              "distance": "16",
+              "segment_id": "3001-75"
+            },
+            "coordinates": [
+              [
+                7.9694,
+                45.1911
+              ],
+              [
+                8.2974,
+                45.1931
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0030",
+              "target": "vb0029",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "RIGOMAGVM <> CVTTIAS",
+              "distance": "15",
+              "segment_id": "3001-76"
+            },
+            "coordinates": [
+              [
+                8.2974,
+                45.1931
+              ],
+              [
+                8.6111,
+                45.1921
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0029",
+              "target": "vb0028",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "CVTTIAS <> LAVMELLVM",
+              "distance": "13",
+              "segment_id": "3001-77"
+            },
+            "coordinates": [
+              [
+                8.6111,
+                45.1921
+              ],
+              [
+                8.7938,
+                45.1227
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0028",
+              "target": "vb0027",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "LAVMELLVM <> TICINVM",
+              "distance": "21",
+              "segment_id": "3001-78"
+            },
+            "coordinates": [
+              [
+                8.7938,
+                45.1227
+              ],
+              [
+                9.1566,
+                45.1859
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0027",
+              "target": "vb0026",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "TICINVM <> PLAMBRVM",
+              "distance": "20",
+              "segment_id": "3001-79"
+            },
+            "coordinates": [
+              [
+                9.1566,
+                45.1859
+              ],
+              [
+                9.5266,
+                45.1574
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0026",
+              "target": "vb0025",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "PLAMBRVM <> PLACENTIAM",
+              "distance": "16",
+              "segment_id": "3001-80"
+            },
+            "coordinates": [
+              [
+                9.5266,
+                45.1574
+              ],
+              [
+                9.6966,
+                45.0528
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0025",
+              "target": "vb0024",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "PLACENTIAM <> FLORENTIAM",
+              "distance": "15",
+              "segment_id": "3001-81"
+            },
+            "coordinates": [
+              [
+                9.6966,
+                45.0528
+              ],
+              [
+                9.911,
+                44.9281
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0024",
+              "target": "vb0023",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "FLORENTIAM <> PARMAM",
+              "distance": "25",
+              "segment_id": "3001-82"
+            },
+            "coordinates": [
+              [
+                9.911,
+                44.9281
+              ],
+              [
+                10.328,
+                44.8015
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0023",
+              "target": "vb0022",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "PARMAM <> LEPIDVM REGIVM",
+              "distance": "18",
+              "segment_id": "3001-83"
+            },
+            "coordinates": [
+              [
+                10.328,
+                44.8015
+              ],
+              [
+                10.6308,
+                44.6977
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0022",
+              "target": "vb0021",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "LEPIDVM REGIVM <> MVTINAM",
+              "distance": "17",
+              "segment_id": "3001-84"
+            },
+            "coordinates": [
+              [
+                10.6308,
+                44.6977
+              ],
+              [
+                10.9252,
+                44.6471
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0021",
+              "target": "vb0020",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "MVTINAM <> BONONIAM",
+              "distance": "25",
+              "segment_id": "3001-85"
+            },
+            "coordinates": [
+              [
+                10.9252,
+                44.6471
+              ],
+              [
+                11.3418,
+                44.4946
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0020",
+              "target": "vb0019",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "BONONIAM <> CLATERNVM",
+              "distance": "10",
+              "segment_id": "3001-86"
+            },
+            "coordinates": [
+              [
+                11.3418,
+                44.4946
+              ],
+              [
+                11.4747,
+                44.4421
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0019",
+              "target": "vb0018",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "CLATERNVM <> FORVM CORNELI",
+              "distance": "13",
+              "segment_id": "3001-87"
+            },
+            "coordinates": [
+              [
+                11.4747,
+                44.4421
+              ],
+              [
+                11.7111,
+                44.3535
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0018",
+              "target": "vb0017",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "FORVM CORNELI <> FAVENTIAM",
+              "distance": "10",
+              "segment_id": "3001-88"
+            },
+            "coordinates": [
+              [
+                11.7111,
+                44.3535
+              ],
+              [
+                11.8845,
+                44.2859
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0017",
+              "target": "vb0016",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "FAVENTIAM <> FORVM LIVI",
+              "distance": "10",
+              "segment_id": "3001-89"
+            },
+            "coordinates": [
+              [
+                11.8845,
+                44.2859
+              ],
+              [
+                12.0427,
+                44.2212
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0016",
+              "target": "vb0015",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "FORVM LIVI <> CESENAM",
+              "distance": "13",
+              "segment_id": "3001-90"
+            },
+            "coordinates": [
+              [
+                12.0427,
+                44.2212
+              ],
+              [
+                12.2429,
+                44.1391
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0015",
+              "target": "vb0014",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "CESENAM <> ARIMINVM",
+              "distance": "20",
+              "segment_id": "3001-91"
+            },
+            "coordinates": [
+              [
+                12.2429,
+                44.1391
+              ],
+              [
+                12.5703,
+                44.0596
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0014",
+              "target": "vb0013",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "ARIMINVM <> PISAVRVM",
+              "distance": "24",
+              "segment_id": "3001-92"
+            },
+            "coordinates": [
+              [
+                12.5703,
+                44.0596
+              ],
+              [
+                12.9146,
+                43.911
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0013",
+              "target": "vb0012",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "PISAVRVM <> FANVM FORTVNAE",
+              "distance": "8",
+              "segment_id": "3001-93"
+            },
+            "coordinates": [
+              [
+                12.9146,
+                43.911
+              ],
+              [
+                13.0181,
+                43.8443
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0012",
+              "target": "vb0011",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "FANVM FORTVNAE <> FORVM SEMPRONI",
+              "distance": "16",
+              "segment_id": "3001-94"
+            },
+            "coordinates": [
+              [
+                13.0181,
+                43.8443
+              ],
+              [
+                12.8291,
+                43.6974
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0011",
+              "target": "vb0010",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "FORVM SEMPRONI <> AD CALEM",
+              "distance": "18",
+              "segment_id": "3001-95"
+            },
+            "coordinates": [
+              [
+                12.8291,
+                43.6974
+              ],
+              [
+                12.6485,
+                43.5468
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0010",
+              "target": "vb0009",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "AD CALEM <> HESIM",
+              "distance": "13",
+              "segment_id": "3001-96"
+            },
+            "coordinates": [
+              [
+                12.6485,
+                43.5468
+              ],
+              [
+                12.6693,
+                43.4035
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0009",
+              "target": "vb0008",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "HESIM <> HELVILLVM",
+              "distance": "10",
+              "segment_id": "3001-97"
+            },
+            "coordinates": [
+              [
+                12.6693,
+                43.4035
+              ],
+              [
+                12.7621,
+                43.2957
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0008",
+              "target": "vb0007",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "HELVILLVM <> NVCERIAM",
+              "distance": "15",
+              "segment_id": "3001-98"
+            },
+            "coordinates": [
+              [
+                12.7621,
+                43.2957
+              ],
+              [
+                12.7915,
+                43.1135
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0007",
+              "target": "vb0006",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "NVCERIAM <> MEVANIAM",
+              "distance": "19",
+              "segment_id": "3001-99"
+            },
+            "coordinates": [
+              [
+                12.7915,
+                43.1135
+              ],
+              [
+                12.6094,
+                42.9349
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0006",
+              "target": "vb0005",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "MEVANIAM <> AD MARTIS",
+              "distance": "16",
+              "segment_id": "3001-100"
+            },
+            "coordinates": [
+              [
+                12.6094,
+                42.9349
+              ],
+              [
+                12.5318,
+                42.7509
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0005",
+              "target": "vb0004",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "AD MARTIS <> NARNIAM",
+              "distance": "18",
+              "segment_id": "3001-101"
+            },
+            "coordinates": [
+              [
+                12.5318,
+                42.7509
+              ],
+              [
+                12.5156,
+                42.5176
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0004",
+              "target": "vb0003",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "NARNIAM <> OCRICLO",
+              "distance": "12",
+              "segment_id": "3001-102"
+            },
+            "coordinates": [
+              [
+                12.5156,
+                42.5176
+              ],
+              [
+                12.4663,
+                42.4136
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0003",
+              "target": "vb0002",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "OCRICLO <> AD XX",
+              "distance": "24",
+              "segment_id": "3001-103"
+            },
+            "coordinates": [
+              [
+                12.4663,
+                42.4136
+              ],
+              [
+                12.4768,
+                42.1484
+              ]
+            ],
+            "type": "LineString"
+          },
+          {
+            "when": {
+              "follows": "",
+              "duration": "",
+              "timespan": [
+                ""
+              ]
+            },
+            "properties": {
+              "source": "vb0002",
+              "target": "vb0001",
+              "collection": "vb",
+              "follows": "",
+              "beaker": "1",
+              "route_id": "3001",
+              "tags": "item,route6",
+              "label": "AD XX <> ROMAM",
+              "distance": "20",
+              "segment_id": "3001-104"
+            },
+            "coordinates": [
+              [
+                12.4768,
+                42.1484
+              ],
+              [
+                12.4843,
+                41.8926
+              ]
+            ],
+            "type": "LineString"
+          }
+        ],
+        "type": "GeometryCollection"
+      },
+      "type": "Feature"
+    }
+  ]
+}

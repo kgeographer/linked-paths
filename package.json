@@ -1,0 +1,58 @@
+{
+  "name": "topotime",
+  "version": "0.3.0",
+  "description": "merging place and period in various ways",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "@turf": "^3.0.14",
+    "bootstrap": "^3.3.6",
+    "brfs": "^1.4.3",
+    "d3": "^4.3.0",
+    "d3-scale": "^1.0.4",
+    "elasticsearch-completion": "^1.1.0",
+    "grunt": "^1.0.1",
+    "handlebars": "^4.0.6",
+    "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1",
+    "leaflet": "^1.0.1",
+    "leaflet-ajax": "^2.1.0",
+    "lodash": "^4.16.6",
+    "mapbox.js": "^3.0.0",
+    "moment": "^2.17.1",
+    "querystring": "^0.2.0",
+    "typeahead": "^0.2.2"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "babelify": "^7.3.0",
+    "elasticsearch": "^12.1.0",
+    "font-awesome": "^4.7.0",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-gh-pages": "^2.0.0",
+    "jit-grunt": "^0.10.0",
+    "load-grunt-config": "^0.19.2",
+    "time-grunt": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgeographer/topotime.git"
+  },
+  "author": "@kgeographer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kgeographer/topotime/issues"
+  },
+  "homepage": "https://github.com/kgeographer/topotime#readme"
+}

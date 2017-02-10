@@ -1,0 +1,11 @@
+/node_modules
+/.grunt
+/old
+/notes
+/_site/lib/timeline_2.3.0
+
+py/local_settings.py
+py/__pycache__
+
+~*.*
+.DS_Store
