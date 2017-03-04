@@ -6,6 +6,7 @@
 
 py/local_settings.py
 py/__pycache__
+py/older
 
 ~*.*
 .DS_Store
