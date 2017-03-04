@@ -1,6 +1,6 @@
 # csvToGeoJSON-T.py
 # read places and segments csv, output GeoJSON-T for routes, JSONlines for Elasticsearch
-# 2016-12-02 k. grossner
+# rev 2017-03 k. grossner
 
 import os, sys, csv, json, codecs, re, copy
 # TODO should we de-duplicate?
@@ -15,15 +15,15 @@ def init():
 
     finp = codecs.open('../data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
     fins = codecs.open('../data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
-    fout = codecs.open('../_site/data/'+data+'.geojson', 'w', 'utf8')  
-    
+    fout = codecs.open('../_site/data/'+data+'.geojson', 'w', 'utf8')
+
     # NOTE: demo uses manually edited place records
     # output places for index
     foutp = codecs.open('../_site/data/index/'+proj+'.jsonl', 'w', 'utf8')
-    
+
     # output segments for index
     fouts = codecs.open('../_site/data/index/'+data+'_seg.jsonl', 'w', 'utf8')
-    
+
     # TODO: option for separate places and segments files
 
     reader_p = csv.DictReader(filter(lambda row: row[0]!='#', finp), delimiter=';')
@@ -68,7 +68,7 @@ def init():
 
 
 def createPlaces():
-    
+
     places = []
 
     def toPoint(row):
@@ -81,7 +81,7 @@ def createPlaces():
         arr = row['gazetteer_label'].split('/') if row['gazetteer_label'] != '' else []
         arr.append(row['toponym'])
         return arr
-    
+
     for idx, row in enumerate(reader_p):
         feat = {"type":"Feature", \
                 "id": row['place_id'], \
@@ -102,11 +102,11 @@ def createPlaces():
             feat['properties'][props[x]] = row[props[x]]
 
         collection['features'].append(feat)
-        
+
     # write places to separate file for index
     # does not perform conflation now, will be manual
     # only mimics Pelagios
-    
+
     finp.seek(0) # resets dict.reader
     next(reader_p, None) # skip header
     for row in reader_p:
@@ -132,7 +132,7 @@ def createPlaces():
             }
         places.append(place)
         #print(json.dumps(place))
-    
+
     # JSONlines for index
     # NOTE: demo place index records have been manually edited , do not regenerate
     for x in range(len(places)):
@@ -233,15 +233,15 @@ def createSegments():
             routeidx = row['route_id']
             collection['features'].append(feat)
             counter += 1
-            
+
             # segments as JSONlines for index
-                      
+
             #print('new feature: ',counter)
         else:
             # add geometry + properties for each segment within a route
             feat['geometry']['geometries'].append(segment)
             counter += 1
-            
+
         # output modified segment as JSONline for index
         leanSegment = copy.deepcopy(segment)
         leanSegment['geometry'] = {"type":segment['type'], "coordinates":segment['coordinates']}
@@ -251,7 +251,7 @@ def createSegments():
         #print(leanSegment)
         fouts.write(json.dumps(leanSegment) + '\n')
 
-        
+
     fout.write(json.dumps(collection,indent=2))
     fout.close()
     fouts.close()
