@@ -1,0 +1,8 @@
+# title: Old World Trade Routes
+# lp_id: lp_owtrad
+# pub_date: 2012
+# timespan: [-4000,,,1820,]
+# segmentType: hRoute
+# contributors: [T. M. Ciolek]
+# description: "Land, river and maritime trade routes of Eurasia and Africa during the period 4,000 BCE - circa 1820 CE"
+collection;route_id;segment_id;source;target;label;geometry;timespan;duration;follows

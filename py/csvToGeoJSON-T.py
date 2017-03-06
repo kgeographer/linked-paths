@@ -9,20 +9,20 @@ import os, sys, csv, json, codecs, re, copy
 def init():
     dir = os.getcwd() + '/data/'
     global proj, reader_p, reader_s, finp, fins, fout, foutp, fouts, collection, collectionAttributes, routeidx
-    # courier, incanto-f, incanto-j, roundabout, vicarello, xuanzang
-    proj = 'roundabout'
-    data = 'roundabout'
+    # owtrad, courier, incanto-f, incanto-j, roundabout, vicarello, xuanzang
+    proj = 'owtrad'
+    data = 'owtrad'
 
-    finp = codecs.open('../data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
-    fins = codecs.open('../data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
-    fout = codecs.open('../_site/data/'+data+'.geojson', 'w', 'utf8')
+    finp = codecs.open('data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
+    fins = codecs.open('data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
+    fout = codecs.open('_site/data/'+data+'.geojson', 'w', 'utf8')
 
     # NOTE: demo uses manually edited place records
     # output places for index
-    foutp = codecs.open('../_site/data/index/'+proj+'.jsonl', 'w', 'utf8')
+    foutp = codecs.open('_site/data/index/'+proj+'.jsonl', 'w', 'utf8')
 
     # output segments for index
-    fouts = codecs.open('../_site/data/index/'+data+'_seg.jsonl', 'w', 'utf8')
+    fouts = codecs.open('_site/data/index/'+data+'_seg.jsonl', 'w', 'utf8')
 
     # TODO: option for separate places and segments files
 
@@ -37,6 +37,7 @@ def init():
     # get FeatureCollection properties from segments file header
     # NOTE: GeoJSON specs disallow 'properties' members outside of Features
     # but allow 'foreign members' anywhere, so call them 'attributes'
+    
     reader_attr = csv.reader(filter(lambda row: row[0]=='#', fins), delimiter=';')
     collectionAttributes = {}
 
@@ -49,7 +50,7 @@ def init():
     collection = {
         "type":"FeatureCollection",
         "attributes": collectionAttributes,
-        # NOTE: line 53 used for courier, the only one with a "periods" object now
+        # NOTE: line 54 used for courier, the only one with a "periods" object now
         #"when": {"timespan": collectionAttributes['timespan'][1:-1].split(','), "periods": collectionAttributes['periods']},
         "when": {"timespan": collectionAttributes['timespan'][1:-1].split(',')},
         "features": []
@@ -59,10 +60,10 @@ def init():
         sys.exit('core place field names incorrect. You have: \n' + str(reader_p.fieldnames))
 
     # TODO test segments columns, offer options
-    #fins.seek(0)
-    #if not reader_s.fieldnames[:10] == req_s:
-        #sys.exit('core segment field names incorrect. You have: \n' + str(reader_s.fieldnames))
-        #sys.exit('core segment field names incorrect.')
+    fins.seek(0)
+    if not reader_s.fieldnames[:10] == req_s:
+        sys.exit('core segment field names incorrect. You have: \n' + str(reader_s.fieldnames))
+        sys.exit('core segment field names incorrect.')
 
     print('Project: ' + proj + ', Data: ' + data)
 
@@ -256,6 +257,9 @@ def createSegments():
     fout.close()
     fouts.close()
 
+
 init()
 createPlaces()
-createSegments()
+#fout.write(json.dumps(collection,indent=2))
+#fout.close()
+#createSegments()

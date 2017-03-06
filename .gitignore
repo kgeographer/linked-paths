@@ -1,6 +1,6 @@
 /node_modules
 /.grunt
-/old
+/data/older
 /notes
 /_site/lib/timeline_2.3.0
 
