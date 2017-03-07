@@ -338,7 +338,8 @@ function writeAbstract(attribs){``
   }
   let html = "<div id='"+attribs.lp_id+
     "' class='project-card'><span class='project-card-title'>"+
-    attribs.short_title+"</span>"
+    attribs.title+"</span>"
+    // attribs.short_title+"</span>"
   html += '<p><b>Date</b>: '+attribs.pub_date+'</p>'+
     '<p><b>Contributor(s)</b>: '+attribs.contributors+'<p>'
   html += attribs.periods?
