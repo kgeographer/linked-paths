@@ -5,24 +5,25 @@
 import os, sys, csv, json, codecs, re, copy
 # TODO should we de-duplicate?
 # TODO options: separate files for QGIS work; generate edges (here or in js?)
-
+dir = os.getcwd() + '/data/'
 def init():
-    dir = os.getcwd() + '/data/'
+    #dir = os.getcwd() + '/data/'
+    #os.chdir('./py')
     global proj, reader_p, reader_s, finp, fins, fout, foutp, fouts, collection, collectionAttributes, routeidx
     # owtrad, courier, incanto-f, incanto-j, roundabout, vicarello, xuanzang
     proj = 'owtrad'
     data = 'owtrad'
 
-    finp = codecs.open('data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
-    fins = codecs.open('data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
-    fout = codecs.open('_site/data/'+data+'.geojson', 'w', 'utf8')
+    finp = codecs.open('../data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
+    fins = codecs.open('../data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
+    fout = codecs.open('../_site/data/'+data+'.geojson', 'w', 'utf8')
 
     # NOTE: demo uses manually edited place records
     # output places for index
-    foutp = codecs.open('_site/data/index/'+proj+'.jsonl', 'w', 'utf8')
+    foutp = codecs.open('../_site/data/index/'+proj+'.jsonl', 'w', 'utf8')
 
     # output segments for index
-    fouts = codecs.open('_site/data/index/'+data+'_seg.jsonl', 'w', 'utf8')
+    fouts = codecs.open('../_site/data/index/'+data+'_seg.jsonl', 'w', 'utf8')
 
     # TODO: option for separate places and segments files
 
@@ -41,7 +42,7 @@ def init():
     reader_attr = csv.reader(filter(lambda row: row[0]=='#', fins), delimiter=';')
     collectionAttributes = {}
 
-    fins.seek(0)
+    #fins.seek(0)
     for row in reader_attr:
         field = re.match(r'#(.*?):(.*)', row[0]).group(1).lstrip()
         value = re.match(r'#(.*?):(.*$)', row[0]).group(2).lstrip()
@@ -84,6 +85,7 @@ def createPlaces():
         return arr
 
     for idx, row in enumerate(reader_p):
+        #print(row)
         feat = {"type":"Feature", \
                 "id": row['place_id'], \
                 "label": row['toponym'], \
@@ -142,7 +144,6 @@ def createPlaces():
 
 def createSegments():
 
-    fins.seek(0) # resets segments dict.reader
     counter = 0
     routeidx = 0
 
@@ -163,7 +164,7 @@ def createSegments():
             coords.append(p2)
         except:
             sys.exit('target id ' + p1 + ' not found')
-        print(coords)
+        #print(coords)
         return coords
 
     def toGeometry(row):
@@ -207,16 +208,16 @@ def createSegments():
         }
 
         props = reader_s.fieldnames[8:]
-        print(props)
+        #print(props)
         for x in range(len(props)):
-            print(props[x])
+            #print(props[x])
             g['properties'][props[x]] = row[props[x]]
 
         return g
     # end toGeometry(row)
 
-
     for idx, row in enumerate(reader_s):
+        print(row)
         segment = toGeometry(row)
         #print('route_id is ' + row['route_id'])
         if row['route_id'] != routeidx:
@@ -260,6 +261,6 @@ def createSegments():
 
 init()
 createPlaces()
+#createSegments()
 #fout.write(json.dumps(collection,indent=2))
 #fout.close()
-#createSegments()
