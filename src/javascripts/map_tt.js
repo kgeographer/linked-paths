@@ -63,6 +63,7 @@ $(function() {
 });
 
 window.midpoint = function(ts,type) {
+  console.log('midpoint ts',ts)
   if(type == 'start') {
     var mid = new Date(ts[0])
   } else if(type == 'mid') {
@@ -75,7 +76,7 @@ window.midpoint = function(ts,type) {
 }
 
 window.initTimeline = function(events,dataset) {
-  // console.log(events)
+  console.log('initTimeline events',events)
   // custom timeline click event
   Timeline.OriginalEventPainter.prototype._showBubble = function(x, y, evt) {
     ga('send', 'event', ['Timeline'], ['Click event'], ['Timeline']);
@@ -117,6 +118,7 @@ window.initTimeline = function(events,dataset) {
 
   let cfg = tlConfig[dataset]
   var d = Timeline.DateTime.parseGregorianDateTime(tlMidpoint)
+  console.log('midpoint d',d)
   // var d = Timeline.DateTime.parseGregorianDateTime(tlMidpoint)
   // DAY, WEEK, MONTH, YEAR, DECADE, CENTURY
   var bandInfos = [
@@ -149,6 +151,7 @@ window.initTimeline = function(events,dataset) {
   window.tl = Timeline.create(document.getElementById("tl"), bandInfos, Timeline.HORIZONTAL);
   // from the dynamic object; no idea why it needs a dummy url
   eventSrc.loadJSON(events, 'dummyUrl');
+  // eventSrc.loadJSON(events, 'dummyUrl');
 
   timelineCounter += 1;
 }
@@ -189,10 +192,10 @@ function buildSegmentEvent(feat){
 }
 
 function buildCollectionPeriod(coll){
-  // console.log(' in buildCollectionPeriod()',coll.when.timespan)
+  console.log(' in buildCollectionPeriod()',coll.when.timespan)
   window.ts = coll.when.timespan
   var event = {};
-  event['id'] = 'LinkedPlaces001';
+  event['id'] = '{event id}';
   event['title'] = 'valid period, '+coll.attributes.title;
   event['description'] = ts[4];
   event['start'] = ts[0];
@@ -241,13 +244,14 @@ function summarizeEvents(eventsObj){
 function style(feature) {
   window.feat = feature
   var colorMap = {"ra":"#ffff80","courier":"#ff9999","incanto":"#ffb366",
-    "vb":"#b380ff","xuanzang":"#99e699"}
+    "vb":"#b380ff","xuanzang":"#99e699","owtrad":"#A0D0EE"}
   let fill=colorMap[feature.toGeoJSON().properties.collection]
+  let rad=feature.toGeoJSON().properties.collection=='owtrad'?3:4;
   // console.log(coll)
 	return {
       color: '#000',
       fillColor: fill,
-      radius: 4,
+      radius: rad,
       fillOpacity: 0.6,
       weight: 1
     };

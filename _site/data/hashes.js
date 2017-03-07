@@ -1,4 +1,9 @@
 window.tlConfig = {
+  "owtrad": {
+    "type": "hroute",
+    "width1": "75%", "intUnit1":"DECADE", "intPixels1":50,
+    "width2": "25%", "intUnit2":"CENTURY", "intPixels2":120
+    },
   "courier": {
     "type": "hroute",
     "width1": "75%", "intUnit1":"DECADE", "intPixels1":50,
@@ -36,4 +41,5 @@ blurbs = {
   "roundabout": "@kgeographer perambulation, 2016-17",
   "vicarello": "Vicarello Beaker #1, 1-3c CE",
   "xuanzang": "Pilgrimage of Xuanzang, 7c CE",
+  "owtrad": "Old World Trade Routes (OWTRAD), 2c BCE - 19c CE",
 }
