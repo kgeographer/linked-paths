@@ -11,8 +11,8 @@ def init():
     #os.chdir('./py')
     global proj, reader_p, reader_s, finp, fins, fout, foutp, fouts, collection, collectionAttributes, routeidx
     # owtrad, courier, incanto-f, incanto-j, roundabout, vicarello, xuanzang
-    proj = 'owtrad'
-    data = 'owtrad'
+    proj = 'roundabout'
+    data = 'roundabout'
 
     finp = codecs.open('../data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
     fins = codecs.open('../data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
@@ -261,6 +261,6 @@ def createSegments():
 
 init()
 createPlaces()
-#createSegments()
+createSegments()
 #fout.write(json.dumps(collection,indent=2))
 #fout.close()

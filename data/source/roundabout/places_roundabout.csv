@@ -36,42 +36,22 @@ ra;ra0034;Reykjavik, Iceland;http://api.geonames.org/getJSON?geonameId=3413829&u
 ra;ra0035;Béziers, France;http://api.geonames.org/getJSON?geonameId=3032833&username=demo&style=full;Béziers;3.2140;43.3412;;;3032833
 ra;ra0036;Civitanova Marche, Italy;http://api.geonames.org/getJSON?geonameId=3170102&username=demo&style=full;Civitanova Marche;13.72068;43.30491;;;3170102
 ra;ra0037;Assisi, Italy;http://api.geonames.org/getJSON?geonameId=3182722&username=demo&style=full;Assisi;12.62109;43.06671;;;3182722
-
-ra;ra0038;Figueres, Spain;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Figueres;12.62109;43.06671;;;3182722
-ra;ra0039;Mérida, Spain;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Mérida;12.62109;43.06671;;;3182722
-ra;ra0040;Seville, Spain;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Seville;12.62109;43.06671;;;3182722
-ra;ra0041;Cordoba, Spain;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Cordoba;12.62109;43.06671;;;3182722
-ra;ra0042;Granada, Spain;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Granada;12.62109;43.06671;;;3182722
-ra;ra0043;Consuegro, Spain;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Consuegro;12.62109;43.06671;;;3182722
-ra;ra0044;Toledo, Spain;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Toledo;12.62109;43.06671;;;3182722
-ra;ra0045;San Sebastián, Spain;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;San Sebastián;12.62109;43.06671;;;3182722
-ra;ra0046;Orléans, France;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Orléans;12.62109;43.06671;;;3182722
-ra;ra0047;Redpath, Scotland;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Redpath;12.62109;43.06671;;;3182722
-ra;ra0048;Glasgow, Scotland;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Glasgow;12.62109;43.06671;;;3182722
-ra;ra0049;Fort William, Scotland;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Fort William;12.62109;43.06671;;;3182722
-ra;ra0050;Inverness, Scotland;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Inverness;12.62109;43.06671;;;3182722
-ra;ra0051;Stanley, Scotland;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Stanley;12.62109;43.06671;;;3182722
-ra;ra0052;Vienna, Austria;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Vienna;12.62109;43.06671;;;3182722
-ra;ra0053;Chiang Mai, Thailand;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Chiang Mai;12.62109;43.06671;;;3182722
-ra;ra0054;Nong Khai, Thailand;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Nong Khai;12.62109;43.06671;;;3182722
-ra;ra0055;Frankfurt, Germany;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Frankfurt;12.62109;43.06671;;;3182722
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ra;ra0038;Figueres, Spain;http://api.geonames.org/getJSON?geonameId=3122453&username=demo&style=full;Figueres;2.96163;42.26645;;;3122453
+ra;ra0039;Mérida, Spain;http://api.geonames.org/getJSON?geonameId=2513917&username=demo&style=full;Mérida;-6.34366;38.91611;;;2513917
+ra;ra0040;Seville, Spain;http://api.geonames.org/getJSON?geonameId=2510911&username=demo&style=full;Sevilla;-5.97317;37.38283;;;2510911
+ra;ra0041;Córdoba, Spain;http://api.geonames.org/getJSON?geonameId=2519240&username=demo&style=full;Cordoba;-4.77275;37.89155;;;2519240
+ra;ra0042;Granada, Spain;http://api.geonames.org/getJSON?geonameId=2517117&username=demo&style=full;Granada;-3.60667;37.18817;;;2517117
+ra;ra0043;Consuegra, Spain;http://api.geonames.org/getJSON?geonameId=2519277&username=demo&style=full;Consuegra;-3.608;39.46246;;;2519277
+ra;ra0044;Toledo, Spain;http://api.geonames.org/getJSON?geonameId=2510409&username=demo&style=full;Toledo;-4.02263;39.8581;;;2510409
+ra;ra0045;San Sebastián, Spain;http://api.geonames.org/getJSON?geonameId=3110044&username=demo&style=full;San Sebastian;-1.97499;43.31283;;;3110044
+ra;ra0046;Orléans, France;http://api.geonames.org/getJSON?geonameId=2989317&username=demo&style=full;Orléans;1.90389;47.90289;;;2989317
+ra;ra0047;Redpath, Scotland;http://api.geonames.org/getJSON?geonameId=&username=demo&style=full;Redpath;-2.661543;55.613029;;;;, 
+ra;ra0048;Glasgow, Scotland;http://api.geonames.org/getJSON?geonameId=2648579&username=demo&style=full;Glasgow;-4.25763;55.86515;;;2648579
+ra;ra0049;Fort William, Scotland;http://api.geonames.org/getJSON?geonameId=2649169&username=demo&style=full;Fort William;-5.11208;56.81648;;;2649169
+ra;ra0050;Inverness, Scotland;http://api.geonames.org/getJSON?geonameId=2646088&username=demo&style=full;Inverness;-4.22398;57.47908;;;2646088
+ra;ra0051;Stanley, Scotland;http://api.geonames.org/getJSON?geonameId=8224783&username=demo&style=full;Stanley;-1.69846;54.86796;;;8224783
+ra;ra0052;Vienna, Austria;http://api.geonames.org/getJSON?geonameId=2761369&username=demo&style=full;Vienna;16.37208;48.20849;;;2761369
+ra;ra0053;Chiang Mai, Thailand;http://api.geonames.org/getJSON?geonameId=1153671&username=demo&style=full;Chiang Mai;98.98468;18.79038;;;1153671
+ra;ra0054;Nong Khai, Thailand;http://api.geonames.org/getJSON?geonameId=1608232&username=demo&style=full;Nong Khai;102.742;17.87847;;;1608232
+ra;ra0055;Frankfurt, Germany;http://api.geonames.org/getJSON?geonameId=2925533&username=demo&style=full;Frankfurt am Main;8.68417;50.11552;;;2925533
+ra;ra0056;Doha, Qatar;http://api.geonames.org/getJSON?geonameId=290030&username=demo&style=full;Doha;51.52245;25.27932;;;290030
