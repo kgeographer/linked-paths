@@ -727,27 +727,6 @@
     {
       "type": "Feature",
       "properties": {
-        "toponym": "B\u00e9ziers, France",
-        "gazetteer_uri": "http://api.geonames.org/getJSON?geonameId=3032833&username=demo&style=full",
-        "gazetteer_label": "B\u00e9ziers",
-        "comment": "",
-        "nights": "",
-        "collection": "ra",
-        "geonames_id": "3032833"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          3.214,
-          43.3412
-        ]
-      },
-      "id": "ra0035",
-      "label": "B\u00e9ziers, France"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "toponym": "Civitanova Marche, Italy",
         "gazetteer_uri": "http://api.geonames.org/getJSON?geonameId=3170102&username=demo&style=full",
         "gazetteer_label": "Civitanova Marche",
@@ -1064,18 +1043,18 @@
       "type": "Feature",
       "properties": {
         "toponym": "Stanley, Scotland",
-        "gazetteer_uri": "http://api.geonames.org/getJSON?geonameId=8224783&username=demo&style=full",
+        "gazetteer_uri": "http://api.geonames.org/getJSON?geonameId=2637071&username=demo&style=full",
         "gazetteer_label": "Stanley",
         "comment": "",
         "nights": "",
         "collection": "ra",
-        "geonames_id": "8224783"
+        "geonames_id": "2637071"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.69846,
-          54.86796
+          -3.451879,
+          56.4854
         ]
       },
       "id": "ra0051",
@@ -3077,8 +3056,8 @@
                 57.47908
               ],
               [
-                -1.69846,
-                54.86796
+                -3.45184,
+                56.4854
               ]
             ]
           },
@@ -3108,8 +3087,8 @@
             },
             "coordinates": [
               [
-                -1.69846,
-                54.86796
+                -3.45184,
+                56.4854
               ],
               [
                 -3.19648,

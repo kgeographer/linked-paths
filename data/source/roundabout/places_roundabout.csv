@@ -33,7 +33,6 @@ ra;ra0031;San Marino;http://api.geonames.org/getJSON?geonameId=3168070&username=
 ra;ra0032;Rieti, Italy;http://api.geonames.org/getJSON?geonameId=3169412&username=demo&style=full;Rieti;12.8574;42.4048;;;3169412
 ra;ra0033;Boston, MA;http://api.geonames.org/getJSON?geonameId=4930956&username=demo&style=full;Boston;-71.0589;42.3601;;;4930956
 ra;ra0034;Reykjavik, Iceland;http://api.geonames.org/getJSON?geonameId=3413829&username=demo&style=full;Reykjavik;-21.8174;64.1265;;;3413829
-ra;ra0035;Béziers, France;http://api.geonames.org/getJSON?geonameId=3032833&username=demo&style=full;Béziers;3.2140;43.3412;;;3032833
 ra;ra0036;Civitanova Marche, Italy;http://api.geonames.org/getJSON?geonameId=3170102&username=demo&style=full;Civitanova Marche;13.72068;43.30491;;;3170102
 ra;ra0037;Assisi, Italy;http://api.geonames.org/getJSON?geonameId=3182722&username=demo&style=full;Assisi;12.62109;43.06671;;;3182722
 ra;ra0038;Figueres, Spain;http://api.geonames.org/getJSON?geonameId=3122453&username=demo&style=full;Figueres;2.96163;42.26645;;;3122453
@@ -49,7 +48,7 @@ ra;ra0047;Redpath, Scotland;http://api.geonames.org/getJSON?geonameId=&username=
 ra;ra0048;Glasgow, Scotland;http://api.geonames.org/getJSON?geonameId=2648579&username=demo&style=full;Glasgow;-4.25763;55.86515;;;2648579
 ra;ra0049;Fort William, Scotland;http://api.geonames.org/getJSON?geonameId=2649169&username=demo&style=full;Fort William;-5.11208;56.81648;;;2649169
 ra;ra0050;Inverness, Scotland;http://api.geonames.org/getJSON?geonameId=2646088&username=demo&style=full;Inverness;-4.22398;57.47908;;;2646088
-ra;ra0051;Stanley, Scotland;http://api.geonames.org/getJSON?geonameId=8224783&username=demo&style=full;Stanley;-1.69846;54.86796;;;8224783
+ra;ra0051;Stanley, Scotland;http://api.geonames.org/getJSON?geonameId=2637071&username=demo&style=full;Stanley;-3.451879;56.4854;;;2637071
 ra;ra0052;Vienna, Austria;http://api.geonames.org/getJSON?geonameId=2761369&username=demo&style=full;Vienna;16.37208;48.20849;;;2761369
 ra;ra0053;Chiang Mai, Thailand;http://api.geonames.org/getJSON?geonameId=1153671&username=demo&style=full;Chiang Mai;98.98468;18.79038;;;1153671
 ra;ra0054;Nong Khai, Thailand;http://api.geonames.org/getJSON?geonameId=1608232&username=demo&style=full;Nong Khai;102.742;17.87847;;;1608232
