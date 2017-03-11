@@ -7,9 +7,16 @@ from elasticsearch import Elasticsearch
 
 es = Elasticsearch()
 
-# it's all or nothing - delete index first
-projects = ["incanto", "vicarello", "courier", "xuanzang", "roundabout"]
-datasets = ["incanto-f", "incanto-j", "vicarello", "courier", "xuanzang", "roundabout"]
+# delete and rebuild linkedplaces index
+mappings = codecs.open('../data/es_mappings.json', 'r', 'utf8').read()
+es.indices.delete('linkedplaces')
+es.indices.create(index='linkedplaces', ignore=400, body=mappings)
+
+
+# some projects have multiple sets of segments; e.g. incanto
+# project places need to be indexed only once
+projects = ["incanto", "vicarello", "courier", "xuanzang", "roundabout","owtrad"]
+datasets = ["incanto-f", "incanto-j", "vicarello", "courier", "xuanzang", "roundabout","owtrad"]
 
 
 def indexPlaces():
@@ -30,7 +37,6 @@ def indexPlaces():
             except:
                 print("error:", sys.exc_info()[0])
                 
-
 
 def indexSegments():
     # SEGMENTS

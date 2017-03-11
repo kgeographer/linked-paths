@@ -16,12 +16,10 @@ import './bloodhound.js';
 // exposed for debugging
 window.parsedUrl = url.parse(window.location.href, true, true);
 window.searchParams = querystring.parse(parsedUrl.search.substring(1));
-// window.cent = ctr
-// window.buff = buf
 window.features = {};
 window.d3graph = {"nodes":[], "links":[]}
 window.idToFeature = {};
-// TODO; simile doesn't seem able to handle BCE well
+// TODO; simile doesn't handle BCE well
 // window.eventsObj = {'dateTimeFormat': 'Gregorian','events':[ ]};
 window.eventsObj = {'dateTimeFormat': 'iso8601','events':[ ]};
 window.myLayer = {};
@@ -33,6 +31,7 @@ window.tlMidpoint = '';
 window.dataRows = '';
 window.timelineCounter = 0;
 
+// on start
 $(function() {
   // TODO: restore state in href approach (?)
   Object.getOwnPropertyNames(searchParams).length == 0 ?
@@ -62,6 +61,7 @@ $(function() {
   })
 });
 
+// position timeline
 window.midpoint = function(ts,type) {
   console.log('midpoint ts',ts)
   if(type == 'start') {
@@ -75,6 +75,7 @@ window.midpoint = function(ts,type) {
   return mid
 }
 
+// fires from startMap() after data is loaded
 window.initTimeline = function(events,dataset) {
   console.log('initTimeline events',events)
   // custom timeline click event
@@ -149,9 +150,8 @@ window.initTimeline = function(events,dataset) {
   bandInfos[1].highlight = true;
 
   window.tl = Timeline.create(document.getElementById("tl"), bandInfos, Timeline.HORIZONTAL);
-  // from the dynamic object; no idea why it needs a dummy url
+  // from the dynamic object; needs a dummy url
   eventSrc.loadJSON(events, 'dummyUrl');
-  // eventSrc.loadJSON(events, 'dummyUrl');
 
   timelineCounter += 1;
 }
@@ -172,6 +172,7 @@ window.fixDate = function(d){
   return foo;
 }
 
+// events for Journey data
 function buildSegmentEvent(feat){
   // need validate function here
   // if(validateWhen(place)==true {})
@@ -191,6 +192,7 @@ function buildSegmentEvent(feat){
   return event;
 }
 
+// Flows and hPeriod data get a single period band
 function buildCollectionPeriod(coll){
   console.log(' in buildCollectionPeriod()',coll.when.timespan)
   window.ts = coll.when.timespan
@@ -220,25 +222,12 @@ var mapStyles = {
       color: "red"
     }
   },
-  places: {
-    color: '#000',
-    fillColor: '#ffff00',
-    radius: 4,
-    fillOpacity: 0.8,
-    weight: 1
-  },
   bbox: {
     color: 'orange',
     fillColor: '#eeeee0',
     fillOpacity: 0.6,
     weight: 1
   }
-}
-
-function summarizeEvents(eventsObj){
-  // get bounds, midpoint, granularity
-  // multi-day, -week, -month, -year
-  console.log(eventsObj)
 }
 
 function style(feature) {
@@ -285,8 +274,8 @@ function listFeatureProperties(props,when){
   return html;
 }
 
+// from Perio.do, typically
 window.loadPeriods = function(uri){
-  // console.log('loadPeriods()',uri)
   $.when(
     // vanilla
     $.ajax({
@@ -295,13 +284,8 @@ window.loadPeriods = function(uri){
       type: 'get',
       crossDomain: true,
       success: function(data) {
-        // window.pdata = data
-        // console.log('period data',data)
+        // TODO: prettify json returned
         $("#period_pre").html(JSON.stringify(data,undefined,2))
-        // $.each(data, function(i, field){
-        //     $("#period_modal .modal-body").append(field + " <br/>");
-        //     // $("#period_modal .modal-body").append(field + " ");
-        // })
       }
     })
   ).done(function(){
@@ -331,8 +315,8 @@ function writeCard(dataset,attribs){
   })
 }
 
+// project abstract in right panel
 function writeAbstract(attribs){``
-  // console.log('writeAbstract() attribs',attribs)
   if(attribs.periods){
     var foo = '<span class="span-link" onclick="loadPeriods(\''+attribs.periods[0]+'\')">'
   }
@@ -741,19 +725,3 @@ $(".leaflet-popup-content a").click(function(e){
   e.preventDefault();
   console.log(e)
 })
-
-/* polands
-        "when": {
-          "timespans": [
-            {
-              "label": "in 800",
-              "start": {
-                "earliest": "0750-01-01"
-              },
-              "end": {
-                "latest": "0850-12-31"
-              }
-            }
-          ]
-        }
-*/

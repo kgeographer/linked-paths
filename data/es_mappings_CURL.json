@@ -1,3 +1,4 @@
+PUT linkedplaces
 {
   "mappings": {
     "place": {
@@ -93,7 +94,7 @@
                   "ignore_above": 256
                 }
               }
-            },
+            },            
             "id": {
               "type": "text",
               "fields": {
