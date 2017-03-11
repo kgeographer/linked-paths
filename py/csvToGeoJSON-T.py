@@ -113,6 +113,7 @@ def createPlaces():
     finp.seek(0) # resets dict.reader
     next(reader_p, None) # skip header
     for row in reader_p:
+        # TODO find close and exact matches somehow
         place = {
             "id": row['place_id'],
             "representative_title": row['toponym'],

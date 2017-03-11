@@ -22,14 +22,14 @@ window.segmentSearch = function(obj){
   ga('send', 'event', ['Search'], ['Select'], ['Search panel']);
   // retrieve all segments associated with a place,
   // populate results_inset
-  console.log('segmentSearch obj',obj)
   let html = ''
   var plKeys = Object.keys(obj)
   var relevantProjects = []
-  // console.log('segmentSearch obj', obj)
+  console.log('segmentSearch obj', obj)
   for(let i = 0; i < plKeys.length; i++){
-    // console.log('plKeys', plKeys[i])
+    // console.log('plKeys[i]', plKeys[i])
     relevantProjects.push(obj[plKeys[i]][0])
+    console.log('search source and target for:', plKeys[i])
     // multi_match
     var searchParams = {
       index: 'linkedplaces',
@@ -45,6 +45,7 @@ window.segmentSearch = function(obj){
     }
 
     client.search(searchParams).then(function (resp) {
+      console.log('hits:',resp.hits.hits)
       return Promise.all(resp.hits.hits)
     }).then(function(hitsArray){
         // console.log('plKeys[i] for .place-card', obj[plKeys[i]])
@@ -84,9 +85,9 @@ window.segmentSearch = function(obj){
   loadLayers(relevantProjects);
 }
 
-// resolve collection names as the exist in data
+// resolve collection names as they exist in data
 var collections = {"ra":"roundabout","courier":"courier","incanto":"incanto",
-  "vb":"vicarello","xuanzang":"xuanzang"}
+  "vb":"vicarello","xuanzang":"xuanzang","owtrad":"owtrad"}
 
 var toponyms = new Bloodhound({
   datumTokenizer: function(datum) {

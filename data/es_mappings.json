@@ -13,6 +13,7 @@
         },
         "is_conflation_of": {
           "type":"nested",
+          "include_in_root": true,
           "properties": {
             "close_matches": {
               "type": "text",
@@ -171,6 +172,7 @@
       "properties": {
         "properties": {
           "type": "nested",
+          "include_in_root": true,
           "properties": {
             "collection": {
               "type": "text",
