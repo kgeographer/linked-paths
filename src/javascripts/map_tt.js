@@ -3,7 +3,7 @@ var url = require('url'),
     querystring = require('querystring')
     // , d3 = require('d3')
 // require('bootstrap')
-var d3 = Object.assign({}, require("d3"), require("d3-scale"));
+// var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 require('mapbox.js')
 window.moment = require('moment');
 moment().format();
@@ -51,7 +51,9 @@ $(function() {
       }
     } else {
       // one set of events at a time right now
-      eventSrc.clear()
+      if(typeof eventSrc != "undefined"){
+        eventSrc.clear()
+      }
       zapLayer(this.value)
     }
   })
@@ -63,7 +65,7 @@ $(function() {
 
 // position timeline
 window.midpoint = function(ts,type) {
-  console.log('midpoint ts',ts)
+  // console.log('midpoint ts',ts)
   if(type == 'start') {
     var mid = new Date(ts[0])
   } else if(type == 'mid') {
@@ -77,7 +79,7 @@ window.midpoint = function(ts,type) {
 
 // fires from startMap() after data is loaded
 window.initTimeline = function(events,dataset) {
-  console.log('initTimeline events',events)
+  // console.log('initTimeline events',events)
   // custom timeline click event
   Timeline.OriginalEventPainter.prototype._showBubble = function(x, y, evt) {
     ga('send', 'event', ['Timeline'], ['Click event'], ['Timeline']);
@@ -119,7 +121,7 @@ window.initTimeline = function(events,dataset) {
 
   let cfg = tlConfig[dataset]
   var d = Timeline.DateTime.parseGregorianDateTime(tlMidpoint)
-  console.log('midpoint d',d)
+  // console.log('midpoint d',d)
   // var d = Timeline.DateTime.parseGregorianDateTime(tlMidpoint)
   // DAY, WEEK, MONTH, YEAR, DECADE, CENTURY
   var bandInfos = [
@@ -333,91 +335,6 @@ function writeAbstract(attribs){``
   return html
 }
 
-window.buildGraph = function(){
-  var edgeScale = d3.scaleLinear()
-    .domain([1,100])
-    .range([1,5])
-
-  // console.log('current d3graph',d3graph)
-  var svg = d3.select(".modal-body svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
-
-  var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-  var simulation = d3.forceSimulation()
-      .force("link", d3.forceLink().id(function(d) { return d.id; }))
-      .force("charge", d3.forceManyBody())
-      .force("center", d3.forceCenter(width / 2, height / 2));
-
-  // var graph = JSON.parse(d3graph)
-  // for now, use data in d3graph{}, built on each loadLayer()
-  // d3.json(d3graph, function(error, graph) {
-  // d3.json(JSON.parse(d3graph), function(error, graph) {
-    // if (error) throw error
-
-    var link = svg.append("g")
-        .attr("class", "links")
-      .selectAll("line")
-      .data(d3graph.links)
-      .enter().append("line")
-        .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
-
-    var node = svg.append("g")
-        .attr("class", "nodes")
-      .selectAll("circle")
-      .data(d3graph.nodes)
-      .enter().append("circle")
-        .attr("r", 5)
-        .attr("fill", function(d) { return color(d.group); })
-        .call(d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended));
-
-    node.append("title")
-        .text(function(d) { return d.id; });
-
-    simulation
-        .nodes(d3graph.nodes)
-        .on("tick", ticked);
-
-    simulation.force("link")
-        .links(d3graph.links);
-
-    function ticked() {
-      link
-          .attr("x1", function(d) { return d.source.x; })
-          .attr("y1", function(d) { return d.source.y; })
-          .attr("x2", function(d) { return d.target.x; })
-          .attr("y2", function(d) { return d.target.y; });
-
-      node
-          .attr("cx", function(d) { return d.x; })
-          .attr("cy", function(d) { return d.y; });
-    }
-
-    // });
-
-  function dragstarted(d) {
-    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
-  }
-
-  function dragged(d) {
-    d.fx = d3.event.x;
-    d.fy = d3.event.y;
-  }
-
-  function dragended(d) {
-    if (!d3.event.active) simulation.alphaTarget(0);
-    d.fx = null;
-    d.fy = null;
-  }
-
-}
-
 function download(type, data){
   // console.log('download', type,data)
   switch(type) {
@@ -525,6 +442,7 @@ window.loadLayer = function(dataset) {
     lineFeatures = [];
     d3graph.nodes = [];
     d3graph.links = [];
+    // clear previous layer's events if any
     eventsObj.events = [];
     // map id to leaflet layer object
     window.idToFeature[dataset] = {places:{}, segments:{}}
@@ -558,7 +476,8 @@ window.loadLayer = function(dataset) {
         // build separate L.featureGroup for points & lines
         featureLayer.eachLayer(function(layer){
           let geomF = layer.feature.geometry
-          let whenF = layer.feature.when
+          // TODO: no when in Places yet
+          // let whenF = layer.feature.when
 
           // put places features in pointFeatures array
           if(geomF.type == 'Point') {
@@ -599,14 +518,6 @@ window.loadLayer = function(dataset) {
                   //   'with the same results as using the search feature')
                 })
 
-                // for(let i=0;i<obj.data.length;i++){
-                //   let project = collections[obj.data[i].source_gazetteer];
-                //   // gather place_ids from 'conflation_of' records
-                //   placeObj[obj.data[i].id] = [project, obj.data[i].title];
-                // }
-                // get segments and display in #results_inset
-                // segmentSearch(placeObj);
-
               var toponym = $('<div />').html('<p>'+layer.feature.properties.toponym+'</p>')
                 // .append(popContent)[0]
                 .append(popContent, searchLink)[0];
@@ -621,6 +532,7 @@ window.loadLayer = function(dataset) {
               pointFeatures.push(placeFeature)
               var pid = layer.feature.id
               idToFeature[dataset].places[pid] = placeFeature
+
               // add to links for graph viz for some
               if(["incanto-f","courier"].indexOf(dataset) > -1) {
                     d3graph.nodes.push({"id":pid, "group":"1"})
@@ -670,6 +582,7 @@ window.loadLayer = function(dataset) {
                 })
                 // map id to map feature
                 lineFeatures.push(segment)
+                // console.log('segment',segment)
 
                 // var sid = feat.properties.route_id
                 var sid = feat.properties.hasOwnProperty('segment_id') ?
@@ -684,12 +597,11 @@ window.loadLayer = function(dataset) {
                       feat.properties.num_journeys:"1"})
                 }
 
-                //* build event object for timeline
+                //* build event object for journey timeline
                 if (whenObj != ({} || '')) {
-                  if (collection.attributes.segmentType == 'journey') {
+                  // if (collection.attributes.segmentType == 'journey') {
                     eventsObj.events.push(buildSegmentEvent(feat));
-                    // console.log(buildSegmentEvent(feat))
-                  }
+                  // }
                 }
             }
             if(eventsObj.events.length == 0) {
@@ -699,7 +611,8 @@ window.loadLayer = function(dataset) {
               // console.log('period eventsObj', eventsObj.events[0])
             }
           } else {
-            console.log(whenF == undefined ? 'whenF undef' : whenF)
+            // there is no when in place records yet
+            // console.log(whenF == undefined ? 'whenF undef' : whenF)
           }
         })
         // featureGroup pairs as layers
@@ -716,8 +629,13 @@ window.loadLayer = function(dataset) {
           ttmap.fitBounds(features[name_p].getBounds())
         }
 
-        // load timeline
-        initTimeline(eventsObj,dataset)
+        // load timeline for journey(s), histogram for others
+
+        if (collection.attributes.segmentType == 'journey') {
+          initTimeline(eventsObj,dataset)
+        } else {
+          console.log('sample event for histogram',eventsObj.events[0])
+        }
       })
       $(".loader").hide()
 }
