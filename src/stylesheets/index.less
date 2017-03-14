@@ -3,6 +3,7 @@
 
 html, body { height: 100%; margin:0; padding:0;}
 
+.hidden {display:none;}
 .leaflet-zoom-animated {pointer-events: auto;}
 
 #wrapper{
@@ -17,9 +18,31 @@ html, body { height: 100%; margin:0; padding:0;}
   width:100%;
   background: aliceblue;
 }
-#tl {
+#tl, #timevis {
+// #tl, #tabs {
+  position:absolute;
+  top:80%;
+  bottom:0;
+  width:100%;
+  background: aliceblue;
   p { text-align: center; font-size: 2em; color: gainsboro; margin-top: 30px;}
 }
+.timeline-band-layer-inner {cursor:move;}
+.timeline-segment-highlight {
+  color: red;
+}
+.timeline-event-label, .timeline-date-label {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: smaller;
+}
+.timeline-event-tape {
+  background-color: #993333;
+  height: 6px;
+}
+.timeline-event-icon {
+  img {vertical-align: top !important;}
+}
+
 #bloodhound {
   width: 100%;
   margin: 4px ;
@@ -137,29 +160,6 @@ input[type=checkbox] {margin: 2px 0 0;}
   cursor:pointer;
   z-index: 100;
   text-align: center;
-}
-#tl {
-  position:absolute;
-  top:80%;
-  bottom:0;
-  width:100%;
-  background: aliceblue;
-}
-
-.timeline-band-layer-inner {cursor:move;}
-.timeline-segment-highlight {
-  color: red;
-}
-.timeline-event-label, .timeline-date-label {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: smaller;
-}
-.timeline-event-tape {
-  background-color: #993333;
-  height: 6px;
-}
-.timeline-event-icon {
-  img {vertical-align: top !important;}
 }
 
 .links line {

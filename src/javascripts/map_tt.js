@@ -57,6 +57,7 @@ $(function() {
       zapLayer(this.value)
     }
   })
+  $("#tabs").tabs()
   $('[data-toggle="popover"]').popover();
   $('.panel-title i').click(function(){
     window.open('http://kgeographer.com/?p=140&preview=true', '', 'width=700');
