@@ -3,11 +3,9 @@ var url = require('url'),
     moment = require('moment')
     // , d3 = require('d3')
 // require('bootstrap')
-// var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 require('mapbox.js')
 
 moment().format();
-import * as d3 from "node_modules/d3/d3.js";
 // import add'l app JavaScript
 import './bloodhound.js';
 // require('@turf/centroid')
