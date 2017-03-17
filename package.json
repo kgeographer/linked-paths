@@ -22,7 +22,8 @@
     "mapbox.js": "^3.0.0",
     "moment": "^2.17.1",
     "querystring": "^0.2.0",
-    "typeahead": "^0.2.2"
+    "typeahead": "^0.2.2",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel": "^6.5.2",

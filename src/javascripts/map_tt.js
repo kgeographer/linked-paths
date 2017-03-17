@@ -1,6 +1,8 @@
 var url = require('url'),
     querystring = require('querystring'),
-    moment = require('moment')
+    moment = require('moment'),
+    _ = require('underscore')
+window._ = _
     // , d3 = require('d3')
 // require('bootstrap')
 require('mapbox.js')
@@ -186,7 +188,8 @@ function buildSegmentEvent(feat){
   event['latestStart'] = feat.when.timespan[1] == "" ? "" :feat.when.timespan[1];
   event['earliestEnd'] = feat.when.timespan[2] == "" ? "" :feat.when.timespan[2];
   event['end'] = feat.when.timespan[3] == "" ? "" :feat.when.timespan[3];
-  event['durationEvent'] = "true";
+  event['duration'] = feat.when.duration;
+  // event['durationEvent'] = "true";
   event['link'] = "";
   event['image'] = "";
   // console.log('built ', event)
@@ -634,10 +637,23 @@ window.loadLayer = function(dataset) {
         // load timeline for journey(s), histogram for others
 
         if (collection.attributes.segmentType == 'journey') {
-          initTimeline(eventsObj,dataset)
-        } else {
-          console.log('sample event for histogram',eventsObj.events[0])
-        }
+          // initTimeline(eventsObj,dataset)
+        // }
+          // build object like {"name":"","start":"","end":"","sphere":""}
+          // for each case: dates unknown, dates known
+          if(eventsObj.events[0]['duration'] == "?") {
+            // events of unk. duration in year; group and assign faux dates
+            // eq. spaced in year for ordering on timeline
+            var grpE = _.groupBy(eventsObj.events, function(e){
+              return e.start.substring(0,4); })
+            console.log('process, render grpE',grpE)
+          } else {
+            // dates are known, render to timeline
+            console.log('process, render EventsObj.events',eventsObj.events)
+          }
+        } // if journey
+        // console.log('events for timeline',eventsObj.events)
+        // console.log('sample event for histogram',eventsObj.events[0])
       })
       $(".loader").hide()
 }
