@@ -1,13 +1,13 @@
 var url = require('url'),
-    // $ = require('jquery'),
-    querystring = require('querystring')
+    querystring = require('querystring'),
+    moment = require('moment')
     // , d3 = require('d3')
 // require('bootstrap')
 // var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 require('mapbox.js')
-window.moment = require('moment');
-moment().format();
 
+moment().format();
+import * as d3 from "node_modules/d3/d3.js";
 // import add'l app JavaScript
 import './bloodhound.js';
 // require('@turf/centroid')
@@ -394,6 +394,9 @@ window.loadLayers = function(arr) {
 }
 
 function startMapM(dataset=null){
+  // experiment
+  // makeTimeVis();
+  // d3time();
   bboxFeatures = []
   // var bboxGroup = L.featureGroup()
   // mapbox.js (non-gl)

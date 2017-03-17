@@ -1,7 +1,7 @@
 {
-  "name": "topotime",
-  "version": "0.3.0",
-  "description": "merging place and period in various ways",
+  "name": "linked-places",
+  "version": "0.1.0",
+  "description": "modeling and visualizing historic movement",
   "main": "Gruntfile.js",
   "dependencies": {
     "@turf": "^3.0.14",
@@ -9,7 +9,10 @@
     "brfs": "^1.4.3",
     "d3": "^4.3.0",
     "d3-scale": "^1.0.4",
+    "d3-timeline-chart": "^1.3.0",
+    "elasticsearch": "^12.1.0",
     "elasticsearch-completion": "^1.1.0",
+    "font-awesome": "^4.7.0",
     "grunt": "^1.0.1",
     "handlebars": "^4.0.6",
     "jquery": "^3.1.1",
@@ -28,8 +31,6 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-1": "^6.16.0",
     "babelify": "^7.3.0",
-    "elasticsearch": "^12.1.0",
-    "font-awesome": "^4.7.0",
     "grunt-browserify": "^5.0.0",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-cssmin": "^1.0.2",
@@ -47,12 +48,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kgeographer/topotime.git"
+    "url": "git+https://github.com/kgeographer/linked-places.git"
   },
   "author": "@kgeographer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kgeographer/topotime/issues"
+    "url": "https://github.com/kgeographer/linked-places/issues"
   },
-  "homepage": "https://github.com/kgeographer/topotime#readme"
+  "homepage": "https://github.com/kgeographer/linked-places#readme"
 }

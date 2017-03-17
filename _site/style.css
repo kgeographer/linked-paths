@@ -1,3 +1,26 @@
+.vis-item.hideme {
+  background-color: greenyellow;
+  color: greenyellow;
+}
+.vis-item.vis-selected.hideme {
+  /* custom colors for selected orange items */
+  background-color: orange;
+  border-color: orangered;
+  color: black;
+}
+.vis-item .vis-item-content {
+  padding: 0 0 0 5px;
+}
+.vis-item-content {
+  font-size: x-small;
+}
+.vis-item.vis-range .vis-item-content {
+  position: relative;
+  display: block;
+}
+.vis-item .vis-item-overflow {
+  overflow: visible;
+}
 html,
 body {
   height: 100%;
