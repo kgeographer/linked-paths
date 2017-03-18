@@ -644,7 +644,7 @@ window.loadLayer = function(dataset) {
         // }
           // build object like {"name":"","start":"","end":"","sphere":""}
           // for each case: dates unknown, dates known
-          if(eventsObj.events[0]['duration'] == "?") {
+          // if(eventsObj.events[0]['duration'] == "?") {
             // events of unk. duration in year; group and assign faux dates
             // eq. spaced in year on timeline
             window.renderThese = []
@@ -657,19 +657,20 @@ window.loadLayer = function(dataset) {
                 let tlDot = {}
                 tlDot['name'] = v.title
                 // increment days based on #events in year
-                tlDot['start'] = new Date(v.start).addDays(incr)
+                tlDot['start'] = eventsObj.events[0]['duration'] == "?" ?
+                  new Date(v.start).addDays(incr) : new Date(v.start)
                 tlDot['end'] = v.end
                 renderThese.push(tlDot)
                 incr += 365/l.length
               })
             })
             simpleTimeline(renderThese,tlRange)
-          } else {
-            // confirm dates are known, render to timeline
-            if(eventsObj.events[0]['duration'] == "") {
-              console.log('these journey events have dates',eventsObj.events)
-            }
-          }
+          // } else {
+          //   // confirm dates are known, render to timeline
+          //   if(eventsObj.events[0]['duration'] == "") {
+          //     console.log('these journey events have dates',eventsObj.events)
+          //   }
+          // }
         } // end if journey
         console.log(tlRange)
         // console.log('events for timeline',eventsObj.events)

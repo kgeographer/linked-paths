@@ -1,4 +1,4 @@
-var d3 = Object.assign({}, require("d3"), require("d3-scale"));
+// var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 
 // helper to increment y placement
 Date.prototype.addDays = function(days) {
@@ -6,17 +6,23 @@ Date.prototype.addDays = function(days) {
   dat.setDate(dat.getDate() + days);
   return dat;
 }
+var width = window.innerWidth,
+    height = 200,
+    padding = 100;
+
+// Define the div for the tooltip
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
 
 window.simpleTimeline = function(events,tlrange){
-  var width = window.innerWidth,
-      height = 200,
-      padding = 100;
-
+  // if there's one already, zap it
+  $("#tlvis").remove()
   // create an svg container
-  var vis = d3.select("#tl").
-      append("svg:svg")
-          .attr("width", width)
-          .attr("height", height);
+  var vis = d3.select("#tl").append("svg:svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("id", "tlvis");
 
   var colorScale = d3.scaleOrdinal()
     .domain(["European","Native","Colonial","Latin America","Internal"])
@@ -28,8 +34,10 @@ window.simpleTimeline = function(events,tlrange){
       .range([height - padding, padding]);
 
     // define the x scale (horizontal)
-    var mindate = new Date(tlrange[0],1,1),
-        maxdate = new Date(tlrange[1],12,31);
+    var mindate = new Date(tlrange[0]),
+        maxdate = new Date(tlrange[1]);
+    // var mindate = new Date(tlrange[0],1,1),
+    //     maxdate = new Date(tlrange[1],12,31);
 
     window.xScale = d3.scaleTime()
       .domain([mindate, maxdate])
@@ -59,13 +67,26 @@ window.simpleTimeline = function(events,tlrange){
       .data(events)
     .enter()
       .append("circle")
+      .attr('r',6)
+      .attr("class","event")
+      .attr("fill", "orange")
       .attr('cx', function(d){
         return xScale(new Date(d.start))
       })
       .attr('cy', yScale(0))
-      .attr('r',6)
-      .attr("class","event")
-      .attr("fill", "orange")
+      .on("mouseover", function(d) {
+        div.transition()
+          .duration(200)
+          .style("opacity", .9);
+        div.text(d.name)
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+        })
+      .on("mouseout", function(d) {
+        div.transition()
+          .duration(500)
+          .style("opacity", 0);
+        });
       // .attr('fill', function(d){
       //   return colorScale(d.sphere)
       // })
