@@ -1,32 +1,24 @@
-// from map_tt.css
-// 3 Nov 2016
 
-// vis.js timeline stuff
-.vis-item.hideme {
-  background-color: greenyellow;
-  color: greenyellow;
-  // border-color: green;
+/**
+  timeline stuff
+  **/
+.axis path,
+.axis line {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
 }
-.vis-item.vis-selected.hideme {
-  /* custom colors for selected orange items */
-  background-color: orange;
-  border-color: orangered;
-  color:black;
+
+.axis text {
+  font-family: sans-serif;
+  font-size: 11px;
 }
-.vis-item .vis-item-content {
-  padding: 0 0 0 5px;
-}
-.vis-item-content {
-    font-size: x-small;
-}
-.vis-item.vis-range .vis-item-content {
-    position: relative;
-    display: block;
-}
-.vis-item .vis-item-overflow {
-  overflow: visible;
+.event {
+  fill-opacity: .5;
+  stroke: #000;
 }
 //
+
 html, body { height: 100%; margin:0; padding:0;}
 
 .hidden {display:none;}
