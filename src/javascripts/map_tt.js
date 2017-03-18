@@ -475,8 +475,11 @@ window.loadLayer = function(dataset) {
         // write dataset card for data panel
         writeCard(dataset,collection.attributes)
 
+        // collection range
+        var tlRange = [collection.when.timespan[0],collection.when.timespan[3]]
         // set period midpoint for timeline
         tlMidpoint = midpoint(collection.when.timespan,'mid')
+
 
         // build separate L.featureGroup for points & lines
         featureLayer.eachLayer(function(layer){
@@ -643,35 +646,32 @@ window.loadLayer = function(dataset) {
           // for each case: dates unknown, dates known
           if(eventsObj.events[0]['duration'] == "?") {
             // events of unk. duration in year; group and assign faux dates
-            // eq. spaced in year for ordering on timeline
+            // eq. spaced in year on timeline
             window.renderThese = []
             window.grpE = _.groupBy(eventsObj.events, function(e){
               return e.start.substring(0,4); })
             _.each(Object.keys(grpE),function(v,k,l){
               var incr = 0
+              // for each year...
               _.each(grpE[v],function(v,k,l){
                 let tlDot = {}
                 tlDot['name'] = v.title
-                // increment start to space on timeline
-                // increment in days based on #event in year
+                // increment days based on #events in year
                 tlDot['start'] = new Date(v.start).addDays(incr)
-                // tlDot['start'] = v.start
                 tlDot['end'] = v.end
                 renderThese.push(tlDot)
                 incr += 365/l.length
-                // console.log('length, start',l.length,v.start)
               })
-              // console.log(grpE[v][0])
             })
-            simpleTimeline(renderThese,collection.when.timespan[0],collection.when.timespan[3])
-            // console.log(renderThese)
-            // console.log('process, rend er grpE',grpE)
+            simpleTimeline(renderThese,tlRange)
           } else {
-            // dates are known, render to timeline
-            console.log('process, render EventsObj.events',eventsObj.events)
+            // confirm dates are known, render to timeline
+            if(eventsObj.events[0]['duration'] == "") {
+              console.log('these journey events have dates',eventsObj.events)
+            }
           }
-        } // if journey
-        console.log(collection.when.timespan[0],collection.when.timespan[3])
+        } // end if journey
+        console.log(tlRange)
         // console.log('events for timeline',eventsObj.events)
         // console.log('sample event for histogram',eventsObj.events[0])
       })
