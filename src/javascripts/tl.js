@@ -7,17 +7,20 @@ Date.prototype.addDays = function(days) {
   return dat;
 }
 var width = window.innerWidth,
-    height = 200,
-    padding = 100;
+    height = 40,
+    padding_h = 10,
+    padding_w = 30;
+    // height = 200,
+    // padding = 100;
 
 // Define the div for the tooltip
 var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-window.simpleTimeline = function(events,tlrange){
+window.simpleTimeline = function(dataset,events,tlrange){
   // if there's one already, zap it
-  $("#tlvis").remove()
+  // $("#tlvis").remove()
   // create an svg container
   var vis = d3.select("#tl").append("svg:svg")
       .attr("width", width)
@@ -31,7 +34,9 @@ window.simpleTimeline = function(events,tlrange){
   // d3.csv("data/wars.csv", function (csv) {
     window.yScale = d3.scaleLinear()
       .domain([0, 100])    // values between 0 and 100
-      .range([height - padding, padding]);
+      // .domain([0, 100])    // values between 0 and 100
+      .range([height - padding_h, padding_h]);
+      // .range([height - padding, padding]);
 
     // define the x scale (horizontal)
     var mindate = new Date(tlrange[0]),
@@ -41,7 +46,8 @@ window.simpleTimeline = function(events,tlrange){
 
     window.xScale = d3.scaleTime()
       .domain([mindate, maxdate])
-      .range([padding, width - padding * 2]);   // map these the the chart width = total width minus padding at both sides
+      .range([padding_w, width - padding_w * 2]);
+      // .range([padding, width - padding * 2]);
 
     // define the y axis
     var yAxis = d3.axisLeft()
@@ -60,7 +66,8 @@ window.simpleTimeline = function(events,tlrange){
     // draw x axis with labels and move to the bottom of the chart area
     vis.append("g")
         .attr("class", "axis xaxis")
-        .attr("transform", "translate(0," + (height - padding) + ")")
+        .attr("transform", "translate(0,20)")
+        // .attr("transform", "translate(0," + (height - padding) + ")")
         .call(xAxis);
 
     vis.selectAll("circle")
@@ -69,11 +76,15 @@ window.simpleTimeline = function(events,tlrange){
       .append("circle")
       .attr('r',6)
       .attr("class","event")
-      .attr("fill", "orange")
+      .attr('fill', function(d){
+        return colorMap[dataset]
+      })
+      // .attr("fill", "orange")
       .attr('cx', function(d){
         return xScale(new Date(d.start))
       })
-      .attr('cy', yScale(0))
+      .attr('cy', 20)
+      // .attr('cy', yScale(0))
       .on("mouseover", function(d) {
         div.transition()
           .duration(200)
@@ -86,10 +97,7 @@ window.simpleTimeline = function(events,tlrange){
         div.transition()
           .duration(500)
           .style("opacity", 0);
-        });
-      // .attr('fill', function(d){
-      //   return colorScale(d.sphere)
-      // })
+        })
   // })
 
 }

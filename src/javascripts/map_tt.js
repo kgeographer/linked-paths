@@ -236,8 +236,6 @@ var mapStyles = {
 
 function style(feature) {
   window.feat = feature
-  var colorMap = {"ra":"#ffff80","courier":"#ff9999","incanto":"#ffb366",
-    "vb":"#b380ff","xuanzang":"#99e699","owtrad":"#A0D0EE"}
   let fill=colorMap[feature.toGeoJSON().properties.collection]
   let rad=feature.toGeoJSON().properties.collection=='owtrad'?3:4;
   // console.log(coll)
@@ -441,6 +439,7 @@ function startMapM(dataset=null){
 }
 
 window.loadLayer = function(dataset) {
+    console.log('dataset',dataset)
     features.bboxes.removeFrom(ttmap)
     // clear feature arrays
     pointFeatures = [];
@@ -664,7 +663,7 @@ window.loadLayer = function(dataset) {
                 incr += 365/l.length
               })
             })
-            simpleTimeline(renderThese,tlRange)
+            simpleTimeline(dataset,renderThese,tlRange)
           // } else {
           //   // confirm dates are known, render to timeline
           //   if(eventsObj.events[0]['duration'] == "") {
