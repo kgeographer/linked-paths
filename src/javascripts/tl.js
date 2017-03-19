@@ -25,7 +25,7 @@ window.simpleTimeline = function(dataset,events,tlrange){
   var vis = d3.select("#tl").append("svg:svg")
       .attr("width", width)
       .attr("height", height)
-      .attr("id", "tlvis");
+      .attr("id", "tlvis_"+dataset);
 
   var colorScale = d3.scaleOrdinal()
     .domain(["European","Native","Colonial","Latin America","Internal"])

@@ -364,7 +364,8 @@ window.zapLayer = function(dataset) {
   $("#lp_"+dataset).remove();
   // remove all div.place-card
   $(".place-card").remove();
-  // remove
+  // remove time vis
+  $("#tlvis_"+dataset).remove();
   // remove its data from the map
   let name_p = "places_"+dataset;
   let name_s = "segments_"+dataset;
