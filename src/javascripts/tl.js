@@ -1,4 +1,22 @@
 // var d3 = Object.assign({}, require("d3"), require("d3-scale"));
+// var _ = require('underscore')
+
+window.filterFeatures = function(range) { // [start,end]
+  var d0 = new Date(range[0]), d1 = new Date(range[1]);
+  // console.log(range,d0,d1)
+  _.each(lineFeatures, function(l) {
+    l.eachLayer(function(layer){
+      let featuredate = new Date(layer.feature.when.timespan[0])
+      // console.log('d0,d1,featuredate',d0,d1,featuredate)
+      if(featuredate < d0 || featuredate > d1) {
+        console.log('d0,d1,featuredate',d0,d1,featuredate)
+        layer.removeFrom(ttmap)
+      } else {console.log('nope')
+          layer.addTo(ttmap)
+      }
+    })
+  })
+}
 
 // helper to increment y placement
 Date.prototype.addDays = function(days) {

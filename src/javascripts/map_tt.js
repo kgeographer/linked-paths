@@ -466,7 +466,8 @@ window.loadLayer = function(dataset) {
         Routes (geometry.type == GeometryCollection or undefined)
           - route geometry.geometries[i] == LineString or MultiLineString
     */
-    let featureLayer = L.mapbox.featureLayer()
+    window.featureLayer = L.mapbox.featureLayer()
+    // let featureLayer = L.mapbox.featureLayer()
       .loadURL('data/' + dataset + '.geojson')
       .on('ready', function(){
         // get Collection attributes into right panel
@@ -626,7 +627,8 @@ window.loadLayer = function(dataset) {
         // featureGroup pairs as layers
         let name_p = "places_"+dataset
         let name_s = "segments_"+dataset
-        features[name_s] = L.featureGroup(lineFeatures).addTo(ttmap)
+        _.each(lineFeatures, function(l) {l.addTo(ttmap)})
+        // features[name_s] = L.featureGroup(lineFeatures).addTo(ttmap)
         features[name_p] = L.featureGroup(pointFeatures).addTo(ttmap)
 
         // TODO: reconfigure managing state in window.href
