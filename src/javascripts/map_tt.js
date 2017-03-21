@@ -394,9 +394,7 @@ window.loadLayers = function(arr) {
 }
 
 function startMapM(dataset=null){
-  // experiment
-  // makeTimeVis();
-  // d3time();
+
   bboxFeatures = []
   // var bboxGroup = L.featureGroup()
   // mapbox.js (non-gl)
@@ -440,7 +438,7 @@ function startMapM(dataset=null){
 }
 
 window.loadLayer = function(dataset) {
-    console.log('dataset',dataset)
+    // console.log('dataset',dataset)
     features.bboxes.removeFrom(ttmap)
     // clear feature arrays
     pointFeatures = [];
@@ -478,6 +476,8 @@ window.loadLayer = function(dataset) {
 
         // collection range
         var tlRange = [collection.when.timespan[0],collection.when.timespan[3]]
+        var tlRangeDates = [new Date(collection.when.timespan[0]),
+          new Date(collection.when.timespan[3])]
         // set period midpoint for timeline
         tlMidpoint = midpoint(collection.when.timespan,'mid')
 
@@ -642,39 +642,28 @@ window.loadLayer = function(dataset) {
         // load timeline for journey(s), histogram for others
 
         if (collection.attributes.segmentType == 'journey') {
-          // initTimeline(eventsObj,dataset)
-        // }
-          // build object like {"name":"","start":"","end":"","sphere":""}
-          // for each case: dates unknown, dates known
-          // if(eventsObj.events[0]['duration'] == "?") {
-            // events of unk. duration in year; group and assign faux dates
-            // eq. spaced in year on timeline
-            window.renderThese = []
-            window.grpE = _.groupBy(eventsObj.events, function(e){
-              return e.start.substring(0,4); })
-            _.each(Object.keys(grpE),function(v,k,l){
-              var incr = 0
-              // for each year...
-              _.each(grpE[v],function(v,k,l){
-                let tlDot = {}
-                tlDot['name'] = v.title
-                // increment days based on #events in year
-                tlDot['start'] = eventsObj.events[0]['duration'] == "?" ?
-                  new Date(v.start).addDays(incr) : new Date(v.start)
-                tlDot['end'] = v.end
-                renderThese.push(tlDot)
-                incr += 365/l.length
-              })
+          // events of unk. duration in year; group and assign faux dates
+          // eq. spaced in year on timeline
+          window.renderThese = []
+          window.grpE = _.groupBy(eventsObj.events, function(e){
+            return e.start.substring(0,4); })
+          _.each(Object.keys(grpE),function(v,k,l){
+            var incr = 0
+            // for each year...
+            _.each(grpE[v],function(v,k,l){
+              let tlDot = {}
+              tlDot['name'] = v.title
+              // increment days based on #events in year
+              tlDot['start'] = eventsObj.events[0]['duration'] == "?" ?
+                new Date(v.start).addDays(incr) : new Date(v.start)
+              tlDot['end'] = v.end
+              renderThese.push(tlDot)
+              incr += 365/l.length
             })
-            simpleTimeline(dataset,renderThese,tlRange)
-          // } else {
-          //   // confirm dates are known, render to timeline
-          //   if(eventsObj.events[0]['duration'] == "") {
-          //     console.log('these journey events have dates',eventsObj.events)
-          //   }
-          // }
+          })
+          simpleTimeline(dataset,renderThese,tlRangeDates)
         } // end if journey
-        console.log(tlRange)
+        console.log('tlRangeDates',tlRangeDates)
         // console.log('events for timeline',eventsObj.events)
         // console.log('sample event for histogram',eventsObj.events[0])
       })

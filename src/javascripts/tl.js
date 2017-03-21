@@ -1,8 +1,9 @@
 // var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 // var _ = require('underscore')
 
-window.filterFeatures = function(range) { // [start,end]
-  var d0 = new Date(range[0]), d1 = new Date(range[1]);
+window.filterEvents = function(rangedates) { // [start,end]
+  var d0 = rangedates[0], d1 = rangedates[1];
+  // var d0 = new Date(range[0]), d1 = new Date(range[1]);
   // console.log(range,d0,d1)
   _.each(lineFeatures, function(l) {
     l.eachLayer(function(layer){
@@ -18,7 +19,7 @@ window.filterFeatures = function(range) { // [start,end]
   })
 }
 
-// helper to increment y placement
+// helper to increment x placement
 Date.prototype.addDays = function(days) {
   var dat = new Date(this.valueOf());
   dat.setDate(dat.getDate() + days);
@@ -27,14 +28,26 @@ Date.prototype.addDays = function(days) {
 var width = window.innerWidth,
     height = 40,
     padding_h = 10,
-    padding_w = 30;
-    // height = 200,
-    // padding = 100;
+    padding_w = 40;
 
 // Define the div for the tooltip
 var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
+
+var brushended = function(){
+  var s = d3.event.selection;
+  var sx = s.map(xScale.invert);
+  // xScale.domain(selection.map(x2.invert, x2));
+  // focus.selectAll(".dot")
+  //       .attr("cx", function(d) { return x(d.date); })
+  //       .attr("cy", function(d) { return y(d.price); });
+  // focus.select(".axis--x").call(xAxis);
+  console.log('brushended, do something w/this',sx)
+}
+window.brush = d3.brushX()
+    .extent([[0, 0], [width, height]])
+    .on("end", brushended);
 
 window.simpleTimeline = function(dataset,events,tlrange){
   // if there's one already, zap it
@@ -45,27 +58,24 @@ window.simpleTimeline = function(dataset,events,tlrange){
       .attr("height", height)
       .attr("id", "tlvis_"+dataset);
 
-  var colorScale = d3.scaleOrdinal()
-    .domain(["European","Native","Colonial","Latin America","Internal"])
-    .range(["#96abb1", "#313746", "#b0909d", "#687a97", "#292014"]);
+  // var colorScale = d3.scaleOrdinal()
+  //   .domain(["European","Native","Colonial","Latin America","Internal"])
+  //   .range(["#96abb1", "#313746", "#b0909d", "#687a97", "#292014"]);
 
-  // d3.csv("data/wars.csv", function (csv) {
     window.yScale = d3.scaleLinear()
       .domain([0, 100])    // values between 0 and 100
-      // .domain([0, 100])    // values between 0 and 100
       .range([height - padding_h, padding_h]);
-      // .range([height - padding, padding]);
 
     // define the x scale (horizontal)
     var mindate = new Date(tlrange[0]),
         maxdate = new Date(tlrange[1]);
-    // var mindate = new Date(tlrange[0],1,1),
-    //     maxdate = new Date(tlrange[1],12,31);
+
+        var d = new Date();
+         d.setDate(d.getDate()-5);
 
     window.xScale = d3.scaleTime()
       .domain([mindate, maxdate])
       .range([padding_w, width - padding_w * 2]);
-      // .range([padding, width - padding * 2]);
 
     // define the y axis
     var yAxis = d3.axisLeft()
@@ -87,6 +97,10 @@ window.simpleTimeline = function(dataset,events,tlrange){
         .attr("transform", "translate(0,20)")
         // .attr("transform", "translate(0," + (height - padding) + ")")
         .call(xAxis);
+
+    window.gBrush = vis.append("g")
+        .attr("class", "brush")
+        .call(brush);
 
     vis.selectAll("circle")
       .data(events)
@@ -116,6 +130,7 @@ window.simpleTimeline = function(dataset,events,tlrange){
           .duration(500)
           .style("opacity", 0);
         })
-  // })
+
+    gBrush.call(brush.move, [mindate, maxdate].map(xScale));
 
 }
