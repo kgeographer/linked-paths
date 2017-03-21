@@ -43,6 +43,7 @@ var brushended = function(){
   //       .attr("cx", function(d) { return x(d.date); })
   //       .attr("cy", function(d) { return y(d.price); });
   // focus.select(".axis--x").call(xAxis);
+  filterEvents(sx)
   console.log('brushended, do something w/this',sx)
 }
 window.brush = d3.brushX()
