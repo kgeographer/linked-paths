@@ -1,25 +1,26 @@
 // var d3 = Object.assign({}, require("d3"), require("d3-scale"));
-// var _ = require('underscore')
 
-window.filterEvents = function(rangedates) { // [start,end]
-  var d0 = rangedates[0], d1 = rangedates[1];
-  // var d0 = new Date(range[0]), d1 = new Date(range[1]);
-  // console.log(range,d0,d1)
+window.filterEvents = function(selRange) { // [start,end]
+  var d0 = selRange[0],
+      d1 = selRange[1];
+  // console.log('selRange',selRange)
+  // console.log('selRange',d0,d1)
   _.each(lineFeatures, function(l) {
     l.eachLayer(function(layer){
       let featuredate = new Date(layer.feature.when.timespan[0])
       // console.log('d0,d1,featuredate',d0,d1,featuredate)
       if(featuredate < d0 || featuredate > d1) {
-        console.log('d0,d1,featuredate',d0,d1,featuredate)
+        // console.log('d0,d1,featuredate',d0,d1,featuredate)
         layer.removeFrom(ttmap)
-      } else {console.log('nope')
+      } else {
+          // console.log('nope')
           layer.addTo(ttmap)
       }
     })
   })
 }
 
-// helper to increment x placement
+// helper method to increment x placement
 Date.prototype.addDays = function(days) {
   var dat = new Date(this.valueOf());
   dat.setDate(dat.getDate() + days);
@@ -37,18 +38,26 @@ var div = d3.select("body").append("div")
 
 var brushended = function(){
   var s = d3.event.selection;
-  var sx = s.map(xScale.invert);
-  // xScale.domain(selection.map(x2.invert, x2));
-  // focus.selectAll(".dot")
-  //       .attr("cx", function(d) { return x(d.date); })
-  //       .attr("cy", function(d) { return y(d.price); });
-  // focus.select(".axis--x").call(xAxis);
-  filterEvents(sx)
-  console.log('brushended, do something w/this',sx)
+  var selRange = s.map(xScale.invert)
+  console.log('brushended grain, selRange', grain, selRange)
+  filterEvents(selRange)
+}
+var brushendedZ = function(){
+  // grain == 'year'
+  var s = d3.event.selection;
+  if(grain == 'year'){
+    var selRange = s.map(xScale.invert).map(d3.timeYear.round)
+    d3.select(this).transition().call(d3.event.target.move, selRange.map(xScale))
+  } else {
+    var selRange = s.map(xScale.invert)
+  }
+  console.log('brushendedZ grain, selRange:', grain, selRange)
+  filterEvents(selRange)
 }
 window.brush = d3.brushX()
     .extent([[0, 0], [width, height]])
-    .on("end", brushended);
+    .on("end", brushendedZ );
+    // .on("end", grain == 'year' ? brushendedY : brushended );
 
 window.simpleTimeline = function(dataset,events,tlrange){
   // if there's one already, zap it
@@ -58,10 +67,6 @@ window.simpleTimeline = function(dataset,events,tlrange){
       .attr("width", width)
       .attr("height", height)
       .attr("id", "tlvis_"+dataset);
-
-  // var colorScale = d3.scaleOrdinal()
-  //   .domain(["European","Native","Colonial","Latin America","Internal"])
-  //   .range(["#96abb1", "#313746", "#b0909d", "#687a97", "#292014"]);
 
     window.yScale = d3.scaleLinear()
       .domain([0, 100])    // values between 0 and 100

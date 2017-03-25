@@ -1,6 +1,9 @@
+/*@import "./typeahead.css";*/
 /**
   timeline stuff
   **/
+@import "lib/bootstrap.min.css";
+@import "lib/mapbox.css";
 rect.handle {
   fill: crimson;
   fill-opacity: .6;

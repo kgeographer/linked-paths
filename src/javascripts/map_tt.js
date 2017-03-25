@@ -30,6 +30,7 @@ window.tl = {};
 window.tlMidpoint = '';
 window.dataRows = '';
 window.timelineCounter = 0;
+window.grain = 'date' // timeline data grain for snapping
 
 // on start
 $(function() {
@@ -219,11 +220,11 @@ function buildCollectionPeriod(coll){
 
 var mapStyles = {
   segments: {
-    color: "gray",
-    weight: 3,
+    color: "#993333",
+    weight: 2,
     opacity: 0.6,
     highlight: {
-      color: "red"
+      color: "yellow"
     }
   },
   bbox: {
@@ -364,11 +365,14 @@ window.zapLayer = function(dataset) {
   $("#lp_"+dataset).remove();
   // remove all div.place-card
   $(".place-card").remove();
-  // remove time vis
-  $("#tlvis_"+dataset).remove();
+  // remove time vis if exists
+  if($("#tlvis_"+dataset)){
+    $("#tlvis_"+dataset).remove();
+  }
   // remove its data from the map
   let name_p = "places_"+dataset;
   let name_s = "segments_"+dataset;
+  // console.log(name_p,name_s)
   features[name_p].removeFrom(ttmap);
   features[name_s].removeFrom(ttmap);
 }
@@ -628,7 +632,7 @@ window.loadLayer = function(dataset) {
         let name_p = "places_"+dataset
         let name_s = "segments_"+dataset
         _.each(lineFeatures, function(l) {l.addTo(ttmap)})
-        // features[name_s] = L.featureGroup(lineFeatures).addTo(ttmap)
+        features[name_s] = L.featureGroup(lineFeatures).addTo(ttmap)
         features[name_p] = L.featureGroup(pointFeatures).addTo(ttmap)
 
         // TODO: reconfigure managing state in window.href
@@ -661,11 +665,10 @@ window.loadLayer = function(dataset) {
               incr += 365/l.length
             })
           })
+          // TODO: set grain for snapping to year on axis
+          if(dataset == 'xuanzang'){grain='year'}
           simpleTimeline(dataset,renderThese,tlRangeDates)
         } // end if journey
-        console.log('tlRangeDates',tlRangeDates)
-        // console.log('events for timeline',eventsObj.events)
-        // console.log('sample event for histogram',eventsObj.events[0])
       })
       $(".loader").hide()
 }
