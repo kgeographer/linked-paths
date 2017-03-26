@@ -11,8 +11,8 @@ def init():
     #os.chdir('./py')
     global proj, reader_p, reader_s, finp, fins, fout, foutp, fouts, collection, collectionAttributes, routeidx
     # owtrad, courier, incanto-f, incanto-j, roundabout, vicarello, xuanzang
-    proj = 'courier'
-    data = 'courier'
+    proj = 'owtrad'
+    data = 'owtrad'
 
     finp = codecs.open('../data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
     fins = codecs.open('../data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
@@ -189,9 +189,6 @@ def createSegments():
             }
 
         # build when object
-        #if 0 <= len(row['timespan']) <= 5:
-            #g['when'] = yearToSpan(row['timespan'])
-        #else:
         g['when'] = {"timespan": yearToSpan(row['timespan']) if 0 <= len(row['timespan']) <= 5 else \
                                             row['timespan'].split(','),
                      "duration": row['duration'],
@@ -263,5 +260,7 @@ def createSegments():
 init()
 createPlaces()
 createSegments()
+
+# below not used?
 #fout.write(json.dumps(collection,indent=2))
 #fout.close()

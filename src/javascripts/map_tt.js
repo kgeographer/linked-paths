@@ -440,7 +440,17 @@ function startMapM(dataset=null){
     // Madrid: (L.latLng(32.6948,-3.70256),2)
   }
 }
-
+window.makeDate = function(d){
+  // handle all these: "2016-09-10"; "0494-01"; "23"; "-200"
+  let arr = d[0]!='-' ? d.split('-') : d.substring(1,d.length).split('-')
+  let year = arr[0].length==2 ? '00'+arr[0] : arr[0].length==1?'000'+arr[0] : arr[0]
+  console.log('arr, year:', arr,year)
+  let date = new Date()
+  date.setFullYear(year)
+  date.setMonth(arr[1]!=null ? arr[1]-1:0)
+  date.setDate(arr[2]!=null ? arr[2]:1)
+  return date;
+}
 window.loadLayer = function(dataset) {
     // console.log('dataset',dataset)
     features.bboxes.removeFrom(ttmap)
@@ -480,8 +490,10 @@ window.loadLayer = function(dataset) {
 
         // collection range
         var tlRange = [collection.when.timespan[0],collection.when.timespan[3]]
-        var tlRangeDates = [new Date(collection.when.timespan[0]),
-          new Date(collection.when.timespan[3])]
+        var tlRangeDates = [makeDate(collection.when.timespan[0]),
+          makeDate(collection.when.timespan[3])]
+        // var tlRangeDates = [new Date(collection.when.timespan[0]),
+        //   new Date(collection.when.timespan[3])]
         // set period midpoint for timeline
         tlMidpoint = midpoint(collection.when.timespan,'mid')
 
@@ -610,7 +622,7 @@ window.loadLayer = function(dataset) {
                       feat.properties.num_journeys:"1"})
                 }
 
-                //* build event object for journey timeline
+                //* build event object for time vis
                 if (whenObj != ({} || '')) {
                   // if (collection.attributes.segmentType == 'journey') {
                     eventsObj.events.push(buildSegmentEvent(feat));
@@ -644,11 +656,10 @@ window.loadLayer = function(dataset) {
         }
 
         // load timeline for journey(s), histogram for others
-
+        window.renderThese = []
         if (collection.attributes.segmentType == 'journey') {
-          // events of unk. duration in year; group and assign faux dates
+          //// events of unk. duration in year; group and assign faux dates
           // eq. spaced in year on timeline
-          window.renderThese = []
           window.grpE = _.groupBy(eventsObj.events, function(e){
             return e.start.substring(0,4); })
           _.each(Object.keys(grpE),function(v,k,l){
@@ -657,7 +668,7 @@ window.loadLayer = function(dataset) {
             _.each(grpE[v],function(v,k,l){
               let tlDot = {}
               tlDot['name'] = v.title
-              // increment days based on #events in year
+              // if duration, increment days based on #events in year
               tlDot['start'] = eventsObj.events[0]['duration'] == "?" ?
                 new Date(v.start).addDays(incr) : new Date(v.start)
               tlDot['end'] = v.end
@@ -665,10 +676,12 @@ window.loadLayer = function(dataset) {
               incr += 365/l.length
             })
           })
-          // TODO: set grain for snapping to year on axis
+          // TODO: set grain dynamically somehow
           if(dataset == 'xuanzang'){grain='year'}
           simpleTimeline(dataset,renderThese,tlRangeDates)
-        } // end if journey
+        } else { // histogram
+          histogram(dataset,renderThese,tlRangeDates)
+        }
       })
       $(".loader").hide()
 }
