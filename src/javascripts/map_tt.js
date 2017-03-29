@@ -79,87 +79,6 @@ window.midpoint = function(ts,type) {
   return mid
 }
 
-// fires from startMap() after data is loaded
-window.initTimeline = function(events,dataset) {
-  // console.log('initTimeline events',events)
-  // custom timeline click event
-  Timeline.OriginalEventPainter.prototype._showBubble = function(x, y, evt) {
-    ga('send', 'event', ['Timeline'], ['Click event'], ['Timeline']);
-    // popup segment event/period
-    window.evt = evt
-    console.log('timeline evt obj', evt)
-    let name_s = 'segments_'+dataset
-    features[name_s].setStyle({'color':'gray'})
-
-    // journey segment popup on map
-    if(tlConfig[dataset].type == 'journey'){
-      // case dataset is journey(s)
-      idToFeature[dataset].segments[evt._id].openPopup()
-        .setStyle({'color':'red'})
-      idToFeature[dataset].segments[evt._id].on("popupclose", function(e){
-        this.setStyle({'color':'gray'})
-      })
-      ttmap.fitBounds(idToFeature[dataset].segments[evt._id].getBounds())
-    } else {
-      $('#period_modal .modal-header h4').html(evt._text)
-      $('#period_modal .modal-body p').html(evt._description+"<br/>"
-        +evt._start.getFullYear()
-        +";"+evt._latestStart.getFullYear()
-        +";"+evt._earliestEnd.getFullYear()
-        +";"+evt._end.getFullYear()
-        )
-      $('#period_modal').modal('show');
-    }
-  }
-
-  window.eventSrc = new Timeline.DefaultEventSource(0);
-  // Example of changing the theme from the defaults
-  // The default theme is defined in
-  // http://simile-widgets.googlecode.com/svn/timeline/tags/latest/src/webapp/api/scripts/themes.js
-  var theme = Timeline.ClassicTheme.create();
-  theme.event.bubble.width = 320;
-  // theme.event.bubble.height = 300;
-  theme.ether.backgroundColors[1] = theme.ether.backgroundColors[0];
-
-  let cfg = tlConfig[dataset]
-  var d = Timeline.DateTime.parseGregorianDateTime(tlMidpoint)
-  // console.log('midpoint d',d)
-  // var d = Timeline.DateTime.parseGregorianDateTime(tlMidpoint)
-  // DAY, WEEK, MONTH, YEAR, DECADE, CENTURY
-  var bandInfos = [
-    Timeline.createBandInfo({
-        width:          cfg.width1,
-        // width:          "75%",
-        intervalUnit:   eval('Timeline.DateTime.'+cfg.intUnit1),
-        // intervalPixels: 50,
-        intervalPixels: cfg.intPixels1,
-        eventSource:    eventSrc,
-        date:           d,
-        theme:          theme,
-        layout:         'original'  // original, overview, detailed
-    }),
-    Timeline.createBandInfo({
-        width:          cfg.width2,
-        // width:          "25%",
-        intervalUnit:   eval('Timeline.DateTime.'+cfg.intUnit2),
-        intervalPixels: cfg.intPixels2,
-        // intervalPixels: 120,
-        eventSource:    eventSrc,
-        date:           d,
-        theme:          theme,
-        layout:         'overview'  // original, overview, detailed
-    })
-  ];
-  bandInfos[1].syncWith = 0;
-  bandInfos[1].highlight = true;
-
-  window.tl = Timeline.create(document.getElementById("tl"), bandInfos, Timeline.HORIZONTAL);
-  // from the dynamic object; needs a dummy url
-  eventSrc.loadJSON(events, 'dummyUrl');
-
-  timelineCounter += 1;
-}
-
 var resizeTimerID = null;
 
 function onResize() {
@@ -174,6 +93,15 @@ function onResize() {
 window.fixDate = function(d){
   let foo = moment(d).toISOString()
   return foo;
+}
+
+function parseWhen(when) {
+  console.log(when.timespan[0])
+  let html = "<div class='segment-when'>";
+  html+="start: "+when.timespan[0]+"-"+when.timespan[1]+"<br/>"+
+        "end: "+when.timespan[2]+"-"+when.timespan[3]+"<br/>"+
+        "duration: "+when.duration==""?"throughout":when.duration+"</div>"
+  return html;
 }
 
 // events for Journey data
@@ -249,15 +177,6 @@ function style(feature) {
     };
 }
 
-function parseWhen(when) {
-  console.log(when.timespan[0])
-  let html = "<div class='segment-when'>";
-  html+="start: "+when.timespan[0]+"-"+when.timespan[1]+"<br/>"+
-        "end: "+when.timespan[2]+"-"+when.timespan[3]+"<br/>"+
-        "duration: "+when.duration==""?"throughout":when.duration+"</div>"
-  return html;
-}
-
 function listFeatureProperties(props,when){
   let html = "<ul class='ul-segments'>"
   // console.log(JSON.stringify(when.timespan))
@@ -278,7 +197,7 @@ function listFeatureProperties(props,when){
 }
 
 // from Perio.do, typically
-window.loadPeriods = function(uri){
+var loadPeriods = function(uri){
   $.when(
     // vanilla
     $.ajax({
@@ -297,7 +216,7 @@ window.loadPeriods = function(uri){
     $("#period_modal").modal(); })
 }
 
-function writeCard(dataset,attribs){
+var writeCard = function(dataset,attribs){
   // write card and replace intro or append to div#data_abstract
   let html = writeAbstract(attribs)
   html += "download:" +
@@ -319,7 +238,7 @@ function writeCard(dataset,attribs){
 }
 
 // project abstract in right panel
-function writeAbstract(attribs){``
+var writeAbstract = function(attribs){``
   if(attribs.periods){
     var foo = '<span class="span-link" onclick="loadPeriods(\''+attribs.periods[0]+'\')">'
   }
@@ -336,7 +255,7 @@ function writeAbstract(attribs){``
   return html
 }
 
-function download(type, data){
+var download = function(type, data){
   // console.log('download', type,data)
   switch(type) {
     case "d3":
@@ -375,6 +294,10 @@ window.zapLayer = function(dataset) {
   // console.log(name_p,name_s)
   features[name_p].removeFrom(ttmap);
   features[name_s].removeFrom(ttmap);
+  if ($("#data_layers input:checkbox:checked").length == 0){
+    ttmap.setView(L.latLng(32.6948,47.4609),2)
+    features.bboxes.addTo(ttmap)
+  }
 }
 
 window.loadLayers = function(arr) {
@@ -398,7 +321,6 @@ window.loadLayers = function(arr) {
 }
 
 function startMapM(dataset=null){
-
   bboxFeatures = []
   // var bboxGroup = L.featureGroup()
   // mapbox.js (non-gl)
@@ -452,6 +374,7 @@ window.makeDate = function(d){
   date.setDate(arr[2]!=null ? arr[2]:1)
   return date;
 }
+
 window.loadLayer = function(dataset) {
     // console.log('dataset',dataset)
     features.bboxes.removeFrom(ttmap)
@@ -479,8 +402,7 @@ window.loadLayer = function(dataset) {
         Routes (geometry.type == GeometryCollection or undefined)
           - route geometry.geometries[i] == LineString or MultiLineString
     */
-    window.featureLayer = L.mapbox.featureLayer()
-    // let featureLayer = L.mapbox.featureLayer()
+    let featureLayer = L.mapbox.featureLayer()
       .loadURL('data/' + dataset + '.geojson')
       .on('ready', function(){
         // get Collection attributes into right panel
@@ -498,7 +420,6 @@ window.loadLayer = function(dataset) {
         //   new Date(collection.when.timespan[3])]
         // set period midpoint for timeline
         tlMidpoint = midpoint(collection.when.timespan,'mid')
-
 
         // build separate L.featureGroup for points & lines
         featureLayer.eachLayer(function(layer){
@@ -594,15 +515,11 @@ window.loadLayer = function(dataset) {
                   // reset color on timeline
                   $(".timeline-event-label").removeClass('timeline-segment-highlight')
                   let date = e.layer.feature.when.timespan[0]
-                  // label-tl-1-0-5001-6
                   var labelId = '#label-tl-'+(timelineCounter - 1)+'-0-'+
                     feat.properties.segment_id
-                  // console.log(dataset, feat.properties.segment_id)
+                  console.log('labelId',labelId)
                   // console.log(idToFeature[dataset].segments)
                   ttmap.fitBounds(idToFeature[dataset].segments[feat.properties.segment_id].getBounds())
-                  // console.log(labelId)
-                  $(labelId)[0].className += ' timeline-segment-highlight'
-                  tl.getBand(0).setCenterVisibleDate(Timeline.DateTime.parseGregorianDateTime(date))
                 }).on("popupclose",function(e){
                   this.setStyle(mapStyles.segments);
                   $(".timeline-event-label").removeClass('timeline-segment-highlight')
