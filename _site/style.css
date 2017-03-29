@@ -4,6 +4,9 @@
   **/
 @import "lib/bootstrap.min.css";
 @import "lib/mapbox.css";
+.bar {
+  fill: steelblue;
+}
 rect.handle {
   fill: crimson;
   fill-opacity: .6;

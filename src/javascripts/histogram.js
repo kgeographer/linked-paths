@@ -1,23 +1,45 @@
 
 // make a data object D3 histogram likes
 // year;count
-var makeHistogram = function(d){
-  var margin = {top: 0, right: 0, bottom: 0, left: 0},
-    width = window.innerWidth,
-    height = 40,
+window.makeHistogram = function(data){
+  console.log('in makeHistogram')
+  var margin = {top: 10, right: 0, bottom: 20, left: 20},
+    width = window.innerWidth * 0.95,
+    height = 60,
     padding_h = 10,
     padding_w = 40;
-  var svg_hist = d3.select("tl").append("svg")
+
+    // set the ranges
+  var x = d3.scaleBand()
+    .range([0, width])
+    .padding(0.05);
+  var y = d3.scaleLinear()
+    .range([height, 0]);
+
+  var svg_hist = d3.select("#tl").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
   x.domain(data.map(function(d) { return d.year; }));
   y.domain([0, d3.max(data, function(d) { return d.count; })]);
 
+  svg_hist.selectAll(".bar")
+    .data(data)
+  .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d) { return x(d.year); })
+    .attr("width", x.bandwidth())
+    .attr("y", function(d) { return y(d.count); })
+    .attr("height", function(d) { return height - y(d.count); });
 
+  svg_hist.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // svg_hist.append("g")
+  //     .call(d3.axisLeft(y));
 }
 
 
