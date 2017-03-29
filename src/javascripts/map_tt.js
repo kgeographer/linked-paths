@@ -197,7 +197,7 @@ function listFeatureProperties(props,when){
 }
 
 // from Perio.do, typically
-var loadPeriods = function(uri){
+window.loadPeriods = function(uri){
   $.when(
     // vanilla
     $.ajax({
@@ -410,7 +410,7 @@ window.loadLayer = function(dataset) {
 
         // write dataset card for data panel
         writeCard(dataset,collection.attributes)
-
+        console.log('collection attributes',collection.attributes)
         // collection range
         var tlRange = [collection.when.timespan[0],collection.when.timespan[3]]
         var tlRangeDates = [makeDate(collection.when.timespan[0]),
