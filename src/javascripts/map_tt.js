@@ -441,12 +441,13 @@ function startMapM(dataset=null){
   }
 }
 window.makeDate = function(d){
+  // console.log('makeDate from:',d)
   // handle all these: "2016-09-10"; "0494-01"; "23"; "-200"
   let arr = d[0]!='-' ? d.split('-') : d.substring(1,d.length).split('-')
   let year = arr[0].length==2 ? '00'+arr[0] : arr[0].length==1?'000'+arr[0] : arr[0]
-  console.log('arr, year:', arr,year)
+  // console.log('arr, year:', arr,year)
   let date = new Date()
-  date.setFullYear(year)
+  date.setFullYear(d[0]=='-' ? year*-1 : year)
   date.setMonth(arr[1]!=null ? arr[1]-1:0)
   date.setDate(arr[2]!=null ? arr[2]:1)
   return date;
@@ -492,6 +493,7 @@ window.loadLayer = function(dataset) {
         var tlRange = [collection.when.timespan[0],collection.when.timespan[3]]
         var tlRangeDates = [makeDate(collection.when.timespan[0]),
           makeDate(collection.when.timespan[3])]
+        console.log(tlRange,tlRangeDates)
         // var tlRangeDates = [new Date(collection.when.timespan[0]),
         //   new Date(collection.when.timespan[3])]
         // set period midpoint for timeline
@@ -679,8 +681,9 @@ window.loadLayer = function(dataset) {
           // TODO: set grain dynamically somehow
           if(dataset == 'xuanzang'){grain='year'}
           simpleTimeline(dataset,renderThese,tlRangeDates)
-        } else { // histogram
-          histogram(dataset,renderThese,tlRangeDates)
+        } else if (collection.attributes.segmentType == 'hRoutes') {
+          // multiple routes, assuming start/end date range
+          makeHistData(dataset,eventsObj,tlRangeDates)
         }
       })
       $(".loader").hide()
