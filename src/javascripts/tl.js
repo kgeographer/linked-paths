@@ -43,15 +43,15 @@ var brushended = function(){
   filterEvents(selRange)
 }
 var brushendedZ = function(){
-  // grain == 'year'
+  console.log('in brushendedZ')
   var s = d3.event.selection;
   if(grain == 'year'){
     var selRange = s.map(xScale.invert).map(d3.timeYear.round)
-    d3.select(this).transition().call(d3.event.target.move, selRange.map(xScale))
+    // d3.select(this).transition().call(d3.event.target.move, selRange.map(xScale))
   } else {
     var selRange = s.map(xScale.invert)
   }
-  console.log('brushendedZ grain, selRange:', grain, selRange)
+  // console.log('brushendedZ grain, selRange:', grain, selRange)
   filterEvents(selRange)
 }
 window.brush = d3.brushX()

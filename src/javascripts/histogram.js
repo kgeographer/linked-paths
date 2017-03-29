@@ -1,7 +1,7 @@
 
 // make a data object D3 histogram likes
 // year;count
-window.makeHistogram = function(data){
+window.makeHistogram = function(dataset,data){
   console.log('in makeHistogram')
   var margin = {top: 10, right: 0, bottom: 20, left: 20},
     width = window.innerWidth * 0.95,
@@ -20,7 +20,8 @@ window.makeHistogram = function(data){
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform","translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .attr("id", "tlvis_"+dataset);;
 
   x.domain(data.map(function(d) { return d.year; }));
   y.domain([0, d3.max(data, function(d) { return d.count; })]);
@@ -68,7 +69,7 @@ window.makeHistData = function(dataset,eventsObj,tlRangeDates){
   })
   // console.log('bins',bins)
   // console.log('dataset,eventsObj,tlRangeDates',dataset,eventsObj,tlRangeDates)
-  makeHistogram(bins)
+  makeHistogram(dataset, bins)
   console.log('extent:',tlRangeDates[1].getFullYear() - tlRangeDates[0].getFullYear())
   // $("#tl").html('<h2>a histogram</h2>')
 }
