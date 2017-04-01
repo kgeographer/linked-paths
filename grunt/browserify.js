@@ -25,7 +25,8 @@ module.exports = {
   dist: {
     // src: ['src/javascripts/map_tt.js'],
     src: ['src/javascripts/map_tt.js','src/javascripts/graph.js',
-      'src/javascripts/tl.js','src/javascripts/histogram.js'],
+      'src/javascripts/tl.js','src/javascripts/histogram.js',
+      'src/javascripts/periods.js'],
     dest: '<%= site %>/script.js'
   }
 

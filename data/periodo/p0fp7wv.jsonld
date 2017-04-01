@@ -1,0 +1,2168 @@
+{
+  "definitions": {
+    "p0fp7wvzjdh": {
+      "stop": {
+        "in": {
+          "year": "0023"
+        },
+        "label": "23"
+      },
+      "start": {
+        "in": {
+          "year": "-0206"
+        },
+        "label": "-206"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02",
+      "label": "Western Han Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Han, 汉",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Xihan"
+        ],
+        "eng-latn": [
+          "Western Han Dynasty"
+        ],
+        "cmn-hant": [
+          "西漢"
+        ],
+        "cmn-hans": [
+          "西汉"
+        ]
+      },
+      "id": "p0fp7wvzjdh"
+    },
+    "p0fp7wv6f2v": {
+      "stop": {
+        "in": {
+          "year": "1949"
+        },
+        "label": "1949"
+      },
+      "start": {
+        "in": {
+          "year": "1912"
+        },
+        "label": "1912"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 北京, latitude: 39.92, longitude: 116.38",
+      "label": "Republic of China",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Zhonghua Minguo, 中华民国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Zhonghua Minguo"
+        ],
+        "eng-latn": [
+          "Republic of China"
+        ],
+        "cmn-hant": [
+          "中華民國"
+        ],
+        "cmn-hans": [
+          "中华民国"
+        ]
+      },
+      "id": "p0fp7wv6f2v"
+    },
+    "p0fp7wvc6r4": {
+      "stop": {
+        "in": {
+          "year": "-1600"
+        },
+        "label": "-1600"
+      },
+      "start": {
+        "in": {
+          "year": "-2070"
+        },
+        "label": "-2070"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 安邑 (山西夏县) - 阳翟 (河南禹县), latitude: 35.06, longitude: 111.04",
+      "label": "Xia Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Xia"
+        ],
+        "eng-latn": [
+          "Xia Dynasty"
+        ],
+        "cmn-hant": [
+          "夏"
+        ],
+        "cmn-hans": [
+          "夏"
+        ]
+      },
+      "id": "p0fp7wvc6r4"
+    },
+    "p0fp7wvh6rz": {
+      "stop": {
+        "in": {
+          "year": "0577"
+        },
+        "label": "577"
+      },
+      "start": {
+        "in": {
+          "year": "0420"
+        },
+        "label": "420"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "label": "Northern and Southern Dynasties Period",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Nanbeichao"
+        ],
+        "eng-latn": [
+          "Northern and Southern Dynasties Period"
+        ],
+        "cmn-hant": [
+          "南北朝"
+        ],
+        "cmn-hans": [
+          "南北朝"
+        ]
+      },
+      "id": "p0fp7wvh6rz"
+    },
+    "p0fp7wvjvn8": {
+      "stop": {
+        "in": {
+          "year": "1127"
+        },
+        "label": "1127"
+      },
+      "start": {
+        "in": {
+          "year": "0960"
+        },
+        "label": "960"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 汴梁 (开封), latitude: 34.78, longitude: 114.34",
+      "label": "Northern Song",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Song, 宋",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Beisong"
+        ],
+        "eng-latn": [
+          "Northern Song"
+        ],
+        "cmn-hant": [
+          "北宋"
+        ],
+        "cmn-hans": [
+          "北宋"
+        ]
+      },
+      "id": "p0fp7wvjvn8"
+    },
+    "p0fp7wv9x7n": {
+      "stop": {
+        "in": {
+          "year": "1279"
+        },
+        "label": "1279"
+      },
+      "start": {
+        "in": {
+          "year": "1127"
+        },
+        "label": "1127"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 临安 (杭州), latitude: 30.29, longitude: 120.16",
+      "label": "Southern Song",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Song, 宋",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Nansong"
+        ],
+        "eng-latn": [
+          "Southern Song"
+        ],
+        "cmn-hant": [
+          "南宋"
+        ],
+        "cmn-hans": [
+          "南宋"
+        ]
+      },
+      "id": "p0fp7wv9x7n"
+    },
+    "p0fp7wv5h26": {
+      "stop": {
+        "in": {
+          "year": "1279"
+        },
+        "label": "1279"
+      },
+      "start": {
+        "in": {
+          "year": "0907"
+        },
+        "label": "907"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "label": "Five Dynasties and Ten Kingdoms Period",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Wudai Shiguo"
+        ],
+        "eng-latn": [
+          "Five Dynasties and Ten Kingdoms Period"
+        ],
+        "cmn-hant": [
+          "五代十國"
+        ],
+        "cmn-hans": [
+          "五代十国"
+        ]
+      },
+      "id": "p0fp7wv5h26"
+    },
+    "p0fp7wvvrz5": {
+      "stop": {
+        "in": {
+          "year": "1388"
+        },
+        "label": "1388"
+      },
+      "start": {
+        "in": {
+          "year": "1206"
+        },
+        "label": "1206"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 大都  (北京), latitude: 39.92, longitude: 116.38",
+      "label": "Yuan Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Yuan Dynasty"
+        ],
+        "cmn-hans": [
+          "元"
+        ],
+        "cmn-hant": [
+          "元"
+        ]
+      },
+      "id": "p0fp7wvvrz5"
+    },
+    "p0fp7wv6h4z": {
+      "stop": {
+        "in": {
+          "year": "0534"
+        },
+        "label": "534"
+      },
+      "start": {
+        "in": {
+          "year": "0386"
+        },
+        "label": "386"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 盛樂 (呼和浩特), latitude: 40.81, longitude: 111.65",
+      "label": "Northern Wei Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Nanbeichao, 南北朝",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Beiwei"
+        ],
+        "eng-latn": [
+          "Northern Wei Dynasty"
+        ],
+        "cmn-hant": [
+          "北魏"
+        ],
+        "cmn-hans": [
+          "北魏"
+        ]
+      },
+      "id": "p0fp7wv6h4z"
+    },
+    "p0fp7wvw8zq": {
+      "stop": {
+        "in": {
+          "year": "1214"
+        },
+        "label": "1214"
+      },
+      "start": {
+        "in": {
+          "year": "0907"
+        },
+        "label": "907"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 上京 (内蒙赤峰市巴林左旗), latitude: 44.2, longitude: 119.25",
+      "label": "Liao Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Liao, 辽",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Liao Dynasty"
+        ],
+        "cmn-hans": [
+          "辽"
+        ],
+        "cmn-hant": [
+          "遼"
+        ]
+      },
+      "id": "p0fp7wvw8zq"
+    },
+    "p0fp7wv8qv7": {
+      "stop": {
+        "in": {
+          "year": "0963"
+        },
+        "label": "963"
+      },
+      "start": {
+        "in": {
+          "year": "0925"
+        },
+        "label": "925"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 南京, latitude: 32.05, longitude: 118.76",
+      "label": "Southern Jing Kingdom",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Shiguo Jingnan, 十国荆南",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Shiguo Jingnan"
+        ],
+        "eng-latn": [
+          "Southern Jing Kingdom"
+        ],
+        "cmn-hant": [
+          "十國荊南"
+        ],
+        "cmn-hans": [
+          "十国荆南"
+        ]
+      },
+      "id": "p0fp7wv8qv7"
+    },
+    "p0fp7wv23z4": {
+      "stop": {
+        "in": {
+          "year": "0950"
+        },
+        "label": "950"
+      },
+      "start": {
+        "in": {
+          "year": "0947"
+        },
+        "label": "947"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 开封, latitude: 34.78, longitude: 114.34",
+      "label": "Later Han Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Wudai Shiguo, 五代十国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Houhan"
+        ],
+        "eng-latn": [
+          "Later Han Dynasty"
+        ],
+        "cmn-hant": [
+          "後漢"
+        ],
+        "cmn-hans": [
+          "后汉"
+        ]
+      },
+      "id": "p0fp7wv23z4"
+    },
+    "p0fp7wvsqwt": {
+      "stop": {
+        "in": {
+          "year": "-0256"
+        },
+        "label": "-256"
+      },
+      "start": {
+        "in": {
+          "year": "-1046"
+        },
+        "label": "-1046"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 镐京 (陕西西安), latitude: 34.3, longitude: 109.02",
+      "label": "Zhou Period",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Zhou Period"
+        ],
+        "cmn-hans": [
+          "周"
+        ],
+        "cmn-hant": [
+          "周"
+        ]
+      },
+      "id": "p0fp7wvsqwt"
+    },
+    "p0fp7wvcpdr": {
+      "stop": {
+        "in": {
+          "year": "0936"
+        },
+        "label": "936"
+      },
+      "start": {
+        "in": {
+          "year": "0923"
+        },
+        "label": "923"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 洛阳 (河南洛阳), latitude: 34.68, longitude: 112.45",
+      "label": "Later Tang Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Wudai Shiguo, 五代十国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Houtang"
+        ],
+        "eng-latn": [
+          "Later Tang Dynasty"
+        ],
+        "cmn-hant": [
+          "後唐"
+        ],
+        "cmn-hans": [
+          "后唐"
+        ]
+      },
+      "id": "p0fp7wvcpdr"
+    },
+    "p0fp7wvbngv": {
+      "stop": {
+        "in": {
+          "year": "-0256"
+        },
+        "label": "-256"
+      },
+      "start": {
+        "in": {
+          "year": "-0770"
+        },
+        "label": "-770"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 咸阳 (陕西咸阳), latitude: 34.33, longitude: 108.71",
+      "label": "Eastern Zhou Period",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Zhou, 周",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Dongzhou"
+        ],
+        "eng-latn": [
+          "Eastern Zhou Period"
+        ],
+        "cmn-hant": [
+          "東周 "
+        ],
+        "cmn-hans": [
+          "东周 "
+        ]
+      },
+      "id": "p0fp7wvbngv"
+    },
+    "p0fp7wvbf5n": {
+      "stop": {
+        "in": {
+          "year": "0581"
+        },
+        "label": "581"
+      },
+      "start": {
+        "in": {
+          "year": "0557"
+        },
+        "label": "557"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02",
+      "label": "Northern Zhou Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Nanbeichao, 南北朝",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Beizhou"
+        ],
+        "eng-latn": [
+          "Northern Zhou Dynasty"
+        ],
+        "cmn-hant": [
+          "北周"
+        ],
+        "cmn-hans": [
+          "北周"
+        ]
+      },
+      "id": "p0fp7wvbf5n"
+    },
+    "p0fp7wv2jt9": {
+      "stop": {
+        "in": {
+          "year": "0025"
+        },
+        "label": "25"
+      },
+      "start": {
+        "in": {
+          "year": "0023"
+        },
+        "label": "23"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02",
+      "label": "Xin Wang Mang Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Han, 汉",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Xin"
+        ],
+        "eng-latn": [
+          "Xin Wang Mang Dynasty"
+        ],
+        "cmn-hant": [
+          "新"
+        ],
+        "cmn-hans": [
+          "新"
+        ]
+      },
+      "id": "p0fp7wv2jt9"
+    },
+    "p0fp7wvxnn5": {
+      "stop": {
+        "in": {
+          "year": "-0476"
+        },
+        "label": "-476"
+      },
+      "start": {
+        "in": {
+          "year": "-0770"
+        },
+        "label": "-770"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "label": "Spring and Autumn Period",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Chunqiu Shidai"
+        ],
+        "eng-latn": [
+          "Spring and Autumn Period"
+        ],
+        "cmn-hant": [
+          "春秋時代"
+        ],
+        "cmn-hans": [
+          "春秋时代"
+        ]
+      },
+      "id": "p0fp7wvxnn5"
+    },
+    "p0fp7wv8644": {
+      "stop": {
+        "in": {
+          "year": "0220"
+        },
+        "label": "220"
+      },
+      "start": {
+        "in": {
+          "year": "0025"
+        },
+        "label": "25"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 洛阳 (河南洛阳), latitude: 34.68, longitude: 112.45",
+      "label": "Eastern Han Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Han, 汉",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Donghan"
+        ],
+        "eng-latn": [
+          "Eastern Han Dynasty"
+        ],
+        "cmn-hant": [
+          "東漢"
+        ],
+        "cmn-hans": [
+          "东汉"
+        ]
+      },
+      "id": "p0fp7wv8644"
+    },
+    "p0fp7wvmghn": {
+      "stop": {
+        "in": {
+          "year": "1234"
+        },
+        "label": "1234"
+      },
+      "start": {
+        "in": {
+          "year": "1115"
+        },
+        "label": "1115"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 上京会宁府 (黑龙江哈尔滨市阿城区南白城), latitude: 45.52, longitude: 126.97",
+      "label": "Jin Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Jin Dynasty"
+        ],
+        "cmn-hans": [
+          "金"
+        ],
+        "cmn-hant": [
+          "金"
+        ]
+      },
+      "id": "p0fp7wvmghn"
+    },
+    "p0fp7wv699w": {
+      "stop": {
+        "in": {
+          "year": "1227"
+        },
+        "label": "1227"
+      },
+      "start": {
+        "in": {
+          "year": "1032"
+        },
+        "label": "1032"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 興慶府 (宁夏银川), latitude: 38.5, longitude: 106.2",
+      "label": "Xixia Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Xixia Dynasty"
+        ],
+        "cmn-hans": [
+          "西夏"
+        ],
+        "cmn-hant": [
+          "西夏"
+        ]
+      },
+      "id": "p0fp7wv699w"
+    },
+    "p0fp7wv5c3f": {
+      "stop": {
+        "in": {
+          "year": "0420"
+        },
+        "label": "420"
+      },
+      "start": {
+        "in": {
+          "year": "0317"
+        },
+        "label": "317"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77",
+      "label": "Eastern Jin Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Jin, 晋",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Dongjin"
+        ],
+        "eng-latn": [
+          "Eastern Jin Dynasty"
+        ],
+        "cmn-hant": [
+          "東晉 "
+        ],
+        "cmn-hans": [
+          "东晋 "
+        ]
+      },
+      "id": "p0fp7wv5c3f"
+    },
+    "p0fp7wvdf54": {
+      "stop": {
+        "in": {
+          "year": "0263"
+        },
+        "label": "263"
+      },
+      "start": {
+        "in": {
+          "year": "0221"
+        },
+        "label": "221"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 成都 (四川成都), latitude: 30.66, longitude: 104.06",
+      "label": "Shu Kingdom",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Three Kingdoms Period, 三国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Shu"
+        ],
+        "eng-latn": [
+          "Shu Kingdom"
+        ],
+        "cmn-hant": [
+          "蜀"
+        ],
+        "cmn-hans": [
+          "蜀"
+        ]
+      },
+      "id": "p0fp7wvdf54"
+    },
+    "p0fp7wvsz6q": {
+      "stop": {
+        "in": {
+          "year": "2016"
+        },
+        "label": "2016"
+      },
+      "start": {
+        "in": {
+          "year": "1949"
+        },
+        "label": "1949"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 北京, latitude: 39.92, longitude: 116.38",
+      "label": "People’s Republic of China",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Zhonghua Renmin Gongheguo, 中华人民共和国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Zhonghua Renmin Gongheguo"
+        ],
+        "eng-latn": [
+          "People’s Republic of China"
+        ],
+        "cmn-hant": [
+          "中華人民共和國"
+        ],
+        "cmn-hans": [
+          "中华人民共和国"
+        ]
+      },
+      "id": "p0fp7wvsz6q"
+    },
+    "p0fp7wvh6pd": {
+      "stop": {
+        "in": {
+          "year": "0439"
+        },
+        "label": "439"
+      },
+      "start": {
+        "in": {
+          "year": "0304"
+        },
+        "label": "304"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "label": "Sixteen Kingdoms Period",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Shiliuguo"
+        ],
+        "eng-latn": [
+          "Sixteen Kingdoms Period"
+        ],
+        "cmn-hant": [
+          "十六國"
+        ],
+        "cmn-hans": [
+          "十六国"
+        ]
+      },
+      "id": "p0fp7wvh6pd"
+    },
+    "p0fp7wvhzb5": {
+      "stop": {
+        "in": {
+          "year": "0479"
+        },
+        "label": "479"
+      },
+      "start": {
+        "in": {
+          "year": "0420"
+        },
+        "label": "420"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77",
+      "label": "Liu Song Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Nanbeichao, 南北朝",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Liusong"
+        ],
+        "eng-latn": [
+          "Liu Song Dynasty"
+        ],
+        "cmn-hant": [
+          "劉宋"
+        ],
+        "cmn-hans": [
+          "刘宋"
+        ]
+      },
+      "id": "p0fp7wvhzb5"
+    },
+    "p0fp7wvkr75": {
+      "stop": {
+        "in": {
+          "year": "0316"
+        },
+        "label": "316"
+      },
+      "start": {
+        "in": {
+          "year": "0265"
+        },
+        "label": "265"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 洛阳 (河南洛阳), latitude: 34.68, longitude: 112.45",
+      "label": "Western Jin Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Jin, 晋",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Xijin"
+        ],
+        "eng-latn": [
+          "Western Jin Dynasty"
+        ],
+        "cmn-hant": [
+          "西晉"
+        ],
+        "cmn-hans": [
+          "西晋"
+        ]
+      },
+      "id": "p0fp7wvkr75"
+    },
+    "p0fp7wvm7qm": {
+      "stop": {
+        "in": {
+          "year": "0557"
+        },
+        "label": "557"
+      },
+      "start": {
+        "in": {
+          "year": "0502"
+        },
+        "label": "502"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77",
+      "label": "Southern Liang Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Nanbeichao, 南北朝",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Nanchao Liang"
+        ],
+        "eng-latn": [
+          "Southern Liang Dynasty"
+        ],
+        "cmn-hant": [
+          "南朝梁"
+        ],
+        "cmn-hans": [
+          "南朝梁"
+        ]
+      },
+      "id": "p0fp7wvm7qm"
+    },
+    "p0fp7wvtqp9": {
+      "stop": {
+        "in": {
+          "year": "1911"
+        },
+        "label": "1911"
+      },
+      "start": {
+        "in": {
+          "year": "1644"
+        },
+        "label": "1644"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 京师顺天府 (北京), latitude: 39.92, longitude: 116.38",
+      "label": "Qing Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Qing Dynasty"
+        ],
+        "cmn-hans": [
+          "清"
+        ],
+        "cmn-hant": [
+          "清"
+        ]
+      },
+      "id": "p0fp7wvtqp9"
+    },
+    "p0fp7wvvdvn": {
+      "stop": {
+        "in": {
+          "year": "0502"
+        },
+        "label": "502"
+      },
+      "start": {
+        "in": {
+          "year": "0479"
+        },
+        "label": "479"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77",
+      "label": "Southern Qi Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Nanbeichao, 南北朝",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Nanqi"
+        ],
+        "eng-latn": [
+          "Southern Qi Dynasty"
+        ],
+        "cmn-hant": [
+          "南齊"
+        ],
+        "cmn-hans": [
+          "南齐"
+        ]
+      },
+      "id": "p0fp7wvvdvn"
+    },
+    "p0fp7wv8vm6": {
+      "stop": {
+        "in": {
+          "year": "0923"
+        },
+        "label": "923"
+      },
+      "start": {
+        "in": {
+          "year": "0907"
+        },
+        "label": "907"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 西都 (河南洛阳), latitude: 34.68, longitude: 112.45",
+      "label": "Later Liang Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Wudai Shiguo, 五代十国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Houliang"
+        ],
+        "eng-latn": [
+          "Later Liang Dynasty"
+        ],
+        "cmn-hant": [
+          "後梁"
+        ],
+        "cmn-hans": [
+          "后梁"
+        ]
+      },
+      "id": "p0fp7wv8vm6"
+    },
+    "p0fp7wv72wc": {
+      "stop": {
+        "in": {
+          "year": "0280"
+        },
+        "label": "280"
+      },
+      "start": {
+        "in": {
+          "year": "0220"
+        },
+        "label": "220"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "label": "Three Kingdoms Period",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Sanguo"
+        ],
+        "eng-latn": [
+          "Three Kingdoms Period"
+        ],
+        "cmn-hant": [
+          "三國"
+        ],
+        "cmn-hans": [
+          "三国"
+        ]
+      },
+      "id": "p0fp7wv72wc"
+    },
+    "p0fp7wv2mgt": {
+      "stop": {
+        "in": {
+          "year": "-0206"
+        },
+        "label": "-206"
+      },
+      "start": {
+        "in": {
+          "year": "-0221"
+        },
+        "label": "-221"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 咸阳 (陕西咸阳), latitude: 34.33, longitude: 108.71",
+      "label": "Qin Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Qin"
+        ],
+        "eng-latn": [
+          "Qin Dynasty"
+        ],
+        "cmn-hans": [
+          "秦",
+          "秦"
+        ]
+      },
+      "id": "p0fp7wv2mgt"
+    },
+    "p0fp7wvk97r": {
+      "stop": {
+        "in": {
+          "year": "0420"
+        },
+        "label": "420"
+      },
+      "start": {
+        "in": {
+          "year": "0265"
+        },
+        "label": "265"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "label": "Jin Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Jin Dynasty"
+        ],
+        "cmn-hans": [
+          "晋"
+        ],
+        "cmn-hant": [
+          "晉"
+        ]
+      },
+      "id": "p0fp7wvk97r"
+    },
+    "p0fp7wv9h4n": {
+      "stop": {
+        "in": {
+          "year": "0618"
+        },
+        "label": "618"
+      },
+      "start": {
+        "in": {
+          "year": "0581"
+        },
+        "label": "581"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 大兴 (陕西西安), latitude: 34.3, longitude: 109.02",
+      "label": "Sui Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Sui Dynasty"
+        ],
+        "cmn-hans": [
+          "隋"
+        ],
+        "cmn-hant": [
+          "隋"
+        ]
+      },
+      "id": "p0fp7wv9h4n"
+    },
+    "p0fp7wvxmqg": {
+      "stop": {
+        "in": {
+          "year": "-0221"
+        },
+        "label": "-221"
+      },
+      "start": {
+        "in": {
+          "year": "-0475"
+        },
+        "label": "-475"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "label": "Warring States Period",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Warring States Period"
+        ],
+        "cmn-hans": [
+          "战国时代"
+        ],
+        "cmn-hant": [
+          "戰國時代",
+          "Zhanguo Shidai"
+        ]
+      },
+      "id": "p0fp7wvxmqg"
+    },
+    "p0fp7wv99g3": {
+      "stop": {
+        "in": {
+          "year": "0550"
+        },
+        "label": "550"
+      },
+      "start": {
+        "in": {
+          "year": "0534"
+        },
+        "label": "534"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 鄴 (河北省临漳县), latitude: 36.34, longitude: 114.6",
+      "label": "Eastern Wei Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Nanbeichao, 南北朝",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Dongwei"
+        ],
+        "eng-latn": [
+          "Eastern Wei Dynasty"
+        ],
+        "cmn-hant": [
+          "東魏"
+        ],
+        "cmn-hans": [
+          "东魏"
+        ]
+      },
+      "id": "p0fp7wv99g3"
+    },
+    "p0fp7wv2s8c": {
+      "stop": {
+        "in": {
+          "year": "1644"
+        },
+        "label": "1644"
+      },
+      "start": {
+        "in": {
+          "year": "1368"
+        },
+        "label": "1368"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 應天府  (江苏南京), latitude: 32.05, longitude: 118.76",
+      "label": "Ming Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Ming Dynasty"
+        ],
+        "cmn-hans": [
+          "明"
+        ],
+        "cmn-hant": [
+          "明"
+        ]
+      },
+      "id": "p0fp7wv2s8c"
+    },
+    "p0fp7wv4q5d": {
+      "stop": {
+        "in": {
+          "year": "-0771"
+        },
+        "label": "-771"
+      },
+      "start": {
+        "in": {
+          "year": "-1046"
+        },
+        "label": "-1046"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 洛邑 (河南洛阳), latitude: 34.68, longitude: 112.45",
+      "label": "Western Zhou Period",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Zhou, 周",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Xizhou"
+        ],
+        "eng-latn": [
+          "Western Zhou Period"
+        ],
+        "cmn-hant": [
+          "西周"
+        ],
+        "cmn-hans": [
+          "西周"
+        ]
+      },
+      "id": "p0fp7wv4q5d"
+    },
+    "p0fp7wv847g": {
+      "stop": {
+        "in": {
+          "year": "0265"
+        },
+        "label": "265"
+      },
+      "start": {
+        "in": {
+          "year": "0220"
+        },
+        "label": "220"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 洛阳 (河南洛阳), latitude: 34.68, longitude: 112.45",
+      "label": "Wei Kingdom",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Three Kingdoms Period, 三国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Wei"
+        ],
+        "eng-latn": [
+          "Wei Kingdom"
+        ],
+        "cmn-hant": [
+          "魏"
+        ],
+        "cmn-hans": [
+          "魏"
+        ]
+      },
+      "id": "p0fp7wv847g"
+    },
+    "p0fp7wvbdm8": {
+      "stop": {
+        "in": {
+          "year": "1279"
+        },
+        "label": "1279"
+      },
+      "start": {
+        "in": {
+          "year": "0960"
+        },
+        "label": "960"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "label": "Song",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Song"
+        ],
+        "cmn-hans": [
+          "宋"
+        ],
+        "cmn-hant": [
+          "宋"
+        ]
+      },
+      "id": "p0fp7wvbdm8"
+    },
+    "p0fp7wvjnjs": {
+      "stop": {
+        "in": {
+          "year": "0556"
+        },
+        "label": "556"
+      },
+      "start": {
+        "in": {
+          "year": "0535"
+        },
+        "label": "535"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02",
+      "label": "Western Wei Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Nanbeichao, 南北朝",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Xiwei"
+        ],
+        "eng-latn": [
+          "Western Wei Dynasty"
+        ],
+        "cmn-hant": [
+          "西魏"
+        ],
+        "cmn-hans": [
+          "西魏"
+        ]
+      },
+      "id": "p0fp7wvjnjs"
+    },
+    "p0fp7wv9s3f": {
+      "stop": {
+        "in": {
+          "year": "0220"
+        },
+        "label": "220"
+      },
+      "start": {
+        "in": {
+          "year": "-0206"
+        },
+        "label": "-206"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "label": "Han Dynasties",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Han Dynasties"
+        ],
+        "cmn-hans": [
+          "汉"
+        ],
+        "cmn-hant": [
+          "漢"
+        ]
+      },
+      "id": "p0fp7wv9s3f"
+    },
+    "p0fp7wvqcws": {
+      "stop": {
+        "in": {
+          "year": "-1046"
+        },
+        "label": "-1046"
+      },
+      "start": {
+        "in": {
+          "year": "-1600"
+        },
+        "label": "-1600"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 亳 (河南商丘) - 殷 (河南安阳), latitude: 34.44, longitude: 115.65",
+      "label": "Shang Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Shang Dynasty"
+        ],
+        "cmn-hans": [
+          "商"
+        ],
+        "cmn-hant": [
+          "商"
+        ]
+      },
+      "id": "p0fp7wvqcws"
+    },
+    "p0fp7wvrd4r": {
+      "stop": {
+        "in": {
+          "year": "0280"
+        },
+        "label": "280"
+      },
+      "start": {
+        "in": {
+          "year": "0222"
+        },
+        "label": "222"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 建业 (江苏南京), latitude: 32.06, longitude: 118.77",
+      "label": "Wu Kingdom",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Three Kingdoms Period, 三国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Wu"
+        ],
+        "eng-latn": [
+          "Wu Kingdom"
+        ],
+        "cmn-hant": [
+          "吳"
+        ],
+        "cmn-hans": [
+          "吴"
+        ]
+      },
+      "id": "p0fp7wvrd4r"
+    },
+    "p0fp7wv8j8v": {
+      "stop": {
+        "in": {
+          "year": "0945"
+        },
+        "label": "945"
+      },
+      "start": {
+        "in": {
+          "year": "0909"
+        },
+        "label": "909"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 北京, latitude: 39.92, longitude: 116.38",
+      "label": "Min Kingdom",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Shiguo Min, 十国闽",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Shiguo Min"
+        ],
+        "eng-latn": [
+          "Min Kingdom"
+        ],
+        "cmn-hant": [
+          "十國閩"
+        ],
+        "cmn-hans": [
+          "十国闽"
+        ]
+      },
+      "id": "p0fp7wv8j8v"
+    },
+    "p0fp7wv8kjh": {
+      "stop": {
+        "in": {
+          "year": "0577"
+        },
+        "label": "577"
+      },
+      "start": {
+        "in": {
+          "year": "0550"
+        },
+        "label": "550"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 鄴 (河北省临漳县), latitude: 36.34, longitude: 114.6",
+      "label": "Northern Qi Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Nanbeichao, 南北朝",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Beiqi"
+        ],
+        "eng-latn": [
+          "Northern Qi Dynasty"
+        ],
+        "cmn-hant": [
+          "北齊"
+        ],
+        "cmn-hans": [
+          "北齐"
+        ]
+      },
+      "id": "p0fp7wv8kjh"
+    },
+    "p0fp7wvmvjs": {
+      "stop": {
+        "in": {
+          "year": "0589"
+        },
+        "label": "589"
+      },
+      "start": {
+        "in": {
+          "year": "0557"
+        },
+        "label": "557"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77",
+      "label": "Chen Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Nanbeichao, 南北朝",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Chen Dynasty"
+        ],
+        "cmn-hans": [
+          "陈"
+        ],
+        "cmn-hant": [
+          "陳"
+        ]
+      },
+      "id": "p0fp7wvmvjs"
+    },
+    "p0fp7wvghct": {
+      "stop": {
+        "in": {
+          "year": "0960"
+        },
+        "label": "960"
+      },
+      "start": {
+        "in": {
+          "year": "0951"
+        },
+        "label": "951"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 汴京 (开封), latitude: 34.78, longitude: 114.34",
+      "label": "Later Zhou Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Wudai Shiguo, 五代十国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Houzhou"
+        ],
+        "eng-latn": [
+          "Later Zhou Dynasty"
+        ],
+        "cmn-hant": [
+          "後周"
+        ],
+        "cmn-hans": [
+          "后周"
+        ]
+      },
+      "id": "p0fp7wvghct"
+    },
+    "p0fp7wvzgmr": {
+      "stop": {
+        "in": {
+          "year": "0946"
+        },
+        "label": "946"
+      },
+      "start": {
+        "in": {
+          "year": "0936"
+        },
+        "label": "936"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 开封, latitude: 34.78, longitude: 114.34",
+      "label": "Later Jin Dynasty",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Wudai Shiguo, 五代十国",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Houjin"
+        ],
+        "eng-latn": [
+          "Later Jin Dynasty"
+        ],
+        "cmn-hant": [
+          "後晉"
+        ],
+        "cmn-hans": [
+          "后晋"
+        ]
+      },
+      "id": "p0fp7wvzgmr"
+    },
+    "p0fp7wv9m9w": {
+      "stop": {
+        "in": {
+          "year": "0978"
+        },
+        "label": "978"
+      },
+      "start": {
+        "in": {
+          "year": "0907"
+        },
+        "label": "907"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 錢塘 (杭州), latitude: 30.29, longitude: 120.16",
+      "label": "Wu Yue Kingdom",
+      "language": "eng-latn",
+      "editorialNote": "Parent period: Shiguo Wuyue, 十国吴越",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "cmn-latn": [
+          "Shiguo Wuyue"
+        ],
+        "eng-latn": [
+          "Wu Yue Kingdom"
+        ],
+        "cmn-hant": [
+          "十國吳越"
+        ],
+        "cmn-hans": [
+          "十国吴越"
+        ]
+      },
+      "id": "p0fp7wv9m9w"
+    },
+    "p0fp7wvrjpj": {
+      "stop": {
+        "in": {
+          "year": "0907"
+        },
+        "label": "907"
+      },
+      "start": {
+        "in": {
+          "year": "0618"
+        },
+        "label": "618"
+      },
+      "spatialCoverage": [
+        {
+          "label": "China",
+          "id": "http://dbpedia.org/resource/China"
+        }
+      ],
+      "spatialCoverageDescription": "China",
+      "note": "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02",
+      "label": "Tang Dynasty",
+      "language": "eng-latn",
+      "type": "PeriodDefinition",
+      "localizedLabels": {
+        "eng-latn": [
+          "Tang Dynasty"
+        ],
+        "cmn-hans": [
+          "唐"
+        ],
+        "cmn-hant": [
+          "唐"
+        ]
+      },
+      "id": "p0fp7wvrjpj"
+    }
+  },
+  "type": "PeriodCollection",
+  "id": "p0fp7wv",
+  "source": {
+    "title": "CHGIS: Major Chinese Periods Chronology",
+    "creators": [
+      {
+        "name": "Merrick Lex Berman"
+      }
+    ],
+    "contributors": [
+      {
+        "name": ""
+      }
+    ],
+    "yearPublished": "2015",
+    "citation": "CHGIS: Major Chinese Periods Chronology. Ed. Merrick Lex Berman. 2015."
+  },
+  "editorialNote": "[notes provided by source editor Berman]\n\nsources:\n\n1.http://www.baike.com/wiki/%E4%B8%AD%E5%9B%BD%E5%8E%86%E4%BB%A3%E5%85%AC%E5%85%83%E5%AF%B9%E7%85%A7%E7%AE%80%E8%A1%A8\n\n2.http://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9C%8B%E6%AD%B7%E5%8F%B2%E4%BA%8B%E4%BB%B6%E5%88%97%E8%A1%A8\n\n3.http://ljzlcl.blog.163.com/blog/static/9666123620090433033441/\n\nNOTES:\n\nThis table of major Chinese States and Dynasties provides a basic time frame, and includes both the overall periods, as well as specific sub-periods, or in most cases, specific states.\n\nFor example, the Northern and Southern Dynasties is listed (420 CE - 577 CE), along with the various states, such as Liu Song, Eastern Wei, and so on that existed during that period.    Note that the overall period is not itself a \"state\" and has no capital, nor any administration or political history.  It is merely a superset of many states.\n\nBy contrast there are Periods, with Sub-periods, such as the Song Dynasty, which was one continuous political entity, but is divided into two very distinct periods, the Northern Song and Southern Song, reflecting the incursion of the Mongols who seized the greater part of the northern area of the Song, and forced the capital to be relocated from Kaifeng to Hangzhou.\n",
+  "@context": {
+    "@base": "http://n2t.net/ark:/99152/",
+    "PeriodCollection": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "PeriodDefinition": "http://www.w3.org/2004/02/skos/core#Concept",
+    "abstract": "http://purl.org/dc/terms/abstract",
+    "collection": {
+      "@id": "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type": "@id"
+    },
+    "contributors": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/contributor"
+    },
+    "creators": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/creator"
+    },
+    "dateAccessed": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "definitions": {
+      "@container": "@index",
+      "@reverse": "http://www.w3.org/2004/02/skos/core#inScheme"
+    },
+    "earliestYear": {
+      "@id": "periodo:earliestYear",
+      "@type": "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "editorialNote": "http://www.w3.org/2004/02/skos/core#editorialNote",
+    "id": "@id",
+    "in": "http://www.w3.org/2006/time#hasDateTimeDescription",
+    "inDataset": {
+      "@id": "http://rdfs.org/ns/void#inDataset",
+      "@type": "@id"
+    },
+    "label": "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "language": "http://purl.org/dc/terms/language",
+    "latestYear": {
+      "@id": "periodo:latestYear",
+      "@type": "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "localizedLabels": {
+      "@container": "@language",
+      "@id": "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "locator": "http://purl.org/ontology/bibo/locator",
+    "name": "http://xmlns.com/foaf/0.1/name",
+    "note": "http://www.w3.org/2004/02/skos/core#note",
+    "partOf": {
+      "@id": "http://purl.org/dc/terms/isPartOf",
+      "@type": "@id"
+    },
+    "periodCollections": {
+      "@container": "@index",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#member"
+    },
+    "periodo": "http://n2t.net/ark:/99152/p0v#",
+    "primaryTopicOf": {
+      "@id": "http://xmlns.com/foaf/0.1/isPrimaryTopicOf",
+      "@type": "@id"
+    },
+    "sameAs": {
+      "@id": "http://www.w3.org/2002/07/owl#sameAs",
+      "@type": "@id"
+    },
+    "source": "http://purl.org/dc/terms/source",
+    "spatialCoverage": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial"
+    },
+    "spatialCoverageDescription": "periodo:spatialCoverageDescription",
+    "start": "http://www.w3.org/2006/time#intervalStartedBy",
+    "stop": "http://www.w3.org/2006/time#intervalFinishedBy",
+    "title": "http://purl.org/dc/terms/title",
+    "type": "@type",
+    "url": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "@id"
+    },
+    "year": {
+      "@id": "http://www.w3.org/2006/time#year",
+      "@type": "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "yearPublished": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#gYear"
+    }
+  }
+}

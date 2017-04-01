@@ -7,6 +7,7 @@ window.filterEvents = function(selRange) { // [start,end]
   // console.log('selRange',d0,d1)
   _.each(lineFeatures, function(l) {
     l.eachLayer(function(layer){
+      // console.log('layer',layer)
       let featuredate = new Date(layer.feature.when.timespan[0])
       // console.log('d0,d1,featuredate',d0,d1,featuredate)
       if(featuredate < d0 || featuredate > d1) {

@@ -1,5 +1,5 @@
 colorMap = {"ra":"#ffff80","roundabout":"#ffff80","courier":"#ff9999","incanto":"#ffb366",
-"incanto-j":"#ffb366", "vb":"#b380ff","xuanzang":"#99e699","owtrad":"#A0D0EE"}
+"incanto-j":"#ffb366", "vb":"#b380ff","xuanzang":"#99e699","owtrad":"#fff"}
 
 window.tlConfig = {
   "owtrad": {

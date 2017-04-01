@@ -6,6 +6,7 @@ window._ = _
     // , d3 = require('d3')
 // require('bootstrap')
 require('mapbox.js')
+var turf = require('turf')
 
 moment().format();
 // import add'l app JavaScript
@@ -149,10 +150,12 @@ function buildCollectionPeriod(coll){
 var mapStyles = {
   segments: {
     color: "#993333",
+    // color: "#993333",
     weight: 2,
     opacity: 0.6,
     highlight: {
-      color: "yellow"
+      color: "yellow",
+      weight: 4
     }
   },
   bbox: {
@@ -163,10 +166,9 @@ var mapStyles = {
   }
 }
 
-function style(feature) {
-  window.feat = feature
+function stylePoints(feature) {
   let fill=colorMap[feature.toGeoJSON().properties.collection]
-  let rad=feature.toGeoJSON().properties.collection=='owtrad'?3:4;
+  let rad=feature.toGeoJSON().properties.collection=='owtrad'?2:4;
   // console.log(coll)
 	return {
       color: '#000',
@@ -175,6 +177,27 @@ function style(feature) {
       fillOpacity: 0.6,
       weight: 1
     };
+}
+
+function stylePaths(feature,range) {
+  let when = new Date(feature.when.timespan[0])
+  let pathDateScale = d3.scaleTime()
+    .domain([range[0], range[1]])
+    .range(["#ff6666","#990000"]);
+  let pathSequenceScale = d3.scaleTime()
+    .domain([range[0], range[1]])
+    .range(["#ff6666","#990000"]);
+  // console.log('when, range',when,range)
+  return {
+    // color: "#993333",
+    color: pathDateScale(when),
+    weight: 2,
+    opacity: 0.6,
+    highlight: {
+      color: "yellow",
+      weight: 4
+    }
+  }
 }
 
 function listFeatureProperties(props,when){
@@ -198,6 +221,11 @@ function listFeatureProperties(props,when){
 
 // from Perio.do, typically
 window.loadPeriods = function(uri){
+  let l = uri.length
+  let collUri = uri.substring(0,l-9)+'.json'
+  console.log('collUri',collUri)
+  //period https://test.perio.do/fp7wv2s8c.json
+  //collection https://test.perio.do/fp7wv.json
   $.when(
     // vanilla
     $.ajax({
@@ -362,6 +390,7 @@ function startMapM(dataset=null){
     // Madrid: (L.latLng(32.6948,-3.70256),2)
   }
 }
+
 window.makeDate = function(d){
   // console.log('makeDate from:',d)
   // handle all these: "2016-09-10"; "0494-01"; "23"; "-200"
@@ -410,7 +439,7 @@ window.loadLayer = function(dataset) {
 
         // write dataset card for data panel
         writeCard(dataset,collection.attributes)
-        console.log('collection attributes',collection.attributes)
+        // console.log('collection attributes',collection.attributes)
         // collection range
         var tlRange = [collection.when.timespan[0],collection.when.timespan[3]]
         var tlRangeDates = [makeDate(collection.when.timespan[0]),
@@ -431,7 +460,7 @@ window.loadLayer = function(dataset) {
           if(geomF.type == 'Point') {
               let latlng = new L.LatLng(geomF.coordinates[1],geomF.coordinates[0])
 
-              var placeFeature = new L.CircleMarker(latlng,style(layer))
+              var placeFeature = new L.CircleMarker(latlng,stylePoints(layer))
               // var placeFeature = new L.CircleMarker(latlng, mapStyles.places)
               // console.log(placeFeature)
               let gazURI = layer.feature.properties.gazetteer_uri
@@ -503,8 +532,11 @@ window.loadLayer = function(dataset) {
                   "when": whenObj,
                   "properties": geomF.geometries[i].properties
                 }
+                //TODO: what does a turf.bezier feature look like?
+                // var segment = new L.GeoJSON(turf.bezier(feat), {
                 var segment = new L.GeoJSON(feat, {
-                  style: mapStyles.segments
+                  style: stylePaths(feat,tlRangeDates)
+                  // style: mapStyles.segments
                 }).bindPopup('<b>'+feat.properties.label+'</b><br/>'+
                   listFeatureProperties(feat.properties,feat.when))
                 segment.on("click", function(e){
@@ -601,6 +633,8 @@ window.loadLayer = function(dataset) {
         } else if (collection.attributes.segmentType == 'hRoutes') {
           // multiple routes, assuming start/end date range
           makeHistData(dataset,eventsObj,tlRangeDates)
+        } else if (collection.attributes.segmentType == 'hRoutesPeriod') {
+          makePeriodData('a uri')
         }
       })
       $(".loader").hide()
