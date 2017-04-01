@@ -1,5 +1,5 @@
 // render period context timeline
 
-window.makePeriodData = function(uri){
-  console.log('make period timeline with:',uri)
+window.makePeriodData = function(periods){
+  console.log('make period timeline with:',periods)
 }

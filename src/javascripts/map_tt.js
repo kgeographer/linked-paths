@@ -220,27 +220,31 @@ function listFeatureProperties(props,when){
 }
 
 // from Perio.do, typically
-window.loadPeriods = function(uri){
-  let l = uri.length
-  let collUri = uri.substring(0,l-9)+'.json'
-  console.log('collUri',collUri)
+window.loadPeriods = function(pid){
+  // https://test.perio.do/---.json
+  let l = pid.length
+  let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
+  console.log('pid, collUri',pid, collUri)
   //period https://test.perio.do/fp7wv2s8c.json
   //collection https://test.perio.do/fp7wv.json
   $.when(
     // vanilla
     $.ajax({
-      url: uri,
+      url: collUri,
+      // url: uri,
       dataType: 'json',
       type: 'get',
       crossDomain: true,
       success: function(data) {
         // TODO: prettify json returned
-        $("#period_pre").html(JSON.stringify(data,undefined,2))
+        window.pd=data
+        // console.log(JSON.stringify(data.definitions[pid],undefined,2))
+        $("#period_pre").html(JSON.stringify(data.definitions['p0'+pid],undefined,2))
       }
     })
   ).done(function(){
     $(".loader").hide()
-    $("#period_modal .modal-title").html(uri)
+    $("#period_modal .modal-title").html(pid)
     $("#period_modal").modal(); })
 }
 
@@ -268,6 +272,7 @@ var writeCard = function(dataset,attribs){
 // project abstract in right panel
 var writeAbstract = function(attribs){``
   if(attribs.periods){
+    console.log(attribs.periods[0])
     var foo = '<span class="span-link" onclick="loadPeriods(\''+attribs.periods[0]+'\')">'
   }
   let html = "<div id='"+attribs.lp_id+
@@ -633,8 +638,8 @@ window.loadLayer = function(dataset) {
         } else if (collection.attributes.segmentType == 'hRoutes') {
           // multiple routes, assuming start/end date range
           makeHistData(dataset,eventsObj,tlRangeDates)
-        } else if (collection.attributes.segmentType == 'hRoutesPeriod') {
-          makePeriodData('a uri')
+        } else if (collection.attributes.periods) {
+          makePeriodData(collection.attributes.periods)
         }
       })
       $(".loader").hide()

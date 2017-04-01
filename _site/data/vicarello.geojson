@@ -13,7 +13,7 @@
     "places": "places_vicarello.csv",
     "pub_date": "2013",
     "collections": "Latin Tradition",
-    "segmentType": "hroute",
+    "segmentType": "hRoute",
     "contributors": "R. Simon",
     "author": "Anonymous",
     "date (numeric)": "300",
