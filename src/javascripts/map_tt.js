@@ -237,12 +237,14 @@ window.loadPeriods = function(pid){
       crossDomain: true,
       success: function(data) {
         // TODO: prettify json returned
-        window.pd=data
+        window.pds=data
         // console.log(JSON.stringify(data.definitions[pid],undefined,2))
         $("#period_pre").html(JSON.stringify(data.definitions['p0'+pid],undefined,2))
       }
     })
   ).done(function(){
+    console.log('got periods:',pds)
+    _.each(pds.definitions, function(p){console.log(p.label,p.start.in.year,p.stop.in.year)})
     $(".loader").hide()
     $("#period_modal .modal-title").html(pid)
     $("#period_modal").modal(); })
@@ -611,7 +613,7 @@ window.loadLayer = function(dataset) {
           ttmap.fitBounds(features[name_p].getBounds())
         }
 
-        // load timeline for journey(s), histogram for others
+        // TIME: load timeline for journey(s), histogram for others
         window.renderThese = []
         if (collection.attributes.segmentType == 'journey') {
           //// events of unk. duration in year; group and assign faux dates
