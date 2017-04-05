@@ -2,13 +2,12 @@
 /**
   timeline stuff
   **/
-#toggle {
-  width: 1000px;
-  height: 700px;
-  // background: #ccc;
-}
 .vis-item .vis-item-overflow {
   overflow: visible;
+}
+.vis-item.orange {
+  background-color: gold;
+  border-color: orange;
 }
 .bar { fill: steelblue; }
 
@@ -92,7 +91,9 @@ html, body { height: 100%; margin:0; padding:0;}
 .timeline-event-icon {
   img {vertical-align: top !important;}
 }
-
+#search {
+  z-index: 30;
+}
 #bloodhound {
   width: 100%;
   margin: 4px ;

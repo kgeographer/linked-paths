@@ -4,12 +4,12 @@
   **/
 @import "lib/bootstrap.min.css";
 @import "lib/mapbox.css";
-#toggle {
-  width: 1000px;
-  height: 700px;
-}
 .vis-item .vis-item-overflow {
   overflow: visible;
+}
+.vis-item.orange {
+  background-color: gold;
+  border-color: orange;
 }
 .bar {
   fill: steelblue;
@@ -103,6 +103,9 @@ body {
 }
 .timeline-event-icon img {
   vertical-align: top !important;
+}
+#search {
+  z-index: 30;
 }
 #bloodhound {
   width: 100%;

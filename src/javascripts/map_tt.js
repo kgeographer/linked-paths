@@ -246,11 +246,13 @@ window.loadPeriods = function(pid){
     _.each(pdsContext, function(p){
     // _.each(pds.definitions, function(p){
       var pd = {}
-      // console.log(p.label,p.start.in.year,p.stop.in.year)
+      // console.log(p.id,p.label,p.start.in.year,p.stop.in.year)
       pd['id'] = p.id
       pd['content'] = p.label
       pd['start'] = makeDate(p.start.in.year)
       pd['end'] = makeDate(p.stop.in.year)
+      pd['className'] = p.id == 'p0'+pid ? 'orange' : 'vis-item'
+      // console.log('pid, pd:',pid,pd)
       periodArray.push(pd)
     })
     makeTimeVis(periodArray,pid)
