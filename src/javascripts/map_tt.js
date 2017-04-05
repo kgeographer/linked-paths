@@ -64,12 +64,13 @@ $(function() {
   $('.panel-title i').click(function(){
     window.open('http://kgeographer.com/?p=140&preview=true', '', 'width=700');
   })
-  $("#tl").click(function(e){
-    e.preventDefault;
-    if($(".vis-timeline").length >0) {
+  $("#tl").click(function(){
+    // e.preventDefault;
+    if($(".vis-timeline").length > 0) {
       console.log('clicked #tl')
       window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
-      $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight)})
+      $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight),
+        "z-index":40})
     } else {
       console.log('clicked #tl, no timeline')
     }
@@ -133,27 +134,6 @@ function buildSegmentEvent(feat){
   event['link'] = "";
   event['image'] = "";
   // console.log('built ', event)
-  return event;
-}
-
-// Flows and hPeriod data get a single period band
-function buildCollectionPeriod(coll){
-  console.log(' in buildCollectionPeriod()',coll.when.timespan)
-  window.ts = coll.when.timespan
-  var event = {};
-  event['id'] = '{event id}';
-  event['title'] = 'valid period, '+coll.attributes.title;
-  event['description'] = ts[4];
-  event['start'] = ts[0];
-  event['latestStart'] = ts[1] == "" ? "" :ts[1];
-  event['earliestEnd'] = ts[2] == "" ? "" :ts[2];
-  event['end'] = ts[3] == "" ? "" :ts[3];
-  event['durationEvent'] = "true";
-  event['link'] = "";
-  // event['link'] = coll.attributes.uri;
-  event['image'] = "";
-  // console.log('event', JSON.stringify(event))
-  tlMidpoint = midpoint(ts,'start')
   return event;
 }
 
@@ -229,7 +209,7 @@ function listFeatureProperties(props,when){
   return html;
 }
 
-// from Perio.do, typically
+// from Perio.do
 window.loadPeriods = function(pid){
   $(".loader").show()
   // https://test.perio.do/---.json
@@ -254,21 +234,23 @@ window.loadPeriods = function(pid){
             _.max(pds.definitions, function(pd){ return pd.stop.in.year })
           ];
         let pdsRangeYears = [pdsRange[0].start.in.year,pdsRange[1].stop.in.year]
+        window.pdsContext = _.filter(pds.definitions,function(pdef){
+          return pdef.start.in.year <= pidRange[1] && pdef.stop.in.year >= pidRange[0];
+        })
         console.log('pidRange,pdsRange,pdsRangeYears:',pidRange,pdsRange,pdsRangeYears)
-        // console.log(JSON.stringify(data.definitions[pid],undefined,2))
-        // $("#period_pre").html(JSON.stringify(data.definitions['p0'+pid],undefined,2))
       }
     })
   ).done(function(){
     // console.log('got periods:',pds)
     window.periodArray = []
-    _.each(pds.definitions, function(p){
+    _.each(pdsContext, function(p){
+    // _.each(pds.definitions, function(p){
       var pd = {}
       // console.log(p.label,p.start.in.year,p.stop.in.year)
       pd['id'] = p.id
       pd['content'] = p.label
-      pd['start'] = p.start.in.year
-      pd['end'] = p.stop.in.year
+      pd['start'] = makeDate(p.start.in.year)
+      pd['end'] = makeDate(p.stop.in.year)
       periodArray.push(pd)
     })
     makeTimeVis(periodArray,pid)
@@ -615,16 +597,17 @@ window.loadLayer = function(dataset) {
                   // }
                 }
             }
-            if(eventsObj.events.length == 0) {
-              // needs a period, not bunch of events
-              eventsObj.events.push(buildCollectionPeriod(collection))
-              // console.log('build',buildCollectionPeriod(collection))
-              // console.log('period eventsObj', eventsObj.events[0])
-            }
-          } else {
+            // OBSOLETE
+            // if(eventsObj.events.length == 0) {
+            //   // needs a period, not bunch of events
+            //   eventsObj.events.push(buildCollectionPeriod(collection))
+            //   // console.log('build',buildCollectionPeriod(collection))
+            //   // console.log('period eventsObj', eventsObj.events[0])
+            // }
+          } // else {
             // there is no when in place records yet
             // console.log(whenF == undefined ? 'whenF undef' : whenF)
-          }
+          // }
         })
         // featureGroup pairs as layers
         let name_p = "places_"+dataset
@@ -668,7 +651,7 @@ window.loadLayer = function(dataset) {
         } else if (collection.attributes.segmentType == 'hRoutes') {
           // multiple routes, assuming start/end date range
           makeHistData(dataset,eventsObj,tlRangeDates)
-        } else if (collection.attributes.periods) {
+        } else if (collection.attributes.periods.length > 0) {
           loadPeriods(collection.attributes.periods[0])
           // makePeriodData(collection.attributes.periods)
         }

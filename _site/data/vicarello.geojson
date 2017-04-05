@@ -10,7 +10,7 @@
   },
   "attributes": {
     "timespan": "[0200,,,0400,around 200 - 400 CE]",
-    "periods": ["",""]
+    "periods": [],
     "places": "places_vicarello.csv",
     "pub_date": "2013",
     "collections": "Latin Tradition",
