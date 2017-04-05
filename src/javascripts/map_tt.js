@@ -64,17 +64,18 @@ $(function() {
   $('.panel-title i').click(function(){
     window.open('http://kgeographer.com/?p=140&preview=true', '', 'width=700');
   })
-  $("#tl").click(function(){
-    // e.preventDefault;
-    if($(".vis-timeline").length > 0) {
-      console.log('clicked #tl')
-      window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
-      $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight),
-        "z-index":40})
-    } else {
-      console.log('clicked #tl, no timeline')
-    }
-  })
+  // expand #tl on click
+  // $("#tl").click(function(){
+  //   // e.preventDefault;
+  //   if($(".vis-timeline").length > 0) {
+  //     console.log('clicked #tl')
+  //     window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
+  //     $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight),
+  //       "z-index":40})
+  //   } else {
+  //     console.log('clicked #tl, no timeline')
+  //   }
+  // })
 });
 
 // position timeline
@@ -252,6 +253,7 @@ window.loadPeriods = function(pid){
       pd['start'] = makeDate(p.start.in.year)
       pd['end'] = makeDate(p.stop.in.year)
       pd['className'] = p.id == 'p0'+pid ? 'orange' : 'vis-item'
+      pd['title'] = p.note
       // console.log('pid, pd:',pid,pd)
       periodArray.push(pd)
     })

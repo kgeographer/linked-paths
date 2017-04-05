@@ -12,6 +12,9 @@ window.makeTimeVis = function(periodArray,pid){
       item: {
         vertical: 4
       }
+    },
+    tooltip: {
+      followMouse: true
     }
     // margin.item.vertical: 24
   };
