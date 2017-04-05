@@ -64,6 +64,16 @@ $(function() {
   $('.panel-title i').click(function(){
     window.open('http://kgeographer.com/?p=140&preview=true', '', 'width=700');
   })
+  $("#tl").click(function(e){
+    e.preventDefault;
+    if($(".vis-timeline").length >0) {
+      console.log('clicked #tl')
+      window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
+      $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight)})
+    } else {
+      console.log('clicked #tl, no timeline')
+    }
+  })
 });
 
 // position timeline
@@ -221,10 +231,11 @@ function listFeatureProperties(props,when){
 
 // from Perio.do, typically
 window.loadPeriods = function(pid){
+  $(".loader").show()
   // https://test.perio.do/---.json
   let l = pid.length
   let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
-  console.log('pid, collUri',pid, collUri)
+  // console.log('pid, collUri',pid, collUri)
   //period https://test.perio.do/fp7wv2s8c.json
   //collection https://test.perio.do/fp7wv.json
   $.when(
@@ -238,16 +249,33 @@ window.loadPeriods = function(pid){
       success: function(data) {
         // TODO: prettify json returned
         window.pds=data
+        let pidRange = [pds.definitions['p0'+pid].start.in.year,pds.definitions['p0'+pid].stop.in.year]
+        let pdsRange = [_.min(pds.definitions, function(pd){ return pd.start.in.year }),
+            _.max(pds.definitions, function(pd){ return pd.stop.in.year })
+          ];
+        let pdsRangeYears = [pdsRange[0].start.in.year,pdsRange[1].stop.in.year]
+        console.log('pidRange,pdsRange,pdsRangeYears:',pidRange,pdsRange,pdsRangeYears)
         // console.log(JSON.stringify(data.definitions[pid],undefined,2))
-        $("#period_pre").html(JSON.stringify(data.definitions['p0'+pid],undefined,2))
+        // $("#period_pre").html(JSON.stringify(data.definitions['p0'+pid],undefined,2))
       }
     })
   ).done(function(){
-    console.log('got periods:',pds)
-    _.each(pds.definitions, function(p){console.log(p.label,p.start.in.year,p.stop.in.year)})
+    // console.log('got periods:',pds)
+    window.periodArray = []
+    _.each(pds.definitions, function(p){
+      var pd = {}
+      // console.log(p.label,p.start.in.year,p.stop.in.year)
+      pd['id'] = p.id
+      pd['content'] = p.label
+      pd['start'] = p.start.in.year
+      pd['end'] = p.stop.in.year
+      periodArray.push(pd)
+    })
+    makeTimeVis(periodArray,pid)
     $(".loader").hide()
-    $("#period_modal .modal-title").html(pid)
-    $("#period_modal").modal(); })
+    // $("#period_modal .modal-title").html(pid)
+    // $("#period_modal").modal();
+  })
 }
 
 var writeCard = function(dataset,attribs){
@@ -274,7 +302,7 @@ var writeCard = function(dataset,attribs){
 // project abstract in right panel
 var writeAbstract = function(attribs){``
   if(attribs.periods){
-    console.log(attribs.periods[0])
+    // console.log(attribs.periods[0])
     var foo = '<span class="span-link" onclick="loadPeriods(\''+attribs.periods[0]+'\')">'
   }
   let html = "<div id='"+attribs.lp_id+
@@ -451,7 +479,7 @@ window.loadLayer = function(dataset) {
         var tlRange = [collection.when.timespan[0],collection.when.timespan[3]]
         var tlRangeDates = [makeDate(collection.when.timespan[0]),
           makeDate(collection.when.timespan[3])]
-        console.log(tlRange,tlRangeDates)
+        // console.log(tlRange,tlRangeDates)
         // var tlRangeDates = [new Date(collection.when.timespan[0]),
         //   new Date(collection.when.timespan[3])]
         // set period midpoint for timeline
@@ -641,7 +669,8 @@ window.loadLayer = function(dataset) {
           // multiple routes, assuming start/end date range
           makeHistData(dataset,eventsObj,tlRangeDates)
         } else if (collection.attributes.periods) {
-          makePeriodData(collection.attributes.periods)
+          loadPeriods(collection.attributes.periods[0])
+          // makePeriodData(collection.attributes.periods)
         }
       })
       $(".loader").hide()
