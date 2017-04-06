@@ -4,6 +4,11 @@
   **/
 .vis-item .vis-item-overflow {
   overflow: visible;
+  padding: 0 0 0 5px;
+}
+.vis-item .vis-item-content {
+  padding: 0 0 0 5px;
+  font-size: .8em;
 }
 .vis-item.orange {
   background-color: gold;
@@ -51,7 +56,11 @@ div.tooltip {
 html, body { height: 100%; margin:0; padding:0;}
 
 .hidden {display:none;}
+.disabled {cursor:default !important; color:gray;}
 .leaflet-zoom-animated {pointer-events: auto;}
+.checkbox input[type=checkbox] {cursor:pointer;}
+// .checkbox input[type=checkbox] {cursor:default !important;}
+// .checkbox label {cursor:default !important;}
 
 #wrapper{
   width: 100%;

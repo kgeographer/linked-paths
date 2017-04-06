@@ -6,7 +6,8 @@ window.makeTimeVis = function(periodArray,pid){
   var container = document.getElementById('tl');
   // Configuration for the Timeline
   var options = {
-    autoResize: false,
+    autoResize: true,
+    // autoResize: false,
     margin: {
       axis: 8,
       item: {
@@ -19,5 +20,6 @@ window.makeTimeVis = function(periodArray,pid){
     // margin.item.vertical: 24
   };
   // Create a Timeline
-  var timeline = new vis.Timeline(container, periodArray, options);
+  var timeline = new vis.Timeline(container, periodArray, options)
+
 }

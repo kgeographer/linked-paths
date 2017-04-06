@@ -1,16 +1,17 @@
 {
   "when": {
     "timespan": [
-      "0200",
+      "0275",
       "",
       "",
-      "0400",
-      "around 200 - 400 CE"
+      "0325",
+      "late 3rd to early 4th c."
     ]
   },
   "attributes": {
-    "timespan": "[0200,,,0400,around 200 - 400 CE]",
-    "periods": [],
+    "lp_id": "lp_vicarello",
+    "timespan": "[0275,,,0325,late 3rd to early 4th c.]",
+    "periods": ["gjgrs69ws"],
     "places": "places_vicarello.csv",
     "pub_date": "2013",
     "collections": "Latin Tradition",

@@ -47,7 +47,7 @@ var brushended = function(){
   filterEvents(selRange)
 }
 var brushendedZ = function(){
-  console.log('in brushendedZ')
+  // console.log('in brushendedZ')
   var s = d3.event.selection;
   if(grain == 'year'){
     var selRange = s.map(xScale.invert).map(d3.timeYear.round)

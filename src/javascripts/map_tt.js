@@ -65,17 +65,17 @@ $(function() {
     window.open('http://kgeographer.com/?p=140&preview=true', '', 'width=700');
   })
   // expand #tl on click
-  // $("#tl").click(function(){
-  //   // e.preventDefault;
-  //   if($(".vis-timeline").length > 0) {
-  //     console.log('clicked #tl')
-  //     window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
-  //     $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight),
-  //       "z-index":40})
-  //   } else {
-  //     console.log('clicked #tl, no timeline')
-  //   }
-  // })
+  $("#tl").click(function(){
+    // e.preventDefault;
+    if($(".vis-timeline").length > 0) {
+      console.log('clicked #tl')
+      window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
+      $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight),
+        "z-index":40})
+    } else {
+      console.log('clicked #tl, no timeline')
+    }
+  })
 });
 
 // position timeline
@@ -212,11 +212,11 @@ function listFeatureProperties(props,when){
 
 // from Perio.do
 window.loadPeriods = function(pid){
-  $(".loader").show()
+  // $(".loader").show()
   // https://test.perio.do/---.json
   let l = pid.length
   let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
-  // console.log('pid, collUri',pid, collUri)
+  console.log('pid, collUri',pid, collUri)
   //period https://test.perio.do/fp7wv2s8c.json
   //collection https://test.perio.do/fp7wv.json
   $.when(
@@ -229,13 +229,13 @@ window.loadPeriods = function(pid){
       crossDomain: true,
       success: function(data) {
         // TODO: prettify json returned
-        window.pds=data
-        let pidRange = [pds.definitions['p0'+pid].start.in.year,pds.definitions['p0'+pid].stop.in.year]
-        let pdsRange = [_.min(pds.definitions, function(pd){ return pd.start.in.year }),
-            _.max(pds.definitions, function(pd){ return pd.stop.in.year })
+        window.pdefs=data.definitions
+        window.pidRange = [pdefs['p0'+pid].start.in.year,pdefs['p0'+pid].stop.in.year]
+        let pdsRange = [_.min(pdefs, function(pd){ return pd.start.in.year }),
+            _.max(pdefs, function(pd){ return pd.stop.in.year })
           ];
         let pdsRangeYears = [pdsRange[0].start.in.year,pdsRange[1].stop.in.year]
-        window.pdsContext = _.filter(pds.definitions,function(pdef){
+        window.pdsContext = _.filter(pdefs,function(pdef){
           return pdef.start.in.year <= pidRange[1] && pdef.stop.in.year >= pidRange[0];
         })
         console.log('pidRange,pdsRange,pdsRangeYears:',pidRange,pdsRange,pdsRangeYears)
@@ -258,6 +258,7 @@ window.loadPeriods = function(pid){
       periodArray.push(pd)
     })
     makeTimeVis(periodArray,pid)
+
     $(".loader").hide()
     // $("#period_modal .modal-title").html(pid)
     // $("#period_modal").modal();
@@ -334,9 +335,10 @@ window.zapLayer = function(dataset) {
   // remove all div.place-card
   $(".place-card").remove();
   // remove time vis if exists
-  if($("#tlvis_"+dataset)){
-    $("#tlvis_"+dataset).remove();
-  }
+  $("#tl").html("")
+  // if($("#tlvis_"+dataset)){
+  //   $("#tlvis_"+dataset).remove();
+  // }
   // remove its data from the map
   let name_p = "places_"+dataset;
   let name_s = "segments_"+dataset;

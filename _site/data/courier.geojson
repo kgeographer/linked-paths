@@ -1,5 +1,6 @@
 {
   "attributes": {
+    "lp_id": "lp_courier",
     "pub_date": "2014",
     "title": "Ming Dynasty Courier Routes and Postal Stations",
     "description": "The Late Ming Dynasty Courier Stations and Routes were compiled primarily from the \"Mingdai Yizhankao\" by YANG Zhengtai, supplemented for some areas with information derived from the 1908 Postal Atlas. The Courier Stations and Routes were developed for use in an online network analyst application, which calculates the shortest route between selected postal stations on the fly:    http://maps.cga.harvard.edu/chinapostoffice/",
