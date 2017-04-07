@@ -59,13 +59,14 @@ var brushendedZ = function(){
   filterEvents(selRange)
 }
 window.brush = d3.brushX()
+    // .extent([new Date(628,0,1),new Date(646,12,31)])
     .extent([[0, 0], [width, height]])
     .on("end", brushendedZ );
-    // .on("end", grain == 'year' ? brushendedY : brushended );
 
 window.simpleTimeline = function(dataset,events,tlrange){
   // if there's one already, zap it
   // $("#tlvis").remove()
+  console.log('simpleTimeline range:',new Date(tlrange[0]), new Date(tlrange[1]))
   // create an svg container
   var vis = d3.select("#tl").append("svg:svg")
       .attr("width", width)
@@ -80,10 +81,11 @@ window.simpleTimeline = function(dataset,events,tlrange){
     var mindate = new Date(tlrange[0]),
         maxdate = new Date(tlrange[1]);
 
-        var d = new Date();
-         d.setDate(d.getDate()-5);
+    var d = new Date();
+    d.setDate(d.getDate()-5);
 
     window.xScale = d3.scaleTime()
+      // .domain([new Date(628,0,1),new Date(646,12,31) ])
       .domain([mindate, maxdate])
       .range([padding_w, width - padding_w * 2]);
 

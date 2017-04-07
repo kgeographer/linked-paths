@@ -464,12 +464,16 @@ window.loadLayer = function(dataset) {
         writeCard(dataset,collection.attributes)
         // console.log('collection attributes',collection.attributes)
         // collection range
-        var tlRange = [collection.when.timespan[0],collection.when.timespan[3]]
-        var tlRangeDates = [makeDate(collection.when.timespan[0]),
+        // Expand x axis?
+        // let tlRange0 = makeDate(collection.when.timespan[0])
+        // let tlRange1 = makeDate(collection.when.timespan[3])
+        // window.tlRangeDates = [tlRange0.setDate(tlRange0.getDate()-10),
+        //   tlRange1.setDate(tlRange1.getDate()+10)]
+        //
+        // console.log(tlRange0,tlRange1,tlRangeDates)
+        window.tlRangeDates = [makeDate(collection.when.timespan[0]),
           makeDate(collection.when.timespan[3])]
-        // console.log(tlRange,tlRangeDates)
-        // var tlRangeDates = [new Date(collection.when.timespan[0]),
-        //   new Date(collection.when.timespan[3])]
+
         // set period midpoint for timeline
         tlMidpoint = midpoint(collection.when.timespan,'mid')
 
@@ -541,7 +545,7 @@ window.loadLayer = function(dataset) {
 
           // the rest are line features for routes/segments in GeometryCollection
           else if(geomF.type == 'GeometryCollection') {
-            // console.log('layer.feature', layer.feature)
+            console.log('layer.feature', layer.feature)
             //* TODO: create feature for each geometry
             // dataRows = '<table><hr><td>id</td><td>label</td></hr>'
             for(let i in geomF.geometries) {
