@@ -108,15 +108,6 @@ window.fixDate = function(d){
   return foo;
 }
 
-// function parseWhen(when) {
-//   console.log(when.timespan[0])
-//   let html = "<div class='segment-when'>";
-//   html+="start: "+when.timespan[0]+"-"+when.timespan[1]+"<br/>"+
-//         "end: "+when.timespan[2]+"-"+when.timespan[3]+"<br/>"+
-//         "duration: "+when.duration==""?"throughout":when.duration+"</div>"
-//   return html;
-// }
-
 // events for Journey data
 function buildSegmentEvent(feat){
   // need validate function here
@@ -463,14 +454,7 @@ window.loadLayer = function(dataset) {
         // write dataset card for data panel
         writeCard(dataset,collection.attributes)
         // console.log('collection attributes',collection.attributes)
-        // collection range
-        // Expand x axis?
-        // let tlRange0 = makeDate(collection.when.timespan[0])
-        // let tlRange1 = makeDate(collection.when.timespan[3])
-        // window.tlRangeDates = [tlRange0.setDate(tlRange0.getDate()-10),
-        //   tlRange1.setDate(tlRange1.getDate()+10)]
-        //
-        // console.log(tlRange0,tlRange1,tlRangeDates)
+
         window.tlRangeDates = [makeDate(collection.when.timespan[0]),
           makeDate(collection.when.timespan[3])]
 
@@ -545,7 +529,7 @@ window.loadLayer = function(dataset) {
 
           // the rest are line features for routes/segments in GeometryCollection
           else if(geomF.type == 'GeometryCollection') {
-            console.log('dataset: layer.feature', dataset, layer.feature)
+            // console.log('dataset: layer.feature', dataset, layer.feature)
             //* TODO: create feature for each geometry
             // dataRows = '<table><hr><td>id</td><td>label</td></hr>'
             for(let i in geomF.geometries) {
@@ -668,6 +652,7 @@ window.loadLayer = function(dataset) {
       })
       $(".loader").hide()
 }
+
 $(".leaflet-popup-content a").click(function(e){
   e.preventDefault();
   console.log(e)

@@ -9,9 +9,11 @@ window.client = new elasticsearch.Client({
 
 var years = function(timespan){
   //return start and end from topotime when timespan
+  console.log('years() timespan',timespan)
   var str = '';
   if(timespan.length > 1) {
-    str = timespan[0].substring(0,4)+'-'+timespan[3].substring(0,4);
+    str = timespan[0].substring(0,4)+'-'+timespan[2].substring(0,4);
+    // str = timespan[0].substring(0,4)+'-'+timespan[3].substring(0,4);
   } else {
     str = timespan[0]
   }
@@ -48,7 +50,7 @@ window.segmentSearch = function(obj){
       console.log('hits:',resp.hits.hits)
       return Promise.all(resp.hits.hits)
     }).then(function(hitsArray){
-        // console.log('plKeys[i] for .place-card', obj[plKeys[i]])
+        console.log('hitsArray', hitsArray)
         html += '<div class="place-card">'+
           '<p class="search-result-project">from: <em>'+obj[plKeys[i]][0]+'</em></p>'+
           '<h4><a href="#" project="'+obj[plKeys[i]][0]+
