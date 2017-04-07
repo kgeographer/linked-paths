@@ -166,7 +166,7 @@ div.tooltip {
   top: 8px;
   right: 0;
   background: beige;
-  z-index: 30;
+  z-index: 10;
 }
 #data_abstract {
   position: relative;

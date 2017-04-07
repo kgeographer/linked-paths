@@ -3,17 +3,18 @@
 // var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 
 window.filterEvents = function(selRange) { // [start,end]
-  var d0 = selRange[0],
+  // subtract 1 day to acccount for timezone
+  var d0 = selRange[0].addDays(-1),
       d1 = selRange[1];
   // console.log('selRange',selRange)
-  // console.log('selRange',d0,d1)
+  console.log('selRange',d0,d1)
   _.each(lineFeatures, function(l) {
     l.eachLayer(function(layer){
       // console.log('layer',layer)
       let featuredate = new Date(layer.feature.when.timespan[0])
       // console.log('d0,d1,featuredate',d0,d1,featuredate)
-      if(featuredate < d0 || featuredate > d1) {
-        // console.log('d0,d1,featuredate',d0,d1,featuredate)
+      if(featuredate <= d0 || featuredate >= d1) {
+        console.log('d0,d1,featuredate',d0,d1,featuredate)
         layer.removeFrom(ttmap)
       } else {
           // console.log('nope')
@@ -29,6 +30,12 @@ Date.prototype.addDays = function(days) {
   dat.setDate(dat.getDate() + days);
   return dat;
 }
+// helper method to increment x placement
+Date.prototype.addYears = function(years) {
+  var dat = new Date(this.valueOf());
+  dat.setYear(dat.getFullYear() + years);
+  return dat;
+}
 
 var width = window.innerWidth,
     height = 40,
@@ -40,24 +47,17 @@ var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-var brushended = function(){
-  var s = d3.event.selection;
-  var selRange = s.map(xScale.invert)
-  console.log('brushended grain, selRange', grain, selRange)
-  filterEvents(selRange)
-}
 var brushendedZ = function(){
-  // console.log('in brushendedZ')
   var s = d3.event.selection;
   if(grain == 'year'){
     var selRange = s.map(xScale.invert).map(d3.timeYear.round)
-    // d3.select(this).transition().call(d3.event.target.move, selRange.map(xScale))
   } else {
     var selRange = s.map(xScale.invert)
   }
-  // console.log('brushendedZ grain, selRange:', grain, selRange)
+  console.log('brushendedZ grain, selRange:', grain, selRange)
   filterEvents(selRange)
 }
+
 window.brush = d3.brushX()
     // .extent([new Date(628,0,1),new Date(646,12,31)])
     .extent([[0, 0], [width, height]])
@@ -80,16 +80,23 @@ window.simpleTimeline = function(dataset,events,tlrange){
     // define the x scale (horizontal)
     var mindate = new Date(tlrange[0]),
         maxdate = new Date(tlrange[1]);
-
+    if(dataset == 'roundabout'){
+      mindate=mindate.addDays(-1)
+    } else if(dataset == 'xuanzang') {
+      mindate=mindate.addDays(-1)
+      maxdate=maxdate.addYears(1)
+    }
+    console.log('mindate,maxdate',mindate,maxdate)
     window.xScale = d3.scaleTime()
+      // subtract 1 day to account for timezone when grain = day
       .domain([mindate, maxdate])
-      .range([padding_w - 10, width - (padding_w * 2)]);
+      .range([padding_w - 10, width - (padding_w*2)]);
 
     // define the y axis
     var yAxis = d3.axisLeft()
         .scale(yScale);
 
-    // define the y axis
+    // define the x axis
     var xAxis = d3.axisBottom()
         .scale(xScale);
 
@@ -122,6 +129,7 @@ window.simpleTimeline = function(dataset,events,tlrange){
       })
       // .attr("fill", "orange")
       .attr('cx', function(d){
+        // console.log('cx(d)', xScale(new Date(d.start)))
         return xScale(new Date(d.start))
       })
       .attr('cy', 20)
