@@ -108,14 +108,14 @@ window.fixDate = function(d){
   return foo;
 }
 
-function parseWhen(when) {
-  console.log(when.timespan[0])
-  let html = "<div class='segment-when'>";
-  html+="start: "+when.timespan[0]+"-"+when.timespan[1]+"<br/>"+
-        "end: "+when.timespan[2]+"-"+when.timespan[3]+"<br/>"+
-        "duration: "+when.duration==""?"throughout":when.duration+"</div>"
-  return html;
-}
+// function parseWhen(when) {
+//   console.log(when.timespan[0])
+//   let html = "<div class='segment-when'>";
+//   html+="start: "+when.timespan[0]+"-"+when.timespan[1]+"<br/>"+
+//         "end: "+when.timespan[2]+"-"+when.timespan[3]+"<br/>"+
+//         "duration: "+when.duration==""?"throughout":when.duration+"</div>"
+//   return html;
+// }
 
 // events for Journey data
 function buildSegmentEvent(feat){
@@ -545,7 +545,7 @@ window.loadLayer = function(dataset) {
 
           // the rest are line features for routes/segments in GeometryCollection
           else if(geomF.type == 'GeometryCollection') {
-            console.log('layer.feature', layer.feature)
+            console.log('dataset: layer.feature', dataset, layer.feature)
             //* TODO: create feature for each geometry
             // dataRows = '<table><hr><td>id</td><td>label</td></hr>'
             for(let i in geomF.geometries) {

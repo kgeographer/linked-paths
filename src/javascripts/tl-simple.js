@@ -66,7 +66,7 @@ window.brush = d3.brushX()
 window.simpleTimeline = function(dataset,events,tlrange){
   // if there's one already, zap it
   // $("#tlvis").remove()
-  console.log('simpleTimeline range:',new Date(tlrange[0]), new Date(tlrange[1]))
+  // console.log('simpleTimeline range:',new Date(tlrange[0]), new Date(tlrange[1]))
   // create an svg container
   var vis = d3.select("#tl").append("svg:svg")
       .attr("width", width)
@@ -81,13 +81,9 @@ window.simpleTimeline = function(dataset,events,tlrange){
     var mindate = new Date(tlrange[0]),
         maxdate = new Date(tlrange[1]);
 
-    var d = new Date();
-    d.setDate(d.getDate()-5);
-
     window.xScale = d3.scaleTime()
-      // .domain([new Date(628,0,1),new Date(646,12,31) ])
       .domain([mindate, maxdate])
-      .range([padding_w, width - padding_w * 2]);
+      .range([padding_w - 10, width - (padding_w * 2)]);
 
     // define the y axis
     var yAxis = d3.axisLeft()
@@ -107,12 +103,13 @@ window.simpleTimeline = function(dataset,events,tlrange){
     vis.append("g")
         .attr("class", "axis xaxis")
         .attr("transform", "translate(0,20)")
-        // .attr("transform", "translate(0," + (height - padding) + ")")
         .call(xAxis);
 
     window.gBrush = vis.append("g")
         .attr("class", "brush")
-        .call(brush);
+        .call(brush)
+
+    // gBrush.call(brush.move, xScale.range());
 
     vis.selectAll("circle")
       .data(events)
@@ -143,6 +140,7 @@ window.simpleTimeline = function(dataset,events,tlrange){
           .style("opacity", 0);
         })
 
-    gBrush.call(brush.move, [mindate, maxdate].map(xScale));
+    gBrush.call(brush.move, xScale.range());
+    // gBrush.call(brush.move, [mindate, maxdate].map(xScale));
 
 }
