@@ -650,10 +650,10 @@ window.loadLayer = function(dataset) {
           if(collection.attributes.segmentType == 'journey') {
             simpleTimeline(dataset,renderThese,tlRangeDates)
           } else if(isFlow == true){
-            console.log('journeys flow:', renderThese)
             window.yrgroups = _.countBy(renderThese,function(l){
               return l.start.getFullYear();
             })
+            console.log('render histogram of yrgroups:', yrgroups)
           }
         } else if (collection.attributes.segmentType == 'hRoutes') {
           // multiple routes, assuming start/end date range
