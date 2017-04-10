@@ -13,6 +13,7 @@ var years = function(timespan){
   var str = '';
   if(timespan.length > 1) {
     str = timespan[0].substring(0,4)+'-'+timespan[2].substring(0,4);
+    //TODO: make timespans in json-l index files consistent length
     // str = timespan[0].substring(0,4)+'-'+timespan[3].substring(0,4);
   } else {
     str = timespan[0]

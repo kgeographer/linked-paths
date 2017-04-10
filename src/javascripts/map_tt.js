@@ -32,6 +32,7 @@ window.tlMidpoint = '';
 window.dataRows = '';
 window.timelineCounter = 0;
 window.grain = 'date' // timeline data grain for snapping
+window.isFlow = false;
 
 // on start
 $(function() {
@@ -320,7 +321,9 @@ var download = function(type, data){
 
 window.zapLayer = function(dataset) {
   // uncheck it
-  $("input:checkbox[value='"+dataset+"']").prop('checked',false);
+  dataset = dataset.slice(-2)[0]=='-' ? dataset.slice(0,-2) : dataset
+  $("input:checkbox[value='"+ dataset +"']").prop('checked',false);
+  console.log('want to zap: dataset',dataset)
   //remove its card from data panel
   $("#lp_"+dataset).remove();
   // remove all div.place-card
@@ -419,7 +422,9 @@ window.makeDate = function(d){
 }
 
 window.loadLayer = function(dataset) {
-    // console.log('dataset',dataset)
+    isFlow = dataset.slice(-2) == '-f' ? true : false;
+    dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
+    console.log('dataset:',dataset)
     features.bboxes.removeFrom(ttmap)
     // clear feature arrays
     pointFeatures = [];
@@ -449,7 +454,7 @@ window.loadLayer = function(dataset) {
       .loadURL('data/' + dataset + '.geojson')
       .on('ready', function(){
         // get Collection attributes into right panel
-        var collection = featureLayer._geojson
+        window.collection = featureLayer._geojson
 
         // write dataset card for data panel
         writeCard(dataset,collection.attributes)
@@ -645,7 +650,7 @@ window.loadLayer = function(dataset) {
         } else if (collection.attributes.segmentType == 'hRoutes') {
           // multiple routes, assuming start/end date range
           makeHistData(dataset,eventsObj,tlRangeDates)
-        } else if (collection.attributes.periods.length > 0) {
+        } else if (collection.attributes.periods.length > 0 && isFlow == false) {
           loadPeriods(collection.attributes.periods[0])
           // makePeriodData(collection.attributes.periods)
         }
