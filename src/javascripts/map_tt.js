@@ -653,7 +653,8 @@ window.loadLayer = function(dataset) {
             window.yrgroups = _.countBy(renderThese,function(l){
               return l.start.getFullYear();
             })
-            console.log('render histogram of yrgroups:', yrgroups)
+            makeFlowHistData(dataset, yrgroups)
+            // console.log('render histogram of yrgroups:', yrgroups)
           }
         } else if (collection.attributes.segmentType == 'hRoutes') {
           // multiple routes, assuming start/end date range
@@ -661,23 +662,6 @@ window.loadLayer = function(dataset) {
         } else if (collection.attributes.periods.length > 0 && isFlow == false) {
           loadPeriods(collection.attributes.periods[0])
           // makePeriodData(collection.attributes.periods)
-        } else if (isFlow == true){
-          window.yrlayers = {}
-          _.each(features.segments_incanto._layers,function(l){
-            // _.each(l, function(m){
-            //   console.log(m)
-            //     // yrlayers[m];
-            // })
-          })
-
-            // _.each(l._layers,function(f){
-            //   // console.log(f.feature.when.timespan[0])
-            //   return f.feature.when.timespan[0]
-            // })
-            // _.each(l._layers,function(f){
-            //   console.log(f.feature.when.timespan[0])
-            // })
-            //})
         }
       })
       $(".loader").hide()

@@ -2,7 +2,7 @@
 // make a data object D3 histogram likes
 // year;count
 window.makeHistogram = function(dataset,data){
-  // console.log('in makeHistogram')
+  console.log('in makeHistogram',data[0])
   var margin = {top: 10, right: 0, bottom: 20, left: 20},
     width = window.innerWidth * 0.95,
     height = 60,
@@ -10,10 +10,10 @@ window.makeHistogram = function(dataset,data){
     padding_w = 40;
 
     // set the ranges
-  var x = d3.scaleBand()
+  var xScale = d3.scaleBand()
     .range([0, width])
     .padding(0.05);
-  var y = d3.scaleLinear()
+  var yScale = d3.scaleLinear()
     .range([height, 0]);
 
   var svg_hist = d3.select("#tl").append("svg")
@@ -23,29 +23,39 @@ window.makeHistogram = function(dataset,data){
   .append("g")
     .attr("transform","translate(" + margin.left + "," + margin.top + ")")
 
-  x.domain(data.map(function(d) { return d.year; }));
-  y.domain([0, d3.max(data, function(d) { return d.count; })]);
+  xScale.domain(data.map(function(d) { return d.year; }));
+  yScale.domain([0, d3.max(data, function(d) { return d.count; })]);
+
+  window.axisB = d3.axisBottom(xScale)
+    .tickValues(xScale.domain().filter(function(d,i){ return !(i%10)}));
+    // .tickFormat(d3.timeFormat("%a %d"))
 
   svg_hist.selectAll(".bar")
     .data(data)
   .enter().append("rect")
     .attr("class", "bar")
-    .attr("x", function(d) { return x(d.year); })
-    .attr("width", x.bandwidth())
-    .attr("y", function(d) { return y(d.count); })
-    .attr("height", function(d) { return height - y(d.count); });
+    .attr("x", function(d) { return xScale(d.year); })
+    .attr("width", xScale.bandwidth())
+    .attr("y", function(d) { return yScale(d.count); })
+    .attr("height", function(d) { return height - yScale(d.count); });
 
-  svg_hist.append("g")
+  window.hAxis = svg_hist.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
+      .call(axisB)
   // svg_hist.append("g")
   //     .call(d3.axisLeft(y));
 }
 
 
-// x.domain(data.map(function(d) { return d.letter; }));
-// y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+
+window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates){
+  window.bins = []
+  window.range=tlRangeDates
+  _.each(yrgroups,function(k,v){
+    bins.push({"year":parseInt(v),"count":k});
+  })
+  makeHistogram(dataset, bins)
+}
 
 window.makeHistData = function(dataset,eventsObj,tlRangeDates){
   window.bins = []
@@ -67,9 +77,5 @@ window.makeHistData = function(dataset,eventsObj,tlRangeDates){
       }
     })
   })
-  // console.log('bins',bins)
-  // console.log('dataset,eventsObj,tlRangeDates',dataset,eventsObj,tlRangeDates)
   makeHistogram(dataset, bins)
-  // console.log('extent:',tlRangeDates[1].getFullYear() - tlRangeDates[0].getFullYear())
-  // $("#tl").html('<h2>a histogram</h2>')
 }
