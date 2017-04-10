@@ -625,7 +625,8 @@ window.loadLayer = function(dataset) {
 
         // TIME: load timeline for journey(s), histogram for others
         window.renderThese = []
-        if (collection.attributes.segmentType == 'journey') {
+        if(['journey','journeys'].indexOf(collection.attributes.segmentType) > 0) {
+        // if (collection.attributes.segmentType == 'journey') {
           //// events of unk. duration in year; group and assign faux dates
           // eq. spaced in year on timeline
           window.grpE = _.groupBy(eventsObj.events, function(e){
@@ -646,13 +647,37 @@ window.loadLayer = function(dataset) {
           })
           // TODO: set grain dynamically somehow
           if(dataset == 'xuanzang'){grain='year'}
-          simpleTimeline(dataset,renderThese,tlRangeDates)
+          if(collection.attributes.segmentType == 'journey') {
+            simpleTimeline(dataset,renderThese,tlRangeDates)
+          } else if(isFlow == true){
+            console.log('journeys flow:', renderThese)
+            window.yrgroups = _.countBy(renderThese,function(l){
+              return l.start.getFullYear();
+            })
+          }
         } else if (collection.attributes.segmentType == 'hRoutes') {
           // multiple routes, assuming start/end date range
           makeHistData(dataset,eventsObj,tlRangeDates)
         } else if (collection.attributes.periods.length > 0 && isFlow == false) {
           loadPeriods(collection.attributes.periods[0])
           // makePeriodData(collection.attributes.periods)
+        } else if (isFlow == true){
+          window.yrlayers = {}
+          _.each(features.segments_incanto._layers,function(l){
+            // _.each(l, function(m){
+            //   console.log(m)
+            //     // yrlayers[m];
+            // })
+          })
+
+            // _.each(l._layers,function(f){
+            //   // console.log(f.feature.when.timespan[0])
+            //   return f.feature.when.timespan[0]
+            // })
+            // _.each(l._layers,function(f){
+            //   console.log(f.feature.when.timespan[0])
+            // })
+            //})
         }
       })
       $(".loader").hide()
