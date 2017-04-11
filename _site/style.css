@@ -66,6 +66,9 @@ body {
 .bar {
   fill: steelblue;
 }
+#yaxis .tick {
+  font-size: 0.8em;
+}
 rect.handle {
   fill: crimson;
   fill-opacity: .6;

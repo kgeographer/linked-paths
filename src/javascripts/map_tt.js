@@ -323,7 +323,7 @@ window.zapLayer = function(dataset) {
   // uncheck it
   dataset = dataset.slice(-2)[0]=='-' ? dataset.slice(0,-2) : dataset
   $("input:checkbox[value='"+ dataset +"']").prop('checked',false);
-  console.log('want to zap: dataset',dataset)
+  // console.log('want to zap: dataset',dataset)
   //remove its card from data panel
   $("#lp_"+dataset).remove();
   // remove all div.place-card
@@ -424,7 +424,7 @@ window.makeDate = function(d){
 window.loadLayer = function(dataset) {
     isFlow = dataset.slice(-2) == '-f' ? true : false;
     dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
-    console.log('dataset:',dataset)
+    // console.log('dataset:',dataset)
     features.bboxes.removeFrom(ttmap)
     // clear feature arrays
     pointFeatures = [];
@@ -625,7 +625,8 @@ window.loadLayer = function(dataset) {
 
         // TIME: load timeline for journey(s), histogram for others
         window.renderThese = []
-        if(['journey','journeys'].indexOf(collection.attributes.segmentType) > 0) {
+        if(['journey','journeys'].indexOf(collection.attributes.segmentType) > -1) {
+          console.log('segmentType',collection.attributes.segmentType)
         // if (collection.attributes.segmentType == 'journey') {
           //// events of unk. duration in year; group and assign faux dates
           // eq. spaced in year on timeline
@@ -646,8 +647,9 @@ window.loadLayer = function(dataset) {
             })
           })
           // TODO: set grain dynamically somehow
-          if(dataset == 'xuanzang'){grain='year'}
+          if(['xuanzang','incanto'].indexOf(dataset) >0) {grain='year'}
           if(collection.attributes.segmentType == 'journey') {
+            console.log('journey')
             simpleTimeline(dataset,renderThese,tlRangeDates)
           } else if(isFlow == true){
             window.yrgroups = _.countBy(renderThese,function(l){

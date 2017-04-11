@@ -14,7 +14,7 @@ window.filterEvents = function(selRange) { // [start,end]
       let featuredate = new Date(layer.feature.when.timespan[0])
       // console.log('d0,d1,featuredate',d0,d1,featuredate)
       if(featuredate <= d0 || featuredate >= d1) {
-        console.log('d0,d1,featuredate',d0,d1,featuredate)
+        // console.log('d0,d1,featuredate',d0,d1,featuredate)
         layer.removeFrom(ttmap)
       } else {
           // console.log('nope')

@@ -1,20 +1,22 @@
+// var d3 = Object.assign({}, require("d3"), require("d3-scale"));
+
+var margin = {top: 10, right: 0, bottom: 20, left: 40},
+  width = window.innerWidth * 0.95,
+  height = 60,
+  padding_h = 10,
+  padding_w = 40;
+
+  // set the ranges
+window.xScale = d3.scaleBand()
+  .range([0, width])
+  .padding(0.05);
+window.yScale = d3.scaleLinear()
+  .range([height, 0]);
 
 // make a data object D3 histogram likes
 // year;count
 window.makeHistogram = function(dataset,data){
-  console.log('in makeHistogram',data[0])
-  var margin = {top: 10, right: 0, bottom: 20, left: 20},
-    width = window.innerWidth * 0.95,
-    height = 60,
-    padding_h = 10,
-    padding_w = 40;
-
-    // set the ranges
-  var xScale = d3.scaleBand()
-    .range([0, width])
-    .padding(0.05);
-  var yScale = d3.scaleLinear()
-    .range([height, 0]);
+  console.log('in makeHistogram',dataset)
 
   var svg_hist = d3.select("#tl").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -24,11 +26,19 @@ window.makeHistogram = function(dataset,data){
     .attr("transform","translate(" + margin.left + "," + margin.top + ")")
 
   xScale.domain(data.map(function(d) { return d.year; }));
+  // yScale.domain(data.map(function(d) { return d.count; }));
   yScale.domain([0, d3.max(data, function(d) { return d.count; })]);
 
-  window.axisB = d3.axisBottom(xScale)
-    .tickValues(xScale.domain().filter(function(d,i){ return !(i%10)}));
-    // .tickFormat(d3.timeFormat("%a %d"))
+  var axisB = d3.axisBottom(xScale)
+    .tickValues(xScale.domain().filter(function(d,i){
+      return dataset == 'incanto' ? !(i%10): d
+    }));
+
+  var axisL = d3.axisLeft(yScale)
+    // .tickValues(yScale.domain().filter(function(d,i){
+    //   // console.log(d,i)
+    //   return dataset == 'incanto' ? !(i%10): d
+    // }));
 
   svg_hist.selectAll(".bar")
     .data(data)
@@ -38,15 +48,17 @@ window.makeHistogram = function(dataset,data){
     .attr("width", xScale.bandwidth())
     .attr("y", function(d) { return yScale(d.count); })
     .attr("height", function(d) { return height - yScale(d.count); });
+    // .attr("y", function(d) { return yScale(d.count); })
+    // .attr("height", function(d) { return height - yScale(d.count); });
 
-  window.hAxis = svg_hist.append("g")
-      .attr("transform", "translate(0," + height + ")")
-      .call(axisB)
-  // svg_hist.append("g")
-  //     .call(d3.axisLeft(y));
+  window.xAxis = svg_hist.append("g")
+    .attr("id","xaxis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(axisB)
+  window.yAxis = svg_hist.append("g")
+    .attr("id","yaxis")
+    .call(axisL);
 }
-
-
 
 window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates){
   window.bins = []
