@@ -47,108 +47,111 @@ var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-var brushendedZ = function(){
-  var s = d3.event.selection;
-  if(grain == 'year'){
-    var selRange = s.map(xScale.invert).map(d3.timeYear.round)
-  } else {
-    var selRange = s.map(xScale.invert)
-  }
-  // console.log('brushendedZ grain, selRange:', grain, selRange)
-  filterEvents(selRange)
-}
-
-window.brush = d3.brushX()
-    // .extent([new Date(628,0,1),new Date(646,12,31)])
-    .extent([[0, 0], [width, height]])
-    .on("end", brushendedZ );
-
 window.simpleTimeline = function(dataset,events,tlrange){
+
   // if there's one already, zap it
   // $("#tlvis").remove()
   // console.log('simpleTimeline range:',new Date(tlrange[0]), new Date(tlrange[1]))
   // create an svg container
+
+  var yScale = d3.scaleLinear()
+    .domain([0, 100])    // values between 0 and 100
+    .range([height - padding_h, padding_h]);
+
+  // define the x scale (horizontal)
+  var mindate = new Date(tlrange[0]),
+      maxdate = new Date(tlrange[1]);
+  if(dataset == 'roundabout'){
+    mindate=mindate.addDays(-1)
+  } else if(dataset == 'xuanzang') {
+    mindate=mindate.addDays(-1)
+    maxdate=maxdate.addYears(1)
+  }
+  // console.log('mindate,maxdate',mindate,maxdate)
   var vis = d3.select("#tl").append("svg:svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("id", "tlvis_"+dataset);
+    .attr("width", width)
+    .attr("height", height)
+    .attr("id", "tlvis_"+dataset);
 
-    window.yScale = d3.scaleLinear()
-      .domain([0, 100])    // values between 0 and 100
-      .range([height - padding_h, padding_h]);
+  var xScale = d3.scaleTime()
+    // subtract 1 day to account for timezone when grain = day
+    .domain([mindate, maxdate])
+    .range([padding_w - 10, width - (padding_w*2)]);
 
-    // define the x scale (horizontal)
-    var mindate = new Date(tlrange[0]),
-        maxdate = new Date(tlrange[1]);
-    if(dataset == 'roundabout'){
-      mindate=mindate.addDays(-1)
-    } else if(dataset == 'xuanzang') {
-      mindate=mindate.addDays(-1)
-      maxdate=maxdate.addYears(1)
+  // define the y axis
+  var yAxis = d3.axisLeft()
+      .scale(yScale);
+
+  // define the x axis
+  var xAxis = d3.axisBottom()
+      .scale(xScale);
+
+  var brushendedZ = function(){
+    var s = d3.event.selection;
+    if(grain == 'year'){
+      var selRange = s.map(xScale.invert).map(d3.timeYear.round)
+    } else {
+      var selRange = s.map(xScale.invert)
     }
-    // console.log('mindate,maxdate',mindate,maxdate)
-    window.xScale = d3.scaleTime()
-      // subtract 1 day to account for timezone when grain = day
-      .domain([mindate, maxdate])
-      .range([padding_w - 10, width - (padding_w*2)]);
+    // console.log('brushendedZ grain, selRange:', grain, selRange)
+    filterEvents(selRange)
+  }
 
-    // define the y axis
-    var yAxis = d3.axisLeft()
-        .scale(yScale);
+  window.brush = d3.brushX()
+      // .extent([new Date(628,0,1),new Date(646,12,31)])
+      .extent([[0, 0], [width, height]])
+      .on("end", brushendedZ );
+  // draw y axis with labels and move in from the size by the amount of padding
+  // vis.append("g")
+  //   .attr("class","axis")
+  //     .attr("transform", "translate("+padding+",0)")
+  //     .call(yAxis);
 
-    // define the x axis
-    var xAxis = d3.axisBottom()
-        .scale(xScale);
+  // draw x axis with labels and move to the bottom of the chart area
+  vis.append("g")
+      .attr("class", "axis xaxis")
+      .attr("transform", "translate(0,20)")
+      .call(xAxis);
 
-    // draw y axis with labels and move in from the size by the amount of padding
-    // vis.append("g")
-    //   .attr("class","axis")
-    //     .attr("transform", "translate("+padding+",0)")
-    //     .call(yAxis);
+  window.gBrush = vis.append("g")
+      .attr("class", "brush")
+      .call(brush)
 
-    // draw x axis with labels and move to the bottom of the chart area
-    vis.append("g")
-        .attr("class", "axis xaxis")
-        .attr("transform", "translate(0,20)")
-        .call(xAxis);
+  // gBrush.call(brush.move, xScale.range());
 
-    window.gBrush = vis.append("g")
-        .attr("class", "brush")
-        .call(brush)
-
-    // gBrush.call(brush.move, xScale.range());
-
-    vis.selectAll("circle")
-      .data(events)
-    .enter()
-      .append("circle")
-      .attr('r',6)
-      .attr("class","event")
-      .attr('fill', function(d){
-        return colorMap[dataset]
+  vis.selectAll("circle")
+    .data(events)
+  .enter()
+    .append("circle")
+    .attr('r',6)
+    .attr("class","event")
+    .attr('fill', function(d){
+      return colorMap[dataset]
+    })
+    // .attr("fill", "orange")
+    .attr('cx', function(d){
+      // console.log('cx(d)', xScale(new Date(d.start)))
+      return xScale(new Date(d.start))
+    })
+    .attr('cy', 20)
+    // .attr('cy', yScale(0))
+    .on("mouseover", function(d) {
+      div.transition()
+        .duration(200)
+        .style("opacity", .9);
+      div.text(d.name)
+        .style("left", (d3.event.pageX) + "px")
+        .style("top", (d3.event.pageY - 28) + "px");
       })
-      // .attr("fill", "orange")
-      .attr('cx', function(d){
-        // console.log('cx(d)', xScale(new Date(d.start)))
-        return xScale(new Date(d.start))
+    .on("mouseout", function(d) {
+      div.transition()
+        .duration(500)
+        .style("opacity", 0);
       })
-      .attr('cy', 20)
-      // .attr('cy', yScale(0))
-      .on("mouseover", function(d) {
-        div.transition()
-          .duration(200)
-          .style("opacity", .9);
-        div.text(d.name)
-          .style("left", (d3.event.pageX) + "px")
-          .style("top", (d3.event.pageY - 28) + "px");
-        })
-      .on("mouseout", function(d) {
-        div.transition()
-          .duration(500)
-          .style("opacity", 0);
-        })
 
     gBrush.call(brush.move, xScale.range());
     // gBrush.call(brush.move, [mindate, maxdate].map(xScale));
+
+  $(".loader").hide()
 
 }

@@ -47,7 +47,6 @@ $(function() {
     if(this.checked == true) {
       if(searchParams['p'] == undefined) {
         ga('send', 'event', ['Layers'], ['Check'], ['Data panel']);
-        $(".loader").show()
         loadLayer(this.value)
       } else {
         location.href = location.origin+location.pathname+'?d='+this.value;
@@ -419,11 +418,12 @@ window.makeDate = function(d){
 }
 
 window.loadLayer = function(dataset) {
+  console.log('loadLayer()',dataset)
+    $(".loader").show()
     // check in case layer was loaded programatically
     $(":checkbox[value='"+dataset+"']").prop("checked","true")
     isFlow = dataset.slice(-2) == '-f' ? true : false;
     dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
-    // console.log('dataset:',dataset)
     features.bboxes.removeFrom(ttmap)
     // clear feature arrays
     pointFeatures = [];
@@ -649,7 +649,6 @@ window.loadLayer = function(dataset) {
           // makePeriodData(collection.attributes.periods)
         }
       })
-      $(".loader").hide()
 }
 
 $(".leaflet-popup-content a").click(function(e){

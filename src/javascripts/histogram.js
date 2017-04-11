@@ -68,6 +68,8 @@ window.makeHistogram = function(dataset,data,yLabel){
     // .style("color", "#993333")
     // .style("font-weight", "800")
     .text(yLabel);
+
+  $(".loader").hide()
 }
 
 window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
