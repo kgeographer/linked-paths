@@ -69,6 +69,11 @@ body {
 #yaxis .tick {
   font-size: 0.8em;
 }
+.y_label {
+  font-size: 12px;
+  fill: #000;
+  font-weight: 800;
+}
 rect.handle {
   fill: crimson;
   fill-opacity: .6;
@@ -169,7 +174,7 @@ div.tooltip {
   top: 8px;
   right: 0;
   background: beige;
-  z-index: 10;
+  z-index: 30;
 }
 #data_abstract {
   position: relative;

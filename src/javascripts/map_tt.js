@@ -34,7 +34,7 @@ window.timelineCounter = 0;
 window.grain = 'date' // timeline data grain for snapping
 window.isFlow = false;
 
-// on start
+// on start listeners
 $(function() {
   // TODO: restore state in href approach (?)
   Object.getOwnPropertyNames(searchParams).length == 0 ?
@@ -79,21 +79,21 @@ $(function() {
   })
 });
 
-// position timeline
-window.midpoint = function(ts,type) {
-  // console.log('midpoint ts',ts)
-  if(type == 'start') {
-    var mid = new Date(ts[0])
-  } else if(type == 'mid') {
-    let start = new Date(ts[0])
-    let end = ts[3] == ('' || undefined) ? new Date(Date.now()) : new Date(ts[3])
-    var mid = new Date((start.getTime() + end.getTime()) / 2);
-  }
-  // console.log(mid)
-  return mid
-}
+// position timeline (obs. simile)
+// var midpoint = function(ts,type) {
+//   // console.log('midpoint ts',ts)
+//   if(type == 'start') {
+//     var mid = new Date(ts[0])
+//   } else if(type == 'mid') {
+//     let start = new Date(ts[0])
+//     let end = ts[3] == ('' || undefined) ? new Date(Date.now()) : new Date(ts[3])
+//     var mid = new Date((start.getTime() + end.getTime()) / 2);
+//   }
+//   // console.log(mid)
+//   return mid
+// }
 
-var resizeTimerID = null;
+// var resizeTimerID = null;
 
 function onResize() {
     if (resizeTimerID == null) {
@@ -104,7 +104,7 @@ function onResize() {
     }
 }
 
-window.fixDate = function(d){
+var fixDate = function(d){
   let foo = moment(d).toISOString()
   return foo;
 }
@@ -202,27 +202,26 @@ function listFeatureProperties(props,when){
   return html;
 }
 
-// from Perio.do
+// from Perio.do, https://test.perio.do/---.json
 window.loadPeriods = function(pid){
-  // $(".loader").show()
-  // https://test.perio.do/---.json
   let l = pid.length
+  // derive collection uri
   let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
-  console.log('pid, collUri',pid, collUri)
+  // console.log('pid, collUri',pid, collUri)
   //period https://test.perio.do/fp7wv2s8c.json
   //collection https://test.perio.do/fp7wv.json
   $.when(
-    // vanilla
+    //
     $.ajax({
-      url: collUri,
+      url: collUri, // get whole collection
       // url: uri,
       dataType: 'json',
       type: 'get',
       crossDomain: true,
       success: function(data) {
-        // TODO: prettify json returned
-        window.pdefs=data.definitions
-        window.pidRange = [pdefs['p0'+pid].start.in.year,pdefs['p0'+pid].stop.in.year]
+        // build pdsContext (intersecting periods)
+        let pdefs=data.definitions
+        let pidRange = [pdefs['p0'+pid].start.in.year,pdefs['p0'+pid].stop.in.year]
         let pdsRange = [_.min(pdefs, function(pd){ return pd.start.in.year }),
             _.max(pdefs, function(pd){ return pd.stop.in.year })
           ];
@@ -230,11 +229,11 @@ window.loadPeriods = function(pid){
         window.pdsContext = _.filter(pdefs,function(pdef){
           return pdef.start.in.year <= pidRange[1] && pdef.stop.in.year >= pidRange[0];
         })
-        console.log('pidRange,pdsRange,pdsRangeYears:',pidRange,pdsRange,pdsRangeYears)
+        // console.log('pidRange,pdsRange,pdsRangeYears:',pidRange,pdsRange,pdsRangeYears)
       }
     })
   ).done(function(){
-    // console.log('got periods:',pds)
+    // format for timeline
     window.periodArray = []
     _.each(pdsContext, function(p){
     // _.each(pds.definitions, function(p){
@@ -246,14 +245,11 @@ window.loadPeriods = function(pid){
       pd['end'] = makeDate(p.stop.in.year)
       pd['className'] = p.id == 'p0'+pid ? 'orange' : 'vis-item'
       pd['title'] = p.note
-      // console.log('pid, pd:',pid,pd)
       periodArray.push(pd)
     })
     makeTimeVis(periodArray,pid)
 
     $(".loader").hide()
-    // $("#period_modal .modal-title").html(pid)
-    // $("#period_modal").modal();
   })
 }
 
@@ -278,7 +274,7 @@ var writeCard = function(dataset,attribs){
   })
 }
 
-// project abstract in right panel
+// per project, in right panel
 var writeAbstract = function(attribs){``
   if(attribs.periods){
     // console.log(attribs.periods[0])
@@ -345,7 +341,7 @@ window.zapLayer = function(dataset) {
   }
 }
 
-window.loadLayers = function(arr) {
+var loadLayers = function(arr) {
   // what is already loaded?
   var loadedIDs = $("#data_layers input:checkbox:checked").map(function(){
     return $(this).val();
@@ -382,6 +378,7 @@ function startMapM(dataset=null){
       .loadURL('data/bb_all.geojson')
       .on('ready', function(){
         bboxLayer.eachLayer(function(layer){
+          // console.log(layer.feature.properties.project)
           bboxFeatures.push(layer)
           layer.bindPopup(blurbs[layer.feature.properties.project],{ closeButton: false})
             .setStyle(mapStyles.bbox)
@@ -422,6 +419,8 @@ window.makeDate = function(d){
 }
 
 window.loadLayer = function(dataset) {
+    // check in case layer was loaded programatically
+    $(":checkbox[value='"+dataset+"']").prop("checked","true")
     isFlow = dataset.slice(-2) == '-f' ? true : false;
     dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
     // console.log('dataset:',dataset)
@@ -442,9 +441,6 @@ window.loadLayer = function(dataset) {
     //     '</p><p>Place:'+searchParams['p']+'</p>')
     // }
 
-    // check in case layer was loaded programatically
-    $(":checkbox[value="+dataset+"]").prop("checked","true")
-
     /*  read a single FeatureCollection of
         Places (geometry.type == Point), and
         Routes (geometry.type == GeometryCollection or undefined)
@@ -455,16 +451,16 @@ window.loadLayer = function(dataset) {
       .on('ready', function(){
         // get Collection attributes into right panel
         window.collection = featureLayer._geojson
-
+        // y-axis label for histogram magnitudes
+        var yLabel = collection.attributes.y_label
         // write dataset card for data panel
         writeCard(dataset,collection.attributes)
-        // console.log('collection attributes',collection.attributes)
 
         window.tlRangeDates = [makeDate(collection.when.timespan[0]),
           makeDate(collection.when.timespan[3])]
 
         // set period midpoint for timeline
-        tlMidpoint = midpoint(collection.when.timespan,'mid')
+        // tlMidpoint = midpoint(collection.when.timespan,'mid')
 
         // build separate L.featureGroup for points & lines
         featureLayer.eachLayer(function(layer){
@@ -596,17 +592,7 @@ window.loadLayer = function(dataset) {
                   // }
                 }
             }
-            // OBSOLETE
-            // if(eventsObj.events.length == 0) {
-            //   // needs a period, not bunch of events
-            //   eventsObj.events.push(buildCollectionPeriod(collection))
-            //   // console.log('build',buildCollectionPeriod(collection))
-            //   // console.log('period eventsObj', eventsObj.events[0])
-            // }
-          } // else {
-            // there is no when in place records yet
-            // console.log(whenF == undefined ? 'whenF undef' : whenF)
-          // }
+          }
         })
         // featureGroup pairs as layers
         let name_p = "places_"+dataset
@@ -626,10 +612,6 @@ window.loadLayer = function(dataset) {
         // TIME: load timeline for journey(s), histogram for others
         window.renderThese = []
         if(['journey','journeys'].indexOf(collection.attributes.segmentType) > -1) {
-          console.log('segmentType',collection.attributes.segmentType)
-        // if (collection.attributes.segmentType == 'journey') {
-          //// events of unk. duration in year; group and assign faux dates
-          // eq. spaced in year on timeline
           window.grpE = _.groupBy(eventsObj.events, function(e){
             return e.start.substring(0,4); })
           _.each(Object.keys(grpE),function(v,k,l){
@@ -649,18 +631,19 @@ window.loadLayer = function(dataset) {
           // TODO: set grain dynamically somehow
           if(['xuanzang','incanto'].indexOf(dataset) >0) {grain='year'}
           if(collection.attributes.segmentType == 'journey') {
-            console.log('journey')
+            // console.log('journey')
             simpleTimeline(dataset,renderThese,tlRangeDates)
           } else if(isFlow == true){
             window.yrgroups = _.countBy(renderThese,function(l){
               return l.start.getFullYear();
             })
-            makeFlowHistData(dataset, yrgroups)
+            // dataset,yrgroups,tlRangeDates,yLabel
+            makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
             // console.log('render histogram of yrgroups:', yrgroups)
           }
         } else if (collection.attributes.segmentType == 'hRoutes') {
           // multiple routes, assuming start/end date range
-          makeHistData(dataset,eventsObj,tlRangeDates)
+          makeHistData(dataset,eventsObj,tlRangeDates,yLabel)
         } else if (collection.attributes.periods.length > 0 && isFlow == false) {
           loadPeriods(collection.attributes.periods[0])
           // makePeriodData(collection.attributes.periods)

@@ -15,10 +15,10 @@ window.yScale = d3.scaleLinear()
 
 // make a data object D3 histogram likes
 // year;count
-window.makeHistogram = function(dataset,data){
-  console.log('in makeHistogram',dataset)
+window.makeHistogram = function(dataset,data,yLabel){
+  console.log('in makeHistogram',dataset,yLabel)
 
-  var svg_hist = d3.select("#tl").append("svg")
+  window.svg_hist = d3.select("#tl").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .attr("id", "tlvis_"+dataset)
@@ -51,25 +51,37 @@ window.makeHistogram = function(dataset,data){
     // .attr("y", function(d) { return yScale(d.count); })
     // .attr("height", function(d) { return height - yScale(d.count); });
 
-  window.xAxis = svg_hist.append("g")
+  var xAxis = svg_hist.append("g")
     .attr("id","xaxis")
     .attr("transform", "translate(0," + height + ")")
     .call(axisB)
-  window.yAxis = svg_hist.append("g")
+
+  var yAxis = svg_hist.append("g")
     .attr("id","yaxis")
     .call(axisL);
+
+  svg_hist.append("text").attr("x", 40)
+    .attr("y", 20)
+    .attr("text-anchor", "left")
+    .classed("y_label", true)
+    // .style("font-size", "12px")
+    // .style("color", "#993333")
+    // .style("font-weight", "800")
+    .text(yLabel);
 }
 
-window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates){
+window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
+  console.log('makeFlowHistData',dataset,yLabel)
   window.bins = []
   window.range=tlRangeDates
   _.each(yrgroups,function(k,v){
     bins.push({"year":parseInt(v),"count":k});
   })
-  makeHistogram(dataset, bins)
+  makeHistogram(dataset,bins,yLabel)
 }
 
-window.makeHistData = function(dataset,eventsObj,tlRangeDates){
+window.makeHistData = function(dataset,eventsObj,tlRangeDates,yLabel){
+  console.log('makeHistData yLabel',dataset,yLabel)
   window.bins = []
   window.range=tlRangeDates
   var r0 = range[0].getFullYear()
@@ -89,5 +101,5 @@ window.makeHistData = function(dataset,eventsObj,tlRangeDates){
       }
     })
   })
-  makeHistogram(dataset, bins)
+  makeHistogram(dataset,bins,yLabel)
 }

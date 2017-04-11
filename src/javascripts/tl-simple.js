@@ -7,7 +7,7 @@ window.filterEvents = function(selRange) { // [start,end]
   var d0 = selRange[0].addDays(-1),
       d1 = selRange[1];
   // console.log('selRange',selRange)
-  console.log('selRange',d0,d1)
+  // console.log('selRange',d0,d1)
   _.each(lineFeatures, function(l) {
     l.eachLayer(function(layer){
       // console.log('layer',layer)
@@ -54,7 +54,7 @@ var brushendedZ = function(){
   } else {
     var selRange = s.map(xScale.invert)
   }
-  console.log('brushendedZ grain, selRange:', grain, selRange)
+  // console.log('brushendedZ grain, selRange:', grain, selRange)
   filterEvents(selRange)
 }
 
@@ -86,7 +86,7 @@ window.simpleTimeline = function(dataset,events,tlrange){
       mindate=mindate.addDays(-1)
       maxdate=maxdate.addYears(1)
     }
-    console.log('mindate,maxdate',mindate,maxdate)
+    // console.log('mindate,maxdate',mindate,maxdate)
     window.xScale = d3.scaleTime()
       // subtract 1 day to account for timezone when grain = day
       .domain([mindate, maxdate])
