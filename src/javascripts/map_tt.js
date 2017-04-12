@@ -274,20 +274,16 @@ var writeCard = function(dataset,attribs){
 }
 
 // per project, in right panel
-var writeAbstract = function(attribs){``
-  if(attribs.periods){
-    // console.log(attribs.periods[0])
-    var foo = '<span class="span-link" onclick="loadPeriods(\''+attribs.periods[0]+'\')">'
-  }
+var writeAbstract = function(attribs){
   let html = "<div id='"+attribs.lp_id+
     "' class='project-card'><span class='project-card-title'>"+
     attribs.title+"</span>"
     // attribs.short_title+"</span>"
   html += '<p><b>Date</b>: '+attribs.pub_date+'</p>'+
     '<p><b>Contributor(s)</b>: '+attribs.contributors+'<p>'
-  html += attribs.periods?
-    '<p><b>Period(s)</b>: '+ foo +
-    attribs.periods[0]+'</span><p>':''
+  html += attribs.periods && attribs.periods.length >0 ?
+    '<p><b>Period(s)</b>: <span class="span-link" onclick="loadPeriods(\'' +
+      attribs.periods[0]+'\')"></span><p>' : ''
   html += '<p>'+attribs.description+'</p>'
   return html
 }
