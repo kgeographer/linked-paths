@@ -219,7 +219,7 @@ window.loadPeriods = function(pid){
       crossDomain: true,
       success: function(data) {
         // build pdsContext (intersecting periods)
-        let pdefs=data.definitions
+        window.pdefs=data.definitions
         let pidRange = [pdefs['p0'+pid].start.in.year,pdefs['p0'+pid].stop.in.year]
         let pdsRange = [_.min(pdefs, function(pd){ return pd.start.in.year }),
             _.max(pdefs, function(pd){ return pd.stop.in.year })
@@ -373,7 +373,7 @@ function startMapM(dataset=null){
       .loadURL('data/bb_all.geojson')
       .on('ready', function(){
         bboxLayer.eachLayer(function(layer){
-          // console.log(layer.feature.properties.project)
+          console.log(layer.feature.properties.project)
           bboxFeatures.push(layer)
           layer.bindPopup(blurbs[layer.feature.properties.project],{ closeButton: false})
             .setStyle(mapStyles.bbox)
