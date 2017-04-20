@@ -1,6 +1,6 @@
 colorMap = {"ra":"#ffff80","roundabout":"#ffff80","courier":"#ff9999","incanto":"#ffb366",
 "incanto-j":"#ffb366", "vb":"#b380ff","xuanzang":"#99e699","owtrad":"#fff",
-"bordeaux":"#fff"}
+"bor":"#fff"}
 
 blurbs = {
   "courier":"Ming Dynasty Courier Routes, 14-17c CE",

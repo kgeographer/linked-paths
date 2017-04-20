@@ -151,7 +151,7 @@ var mapStyles = {
 function stylePoints(feature) {
   let fill=colorMap[feature.toGeoJSON().properties.collection]
   let rad=feature.toGeoJSON().properties.collection=='owtrad'?2:4;
-  // console.log(coll)
+  console.log('fill',fill)
 	return {
       color: '#000',
       fillColor: fill,
@@ -206,7 +206,7 @@ window.loadPeriods = function(pid){
   let l = pid.length
   // derive collection uri
   let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
-  // console.log('pid, collUri',pid, collUri)
+  console.log('pid, collUri',pid, collUri)
   //period https://test.perio.do/fp7wv2s8c.json
   //collection https://test.perio.do/fp7wv.json
   $.when(
@@ -373,7 +373,7 @@ function startMapM(dataset=null){
       .loadURL('data/bb_all.geojson')
       .on('ready', function(){
         bboxLayer.eachLayer(function(layer){
-          console.log(layer.feature.properties.project)
+          // console.log(layer.feature.properties.project)
           bboxFeatures.push(layer)
           layer.bindPopup(blurbs[layer.feature.properties.project],{ closeButton: false})
             .setStyle(mapStyles.bbox)
