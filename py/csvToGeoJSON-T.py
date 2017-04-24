@@ -51,7 +51,7 @@ def init():
     collection = {
         "type":"FeatureCollection",
         "attributes": collectionAttributes,
-        # NOTE: line 54 used for courier, the only one with a "periods" object now
+        # NOTE: next line used for courier, the only one with a "periods" object now
         #"when": {"timespan": collectionAttributes['timespan'][1:-1].split(','), "periods": collectionAttributes['periods']},
         "when": {"timespan": collectionAttributes['timespan'][1:-1].split(',')},
         "features": []
@@ -83,9 +83,11 @@ def createPlaces():
     def parseNames(row):
         arr = row['gazetteer_label'].split('/') if row['gazetteer_label'] != '' else []
         arr.append(row['toponym'])
+        # TODO: de-duplicate
         return arr
 
     for idx, row in enumerate(reader_p):
+        # skip any w/o geometry
         #print(row)
         feat = {"type":"Feature", \
                 "id": row['place_id'], \
@@ -107,9 +109,8 @@ def createPlaces():
         #if row['lng'] != null:
         collection['features'].append(feat)
 
-    # write places to separate file for index
-    # does not perform conflation now, will be manual
-    # only mimics Pelagios
+    # write places to separate json-l file for index
+    # TODO: perform conflation
 
     finp.seek(0) # resets dict.reader
     next(reader_p, None) # skip header
