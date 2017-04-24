@@ -1,6 +1,6 @@
 # csvToGeoJSON-T.py
 # read places and segments csv, output GeoJSON-T for routes, JSONlines for Elasticsearch
-# rev 2017-03 k. grossner
+# rev 2017-04 k. grossner (add bordeaux)
 
 import os, sys, csv, json, codecs, re, copy
 # TODO should we de-duplicate?
@@ -10,9 +10,9 @@ def init():
     #dir = os.getcwd() + '/data/'
     #os.chdir('./py')
     global proj, reader_p, reader_s, finp, fins, fout, foutp, fouts, collection, collectionAttributes, routeidx
-    # owtrad, courier, incanto-f, incanto-j, roundabout, vicarello, xuanzang
-    proj = 'courier'
-    data = 'courier'
+    # owtrad, courier, incanto-f, incanto-j, roundabout, vicarello, xuanzang, bordeaux
+    proj = 'bordeaux'
+    data = 'bordeaux'
 
     finp = codecs.open('../data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
     fins = codecs.open('../data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
@@ -51,7 +51,7 @@ def init():
     collection = {
         "type":"FeatureCollection",
         "attributes": collectionAttributes,
-        # NOTE: line 54 used for courier, the only one with a "periods" object now
+        # NOTE: next line used for courier, the only one with a "periods" object now
         #"when": {"timespan": collectionAttributes['timespan'][1:-1].split(','), "periods": collectionAttributes['periods']},
         "when": {"timespan": collectionAttributes['timespan'][1:-1].split(',')},
         "features": []
@@ -74,6 +74,7 @@ def createPlaces():
     places = []
 
     def toPoint(row):
+        print(row['lng'])
         return {
             'type': 'Point',
             'coordinates': [ float(row['lng']), float(row['lat']) ]
@@ -82,9 +83,11 @@ def createPlaces():
     def parseNames(row):
         arr = row['gazetteer_label'].split('/') if row['gazetteer_label'] != '' else []
         arr.append(row['toponym'])
+        # TODO: de-duplicate
         return arr
 
     for idx, row in enumerate(reader_p):
+        # skip any w/o geometry
         #print(row)
         feat = {"type":"Feature", \
                 "id": row['place_id'], \
@@ -103,12 +106,11 @@ def createPlaces():
 
         for x in range(len(props)):
             feat['properties'][props[x]] = row[props[x]]
-
+        #if row['lng'] != null:
         collection['features'].append(feat)
 
-    # write places to separate file for index
-    # does not perform conflation now, will be manual
-    # only mimics Pelagios
+    # write places to separate json-l file for index
+    # TODO: perform conflation
 
     finp.seek(0) # resets dict.reader
     next(reader_p, None) # skip header
@@ -189,9 +191,6 @@ def createSegments():
             }
 
         # build when object
-        #if 0 <= len(row['timespan']) <= 5:
-            #g['when'] = yearToSpan(row['timespan'])
-        #else:
         g['when'] = {"timespan": yearToSpan(row['timespan']) if 0 <= len(row['timespan']) <= 5 else \
                                             row['timespan'].split(','),
                      "duration": row['duration'],
@@ -263,5 +262,6 @@ def createSegments():
 init()
 createPlaces()
 createSegments()
+
 #fout.write(json.dumps(collection,indent=2))
 #fout.close()

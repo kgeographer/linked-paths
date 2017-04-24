@@ -1,13 +1,14 @@
 var url = require('url'),
-    // $ = require('jquery'),
-    querystring = require('querystring')
+    querystring = require('querystring'),
+    moment = require('moment'),
+    _ = require('underscore')
+window._ = _
     // , d3 = require('d3')
 // require('bootstrap')
-// var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 require('mapbox.js')
-window.moment = require('moment');
-moment().format();
+var turf = require('turf')
 
+moment().format();
 // import add'l app JavaScript
 import './bloodhound.js';
 // require('@turf/centroid')
@@ -30,8 +31,10 @@ window.tl = {};
 window.tlMidpoint = '';
 window.dataRows = '';
 window.timelineCounter = 0;
+window.grain = 'date' // timeline data grain for snapping
+window.isFlow = false;
 
-// on start
+// on start listeners
 $(function() {
   // TODO: restore state in href approach (?)
   Object.getOwnPropertyNames(searchParams).length == 0 ?
@@ -44,7 +47,6 @@ $(function() {
     if(this.checked == true) {
       if(searchParams['p'] == undefined) {
         ga('send', 'event', ['Layers'], ['Check'], ['Data panel']);
-        $(".loader").show()
         loadLayer(this.value)
       } else {
         location.href = location.origin+location.pathname+'?d='+this.value;
@@ -62,104 +64,35 @@ $(function() {
   $('.panel-title i').click(function(){
     window.open('http://kgeographer.com/?p=140&preview=true', '', 'width=700');
   })
+  // expand #tl on click
+  $("#tl").click(function(){
+    // e.preventDefault;
+    if($(".vis-timeline").length > 0) {
+      console.log('clicked #tl')
+      window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
+      $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight),
+        "z-index":40})
+    } else {
+      console.log('clicked #tl, no timeline')
+    }
+  })
 });
 
-// position timeline
-window.midpoint = function(ts,type) {
-  // console.log('midpoint ts',ts)
-  if(type == 'start') {
-    var mid = new Date(ts[0])
-  } else if(type == 'mid') {
-    let start = new Date(ts[0])
-    let end = ts[3] == ('' || undefined) ? new Date(Date.now()) : new Date(ts[3])
-    var mid = new Date((start.getTime() + end.getTime()) / 2);
-  }
-  // console.log(mid)
-  return mid
-}
+// position timeline (obs. simile)
+// var midpoint = function(ts,type) {
+//   // console.log('midpoint ts',ts)
+//   if(type == 'start') {
+//     var mid = new Date(ts[0])
+//   } else if(type == 'mid') {
+//     let start = new Date(ts[0])
+//     let end = ts[3] == ('' || undefined) ? new Date(Date.now()) : new Date(ts[3])
+//     var mid = new Date((start.getTime() + end.getTime()) / 2);
+//   }
+//   // console.log(mid)
+//   return mid
+// }
 
-// fires from startMap() after data is loaded
-window.initTimeline = function(events,dataset) {
-  // console.log('initTimeline events',events)
-  // custom timeline click event
-  Timeline.OriginalEventPainter.prototype._showBubble = function(x, y, evt) {
-    ga('send', 'event', ['Timeline'], ['Click event'], ['Timeline']);
-    // popup segment event/period
-    window.evt = evt
-    console.log('timeline evt obj', evt)
-    let name_s = 'segments_'+dataset
-    features[name_s].setStyle({'color':'gray'})
-
-    // journey segment popup on map
-    if(tlConfig[dataset].type == 'journey'){
-      // case dataset is journey(s)
-      idToFeature[dataset].segments[evt._id].openPopup()
-        .setStyle({'color':'red'})
-      idToFeature[dataset].segments[evt._id].on("popupclose", function(e){
-        this.setStyle({'color':'gray'})
-      })
-      ttmap.fitBounds(idToFeature[dataset].segments[evt._id].getBounds())
-    } else {
-      $('#period_modal .modal-header h4').html(evt._text)
-      $('#period_modal .modal-body p').html(evt._description+"<br/>"
-        +evt._start.getFullYear()
-        +";"+evt._latestStart.getFullYear()
-        +";"+evt._earliestEnd.getFullYear()
-        +";"+evt._end.getFullYear()
-        )
-      $('#period_modal').modal('show');
-    }
-  }
-
-  window.eventSrc = new Timeline.DefaultEventSource(0);
-  // Example of changing the theme from the defaults
-  // The default theme is defined in
-  // http://simile-widgets.googlecode.com/svn/timeline/tags/latest/src/webapp/api/scripts/themes.js
-  var theme = Timeline.ClassicTheme.create();
-  theme.event.bubble.width = 320;
-  // theme.event.bubble.height = 300;
-  theme.ether.backgroundColors[1] = theme.ether.backgroundColors[0];
-
-  let cfg = tlConfig[dataset]
-  var d = Timeline.DateTime.parseGregorianDateTime(tlMidpoint)
-  // console.log('midpoint d',d)
-  // var d = Timeline.DateTime.parseGregorianDateTime(tlMidpoint)
-  // DAY, WEEK, MONTH, YEAR, DECADE, CENTURY
-  var bandInfos = [
-    Timeline.createBandInfo({
-        width:          cfg.width1,
-        // width:          "75%",
-        intervalUnit:   eval('Timeline.DateTime.'+cfg.intUnit1),
-        // intervalPixels: 50,
-        intervalPixels: cfg.intPixels1,
-        eventSource:    eventSrc,
-        date:           d,
-        theme:          theme,
-        layout:         'original'  // original, overview, detailed
-    }),
-    Timeline.createBandInfo({
-        width:          cfg.width2,
-        // width:          "25%",
-        intervalUnit:   eval('Timeline.DateTime.'+cfg.intUnit2),
-        intervalPixels: cfg.intPixels2,
-        // intervalPixels: 120,
-        eventSource:    eventSrc,
-        date:           d,
-        theme:          theme,
-        layout:         'overview'  // original, overview, detailed
-    })
-  ];
-  bandInfos[1].syncWith = 0;
-  bandInfos[1].highlight = true;
-
-  window.tl = Timeline.create(document.getElementById("tl"), bandInfos, Timeline.HORIZONTAL);
-  // from the dynamic object; needs a dummy url
-  eventSrc.loadJSON(events, 'dummyUrl');
-
-  timelineCounter += 1;
-}
-
-var resizeTimerID = null;
+// var resizeTimerID = null;
 
 function onResize() {
     if (resizeTimerID == null) {
@@ -170,7 +103,7 @@ function onResize() {
     }
 }
 
-window.fixDate = function(d){
+var fixDate = function(d){
   let foo = moment(d).toISOString()
   return foo;
 }
@@ -188,41 +121,23 @@ function buildSegmentEvent(feat){
   event['latestStart'] = feat.when.timespan[1] == "" ? "" :feat.when.timespan[1];
   event['earliestEnd'] = feat.when.timespan[2] == "" ? "" :feat.when.timespan[2];
   event['end'] = feat.when.timespan[3] == "" ? "" :feat.when.timespan[3];
-  event['durationEvent'] = "true";
+  event['duration'] = feat.when.duration;
+  // event['durationEvent'] = "true";
   event['link'] = "";
   event['image'] = "";
   // console.log('built ', event)
   return event;
 }
 
-// Flows and hPeriod data get a single period band
-function buildCollectionPeriod(coll){
-  console.log(' in buildCollectionPeriod()',coll.when.timespan)
-  window.ts = coll.when.timespan
-  var event = {};
-  event['id'] = '{event id}';
-  event['title'] = 'valid period, '+coll.attributes.title;
-  event['description'] = ts[4];
-  event['start'] = ts[0];
-  event['latestStart'] = ts[1] == "" ? "" :ts[1];
-  event['earliestEnd'] = ts[2] == "" ? "" :ts[2];
-  event['end'] = ts[3] == "" ? "" :ts[3];
-  event['durationEvent'] = "true";
-  event['link'] = "";
-  // event['link'] = coll.attributes.uri;
-  event['image'] = "";
-  // console.log('event', JSON.stringify(event))
-  tlMidpoint = midpoint(ts,'start')
-  return event;
-}
-
 var mapStyles = {
   segments: {
-    color: "gray",
-    weight: 3,
+    color: "#993333",
+    // color: "#993333",
+    weight: 2,
     opacity: 0.6,
     highlight: {
-      color: "red"
+      color: "yellow",
+      weight: 4
     }
   },
   bbox: {
@@ -233,13 +148,10 @@ var mapStyles = {
   }
 }
 
-function style(feature) {
-  window.feat = feature
-  var colorMap = {"ra":"#ffff80","courier":"#ff9999","incanto":"#ffb366",
-    "vb":"#b380ff","xuanzang":"#99e699","owtrad":"#A0D0EE"}
+function stylePoints(feature) {
   let fill=colorMap[feature.toGeoJSON().properties.collection]
-  let rad=feature.toGeoJSON().properties.collection=='owtrad'?3:4;
-  // console.log(coll)
+  let rad=feature.toGeoJSON().properties.collection=='owtrad'?2:4;
+  console.log('fill',fill)
 	return {
       color: '#000',
       fillColor: fill,
@@ -249,13 +161,25 @@ function style(feature) {
     };
 }
 
-function parseWhen(when) {
-  console.log(when.timespan[0])
-  let html = "<div class='segment-when'>";
-  html+="start: "+when.timespan[0]+"-"+when.timespan[1]+"<br/>"+
-        "end: "+when.timespan[2]+"-"+when.timespan[3]+"<br/>"+
-        "duration: "+when.duration==""?"throughout":when.duration+"</div>"
-  return html;
+function stylePaths(feature,range) {
+  let when = new Date(feature.when.timespan[0])
+  let pathDateScale = d3.scaleTime()
+    .domain([range[0], range[1]])
+    .range(["#ff6666","#990000"]);
+  let pathSequenceScale = d3.scaleTime()
+    .domain([range[0], range[1]])
+    .range(["#ff6666","#990000"]);
+  // console.log('when, range',when,range)
+  return {
+    // color: "#993333",
+    color: pathDateScale(when),
+    weight: 2,
+    opacity: 0.6,
+    highlight: {
+      color: "yellow",
+      weight: 4
+    }
+  }
 }
 
 function listFeatureProperties(props,when){
@@ -277,27 +201,58 @@ function listFeatureProperties(props,when){
   return html;
 }
 
-// from Perio.do, typically
-window.loadPeriods = function(uri){
+// from Perio.do, https://test.perio.do/---.json
+window.loadPeriods = function(pid){
+  let l = pid.length
+  // derive collection uri
+  let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
+  console.log('pid, collUri',pid, collUri)
+  //period https://test.perio.do/fp7wv2s8c.json
+  //collection https://test.perio.do/fp7wv.json
   $.when(
-    // vanilla
+    //
     $.ajax({
-      url: uri,
+      url: collUri, // get whole collection
+      // url: uri,
       dataType: 'json',
       type: 'get',
       crossDomain: true,
       success: function(data) {
-        // TODO: prettify json returned
-        $("#period_pre").html(JSON.stringify(data,undefined,2))
+        // build pdsContext (intersecting periods)
+        window.pdefs=data.definitions
+        let pidRange = [pdefs['p0'+pid].start.in.year,pdefs['p0'+pid].stop.in.year]
+        let pdsRange = [_.min(pdefs, function(pd){ return pd.start.in.year }),
+            _.max(pdefs, function(pd){ return pd.stop.in.year })
+          ];
+        let pdsRangeYears = [pdsRange[0].start.in.year,pdsRange[1].stop.in.year]
+        window.pdsContext = _.filter(pdefs,function(pdef){
+          return pdef.start.in.year <= pidRange[1] && pdef.stop.in.year >= pidRange[0];
+        })
+        // console.log('pidRange,pdsRange,pdsRangeYears:',pidRange,pdsRange,pdsRangeYears)
       }
     })
   ).done(function(){
+    // format for timeline
+    window.periodArray = []
+    _.each(pdsContext, function(p){
+    // _.each(pds.definitions, function(p){
+      var pd = {}
+      // console.log(p.id,p.label,p.start.in.year,p.stop.in.year)
+      pd['id'] = p.id
+      pd['content'] = p.label
+      pd['start'] = makeDate(p.start.in.year)
+      pd['end'] = makeDate(p.stop.in.year)
+      pd['className'] = p.id == 'p0'+pid ? 'orange' : 'vis-item'
+      pd['title'] = p.note
+      periodArray.push(pd)
+    })
+    makeTimeVis(periodArray,pid)
+
     $(".loader").hide()
-    $("#period_modal .modal-title").html(uri)
-    $("#period_modal").modal(); })
+  })
 }
 
-function writeCard(dataset,attribs){
+var writeCard = function(dataset,attribs){
   // write card and replace intro or append to div#data_abstract
   let html = writeAbstract(attribs)
   html += "download:" +
@@ -318,25 +273,22 @@ function writeCard(dataset,attribs){
   })
 }
 
-// project abstract in right panel
-function writeAbstract(attribs){``
-  if(attribs.periods){
-    var foo = '<span class="span-link" onclick="loadPeriods(\''+attribs.periods[0]+'\')">'
-  }
+// per project, in right panel
+var writeAbstract = function(attribs){
   let html = "<div id='"+attribs.lp_id+
     "' class='project-card'><span class='project-card-title'>"+
     attribs.title+"</span>"
     // attribs.short_title+"</span>"
   html += '<p><b>Date</b>: '+attribs.pub_date+'</p>'+
     '<p><b>Contributor(s)</b>: '+attribs.contributors+'<p>'
-  html += attribs.periods?
-    '<p><b>Period(s)</b>: '+ foo +
-    attribs.periods[0]+'</span><p>':''
+  html += attribs.periods && attribs.periods.length >0 ?
+    '<p><b>Period(s)</b>: <span class="span-link" onclick="loadPeriods(\'' +
+      attribs.periods[0]+'\')"></span><p>' : ''
   html += '<p>'+attribs.description+'</p>'
   return html
 }
 
-function download(type, data){
+var download = function(type, data){
   // console.log('download', type,data)
   switch(type) {
     case "d3":
@@ -360,20 +312,31 @@ function download(type, data){
 
 window.zapLayer = function(dataset) {
   // uncheck it
-  $("input:checkbox[value='"+dataset+"']").prop('checked',false);
+  dataset = dataset.slice(-2)[0]=='-' ? dataset.slice(0,-2) : dataset
+  $("input:checkbox[value='"+ dataset +"']").prop('checked',false);
+  // console.log('want to zap: dataset',dataset)
   //remove its card from data panel
   $("#lp_"+dataset).remove();
   // remove all div.place-card
   $(".place-card").remove();
-  // remove
+  // remove time vis if exists
+  $("#tl").html("")
+  // if($("#tlvis_"+dataset)){
+  //   $("#tlvis_"+dataset).remove();
+  // }
   // remove its data from the map
   let name_p = "places_"+dataset;
   let name_s = "segments_"+dataset;
+  // console.log(name_p,name_s)
   features[name_p].removeFrom(ttmap);
   features[name_s].removeFrom(ttmap);
+  if ($("#data_layers input:checkbox:checked").length == 0){
+    ttmap.setView(L.latLng(32.6948,47.4609),2)
+    features.bboxes.addTo(ttmap)
+  }
 }
 
-window.loadLayers = function(arr) {
+var loadLayers = function(arr) {
   // what is already loaded?
   var loadedIDs = $("#data_layers input:checkbox:checked").map(function(){
     return $(this).val();
@@ -410,6 +373,7 @@ function startMapM(dataset=null){
       .loadURL('data/bb_all.geojson')
       .on('ready', function(){
         bboxLayer.eachLayer(function(layer){
+          // console.log(layer.feature.properties.project)
           bboxFeatures.push(layer)
           layer.bindPopup(blurbs[layer.feature.properties.project],{ closeButton: false})
             .setStyle(mapStyles.bbox)
@@ -436,7 +400,26 @@ function startMapM(dataset=null){
   }
 }
 
+window.makeDate = function(d){
+  // console.log('makeDate from:',d)
+  // handle all these: "2016-09-10"; "0494-01"; "23"; "-200"
+  let arr = d[0]!='-' ? d.split('-') : d.substring(1,d.length).split('-')
+  let year = arr[0].length==2 ? '00'+arr[0] : arr[0].length==1?'000'+arr[0] : arr[0]
+  // console.log('arr, year:', arr,year)
+  let date = new Date()
+  date.setFullYear(d[0]=='-' ? year*-1 : year)
+  date.setMonth(arr[1]!=null ? arr[1]-1:0)
+  date.setDate(arr[2]!=null ? arr[2]:1)
+  return date;
+}
+
 window.loadLayer = function(dataset) {
+  console.log('loadLayer()',dataset)
+    $(".loader").show()
+    // check in case layer was loaded programatically
+    $(":checkbox[value='"+dataset+"']").prop("checked","true")
+    isFlow = dataset.slice(-2) == '-f' ? true : false;
+    dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
     features.bboxes.removeFrom(ttmap)
     // clear feature arrays
     pointFeatures = [];
@@ -454,9 +437,6 @@ window.loadLayer = function(dataset) {
     //     '</p><p>Place:'+searchParams['p']+'</p>')
     // }
 
-    // check in case layer was loaded programatically
-    $(":checkbox[value="+dataset+"]").prop("checked","true")
-
     /*  read a single FeatureCollection of
         Places (geometry.type == Point), and
         Routes (geometry.type == GeometryCollection or undefined)
@@ -466,13 +446,17 @@ window.loadLayer = function(dataset) {
       .loadURL('data/' + dataset + '.geojson')
       .on('ready', function(){
         // get Collection attributes into right panel
-        var collection = featureLayer._geojson
-
+        window.collection = featureLayer._geojson
+        // y-axis label for histogram magnitudes
+        var yLabel = collection.attributes.y_label
         // write dataset card for data panel
         writeCard(dataset,collection.attributes)
 
+        window.tlRangeDates = [makeDate(collection.when.timespan[0]),
+          makeDate(collection.when.timespan[3])]
+
         // set period midpoint for timeline
-        tlMidpoint = midpoint(collection.when.timespan,'mid')
+        // tlMidpoint = midpoint(collection.when.timespan,'mid')
 
         // build separate L.featureGroup for points & lines
         featureLayer.eachLayer(function(layer){
@@ -484,7 +468,7 @@ window.loadLayer = function(dataset) {
           if(geomF.type == 'Point') {
               let latlng = new L.LatLng(geomF.coordinates[1],geomF.coordinates[0])
 
-              var placeFeature = new L.CircleMarker(latlng,style(layer))
+              var placeFeature = new L.CircleMarker(latlng,stylePoints(layer))
               // var placeFeature = new L.CircleMarker(latlng, mapStyles.places)
               // console.log(placeFeature)
               let gazURI = layer.feature.properties.gazetteer_uri
@@ -542,7 +526,7 @@ window.loadLayer = function(dataset) {
 
           // the rest are line features for routes/segments in GeometryCollection
           else if(geomF.type == 'GeometryCollection') {
-            // console.log('layer.feature', layer.feature)
+            // console.log('dataset: layer.feature', dataset, layer.feature)
             //* TODO: create feature for each geometry
             // dataRows = '<table><hr><td>id</td><td>label</td></hr>'
             for(let i in geomF.geometries) {
@@ -556,8 +540,11 @@ window.loadLayer = function(dataset) {
                   "when": whenObj,
                   "properties": geomF.geometries[i].properties
                 }
+                //TODO: what does a turf.bezier feature look like?
+                // var segment = new L.GeoJSON(turf.bezier(feat), {
                 var segment = new L.GeoJSON(feat, {
-                  style: mapStyles.segments
+                  style: stylePaths(feat,tlRangeDates)
+                  // style: mapStyles.segments
                 }).bindPopup('<b>'+feat.properties.label+'</b><br/>'+
                   listFeatureProperties(feat.properties,feat.when))
                 segment.on("click", function(e){
@@ -568,15 +555,11 @@ window.loadLayer = function(dataset) {
                   // reset color on timeline
                   $(".timeline-event-label").removeClass('timeline-segment-highlight')
                   let date = e.layer.feature.when.timespan[0]
-                  // label-tl-1-0-5001-6
                   var labelId = '#label-tl-'+(timelineCounter - 1)+'-0-'+
                     feat.properties.segment_id
-                  // console.log(dataset, feat.properties.segment_id)
+                  console.log('labelId',labelId)
                   // console.log(idToFeature[dataset].segments)
                   ttmap.fitBounds(idToFeature[dataset].segments[feat.properties.segment_id].getBounds())
-                  // console.log(labelId)
-                  $(labelId)[0].className += ' timeline-segment-highlight'
-                  tl.getBand(0).setCenterVisibleDate(Timeline.DateTime.parseGregorianDateTime(date))
                 }).on("popupclose",function(e){
                   this.setStyle(mapStyles.segments);
                   $(".timeline-event-label").removeClass('timeline-segment-highlight')
@@ -598,27 +581,19 @@ window.loadLayer = function(dataset) {
                       feat.properties.num_journeys:"1"})
                 }
 
-                //* build event object for journey timeline
+                //* build event object for time vis
                 if (whenObj != ({} || '')) {
                   // if (collection.attributes.segmentType == 'journey') {
                     eventsObj.events.push(buildSegmentEvent(feat));
                   // }
                 }
             }
-            if(eventsObj.events.length == 0) {
-              // needs a period, not bunch of events
-              eventsObj.events.push(buildCollectionPeriod(collection))
-              // console.log('build',buildCollectionPeriod(collection))
-              // console.log('period eventsObj', eventsObj.events[0])
-            }
-          } else {
-            // there is no when in place records yet
-            // console.log(whenF == undefined ? 'whenF undef' : whenF)
           }
         })
         // featureGroup pairs as layers
         let name_p = "places_"+dataset
         let name_s = "segments_"+dataset
+        _.each(lineFeatures, function(l) {l.addTo(ttmap)})
         features[name_s] = L.featureGroup(lineFeatures).addTo(ttmap)
         features[name_p] = L.featureGroup(pointFeatures).addTo(ttmap)
 
@@ -630,16 +605,48 @@ window.loadLayer = function(dataset) {
           ttmap.fitBounds(features[name_p].getBounds())
         }
 
-        // load timeline for journey(s), histogram for others
-
-        if (collection.attributes.segmentType == 'journey') {
-          initTimeline(eventsObj,dataset)
-        } else {
-          console.log('sample event for histogram',eventsObj.events[0])
+        // TIME: load timeline for journey(s), histogram for others
+        window.renderThese = []
+        if(['journey','journeys'].indexOf(collection.attributes.segmentType) > -1) {
+          window.grpE = _.groupBy(eventsObj.events, function(e){
+            return e.start.substring(0,4); })
+          _.each(Object.keys(grpE),function(v,k,l){
+            var incr = 0
+            // for each year...
+            _.each(grpE[v],function(v,k,l){
+              let tlDot = {}
+              tlDot['name'] = v.title
+              // if duration, increment days based on #events in year
+              tlDot['start'] = eventsObj.events[0]['duration'] == "?" ?
+                new Date(v.start).addDays(incr) : new Date(v.start)
+              tlDot['end'] = v.end
+              renderThese.push(tlDot)
+              incr += 365/l.length
+            })
+          })
+          // TODO: set grain dynamically somehow
+          if(['xuanzang','incanto'].indexOf(dataset) >0) {grain='year'}
+          if(collection.attributes.segmentType == 'journey') {
+            // console.log('journey')
+            simpleTimeline(dataset,renderThese,tlRangeDates)
+          } else if(isFlow == true){
+            window.yrgroups = _.countBy(renderThese,function(l){
+              return l.start.getFullYear();
+            })
+            // dataset,yrgroups,tlRangeDates,yLabel
+            makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
+            // console.log('render histogram of yrgroups:', yrgroups)
+          }
+        } else if (collection.attributes.segmentType == 'hRoutes') {
+          // multiple routes, assuming start/end date range
+          makeHistData(dataset,eventsObj,tlRangeDates,yLabel)
+        } else if (collection.attributes.periods.length > 0 && isFlow == false) {
+          loadPeriods(collection.attributes.periods[0])
+          // makePeriodData(collection.attributes.periods)
         }
       })
-      $(".loader").hide()
 }
+
 $(".leaflet-popup-content a").click(function(e){
   e.preventDefault();
   console.log(e)

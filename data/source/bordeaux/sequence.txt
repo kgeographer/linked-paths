@@ -1,0 +1,470 @@
+sequence	latin	stewart	certain	names_pleiades	uri	paris	verona	al	variants	modern_19c	distance	unit	notes
+1	burdigala	Bordigala			http://pleiades.stoa.org/places/138248					Bordeaux			
+2	stomatas	Stomatæ			http://pleiades.stoa.org/places/138599					Castres	7	league	
+3	sirione	Senone			http://pleiades.stoa.org/places/138593				Sirio	Pont de Ciron	9	league	
+4	vasatas	Vasates			http://pleiades.stoa.org/places/138313	Vasatas			Cossio	Bazzas	8	league	
+5	tres arbores	Three Trees			http://pleiades.stoa.org/places/138626				Tres Arbes		5	league	
+6	oscineio	Oscineium			http://pleiades.stoa.org/places/138504					Houeilles?	8	league	
+7	scittio	Scotium			http://pleiades.stoa.org/places/246662	Scitio			Sotium	Sos	8	league	
+8	elusa	Elusa			http://pleiades.stoa.org/places/246380		Tolosa			Eauze	8	league	
+9	vanesia	Vanesia			http://pleiades.stoa.org/places/246727						12	league	
+10	auscius	Auscius			http://pleiades.stoa.org/places/246379				Climberrum, Augusta, Auscorum	Auch	8	league	
+11	ad sextum	6th league	?		http://pleiades.stoa.org/places/206893						6	league	
+12	hungunuerro	Hungunverrum			http://pleiades.stoa.org/places/246420		Hungunerru				7	league	
+13	bucconis	Buccones			http://pleiades.stoa.org/places/246260	Bucconia				L'Isle en Jourdain?	7	league	
+14	ad iouem	Temple of Jupiter			http://pleiades.stoa.org/places/246136						7	league	
+15	tholosa	Tolosa			http://pleiades.stoa.org/places/246694					Toulouse	7	league	
+16	ad nonum	9th milestone			http://pleiades.stoa.org/places/246137						9	league	
+17	ad vicesimum	20th milestone			http://pleiades.stoa.org/places/246143						11	mile	
+18	elusione	Elusio			http://pleiades.stoa.org/places/246381		Eleusione				9	mile	
+19	sostomago	Sostomagus			http://pleiades.stoa.org/places/246660					Castelnaudary?	9	mile	
+20	hebromago	Hebromagus			http://pleiades.stoa.org/places/246413		Ebromago			Bram	10	mile	
+21	cedros	Cædri			http://pleiades.stoa.org/places/246320						6	mile	
+22	castellum carcassone	Carcasso			http://pleiades.stoa.org/places/246294					Carcassonne	8	mile	
+23	tricensimum	30th milestone*			http://pleiades.stoa.org/places/246706	Tricencimum					8	mile	
+24	hosuerbas	Hosuerbas			http://pleiades.stoa.org/places/246720		Husuerbas				15	mile	
+25	narbone	Narbo			http://pleiades.stoa.org/places/246347					Narbonne	15	mile	
+26	beterris	Beterræ			http://pleiades.stoa.org/places/148056	Biterris			Bæterræ	Béziers	16	mile	
+27	cessarone	Cessaro			http://pleiades.stoa.org/places/147997				Cessero, Araura	St. Thibéry	12	mile	
+28	foro domiti	Forum Domiti									18	mile	
+29	sostantione	Sustantio			http://pleiades.stoa.org/places/148202	Sostancione			Sextantio	Soustantion	15	mile	
+30	ambrosi	Ambrosius			http://pleiades.stoa.org/places/147990		Ambrosi		Ambrussum		15	mile	
+31	nemauso	Nemauses			http://pleiades.stoa.org/places/148142					Nimes	15	mile	
+32	ponte aerarium	Pons Herarus			http://pleiades.stoa.org/places/148160	Porte ærarium			Ærarius	Bellegarde	16	mile	
+33	arelate	Arelate			http://pleiades.stoa.org/places/148217					Arles	8	mile	
+34	arnagine	Arnago			http://pleiades.stoa.org/places/148074		Arnagene		Ernaginum	St. Gabriel	8	mile	
+35	bellinto	Bellintum			http://pleiades.stoa.org/places/148019						10	mile	
+36	auenione	Avinio			http://pleiades.stoa.org/places/148004	Avenione			Avenio	Avignon	5	mile	
+37	cypresseta	Cepressata			http://pleiades.stoa.org/places/148065	Cypressata					5	mile	
+38	arausione	Aurasio			http://pleiades.stoa.org/places/148054					Orange	13	mile	
+39	ad letoce	Letoce			http://pleiades.stoa.org/places/167616						10	mile	
+40	nouem craris	Novem Craris			http://pleiades.stoa.org/places/167856		Novencrares				15	mile	
+41	acuno	Acunum			http://pleiades.stoa.org/places/167627					Anconne	7	mile	
+42	bantianis	Vancianis			http://pleiades.stoa.org/places/167668		Bantianis			Bancs	7	mile	
+43	vmbenno	Umbennum			http://pleiades.stoa.org/places/167947						12	mile	
+44	valentia	Valentia			http://pleiades.stoa.org/places/167718					Valence	9	mile	
+45	cerebelliaca	Cerebelliaca			http://pleiades.stoa.org/places/167705						12	mile	
+46	augusta	Augusta			http://pleiades.stoa.org/places/167658					Aoust	10	mile	
+47	darentiaca	Darentiaca			http://pleiades.stoa.org/places/167737						12	mile	
+48	dea vocontiorum	Dea Vocontiorum			http://pleiades.stoa.org/places/167716		Deanocontinorum			Die	16	mile	
+49	luco	Lucus			http://pleiades.stoa.org/places/167815					Luc	12	mile	
+50	vologatis	Vologatis			http://pleiades.stoa.org/places/167978		Volocates			Vaugelas?	9	mile	
+51	cambono	Cambonum			http://pleiades.stoa.org/places/167697					La Combe?	8	mile	
+52	monte seleuci	Hill of Seleucus			http://pleiades.stoa.org/places/167836					Mont-Salćon	8	mile	
+53	dauiano	Davianum			http://pleiades.stoa.org/places/167738					Veynes	8	mile	
+54	ad finem	frontier			http://pleiades.stoa.org/places/167615						12	mile	
+55	vappinco	Vapincum			http://pleiades.stoa.org/places/167954					Gap	11	mile	
+56	catorigas	Catoricæ			http://pleiades.stoa.org/places/167701	Catigoras			Caturigæ	Chorges	12	mile	
+57	ebreduno	Ebrodunum			http://pleiades.stoa.org/places/167750	Hebriuno				Embrun	16	mile	
+58	ramae	Rame			http://pleiades.stoa.org/places/167881					Rame	17	mile	
+59	byrigante	Byrigantum			http://pleiades.stoa.org/places/167691		Byrigane		Brigantium	Briançon	17	mile	
+60	gesdaone	Gesdaona			http://pleiades.stoa.org/places/167778				Gesdao	Sesanne	10	mile	
+61	ad marte	Temple of Mars			http://pleiades.stoa.org/places/167617						9	mile	
+62	segussione	Segussio			http://pleiades.stoa.org/places/167919		Segucio		Segusio	Susa	16	mile	
+63	ad duodecimum	12th milestone			http://pleiades.stoa.org/places/167623						12	mile	
+64	ad fines	frontier			http://pleiades.stoa.org/places/383545						12	mile	
+65	ad octauum	8th milestone			http://pleiades.stoa.org/places/383557						8	mile	
+66	taurinis	Taurini			http://pleiades.stoa.org/places/383580					Turin	8	mile	
+67	ad decimum	10th milestone			http://pleiades.stoa.org/places/383558						10	mile	
+68	quadratis	Quadratæ			http://pleiades.stoa.org/places/383753						12	mile	
+69	ceste	Ceste			http://pleiades.stoa.org/places/383616						11	mile	
+70	rigomago	Regomagus			http://pleiades.stoa.org/places/383759				Rigomagus	Rinco	8	mile	
+71	ad medias	Mediæ			http://pleiades.stoa.org/places/383610						10	mile	
+72	ad cottias	Cottiæ			http://pleiades.stoa.org/places/383630					Cozzo	13	mile	
+73	laumello	Laumellum			http://pleiades.stoa.org/places/383690					Lomello	12	mile	
+74	duriis	Duni			http://pleiades.stoa.org/places/383637	Duriis			Duriæ	Dorno	9	mile	
+75	ticino	Ticinum			http://pleiades.stoa.org/places/383798					Pavia	12	mile	
+76	ad decimum	10th milestone			http://pleiades.stoa.org/places/383559						10	mile	
+77	mediolanum	Mediolanum			http://pleiades.stoa.org/places/383706					Milan	10	mile	
+78	argentea	Argentia			http://pleiades.stoa.org/places/383575					Gorgonzola	10	mile	
+79	ponte aureoli	Pons Aureolus			http://pleiades.stoa.org/places/383747					Pontirilo	10	mile	
+80	bergamo	Bergamum			http://pleiades.stoa.org/places/383589	Vergamo			Bergomum	Bergamo	13	mile	
+81	tellegate	Tellegate			http://pleiades.stoa.org/places/383796		Tallegate			Telgate	12	mile	
+82	tetellus	Tetellus			http://pleiades.stoa.org/places/383797						10	mile	
+83	brixa	Brixa			http://pleiades.stoa.org/places/383603				Brixia	Brescia	10	mile	
+84	ad flexum	Flexus			http://pleiades.stoa.org/places/383546					Ponte S. Marco	11	mile	
+85	beneuentum	Beneventum			http://pleiades.stoa.org/places/383588		Bene Aventum				10	mile	
+86	verona	Verona			http://pleiades.stoa.org/places/383816					Verona	10	mile	
+87	cadiano	Cadianum			http://pleiades.stoa.org/places/393396					Caldiero	10	mile	
+88	aureos	Aurei			http://pleiades.stoa.org/places/393387	Auræus					10	mile	
+89	vincentia	Vincentia			http://pleiades.stoa.org/places/393513				Vicentia	Vicenza	11	mile	
+90	ad finem	frontier			http://pleiades.stoa.org/places/393361						11	mile	
+91	pataui	Patavium			http://pleiades.stoa.org/places/393473					Padua	10	mile	
+92	ad duodecimum	12th milestone			http://pleiades.stoa.org/places/393359						12	mile	
+93	ad nonum	9th milestone			http://pleiades.stoa.org/places/393358						11	mile	
+94	altino	Altinum			http://pleiades.stoa.org/places/393374					Altino	9	mile	
+95	sanos	Sanus			http://pleiades.stoa.org/places/393369	Sanos					10	mile	
+96	concordia	Concordia			http://pleiades.stoa.org/places/393441					Concordia	9	mile	
+97	apicilia	Picilia			http://pleiades.stoa.org/places/187287		Pacilia				9	mile	
+98	ad vndecimum	11th milestone			http://pleiades.stoa.org/places/187260						10	mile	
+99	aquileia	Aquileia			http://pleiades.stoa.org/places/187290					Aquileia	11	mile	
+100	ad vndecimum	11th milestone			http://pleiades.stoa.org/places/187261						11	mile	
+101	ad fornolus	Fornolus			http://pleiades.stoa.org/places/197063						12	mile	
+102	castra	the Camp			http://pleiades.stoa.org/places/197276						12	mile	Cold River?
+103	alpes iuliae	Pirus			http://pleiades.stoa.org/places/197317						9	mile	
+104	longatico	Longaticum			http://pleiades.stoa.org/places/197357					Logatez	10	mile	
+105	ad nonum	9th milestone			http://pleiades.stoa.org/places/197076						9	mile	
+106	emona	Emona			http://pleiades.stoa.org/places/197258		Semona		Æmona	Laybach	14	mile	
+107	ad quartodecimo	14th milestone			http://pleiades.stoa.org/places/197082						10	mile	
+108	hadrante	Hadrante			http://pleiades.stoa.org/places/197147				Adrans	St. Oswald	13	mile	
+109	ad medias	Mediæ			http://pleiades.stoa.org/places/197072						13	mile	
+110	celeia	Cælia			http://pleiades.stoa.org/places/197206				Celeia	Cilly	13	mile	
+111	lotodos	Lotodos			http://pleiades.stoa.org/places/197069						12	mile	
+112	ragindone	Ragendo			http://pleiades.stoa.org/places/197467				Ragando		12	mile	
+113	pultouia	Pultovia			http://pleiades.stoa.org/places/197460		Poltovia				12	mile	
+114	poetouione	Petovio			http://pleiades.stoa.org/places/197446		Potovione			Pettau	12	mile	
+115	ramista	Ramista			http://pleiades.stoa.org/places/197468						9	mile	
+116	aqua viua	Aqua viva			http://pleiades.stoa.org/places/197129						9	mile	
+117	populis	Populi			http://pleiades.stoa.org/places/197454						10	mile	
+118	iouia	Jovia			http://pleiades.stoa.org/places/197326						9	mile	
+119	sunista	Sunista			http://pleiades.stoa.org/places/197522						9	mile	
+120	peritur	Peritur			http://pleiades.stoa.org/places/197440						12	mile	
+121	lentolis	Lentolæ			http://pleiades.stoa.org/places/197348		Lertoles		Lentulæ	Berzentze	12	mile	
+122	cardono	Cardonum			http://pleiades.stoa.org/places/197191						10	mile	
+123	cocconis	Cocconi			http://pleiades.stoa.org/places/197215		Coccones				12	mile	
+124	serota	Serota			http://pleiades.stoa.org/places/197508						10	mile	
+125	bolentia	Bolentia			http://pleiades.stoa.org/places/203108						10	mile	
+126	maurianis	Mauriana			http://pleiades.stoa.org/places/197370						9	mile	
+127	serena	Serena			http://pleiades.stoa.org/places/197507						8	mile	
+128	vereis	Verei			http://pleiades.stoa.org/places/197576						10	mile	
+129	ioualia	Jovalia			http://pleiades.stoa.org/places/197325		Iovenalia			Valpo	8	mile	
+130	mersella	Mersella			http://pleiades.stoa.org/places/197391					Petrievce	8	mile	
+131	mursa	Mursa			http://pleiades.stoa.org/places/197389		Morsa			Esseg	10	mile	
+132	leutuoano	Leutuanum			http://pleiades.stoa.org/places/197065	Leutuoane					12	mile	
+133	cibalis	Cibalæ			http://pleiades.stoa.org/places/197207		Ciliciales			Vincovce	12	mile	
+134	caelena	Celena			http://pleiades.stoa.org/places/197204						11	mile	
+135	vlmo	Ulmus			http://pleiades.stoa.org/places/207525						11	mile	
+136	spaneta	Spaneta			http://pleiades.stoa.org/places/207460						10	mile	
+137	vedulia	Bedulia			http://pleiades.stoa.org/places/206995		Vidunlia		Vedulia		8	mile	
+138	sirmium	Sirmium			http://pleiades.stoa.org/places/207447					Mitrowitza	8	mile	
+139	fossis	Fossi			http://pleiades.stoa.org/places/207120						9	mile	
+140	bassianis	Bassiani			http://pleiades.stoa.org/places/206960						10	mile	
+141	nouiciani	Noviciani			http://pleiades.stoa.org/places/207313						12	mile	
+142	altina	Altima			http://pleiades.stoa.org/places/206913						11	mile	
+143	singiduno	Singidunum			http://pleiades.stoa.org/places/207443					Belgrad	8	mile	
+144	ad sextum	6th milestone									6	mile	
+145	tricornia castra	Tricornia Castra			http://pleiades.stoa.org/places/207515					Ritopek	6	mile	
+146	ad sextum	6th milestone			http://pleiades.stoa.org/places/206893						7	mile	
+147	aureo monte	Aureus Mons			http://pleiades.stoa.org/places/206938						6	mile	
+148	vingeio	Vingeium			http://pleiades.stoa.org/places/207550		Mingeio		Vinceia	Semendria	6	mile	
+149	margo	Margus			http://pleiades.stoa.org/places/207267						9	mile	
+150	viminacio	Viminatium			http://pleiades.stoa.org/places/207549						10	mile	
+151	ad nonum	9th milestone			http://pleiades.stoa.org/places/206887						9	mile	
+152	munecipio	Municipium			http://pleiades.stoa.org/places/207296						9	mile	
+153	iouis pago	Jovis Pagus			http://pleiades.stoa.org/places/207189					Glagowaz?	10	mile	
+154	bao	Bao			http://pleiades.stoa.org/places/206958						7	mile	
+155	idomo	Idomum			http://pleiades.stoa.org/places/207183				Idimus		9	mile	
+156	ad octauum	8th milestone	?		http://pleiades.stoa.org/places/206889						9	mile	
+157	oromago	Oromagus			http://pleiades.stoa.org/places/207173				Horreum Margi	Tjuprija?	8	mile	
+158	sarmatorum	Sarmatæ			http://pleiades.stoa.org/places/207424					Paratjin	12	mile	
+159	caminitas	Cametæ			http://pleiades.stoa.org/places/207006						11	mile	
+160	ipompeis	Ipompei			http://pleiades.stoa.org/places/207363				Pompeii		9	mile	
+161	rampiana	Rappiana			http://pleiades.stoa.org/places/207156		Rampiana			Alexinatz	12	mile	
+162	naisso	Naissus			http://pleiades.stoa.org/places/207303					Nisch	12	mile	
+163	redicibus	Redices			http://pleiades.stoa.org/places/207373					Banja	12	mile	
+164	vlmo	Ulmus			http://pleiades.stoa.org/places/207526						7	mile	
+165	romansiana	Romansiana			http://pleiades.stoa.org/places/207382				Remesiana	Ak Palanka	9	mile	
+166	latina	Latina			http://pleiades.stoa.org/places/207235						9	mile	
+167	turribus	Turres			http://pleiades.stoa.org/places/207521					Pirot	9	mile	
+168	translitis	Translites			http://pleiades.stoa.org/places/207509						12	mile	
+169	ballanstra	Ballanstra			http://pleiades.stoa.org/places/206955						10	mile	
+170	meldia	Meldia			http://pleiades.stoa.org/places/207275						9	mile	
+171	scretisca	Scretesca			http://pleiades.stoa.org/places/207435						12	mile	
+172	serdica	Serdica			http://pleiades.stoa.org/places/207439					Sophia	11	mile	
+173	extuomne	Extuomnes			http://pleiades.stoa.org/places/481835		Extuome				8	mile	
+174	buragara	Buracara			http://pleiades.stoa.org/places/481775	Buragara				Bagaraca	8	mile	
+175	sparata	Sparata			http://pleiades.stoa.org/places/481998						8	mile	
+176	hilica	Hilica			http://pleiades.stoa.org/places/481860	Iliga				Ichtiman	10	mile	
+177	soneio	Soneium			http://pleiades.stoa.org/places/481996						9	mile	
+178	ponte vcasi	Pons Ucasi			http://pleiades.stoa.org/places/222149		Ponte Ugas				6	mile	
+179	bona mansio	Bona Mansio									6	mile	
+180	alusore	Alusor									9	mile	
+181	basapare	Bassapara			http://pleiades.stoa.org/places/216732			Basapare		Tatar Bazarjik	12	mile	
+182	tugugero	Tugugerum									9	mile	
+183	filopopuli	Philippopolis			http://pleiades.stoa.org/places/216927					Philippopoli	12	mile	
+184	sernota	Sernota			http://pleiades.stoa.org/places/216980	Syrnota					10	mile	
+185	paramuole	Paramvole			http://pleiades.stoa.org/places/216920						8	mile	
+186	cillio	Cillium			http://pleiades.stoa.org/places/216767						12	mile	
+187	carassura	Carasurra			http://pleiades.stoa.org/places/216750						9	mile	
+188	arzo	Arzus			http://pleiades.stoa.org/places/216714				Arsus	Chaskeui	11	mile	
+189	palae	Palæ			http://pleiades.stoa.org/places/501384						7	mile	
+190	castozobra	Castozobra			http://pleiades.stoa.org/places/222167				Subzopara, Castra Iarba	Harmanly	11	mile	
+191	rhamis	Rammes			http://pleiades.stoa.org/places/501381	Rhamis					7	mile	
+192	burdista	Burdista			http://pleiades.stoa.org/places/501526		Busdicta		Burdipta	Mustafa Pasha Keupri	11	mile	
+193	daphabae	Daphabe			http://pleiades.stoa.org/places/511428		Dapabe				11	mile	
+194	nicae	Nice			http://pleiades.stoa.org/places/511458						9	mile	
+195	tarpodizo	Tarpodizus			http://pleiades.stoa.org/places/511185				Arboditio, Arbodico	Buyúk Derbend	10	mile	
+196	vrisio	Urisium			http://pleiades.stoa.org/places/511331						7	mile	
+197	virgoles	Virgoli			http://pleiades.stoa.org/places/511241				Bergule	Lule Bergas	7	mile	dist?
+198	narco	Narium			http://pleiades.stoa.org/places/511448						8	mile	
+199	drizupara	Drizupara			http://pleiades.stoa.org/places/511456		Dritiopara				9	mile	
+200	tipso	Tipsus			http://pleiades.stoa.org/places/511456						10	mile	
+201	tunorullo	Tunorullum			http://pleiades.stoa.org/places/511184		Tunorollo		Izirallum	Chorlu	11	mile	
+202	beodizo	Beodizum			http://pleiades.stoa.org/places/511357						8	mile	
+203	heraclea	Heraclea			http://pleiades.stoa.org/places/511357					Eregli	9	mile	
+204	baunne	Braunne			http://pleiades.stoa.org/places/511414	Baunne					12	mile	
+205	salambria	Salamembria			http://pleiades.stoa.org/places/511201		Salambria			Silivri	10	mile	
+206	callum	Eallum			http://pleiades.stoa.org/places/511172				Callum	Ialos	10	mile	
+207	atyra	Atyra			http://pleiades.stoa.org/places/511397		Alesra			Buyúk Chekmejek	10	mile	
+208	regio	Regio							Regium	Kutchúk Chekmejek	12	mile	
+209	constantinopoli	Constantinople			http://pleiades.stoa.org/places/520998					Istanbul	12	mile	
+210	nassete	Narses			http://pleiades.stoa.org/places/521092		Narsite				7	mile	
+211	pandicia	Pandicia			http://pleiades.stoa.org/places/521106					Pandik	7	mile	
+212	pontamus	Pontamus			http://pleiades.stoa.org/places/511371						13	mile	
+213	libissa	Liyssa			http://pleiades.stoa.org/places/511305		Libosa				9	mile	
+214	brunga	Brunga			http://pleiades.stoa.org/places/511193	Brunca					12	mile	
+215	nicomedia	Nicomedia			http://pleiades.stoa.org/places/511337					Ismid	8	mile	
+216	hyribolum	Egribolum			http://pleiades.stoa.org/places/511253			Hiribolum			10	mile	
+217	libum	Libum			http://pleiades.stoa.org/places/511304						11	mile	
+218	liada	Liada			http://pleiades.stoa.org/places/511302						12	mile	
+219	nicia	Nicia			http://pleiades.stoa.org/places/511268			Nicæa		Isnik	9	mile	
+220	schinae	Schine			http://pleiades.stoa.org/places/511412						8	mile	
+221	mido	Midus			http://pleiades.stoa.org/places/511326				Mœdos		7	mile	
+222	chogeae	Chogea			http://pleiades.stoa.org/places/511210		Chogia				6	mile	
+223	thateso	Thatesus			http://pleiades.stoa.org/places/511437						10	mile	
+224	tutaio	Tutadus				Tutaio			Tottaion	near Geivek	9	mile	
+225	protunica	Protoniaca			http://pleiades.stoa.org/places/511431	Protunica					11	mile	
+226	artemis	Artemis	?		http://pleiades.stoa.org/places/511383						12	mile	
+227	dablae	Dable			http://pleiades.stoa.org/places/844900		Doble		Dablis	near Tereklu	6	mile	
+228	ceratae	Cerate			http://pleiades.stoa.org/places/844892						6	mile	
+229	fines	frontier									10	mile	
+230	dadastano	Dadartanum			http://pleiades.stoa.org/places/844901				Dadastunum		6	mile	
+231	trans monte	Trans Montem			http://pleiades.stoa.org/places/845086						6	mile	
+232	milia	Milia			http://pleiades.stoa.org/places/845019		Melia				11	mile	
+233	iuliopolis	Juliopolis			http://pleiades.stoa.org/places/844935					near Nalli Khan	8	mile	
+234	hicronpotamum	River Hycron			http://pleiades.stoa.org/places/844946				River Siberis	Ala Dagh Su	13	mile	
+235	agannia	Agannia			http://pleiades.stoa.org/places/609447				Lagania		11	mile	
+236	petrobrogen	Petrobroge			http://pleiades.stoa.org/places/845038			Ipetobrogen, Petrobogen	Petroboge	Bei Bazar	6	mile	
+237	mnizos	Mnizos			http://pleiades.stoa.org/places/845020	Innizos	Simonizous				10	mile	
+238	prasmon	Prasmon			http://pleiades.stoa.org/places/845047		Trasmon				12	mile	
+239	malogordis	Malogardis			http://pleiades.stoa.org/places/845011				Manegordus		9	mile	
+240	cenaxem palidem	Lake Cenaxis			http://pleiades.stoa.org/places/619136	Cenaxempalidem					13	mile	
+241	anchira galatia	Anchira			http://pleiades.stoa.org/places/619103				Ancyra	Angora	13	mile	
+242	delemna	Delemna			http://pleiades.stoa.org/places/619161				Delemnia		10	mile	
+243	curueunta	Curveunta			http://pleiades.stoa.org/places/619167				Gorbeous		11	mile	
+244	rosolodiaco	Rosolodiacum			http://pleiades.stoa.org/places/619228				Rosolatiacum, Orosologia			mile	
+245	aliassum	Aliassus			http://pleiades.stoa.org/places/619102		Aliasum				13	mile	
+246	aspona	Aspona			http://pleiades.stoa.org/places/619118	Arpona					18	mile	
+247	galea	Galea			http://pleiades.stoa.org/places/619162						13	mile	
+248	andrapa	Andrapa			http://pleiades.stoa.org/places/619106						9	mile	
+249	parnasso	Parnassus			http://pleiades.stoa.org/places/619235						13	mile	
+250	iogola	Iogola			http://pleiades.stoa.org/places/619232		Iogula		Ozizala		16	mile	
+251	nitalis	Nitalis			http://pleiades.stoa.org/places/619220						18	mile	
+252	argustana	Argustana			http://pleiades.stoa.org/places/619115						13	mile	
+253	colonia	Colonia			http://pleiades.stoa.org/places/619164				Archelais	Ak Serai?	16	mile	
+254	momoasson	Momoasson			http://pleiades.stoa.org/places/619212		Mummoasum			Mammasún	12	mile	
+255	anathiango	Anathiango			http://pleiades.stoa.org/places/619218		Anachiango		Nazianzus	Nenizi	12	mile	
+256	chusa	Chusa			http://pleiades.stoa.org/places/619139						12	mile	
+257	sasima	Sasima			http://pleiades.stoa.org/places/619256					Hassa Keui	12	mile	
+258	andauilis	Andavilis			http://pleiades.stoa.org/places/619104		Andaviles			Andaval	16	mile	
+259	thyana	Thyana			http://pleiades.stoa.org/places/648801				Tyana	Kiz Hissar	18	mile	
+260	faustinopoli	Faustinopolis			http://pleiades.stoa.org/places/648608					Pashmakchi	12	mile	
+261	caena	Cæna			http://pleiades.stoa.org/places/648592		Cona				13	mile	
+262	opodando	Opodandum			http://pleiades.stoa.org/places/648742				Podandus	Bozanti	12	mile	
+263	pilas	Pylæ			http://pleiades.stoa.org/places/648670				Cilian Gates	Ghulek Boghaz	14	mile	
+264	mansucrinae	Mansucrine			http://pleiades.stoa.org/places/648704				Mopsucrine		12	mile	
+265	tarso	Tarsus			http://pleiades.stoa.org/places/648789						12	mile	
+266	pargais	Pargais			http://pleiades.stoa.org/places/648733		Pargas				13	mile	
+267	adana	Adana			http://pleiades.stoa.org/places/648548					Adana	14	mile	
+268	mansista	Mansista			http://pleiades.stoa.org/places/658538				Mopsuestia	Missis	18	mile	
+269	tardequeia	Tardequeia			http://pleiades.stoa.org/places/658610					Kúrt Kúlak	15	mile	
+270	catauolo	Catavolum			http://pleiades.stoa.org/places/658506				Castabala		16	mile	
+271	baiae	Baie			http://pleiades.stoa.org/places/658394				Baiæ	Piyas	17	mile	
+272	alexandria scabiosa	Alexandria Scabiosa			http://pleiades.stoa.org/places/658371					Iskanderún, Alexandretta	16	mile	
+273	pictanus	Pictanus			http://pleiades.stoa.org/places/658573		Platanus			Beilan	9	mile	
+274	pagrios	Pagrius			http://pleiades.stoa.org/places/658564	Pagrios			Pagræ	Begras	8	mile	
+275	antiochia	Antiochia			http://pleiades.stoa.org/places/658381		Anchiotia			Antioch, Antakia	16	mile	
+276	palatium dafne	Palace of Daphne			http://pleiades.stoa.org/places/658450					Beit el Ma	5	mile	
+277	hysdata	Hysdata			http://pleiades.stoa.org/places/658483		Stadata				11	mile	
+278	platanus	Platanus									8	mile	
+279	baccaias	Bacchaiæ					Baccaias				8	mile	
+280	catelas	Catelæ									16	mile	
+281	ladica	Ladica			http://pleiades.stoa.org/places/668290		Ladesca		Laodicea	Latakieh	16	mile	
+282	gabala	Gabala			http://pleiades.stoa.org/places/668250		Gavala			Jebeleh	14	mile	
+283	balaneas	Balaneas			http://pleiades.stoa.org/places/668206					Banias	13	mile	
+284	maraccas	Maraccæ			http://pleiades.stoa.org/places/668305						10	mile	
+285	antaradus	Antaradus			http://pleiades.stoa.org/places/668190					Tartús	16	mile	
+286	spiclin	Spicilis									12	mile	
+287	basiliscum	Basiliscum					Baselisco				12	mile	
+288	arcas	Arcæ			http://pleiades.stoa.org/places/668198				Arca, Cæsarea	'Arka	8	mile	
+289	bruttus	Bruttus			http://pleiades.stoa.org/places/668215						9	mile	
+290	tripoli	Tripolis			http://pleiades.stoa.org/places/668394					Tarabulus	12	mile	
+291	triclis	Triclis			http://pleiades.stoa.org/places/668392		Trecles				12	mile	
+292	bruttos alia	Bruttus alius			http://pleiades.stoa.org/places/668214						12	mile	
+293	alcobile	Alcobilis			http://pleiades.stoa.org/places/668216		Alcovile				12	mile	
+294	heldua	Berytus			http://pleiades.stoa.org/places/678177					Beirút	12	mile	
+295	birito	Heldua			http://pleiades.stoa.org/places/678060		Eldua			Khan Khulda	12	mile	
+296	parphirion	Porphyrion			http://pleiades.stoa.org/places/678338	Parphirion	Parpinon		Porphyreon		13	mile	
+297	sidona	Sidon			http://pleiades.stoa.org/places/678393					Saida	13	mile	
+298	sarepta	Sarepta			http://pleiades.stoa.org/places/678374						9	mile	
+299	ad nonum	9th milestone			http://pleiades.stoa.org/places/679506						4	mile	
+300	tyro	Tyre			http://pleiades.stoa.org/places/678437					Sûr	12	mile	
+301	alexandroschene	Alexandroschene			http://pleiades.stoa.org/places/678013					Khurbet Iskanderûnek	12	mile	
+302	ecdeppa	Ecdeppa			http://pleiades.stoa.org/places/678128		Hecdeppa				12	mile	
+303	ptolomaida	Ptolomais			http://pleiades.stoa.org/places/678010				Accho	'Akka, St. Jean d'Acre	9	mile	
+304	calamon	Calamon					Calomon			Tell es Semak	12	mile	
+305	sicaminos	Sycaminos			http://pleiades.stoa.org/places/678404				Sycaminon		3	mile	
+306	certha	Certa									8	mile	
+307	caesarea palestina	Cæsarea Palæstina			http://pleiades.stoa.org/places/678401	Cesarea Palestina					8	mile	
+308	maximianopoli	Maximianopolis			http://pleiades.stoa.org/places/678266						18	mile	
+309	isdradela	Stradela			http://pleiades.stoa.org/places/678197		Istradela				10	mile	
+310	scithopoli	Scythopolis			http://pleiades.stoa.org/places/678378				Bethshean	Beisân	12	mile	
+311	aser	Aser			http://pleiades.stoa.org/places/678034						6	mile	
+312	Neapoli	Neapolis			http://pleiades.stoa.org/places/678301					Nâblus	15	mile	
+313	hierusalem	Jerusalem			http://pleiades.stoa.org/places/687928					Jerusalem	12	mile	
+314		Jericho								Jericho	18	mile	
+315		Dead Sea									9	mile	
+316		Jordan									5	mile	
+317		Bethlehem									6	mile	
+318		Bethasora					Bettasora				14	mile	
+319		Terebinthus				Therebintus	Therebintus				8	mile	
+320		Hebron									2	mile	
+321	nicopoli	Nicopolis								'Amwâs	22	mile	
+322	lidda	Lydda								Lidd	10	mile	
+323	antipatrida	Antipatris								Râs el 'Ain	10	mile	
+324	betthar	Betthar					Bettarum			Thîreh	10	mile	
+325	caesarea	Cæsarea								Kaisarîeh	16	mile	
+326	aerea	Erea							Heræum		16	mile	
+327	registo	Registus							Resistus, Bisanthe	Rodosto	12	mile	
+328	bedizo	Bedizum							Beodizum		12	mile	
+329	apris	Apri								Ainajik	12	mile	
+330	zesutera	Zesutera									12	mile	
+331	sirogellis	SiroGelli							Syracellae	Malgara	10	mile	
+332	drippa	Drippa									14	mile	
+333	gipsila	Gypsela							Cypsela	Ipsala	12	mile	
+334	demas	Demas							Dymæ	Kaladerkos	12	mile	
+335	traianopoli	Trajanopolis									13	mile	
+336	ad vnimpara	Unimpara							Tempyra		8	mile	
+337	salei	Salei									7	mile	
+338	melalico	Melalicum							Milolitum		8	mile	
+339	berozicha	Berozicha							Brendice, Brizice		15	mile	
+340	breierophara	Breierophara									10	mile	
+341	maximianopoli	Maximianopolis							Porsulæ, Pyrosoalis, Impara	near Gumuljina	10	mile	
+342	ad stabulodio	Diomedes stables								Buru Kaleh	12	mile	
+343	rumbodona	Rumbodona								Kurusu Yenijeh	10	mile	
+344	epyrum	Epirus							Topiris	Karaguz	10	mile	
+345	purdis	Purdi								Sarichoban	8	mile	
+346	hercontroma	Hercontroma							Acontisma		9	mile	
+347	neapolim	Neapolis							Kavala		9	mile	
+348	philippis	Philippi							Crenides	Filibeh	10	mile	
+349	ad duodecimum	12th milestone									12	mile	
+350	domeros	Domeros								Pervista	7	mile	
+351	amphipholim	Amphipolis								Yeni Keui	13	mile	
+352	pennana	Pennana									10	mile	
+353	peripidis	Euripides							Aresthusa	Vrasta	10	mile	
+354	appollonia	Appollonia								Polina	11	mile	
+355	heracleustibus	Heracleustibus							Heracleus, Stibos		11	mile	
+356	duo dea	Duodea									14	mile	
+357	thessalonica	Thessalonica								Saloniki	13	mile	
+358	ad decimum	10th milestone									10	mile	
+359	gephira	Axius								Vardar, Wardar Su	10	mile	river
+360	polli	Pella								Ala Kilisseh, Yenikeui	10	mile	
+361	scurio	Scurio							Cyrius, Cyrrhus	Palæo Kastro?	15	mile	
+362	edissa	Edessa						Edissa		Vodena	15	mile	
+363	ad duodecimum	12th milestone								Ostrovo	12	mile	
+364	cellis	Cellis									16	mile	
+365	grande	Grande								Florina	14	mile	
+366	melitonus	Melitonus								Dragosch	14	mile	
+367	heraclea	Heraclea							Heraclea Lyncestis	Toli Monastir	13	mile	
+368	parambole	Parambole							Castra, Nicia		12	mile	
+369	brucida	Brucida							Brucias, Brygias		19	mile	
+370	cledo	Cledo							Lychnidus	Ochrida	13	mile	
+371	patras	Patræ									12	mile	
+372	claudanon	Claudanon							Claudanum	Kükëseh	4	mile	
+373	tabernas	Tabernæ							Tres Tabernæ	Juru	9	mile	
+374	grandauia	Grandavia							Diana Candavia		9	mile	
+375	treiecto	Genusus								Sakumbi Su	9	mile	river?
+376	hiscampis	Hiscampis							Scampæ	El Bassan	9	mile	
+377	ad quintum	5th milestone									6	mile	
+378	coladiana	Coladiana							Clodiana		15	mile	
+379	marusio	Marusium									13	mile	
+380	absos	Absos							on the Apous		14	mile	
+381	stefanaphana	Stephanaphana								Dukanasi	12	mile	
+382	appollonia	Apollonia								Polina	18	mile	
+383	stefana	Stephanaphana								Goritza	12	mile	
+384	aulona treiectum	Aulon								Avlona	12	mile	
+385	ad duodecimum	12th milestone									13	mile	
+386	clipeas	Clipæ							Lupiæ	Lecce	12	mile	
+387	valentia	Valentia							Baletium	Baleso	13	mile	
+388	brindisi	Brindisium							Brundisium	Brindisi	11	mile	
+389	spilenaees	Spilenees							Speluncæ		14	mile	
+390	ad decimum	10th milestone								Pto. Villa Nova	11	mile	
+391	leonatiae	Leonatia							Gnatia, Egnatia	Agnazzo	10	mile	
+392	turres aurilianas	Turres Aurilianæ								San Vito	15	mile	
+393	turres iuliana	Turres Julianæ									9	mile	
+394	beroes	Beroes							Barium	Bari	11	mile	
+395	butontones	Butontones							Butuntum	Bitonto	11	mile	
+396	rubos	Rubi								Ruvo	11	mile	
+397	ad quintumdecimum	15th milestone									15	mile	
+398	canusio	Canusium							Canosa		15	mile	
+399	vndecimum	11th milestone									11	mile	
+400	serdonis	Serdonis							Herdonea	Ordona	15	mile	
+401	aecas	Æcæ								Troja	18	mile	
+402	aquilonis	Aquilo									10	mile	
+403	equum magnum	Equus Magnus							Equus Tuticus	S. Eleuterio	8	mile	
+404	forno nouo	Fornum Novum							Forum Novum	Buonalbergo	12	mile	
+405	beneuento	Beneventum								Benevento	10	mile	
+406	claudiis	Claudii							Caudium	Casta Cauda	12	mile	
+407	nouas	Novæ									9	mile	
+408	capua	Capua								Capua	12	mile	
+409	ad octauum	8th milestone									8	mile	
+410	ponte campano	Pons Campanus								over Savone River	9	mile	
+411	sonuessa	Sonuessa							Sinuessa	Mondragone	9	mile	
+412	menturnas	Menturnæ							Mintunæ	on Liris	9	mile	
+413	formis	Formi								Mola di Gæta	9	mile	
+414	fundis	Fundi								Fondi	12	mile	
+415	tarracina	Tarracina								Terracina	13	mile	
+416	ad medias	Mediæ								Posta di Mesa	10	mile	
+417	appi foro	Forum Appio								Foro Appio	9	mile	
+418	sponsas	Sponsæ									7	mile	
+419	aricia et albona	Aricia and Albona								La Riccia, Albano	14	mile	
+420	ad nono	9th milestone					Ionum				7	mile	
+421	roma	Rome									9	mile	
+422	rubras	Rubræ							Saxa Rubra	Prima Porta	9	mile	
+423	ad vicensimum	20th milestone									11	mile	
+424	aqua viua	Aqua Viva									12	mile	
+425	vcriculo	Utriculo						Ucriculo	Oriculum	Otricoli	12	mile	
+426	narniae	Narnia								Narni	12	mile	
+427	interamna	Interamna								Terni	8	mile	
+428	tribus tabernis	Tres Tabernæ									3	mile	
+429	fani fugitiui	Fanum Fugitivi					Fugenui			La Somma	10	mile	
+430	spolitio	Spolitio							Spoletium	Spoleto	7	mile	
+431	sacraria	Sacraria							Clitumnus	La Vene	8	mile	
+432	treuis	Trevi					Tranes		Trebia	Trevi	9	mile	
+433	fulginis	Fulgini							Fulginium	Foligno	5	mile	
+434	foro flamini	Forum Flamini							Forum Flaminii	S. Giovani pro Fiamma	3	mile	
+435	noceria	Noceria							Nuceria	Nocera	12	mile	
+436	ptanias	Ptanias							Tanadium	Gualdo Tadino	13	mile	
+437	herbelloni	Herbellum						Herbelloni	Helvillum	Sigillo	7	mile	
+438	ad hesis	Hesis					Adesse		Æsis	Scheggia	10	mile	
+439	ad cale	Cale				Cale	Caloe		Cales	Cagli	14	mile	
+440	intercisa	Intercisa							Petra Pertusa	Passo del Furlo	9	mile	
+441	foro semproni	Forum Semproni							Forum Sempronii	Fossombrone	9	mile	
+442	ad octauo	8th milestone									9	mile	
+443	fano furtunae	Fanum Fortunæ								Fano	8	mile	
+444	pisauro	Pisaurum								Pesaro	24	mile	
+445	ariminum	Riminium				Ariminium				Rimini		mile	
+446	conpetu	Conpetus							Ad Confluentes	Savignano	12	mile	
+447	cesena	Cesena							Cæsena	Cesena	6	mile	
+448	foro populi	Forum Populi					Foropuli		Forum Popilii	Forlimpopoli	6	mile	
+449	foro liui	Forum Livi							F. Livii	Forli	6	mile	
+450	fauentia	Faventia								Faenza	5	mile	
+451	foro corneli	Forum Corneli							F. Cornelii	Imola	10	mile	
+452	claterno	Claternum							Claterna	S. Nicolo	13	mile	
+453	bononia	Bononia								Bologna	10	mile	
+454	ad medias	Mediæ									15	mile	
+455	victoriolas	Victoriolæ									10	mile	
+456	mutena	Mutena							Mutina	Modena	3	mile	
+457	ponte secies	River Secia								Tresinaro	5	mile	
+458	regio	Regio							Regium Lepidum	Reggio	8	mile	
+459	canneto	Canneto							Tannetum	Tanetto	10	mile	
+460	parme	Parma								Parma	8	mile	
+461	ad tarum	River Tarus								Taro	7	mile	
+462	fidentiae	Fidentia					Sidencie			Borgo San Donnino	8	mile	
+463	ad fonteclos	Fonticuli								Alla Fontana	8	mile	
+464	placentia	Placentia								Piacenza	13	mile	
+465	ad rota	Rota								Quodrata	11	mile	
+466	tribus tabernis	Tres Tabernæ									5	mile	
+467	laude	Laude							Laus Pompeia	Lodi Vecchio	9	mile	
+468	ad nonum	9th milestone									7	mile	
+469	mediolanum	Mediolanum								Milan	7	mile	

@@ -5,8 +5,8 @@
       "2016-09-10",
       "",
       "",
-      "2016-11-18",
-      "end date uncertain"
+      "2017-02-12",
+      ""
     ]
   },
   "features": [
@@ -3455,8 +3455,8 @@
     }
   ],
   "attributes": {
-    "description": "An 8-month sojourn of geohumanities computing and tourism",
-    "timespan": "[2016-09-10,,,2016-11-18,end date uncertain]",
+    "description": "A 5-month sojourn of geohumanities computing and tourism",
+    "timespan": "[2016-09-10,,,2017-02-12,]",
     "title": "Roundabout, an extended journey, 2016-2017CE",
     "lp_id": "lp_roundabout",
     "contributors": "[K. Grossner]",

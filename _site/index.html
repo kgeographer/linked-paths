@@ -7,21 +7,26 @@
   <script
 	  src="https://code.jquery.com/jquery-2.2.4.min.js"
 	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-	  crossorigin="anonymous">
-  </script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	  crossorigin="anonymous"></script>
+  <script
+			  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+			  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+			  crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
+  <!-- Simile Timeline <script>
    Timeline_ajax_url="lib/timeline-src_2.3.0/src/ajax/api/simile-ajax-api.js";
    Timeline_urlPrefix='lib/timeline-src_2.3.0/src/timeline_js/';
   </script>
-  <script src="lib/timeline-src_2.3.0/src/timeline_js/timeline-api.js" type="text/javascript"></script>
+  <script src="lib/timeline-src_2.3.0/src/timeline_js/timeline-api.js" type="text/javascript">
+  </script> -->
   <script src="data/hashes.js" type="text/javascript"></script>
-  <!-- <script src="data/placenames.js" type="text/javascript"></script> -->
-  <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" /> -->
-  <link rel='stylesheet' href='lib/mapbox.css'/>
-  <link rel='stylesheet' href='lib/bootstrap.min.css'/>
-  <link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css'/>
+  <script src="lib/vis/vis-timeline-graph2d.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+  <!-- -->
+  <link rel="stylesheet" href="lib/vis/vis-timeline-graph2d.min.css" type="text/css" />
+  <!-- <link rel='stylesheet' href='lib/mapbox.css'/>
+  <link rel='stylesheet' href='lib/bootstrap.min.css'/> -->
+  <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'/>
   <link rel='stylesheet' href='lib/font-awesome/css/font-awesome.min.css'/>
 
 
@@ -40,48 +45,40 @@
     <div id="header">header</div>
     <div class="loader"></div>
     <div id='map'></div>
-    <!-- <div id="timetabs">
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div> -->
-    <div id='tl'><p>time is of the essence</p></div>
+    <div id='tl'></div>
     <div id='data' class="panel">
       <!-- <div id='data' class="panel panel-default"> -->
       <h3 class="panel-title">Linked Places <i class="fa fa-info-circle" aria-hidden="true"></i></h3>
       <div id='data_layers' class="panel-body">
         <p class="menu-header">Journeys</p>
         <div class="checkbox">
+          <label><input type="checkbox" value="bordeaux">Bordeaux Pilgrimage (4 c.)</label>
+        </div>
+        <div class="checkbox">
           <label><input type="checkbox" value="xuanzang">Xuanzang's Pilgrimage (7 c.)</label>
-          <!-- <i class="fa fa-info-circle" aria-hidden="true"></i> -->
         </div>
         <div class="checkbox">
           <label><input type="checkbox" value="roundabout">Roundabout (21 c.)</label>
-          <!-- <i class="fa fa-info-circle" aria-hidden="true"></i> -->
         </div>
-        <div class="checkbox">
-          <label><input type="checkbox" value="incanto-j">Venetian Incanto (13-15 c.)</label>
-          <!-- <i class="fa fa-info-circle" aria-hidden="true"></i> -->
-        </div>
+        <!-- <div class="checkbox" style="cursor:default;">
+          <label><input style="cursor:default" type="checkbox" value="incanto-j" />Venetian Incanto (13-15 c.)</label>
+        </div> -->
+        <!-- <div class="checkbox" style="cursor:default;">
+          <label class="disabled"><input disabled style="cursor:default" type="checkbox" value="incanto-j" />Venetian Incanto (13-15 c.)</label>
+        </div> -->
         <p class="menu-header">Flows</p>
         <div class="checkbox">
           <label><input type="checkbox" value="incanto-f">Venetian Incanto (13-15 c.)</label>
-          <!-- <i class="fa fa-info-circle" aria-hidden="true"></i> -->
         </div>
         <p class="menu-header">Historical Routes</p>
         <div class="checkbox">
           <label><input type="checkbox" value="courier">Ming Courier Routes (14-17 c.)</label>
-          <!-- <i class="fa fa-info-circle" aria-hidden="true"></i> -->
         </div>
         <div class="checkbox">
           <label><input type="checkbox" value="owtrad">Old World Routes (3c BCE-19 c.)</label>
-          <!-- <i class="fa fa-info-circle" aria-hidden="true"></i> -->
         </div>
         <div class="checkbox">
           <label><input type="checkbox" value="vicarello">Vicarello Beakers (1?-5 c.)</label>
-          <!-- <i class="fa fa-info-circle" aria-hidden="true"></i> -->
         </div>
       </div>
       <div id='data_abstract'>
@@ -93,7 +90,6 @@
             and <b>named historical routes/route systems</b>.</p>
         </div>
       </div>
-      <!-- <div id='data_inset' class="panel-body">Panel content #data_inset</div> -->
     </div>
     <div id="search" class="panel left-panel">
       <div id="bloodhound">

@@ -1,0 +1,394 @@
+recno	uuid	quote_transcription	anchor	type	uri	vocab_label	lat	lng	place_type	verification	tags	comments
+1	1eb9939d-8e79-493b-b6ce-72c832b244eb	hierusalem	char-offset:5	PLACE	http://pleiades.stoa.org/places/687928	Ierusalem/Hierosolyma/Col. Aelia Capitolina|Ierusalem/Hierosolyma/Col. Aelia Capitolina, Jerusalem	31.776667	35.234167	church-2,settlement,temple-2	VERIFIED		
+2	a62ef557-92d9-4130-aa13-a1c8d10fa5fb	caesarea palestina	char-offset:8	PLACE	http://pleiades.stoa.org/places/678401	Stratonos Pyrgos/Caesarea|Caesarea/Stratonos Pyrgos, Caesarea	32.4987775	34.8912663	settlement	VERIFIED		
+3	33ca06a1-a8ef-40a0-9de1-ab4419f240d7	tarso	char-offset:9	PLACE	http://pleiades.stoa.org/places/648789	Tarsus/Antiochia ad Cydnum|Tarsus/Antiochia ad Cydnum, Gözlü Kule	36.91242	34.89592	settlement	VERIFIED		
+4	842b97b3-b08f-405d-9fcd-d93d41a8ed17	sirmium	char-offset:10	PLACE	http://pleiades.stoa.org/places/207447	Sirmium|Sirmium, Sremska Mitrovica|Sremska Mitrovica	44.96648	19.61017	settlement	VERIFIED		
+5	d0b813ad-6055-4886-a840-a6f301cf0474	hierusalem	char-offset:16	PLACE	http://pleiades.stoa.org/places/687928	Ierusalem/Hierosolyma/Col. Aelia Capitolina|Ierusalem/Hierosolyma/Col. Aelia Capitolina, Jerusalem	31.776667	35.234167	church-2,settlement,temple-2	VERIFIED		
+6	87f17291-72f4-4c23-a05d-d602b3db3da1	BVRDIGALA	char-offset:20	PLACE	http://pleiades.stoa.org/places/138248	Burdigala|Burdigala, Bordeaux|Bordeaux	44.837789	-0.57918	amphitheatre,settlement	VERIFIED	Summary	
+7	3e8519fa-135a-4d78-85a2-0ac291c6645c	HIERVSALEM	char-offset:30	PLACE	http://pleiades.stoa.org/places/687928	Ierusalem/Hierosolyma/Col. Aelia Capitolina|Ierusalem/Hierosolyma/Col. Aelia Capitolina, Jerusalem	31.776667	35.234167	church-2,settlement,temple-2	VERIFIED	Summary	
+8	2b7e9082-01bc-4ec1-a6da-4374fb4fef7a	iudaea	char-offset:34	PLACE	http://pleiades.stoa.org/places/678401	Stratonos Pyrgos/Caesarea|Caesarea/Stratonos Pyrgos, Caesarea	32.4987775	34.8912663	settlement	VERIFIED		
+9	55ca80b3-3894-47ea-931e-1f89048801ed	caesarea palestina	char-offset:34	PLACE	http://pleiades.stoa.org/places/678401	Stratonos Pyrgos/Caesarea|Caesarea/Stratonos Pyrgos, Caesarea	32.4987775	34.8912663	settlement	VERIFIED		
+11	ac5fd99d-d81b-4704-847e-37d968189d12	aquileia	char-offset:38	PLACE	http://pleiades.stoa.org/places/187290	Aquileia|Aquileia, Aquileia|Aquileia	45.769631	13.370946	church,settlement	VERIFIED		
+13	7aaff8df-9b73-4c1e-9d47-62d82ceee158	sirmium	char-offset:48	PLACE	http://pleiades.stoa.org/places/207447	Sirmium|Sirmium, Sremska Mitrovica|Sremska Mitrovica	44.96648	19.61017	settlement	VERIFIED		
+14	832cb478-64ce-4b7b-b981-d241d04f3bdd	HERACLEA	char-offset:53	PLACE	http://pleiades.stoa.org/places/511357	Perinthus/Heraclea|Perinthus/Heraclea, Marmara Ereğlisi Adliyesi	40.97089	27.95454	settlement	VERIFIED	Summary	
+15	05600b0c-028d-49b6-8537-26dde46ed60f	hierusalem	char-offset:53	PLACE	http://pleiades.stoa.org/places/687928	Ierusalem/Hierosolyma/Col. Aelia Capitolina|Ierusalem/Hierosolyma/Col. Aelia Capitolina, Jerusalem	31.776667	35.234167	church-2,settlement,temple-2	VERIFIED		
+16	6a22df12-e55a-4f5d-be94-a143e2d9f662	tyro	char-offset:60	PLACE	http://pleiades.stoa.org/places/678437	Tyrus/Col. Septimia Severa|Tyrus/Col. Septimia Severa, Tyre (Tyrus)	33.268071	35.209358	circus,settlement	VERIFIED		
+17	19992600-b201-4427-bd16-c1d748f1eaac	calcedonia	char-offset:63	PLACE	http://pleiades.stoa.org/places/520988	Chalcedon|Chalcedon, Kadıköy	40.983393	29.025789	settlement,port	VERIFIED		
+18	f0a4ac53-133e-4ea2-9067-cdfc44310b7e	anchira	char-offset:63	PLACE	http://pleiades.stoa.org/places/619103	Ancyra|Ancyra, Ankara	39.944387	32.858128	settlement	VERIFIED		
+19	b171ad3c-47c2-496d-885a-dde4d5801a82	caesarea palestina	char-offset:65	PLACE	http://pleiades.stoa.org/places/678401	Stratonos Pyrgos/Caesarea|Caesarea/Stratonos Pyrgos, Caesarea	32.4987775	34.8912663	settlement	VERIFIED		
+20	43f6f6ad-bf4e-4ccb-9b90-69b0461d33f8	AVLONAM	char-offset:66	PLACE	http://pleiades.stoa.org/places/481750	Aulon|Aulon, Kepi Triportit	40.484898	19.473197	settlement	VERIFIED	Summary	
+21	397fefa8-5b65-4268-8899-380c05053892	galatia	char-offset:71	PLACE	http://pleiades.stoa.org/places/619161	Galatia	39.75	32.75	region,province	VERIFIED		
+22	e6289996-74ea-495e-995f-c027fe5df15e	tarso	char-offset:79	PLACE	http://pleiades.stoa.org/places/648789	Tarsus/Antiochia ad Cydnum|Tarsus/Antiochia ad Cydnum, Gözlü Kule	36.91242	34.89592	settlement	VERIFIED		
+23	66814a0a-7c3d-4458-8656-3108cac6372b	ROMAM	char-offset:87	PLACE	http://pleiades.stoa.org/places/423025	Roma|Roma, Roma|Rome	41.89262	12.4843457	settlement,urban	VERIFIED	Summary|urbs	
+24	f72017ce-e5f7-4a2d-9a56-85bdc3b586a5	constantinopolim	char-offset:91	PLACE	http://pleiades.stoa.org/places/520998	Byzantium|Constantinopolis|Byzantium/Constantinopolis, Istanbul	41.012379	28.975926	settlement,urban	VERIFIED		
+25	38fdebc4-fb66-40d6-99c7-e0ba39e5be43	MEDIOLANVM	char-offset:93	PLACE	http://pleiades.stoa.org/places/383706	Mediolan(i)um|Mediolanium/Mediolanum, Milano|Milan	45.4637	9.1881	urban,settlement	VERIFIED	Summary	
+26	1a5722fc-e4d6-4a73-bd7d-75bf3683bfb3	fossis	char-offset:122	PLACE	http://pleiades.stoa.org/places/207120	Fossae|Fossae, Sasinci	44.966	19.743	station	VERIFIED		
+27	3720908b-8c99-4aa2-82e0-6d250e09edbe	hierusalem	char-offset:123	PLACE	http://pleiades.stoa.org/places/687928	Ierusalem/Hierosolyma/Col. Aelia Capitolina|Ierusalem/Hierosolyma/Col. Aelia Capitolina, Jerusalem	31.776667	35.234167	church-2,settlement,temple-2	VERIFIED		
+28	25de0d96-79b6-4008-86f0-399c51c33aec	burdigala	char-offset:123	PLACE	http://pleiades.stoa.org/places/138248	Burdigala|Burdigala, Bordeaux|Bordeaux	44.837789	-0.57918	amphitheatre,settlement	VERIFIED	civitas	
+29	d9560266-35f2-45eb-b0df-de789a95bd46	constantinopoli	char-offset:145	PLACE	http://pleiades.stoa.org/places/520998	Byzantium|Constantinopolis|Byzantium/Constantinopolis, Istanbul	41.012379	28.975926	settlement,urban	VERIFIED		
+30	36135b75-cff1-439b-aa83-ffff3eb11ec1	bassianis	char-offset:149	PLACE	http://pleiades.stoa.org/places/206960	Bassiana|Bassiana, Donji Petrovci	44.9707	19.97406	settlement	VERIFIED		
+31	e1020824-0ab1-473a-b77c-d3e50f513810	garonna	char-offset:150	PLACE	http://pleiades.stoa.org/places/138369	Garumna (river)|Garumna, Garonne (La)	45.585693	-1.047134	river	VERIFIED		
+32	e75bab83-2bc3-49fe-834e-e56951659d9a	pargais	char-offset:155	PLACE	http://pleiades.stoa.org/places/648733	Pargais|Pargais, near Gökçeler	36.9712975	35.1059765	station	VERIFIED		
+33	3494fb25-82af-40ed-9a57-851491713e02	argentea	char-offset:160	PLACE	http://pleiades.stoa.org/places/383575	Argentea|Argentea, Gorgonzola	45.53126	9.40846	station	VERIFIED	change	
+34	c58affc4-4624-4662-acae-6c28949f4dbb	pontum	char-offset:169	PLACE	http://pleiades.stoa.org/places/520977	Bosphorus	41.119444	29.075278	water-open	VERIFIED		
+35	742972c1-38b4-4485-ab0a-4708ff46d8c4	nouiciani	char-offset:175	PLACE	http://pleiades.stoa.org/places/207313	‘Noviciani’	44.5	20.5	people	VERIFIED	misplaced	
+36	39e300e0-5828-4fe2-ac49-d1e9de8dd59b	adana	char-offset:182	PLACE	http://pleiades.stoa.org/places/648548	Adana/Antiochia ad Sarum|Adana/Antiochia ad Sarum, Adana	36.985809	35.334166	settlement-modern,settlement	VERIFIED		
+37	9bdc7799-4a06-4249-a2a4-1b0868bc35ba	calcedoniam	char-offset:183	PLACE	http://pleiades.stoa.org/places/520988	Chalcedon|Chalcedon, Kadıköy	40.983393	29.025789	settlement,port	VERIFIED		
+38	8d6e5f5f-8bd4-4083-82ff-f2fb3eff4d0a	ponte aureoli	char-offset:185	PLACE	http://pleiades.stoa.org/places/383747	Pons Aureoli|Pons Aureoli, Canonica d'Adda	45.57757	9.53731	station	VERIFIED	change	
+39	a20380fe-bfd0-4e00-bd7c-c9c059fc31d1	altina	char-offset:203	PLACE	http://pleiades.stoa.org/places/206913	Altina|Altina, Surčin	44.7891667	20.2747222	station	VERIFIED		
+40	399f8899-33e5-4ce1-a330-c3ad4ff5e81f	mansista	char-offset:208	PLACE	http://pleiades.stoa.org/places/658538	Mopsou(h)estia/Seleukeia pros to Pyramo|Mopsouhestia/Mopsouestia/Seleukeia pros to Pyramo, Yakapınar	36.95779	35.62389	settlement	VERIFIED		
+41	64ab33ec-ca66-4c55-9050-ed807990933e	bergamo	char-offset:215	PLACE	http://pleiades.stoa.org/places/383589	Bergomum|Bergomum, Bergamo|Bergamo	45.6947	9.6687	settlement	VERIFIED	civitas	
+42	d0d881ee-bd2a-4f8b-8737-7e98d92587f8	bithyniam	char-offset:215	PLACE	http://pleiades.stoa.org/places/511189	Bithynia (region)	41.01972392	31.50163508	region	VERIFIED		
+43	9ac981e4-700a-42f9-aae5-3b91c2a3c5ca	singiduno	char-offset:227	PLACE	http://pleiades.stoa.org/places/207443	Singidunum|Singidunum, Beograd	44.8236	20.4503	settlement	VERIFIED		
+44	4e17ff4b-64af-48dd-82eb-b01fcff8f4d0	nassete	char-offset:235	PLACE	http://pleiades.stoa.org/places/521092	‘Nassete’|‘Nassete’, near Maltepe	40.918692	29.131811	station	VERIFIED		
+45	4198bb36-f7b4-47ea-9ca8-9592fd6b45a6	syna	char-offset:236	PLACE	http://pleiades.stoa.org/places/678405	Syna M.|Syna M., near Shuni	32.54477	34.93711	settlement	VERIFIED		
+46	82cb29b3-e0aa-46cd-ad54-1fbfce35912e	tardequeia	char-offset:237	PLACE	http://pleiades.stoa.org/places/658610	Tardequeia|Tardequeia, Kurtkulağı?	36.93717	35.88579	station	VERIFIED		
+47	d1becd95-80f6-4fce-af7b-23aa75376176	tellegate	char-offset:242	PLACE	http://pleiades.stoa.org/places/383796	Tellegate|Tellegate, Telgate	45.62681	9.85393	station	VERIFIED	change	
+48	d01af30d-b7e7-48dc-bcf2-bc1f790f11e5	stomatas	char-offset:251	PLACE	http://pleiades.stoa.org/places/138599	Stomatas|Stomatas, La Brède	44.68148	-0.527753	station	VERIFIED	change	
+49	40322836-df28-49d8-a7f4-74d2f40d9fa9	pannoniae	char-offset:262	PLACE	http://pleiades.stoa.org/places/197425	Pannonia	46.5	15.5	province	VERIFIED		
+50	b5896f14-df6c-45dc-b4f7-b21bc7229676	catauolo	char-offset:264	PLACE	http://pleiades.stoa.org/places/658506	Katabolos/Moutloubake|Katabolos/Moutloubake, Muttalip Höyüğü	36.91741	35.98137	settlement	VERIFIED		
+51	077669b4-7540-409c-aaf3-3aa4cbd26e8e	tetellus	char-offset:270	PLACE	http://pleiades.stoa.org/places/383797	Tetellus|Tetellus, Ospitaletto	45.55597	10.07348	station	VERIFIED	change	
+52	f1baf1e9-6133-41d4-85f8-c7fcdcf2e988	pandicia	char-offset:274	PLACE	http://pleiades.stoa.org/places/521106	Panteichion|Panteichion, Pendik	40.876585	29.23513	settlement	VERIFIED		
+53	7a3ca76e-0833-4cde-af5f-9e6ea6f37b2b	sirione	char-offset:279	PLACE	http://pleiades.stoa.org/places/138593	Sirio|Sirio, Cérons|Cérons	44.631404	-0.337996	station	VERIFIED	change	
+54	e46f1cb1-f34d-4e89-b51a-60a50f63ad8f	baiae	char-offset:290	PLACE	http://pleiades.stoa.org/places/658394	Baiae	36.75	36.25	labeled feature	VERIFIED		
+56	ee6f2ebf-7f1b-43c7-988e-e02076f3ebc0	brixa	char-offset:295	PLACE	http://pleiades.stoa.org/places/383603	Brixia|Brixia, Brescia|Brescia	45.5398	10.2229	theatre,church,settlement,temple-2	VERIFIED	civitas	
+57	b16465b8-b1da-4c4a-abc0-07b145feaaca	maximianopoli	char-offset:306	PLACE	http://pleiades.stoa.org/places/678266	Legio/Caporcotani/Maximianopolis|Legio/Caporcotani/Maximianopolis, Tel Megiddo	32.58505	35.18452	settlement	VERIFIED		
+58	2d5928ce-c6f3-4ba6-bade-03dd9d2769be	vasatas	char-offset:308	PLACE	http://pleiades.stoa.org/places/138313	Cossium|Cossium/Vasatis, Bazas|Bazas	44.43146	-0.20973	settlement	VERIFIED	civitas	
+59	67c1ea1a-afb9-4d7f-b65a-f7f9113420af	pontamus	char-offset:311	PLACE	http://pleiades.stoa.org/places/511371	Potamoi|Potamoi, E Pendik	40.798384	29.379823	station	VERIFIED		
+60	4b27baee-58ff-4c79-8e59-102b642a7068	alexandria scabiosa	char-offset:314	PLACE	http://pleiades.stoa.org/places/658371	Alexandria ad Issum|Alexandria ad Issum, İskenderun	36.589023	36.166038	settlement	VERIFIED		
+61	b043acff-8c65-40df-9983-1248ea515e8c	ad flexum	char-offset:316	PLACE	http://pleiades.stoa.org/places/383546	Ad Flexum/Sermione Mansio|Ad Flexum/Sermione Mansio, Colombare, Sirmione	45.46587	10.60554	settlement-modern,station	VERIFIED	halt	
+62	31218721-f310-4ee2-b3bc-e51d2483d830	tricornia	char-offset:318	PLACE	http://pleiades.stoa.org/places/207515	Tricornium|Tricornium, Ritopek|Tricornium, Ritopek	44.7333333	20.65	fort	VERIFIED		
+64	7e4f1a9a-fbb6-4107-8b2f-0a8a6cc4be92	tres arbores	char-offset:337	PLACE	http://pleiades.stoa.org/places/138626	Tres Arbores|Tres Arbores, Les Trois Chênes	44.341177	-0.105492	station	VERIFIED	change	
+65	f414b052-a0e9-4bf5-885b-76df9eee0810	libissa	char-offset:338	PLACE	http://pleiades.stoa.org/places/511305	Libyssa|Libyssa, Libyssa	40.769562	29.539812	settlement	VERIFIED		
+66	e2694b2d-f325-4c5c-a82f-690c85f05a09	isdradela	char-offset:340	PLACE	http://pleiades.stoa.org/places/678197	Iezreel/Isdradela|Iezreel/Isdradela, Tel Yizre'el/Zir'in	32.55693	35.32843	settlement	VERIFIED		
+67	0b081b89-fa73-49d9-ab41-43df99757db1	beneuentum	char-offset:343	PLACE	http://pleiades.stoa.org/places/383588	Beneventum|Beneventum, Cavalcaselle, Castelnuovo del Garda	45.43802	10.72455	station	VERIFIED	change	
+68	48944fb5-a1cc-44c1-8918-f70fabd3c6f3	ad sextum	char-offset:352	PLACE	http://pleiades.stoa.org/places/206893	Ad Sextum Miliarem|Ad Sextum Miliarem, Grocka	44.67	20.717222	station	VERIFIED		
+69	1191e8ec-b1bc-49c7-ada6-203648f1387a	pictanus	char-offset:358	PLACE	http://pleiades.stoa.org/places/658573	Platanoi/‘Pictanus’|Platanoi/‘Pictanus’, Belen	36.488437	36.19513	settlement	VERIFIED		
+70	69823864-9886-44c6-b743-fe99382e9030	oscineio	char-offset:367	PLACE	http://pleiades.stoa.org/places/138504	*Oscincium|*Oscincium, Houeillès	44.194914	0.033055	station	VERIFIED	change	
+71	6c260e78-dc63-440d-8409-60f9c9e26ec4	verona	char-offset:370	PLACE	http://pleiades.stoa.org/places/383816	Verona|Verona, Verona|Verona	45.447243	10.997007	arch,amphitheatre,theatre,settlement	VERIFIED	civitas	
+72	8cfc3acf-2b1c-42ff-8420-9b24535158d7	cilciae	char-offset:387	PLACE	http://pleiades.stoa.org/places/981514	Cilicia	37.5	32.5	province	VERIFIED		
+73	68e12e32-5709-468c-9b07-50add16d8773	aureo monte	char-offset:389	PLACE	http://pleiades.stoa.org/places/206938	*Aureus Mons|*Aureus Mons, Seone	44.6363889	20.8186111	fort	VERIFIED		
+74	edc0045d-bdcf-45f1-8d58-d7ad76c324a4	cadiano	char-offset:393	PLACE	http://pleiades.stoa.org/places/393396	Cadianum|Cadianum, Caldiero	45.415315	11.178444	station	VERIFIED	change	
+75	487d009e-0ef8-4d4a-b684-5d5ba275f677	scittio	char-offset:396	PLACE	http://pleiades.stoa.org/places/246662	Sotium/Scittio|Sotium/Scittio, Sos	44.04268432	0.139726092	station	VERIFIED	change	
+76	102e62a0-33fd-43c2-ba8a-bd7271124a92	syriae	char-offset:398	PLACE	http://pleiades.stoa.org/places/981550	Syria	37.5	37.5	province	VERIFIED		
+77	bb271dbd-0a9d-431b-bb55-488de2dcbd81	pagrios	char-offset:414	PLACE	http://pleiades.stoa.org/places/658564	Pagrae|Pagrae, Bağras	36.426652	36.224864	settlement,fort	VERIFIED		
+78	330661ca-2ee2-46f0-9c66-16331d43c0bf	aureos	char-offset:417	PLACE	http://pleiades.stoa.org/places/393387	Auraei|Auraei, Montebello Vicentino	45.457519	11.384537	station	VERIFIED	change	
+79	bd5e8ad1-7ef1-4112-a926-cc2b1f1220c4	vingeio	char-offset:418	PLACE	http://pleiades.stoa.org/places/207550	Vinceia|Vinceia, Smederevo	44.651382	20.935513	station	VERIFIED		
+80	9227a48d-662a-4b7f-a255-6d859f603cdd	brunga	char-offset:421	PLACE	http://pleiades.stoa.org/places/511193	‘Brunca’|‘Brunca’, Hereke/Yarımca?	40.777757	29.701046	station	VERIFIED		
+81	ba2c906a-0f82-45ce-8e21-ece82e40608d	elusa	char-offset:426	PLACE	http://pleiades.stoa.org/places/246380	Elusa|Elusa, Eauze|Eauze	43.8611	0.1032	settlement	VERIFIED	civitates	
+82	d388468a-f472-4be9-a2e5-3c54f41a3f4c	antiochia	char-offset:441	PLACE	http://pleiades.stoa.org/places/658381	Antiochia/Theoupolis|Antiochia/Theoupolis, Antakya	36.200663	36.165318	amphitheatre,settlement,urban	VERIFIED		
+83	0beeb14f-b00e-49bf-b4f6-3f011b8ba5a1	margo	char-offset:443	PLACE	http://pleiades.stoa.org/places/207267	Margum|Margum, Orašje, Dubravica	44.696115	21.077871	settlement	VERIFIED		
+84	ec6d0f86-5b8a-4538-8746-f748519c2d5c	vincentia	char-offset:446	PLACE	http://pleiades.stoa.org/places/393513	Vicetia|Vicetia, Vicenza|Vicenza	45.5459	11.5403	theatre,settlement	VERIFIED	civitas	
+85	c9646a4d-1d7e-41df-8542-95957b0394c3	nicomedia	char-offset:446	PLACE	http://pleiades.stoa.org/places/511337	Nicomedia|Nicomedia, İzmit	40.76445	29.923486	settlement	VERIFIED		
+86	83f9545a-280a-498a-81eb-f250789b50b0	vanesia	char-offset:452	PLACE	http://pleiades.stoa.org/places/246727	Vanesia|Vanesia, Saint-Jean-Poutge	43.724899	0.377856	station	VERIFIED	change	
+87	f79e1aaf-17af-4e88-a9ed-5ed70877dbcd	scithopoli	char-offset:454	PLACE	http://pleiades.stoa.org/places/678378	Scythopolis/Nysa|Scythopolis/Nysa, Beit She'an	32.502074	35.50196	amphitheatre,theatre,settlement	VERIFIED		
+89	a9a95b56-cc0b-432d-9cf6-5323f2953d91	viminacio	char-offset:469	PLACE	http://pleiades.stoa.org/places/207549	Viminacium|Viminacium/Viminatium, Stari Kostolac	44.736776	21.216122	amphitheatre,settlement	VERIFIED		
+90	8af76102-5240-4b2c-bfdd-885f8f2dc271	tarso	char-offset:469	PLACE	http://pleiades.stoa.org/places/648789	Tarsus/Antiochia ad Cydnum|Tarsus/Antiochia ad Cydnum, Gözlü Kule	36.91242	34.89592	settlement	VERIFIED		
+91	c56dfb83-74a9-4be8-8e7d-4238d4acec15	ad finem	char-offset:473	PLACE	http://pleiades.stoa.org/places/393361	Ad Finem|Ad Finem, Arlesega, Mestrino	45.46073	11.71983	station	VERIFIED	boundary	
+92	d4e28acb-3466-40b5-ade6-c57550be45ae	ciliciae	char-offset:475	PLACE	http://pleiades.stoa.org/places/981514	Cilicia	37.5	32.5	province	VERIFIED		
+93	d9c2344b-5743-4896-b557-516effa7ee13	constantinopoli	char-offset:476	PLACE	http://pleiades.stoa.org/places/520998	Byzantium|Constantinopolis|Byzantium/Constantinopolis, Istanbul	41.012379	28.975926	settlement,urban	VERIFIED		
+94	e5bf4197-879a-450e-bb5a-3c0d834231f2	auscius	char-offset:479	PLACE	http://pleiades.stoa.org/places/246379	Elimberrum|Elimberrum, Auch|Auch	43.6477	0.5852	settlement	VERIFIED	civitas	
+95	0ce00076-0689-4dfc-9830-9e64894ed2c5	aser	char-offset:481	PLACE	http://pleiades.stoa.org/places/678034	Aser|Aser, Tayasir (Samaria)	32.339109	35.396311	station	VERIFIED		
+96	5554177e-04b7-4a51-8834-6b28401a8145	antiochia	char-offset:484	PLACE	http://pleiades.stoa.org/places/658381	Antiochia/Theoupolis|Antiochia/Theoupolis, Antakya	36.200663	36.165318	amphitheatre,settlement,urban	VERIFIED		
+97	25029575-038a-4f97-af3a-ef4bb3132632	nicomedia	char-offset:492	PLACE	http://pleiades.stoa.org/places/511337	Nicomedia|Nicomedia, İzmit	40.76445	29.923486	settlement	VERIFIED		
+98	1a22516b-d181-45cf-9cb6-c09c04c1a33c	pataui	char-offset:499	PLACE	http://pleiades.stoa.org/places/393473	Patavium|Patavium, Padova|Padova	45.4096	11.8766	amphitheatre,settlement	VERIFIED	|civitas	
+99	1df34cea-c614-4d8e-99b7-79dc2e237a40	d sextum	char-offset:508	PLACE	http://pleiades.stoa.org/places/246141	Ad Sextum|Ad Sextum, L'Aubergé, Marsan	43.64785	0.733189	station	VERIFIED	change	
+100	f4b77521-0555-41fb-9be7-bec27541b921	ad duodecimum	char-offset:522	PLACE	http://pleiades.stoa.org/places/393359	Ad XII/Meduacus Maior|Ad XII/Meduacus Maior, Sambruson, Dolo	45.4132	12.10001	station	VERIFIED	change	
+101	796f75c5-5091-4b63-a6fc-f15d30fee38e	Neapoli	char-offset:524	PLACE	http://pleiades.stoa.org/places/678301	Neapolis|Neapolis, Nablus	32.216511	35.26293	amphitheatre,settlement	VERIFIED		
+102	be88c852-c324-4da3-803d-33cc7b0e7a50	ad nonum	char-offset:532	PLACE	http://pleiades.stoa.org/places/206887	Ad Nonum|Ad Nonum, Nabrđe, Požarevac	44.625633	21.252172	labeled feature	VERIFIED		
+103	b4206f30-0348-4951-8ba9-aae3efb4f545	hungunuerro	char-offset:535	PLACE	http://pleiades.stoa.org/places/246420	Hungunverro|Hungunverro, La Tonguère	43.594998	0.91825	station	VERIFIED	change	
+104	952101bc-91a7-4794-b23d-b1f903b2639c	palatium dafne	char-offset:545	PLACE	http://pleiades.stoa.org/places/658450	Daphne|Daphne, Harbiye	36.130422	36.142802	settlement	VERIFIED		
+105	405a0ce1-ce8d-47b2-88d4-50c12af1b04b	mons agazaren	char-offset:551	PLACE	http://pleiades.stoa.org/places/678147	Garizein M.|Garizein Mons/Gerizim Mons, Mount Gerizim	32.200742	35.273414	temple	VERIFIED		
+106	90f10299-ddb9-44ba-866b-74d07b7eac0e	ad nonum	char-offset:554	PLACE	http://pleiades.stoa.org/places/393358	Ad IX|Ad IX, Ponte di Pietra, Venezia	45.4814175	12.2770176	station	VERIFIED	change	
+107	b6380176-1f27-4c24-84d9-8c37ab933ab7	bucconis	char-offset:566	PLACE	http://pleiades.stoa.org/places/246260	Bucconis|Bucconis, Forêt de Bouconne	43.611763	1.085786	station	VERIFIED	change	
+108	199e423d-7f32-49e7-8b57-f11cdec2008a	munecipio	char-offset:566	PLACE	http://pleiades.stoa.org/places/207296	Municipium|Municipium, Kalište, Malo Crniće	44.514234	21.320729	station	VERIFIED		
+109	f91581cb-0e42-4de0-a715-ed8b3f16701c	hyribolum	char-offset:566	PLACE	http://pleiades.stoa.org/places/511253	Eribolon|Eribolon, Yeniköy	40.6939	29.8944	station	VERIFIED		
+110	20919151-7d3e-47fc-905a-5f2cadfba519	altino	char-offset:580	PLACE	http://pleiades.stoa.org/places/393374	Altinum|Altinum, Altino, Quarto d'Altino	45.5462452	12.3994439	road,settlement	VERIFIED	civitas	
+111	8f9906ad-85f8-4646-8e29-db1bdb554b6f	hysdata	char-offset:582	PLACE	http://pleiades.stoa.org/places/658483	Hydatos Potamoi/Seleukeia Pieria|Seleukeia Pieria/Hydatos Potamoi, Çevlik	36.11705	35.93815	settlement,port	VERIFIED		
+112	b631436b-1dc1-4621-a892-7445a3eae32f	libum	char-offset:591	PLACE	http://pleiades.stoa.org/places/511304	Libum|Libum, near Senaiye	40.631587	29.686075	station	VERIFIED		
+113	18559b32-9eb4-4c95-8508-6aaa039aaeb2	iouis pago	char-offset:596	PLACE	http://pleiades.stoa.org/places/207189	Iovis Pagus|Iovis Pagus, Veliki Popovac	44.411467	21.32354	station	VERIFIED		
+114	196d817b-fbbc-4a90-9d3c-ad207ef46aa1	ad iouem	char-offset:600	PLACE	http://pleiades.stoa.org/places/246136	Ad Iovem|Ad Iovem, Pibrac	43.604874	1.276984	station	VERIFIED	change	
+116	7923f6ec-1977-49c3-a9a8-2834104a7bba	sanos	char-offset:607	PLACE	http://pleiades.stoa.org/places/393369	Ad Sanos|Ad Sanos, Santo Stino di Livenza	45.71343	12.69068	station	VERIFIED	|change	
+117	2637abfb-89a6-414f-9744-8376c28695a9	liada	char-offset:614	PLACE	http://pleiades.stoa.org/places/511302	‘Liada’|‘Liada’, near Sarıağıl	40.559956	29.668747	station	VERIFIED		
+118	e1751213-308d-4fdc-a646-7a197114b326	bao	char-offset:623	PLACE	http://pleiades.stoa.org/places/206958	‘Bao’|‘Bao’, Veliko Laole?	44.317278	21.43527	station	VERIFIED		
+119	87d38779-8afe-415c-b4d9-6facbc9bdacd	tholosa	char-offset:628	PLACE	http://pleiades.stoa.org/places/246694	Purpan|Purpan-Ancely|Tolosa|Tolosa, Toulouse|Toulouse	43.6147918	1.3976884	amphitheatre,settlement	VERIFIED	civitas	
+120	a0536a13-49c6-484f-9a6c-7c4a81d6218f	concordia	char-offset:629	PLACE	http://pleiades.stoa.org/places/393441	Iulia Concordia|Iulia Concordia, Concordia Sagittaria|Concordia Sagittaria	45.75594	12.84547	settlement	VERIFIED	civitas	
+122	27554068-1c9b-4892-9fa7-0d94e1d708a3	nicia	char-offset:638	PLACE	http://pleiades.stoa.org/places/511268	Helikore/Nicaea|Nicaea/Helikore, İznik	40.426679	29.715443	theatre,settlement	VERIFIED		
+123	e4c95a4f-b43c-4a42-b55a-41458ea299cd	idomo	char-offset:644	PLACE	http://pleiades.stoa.org/places/207183	Idimum|Idimum, Medveđa	44.148941	21.345266	station	VERIFIED		
+124	e28b522c-66ee-4382-b3b5-473511f493b9	ad nonum	char-offset:655	PLACE	http://pleiades.stoa.org/places/246137	Ad Nonum|Ad Nonum, Pompertuzat|Pompertuzat	43.4916	1.5179	station	VERIFIED	change	
+125	6ee0b982-9d43-430a-ba91-89576979aa1c	apicilia	char-offset:659	PLACE	http://pleiades.stoa.org/places/187287	‘Apicilia’|‘Apicilia’, Latisanotta, Latisana	45.78756	12.98675	station	VERIFIED	change	
+127	2b060ce7-fbb4-4d4f-85ba-e4db02f105ca	schinae	char-offset:664	PLACE	http://pleiades.stoa.org/places/511412	‘Schinae’|‘Schinae’, Karadin	40.413487	29.915044	station	VERIFIED		
+129	21c3667b-641d-4203-bf48-fa3cde7bd877	ad octauum	char-offset:670	PLACE	http://pleiades.stoa.org/places/206889	Ad Octavum|Ad Octavum, Glogovac?	44.042641	21.313576	station	VERIFIED		
+130	47c5b8cf-ba49-414a-bb77-54814b234d79	ad vicesimum	char-offset:684	PLACE	http://pleiades.stoa.org/places/246143	Ad Vicesimum|Ad Vicesimum, L’Hôpital	43.433758	1.668689	station	VERIFIED	change	
+131	a5dbdf9e-dd23-44ea-a4d2-337120701805	ladica	char-offset:687	PLACE	http://pleiades.stoa.org/places/668290	Laodicea|Laodicea, Latakia	35.513994	35.782047	settlement,port	VERIFIED		
+132	8afeab2c-6cc5-4ae0-89db-fb9556d00160	ad vndecimum	char-offset:688	PLACE	http://pleiades.stoa.org/places/187260	Ad Undecimum 1|Ad Undecimum, Chiarisacco, San Giorgio di Nogaro	45.833489	13.215652	station	VERIFIED	change	
+133	649d21a1-f657-4df0-afe4-bafe2522fb37	mido	char-offset:690	PLACE	http://pleiades.stoa.org/places/511326	Mygdum/‘Midum’|Mygdum/‘Midum’, Taşköprü?	40.36105	29.981601	station	VERIFIED		
+134	962cf8b0-f76c-4605-b000-8ff231f7bdc2	oromago	char-offset:700	PLACE	http://pleiades.stoa.org/places/207173	Horreum Margi|Horreum Margi, Ćuprija	43.93376	21.37044	settlement	VERIFIED		
+135	63c801e5-2b1e-4fc3-ab5b-73aa498db55b	gabala	char-offset:712	PLACE	http://pleiades.stoa.org/places/668250	Gabala|Gabala, Jableh	35.36171	35.92429	settlement	VERIFIED		
+136	cf0a46f5-ac5c-4de8-a3d2-7c35f0291dd8	elusione	char-offset:713	PLACE	http://pleiades.stoa.org/places/246381	Elusio|Elusio, Saint-Pierre-d'Alzonne, Montferrand	43.360676	1.8173718	station	VERIFIED	halt	
+137	123fc786-e5e7-4e96-bec8-9ebd0053da31	chogeae	char-offset:713	PLACE	http://pleiades.stoa.org/places/511210	‘Chogeae’|‘Chogeae’, Medetli?	40.289705	30.128565	station	VERIFIED		
+138	fdb7f62e-8289-4bfb-8549-68cb6ba83b4b	aquileia	char-offset:718	PLACE	http://pleiades.stoa.org/places/187290	Aquileia|Aquileia, Aquileia|Aquileia	45.769631	13.370946	church,settlement	VERIFIED	civitas	
+139	a62666ae-c1a2-44e1-91d8-e7595d7d24c0	myssiae	char-offset:727	PLACE	http://pleiades.stoa.org/places/992077	Moesiae	42.5	22.5	province	VERIFIED		
+140	b1506ba1-3fef-4b7c-a205-9ca8ad0d1f0b	sechim	char-offset:730	PLACE	http://pleiades.stoa.org/places/678403	Sychem|Sychem, Balata	32.21324	35.28252	settlement	VERIFIED		
+142	5504bac5-c393-4ea1-8473-95f47357f005	thateso	char-offset:738	PLACE	http://pleiades.stoa.org/places/511437	‘Thateso’|‘Thateso’, Dikenli Boğaz?	40.248889	30.24468	station	VERIFIED		
+143	8a85bc86-ec51-4e9f-b5d3-716a956f3b9b	balaneas	char-offset:739	PLACE	http://pleiades.stoa.org/places/668206	Balanea/Leukas|Balanea/Leukas, Baniyas	35.15354	35.928176	settlement,port	VERIFIED		
+144	dbb01eb0-e972-4c7a-b0b7-c97499b7f38c	sostomago	char-offset:742	PLACE	http://pleiades.stoa.org/places/246660	Sostomagus|Sostomagus, Castelnaudary|Castelnaudary	43.31705	1.95681	station	VERIFIED	change	
+145	8327cbd4-ff61-4b96-9c3a-3e28425ab0df	aquileia	char-offset:754	PLACE	http://pleiades.stoa.org/places/187290	Aquileia|Aquileia, Aquileia|Aquileia	45.769631	13.370946	church,settlement	VERIFIED	summary	
+146	414559bc-696e-4029-af0b-76508d7f4b37	sarmatorum	char-offset:754	PLACE	http://pleiades.stoa.org/places/207424	Sarmates|Sarmates, Gornje Vidovo?	43.786788	21.408727	station	VERIFIED		
+148	bfb42c6d-1cd6-4aef-8a48-1da96c79f3ee	syriae coelis	char-offset:765	PLACE	http://pleiades.stoa.org/places/981550	Syria	37.5	37.5	province	VERIFIED		
+149	eb2b3117-ad0e-4b5a-9788-1152f842e950	hebromago	char-offset:770	PLACE	http://pleiades.stoa.org/places/246413	Hebromagus/Eburomagus|Hebromagus/Eburomagus, Bram|Bram	43.24359	2.11342	settlement	VERIFIED	vicus	
+150	2be271fd-985b-43b1-a3ae-cc1991571973	foenicis	char-offset:782	PLACE	http://pleiades.stoa.org/places/678334	Phoenice	33.25	35.25	region	VERIFIED		
+151	3cfcfd73-858f-420d-ac18-64e5a8d6dcbc	caminitas	char-offset:783	PLACE	http://pleiades.stoa.org/places/207006	‘Cametas’|‘Cametas’, Ražanj?	43.673017	21.54862	station	VERIFIED		
+152	a2b52d02-1fb7-4b6a-a99d-28d42e107bb0	protunica	char-offset:788	PLACE	http://pleiades.stoa.org/places/511431	Tattaios|Tattaios, Arıcaklar	40.286922	30.3429555	settlement	VERIFIED		
+153	dfabeea1-fac1-4556-a5bd-3554ca14482b	cedros	char-offset:796	PLACE	http://pleiades.stoa.org/places/246320	Cedros|Cedros, Caux-et-Sauzens	43.225184	2.2544606	station	VERIFIED	change	
+154	741984cd-3415-4d4d-a30d-ae2f9e2d51d5	maraccas	char-offset:801	PLACE	http://pleiades.stoa.org/places/668305	Maraccas|Maraccas, Khrab Maraqiye	35.041299	35.898709	station	VERIFIED		
+155	ba9676bf-89d5-473e-9f66-270249d7ff74	artemis	char-offset:815	PLACE	http://pleiades.stoa.org/places/511383	‘Protunica’|‘Protunica’, Sarihocalar	40.266892	30.489235	station	VERIFIED		
+156	d5cb4be4-d01f-4b26-9d15-ab1a060fe4db	ipompeis	char-offset:815	PLACE	http://pleiades.stoa.org/places/207363	Praesidium Pompei|Praesidium Pompei, Rutevac, Aleksinac	43.591955	21.610451	station	VERIFIED		
+157	a0168080-c27b-4a1d-ae96-c568cb3b8ae2	carcassone	char-offset:822	PLACE	http://pleiades.stoa.org/places/246294	Carcas(s)o/Col. Iulia|Carcasso/Carcaso/Col. Iulia, Carcassonne|Carcassonne	43.205842	2.364076	settlement	VERIFIED	castellum	
+158	8e1a1fd2-a7ae-482d-a12f-cc08c2cd51f9	ad vndecimum	char-offset:825	PLACE	http://pleiades.stoa.org/places/187261	Ad Undecimum 2|Ad Undecimum, Gradisca d'Isonzo	45.89305	13.50011	station	VERIFIED	change	
+159	03bd5ae7-f75a-4179-8245-400361e75197	antaradus	char-offset:825	PLACE	http://pleiades.stoa.org/places/668190	Antarados/Constantia|Antarados/Constantia, Tartous	34.884894	35.88929	settlement	VERIFIED		
+160	8b573e16-03b2-448c-a437-5c619e3db0a8	artemis	char-offset:829	PLACE	http://pleiades.stoa.org/places/511163	Artemis|Artemis, near Kilciler	40.2863525	30.593308	station	VERIFIED		
+161	1f3ecc9b-5d50-4027-bfb1-49d48bea18ad	rampiana	char-offset:844	PLACE	http://pleiades.stoa.org/places/207156	Gramrianae|Gramrianae, Draževac, Aleksinac	43.449749	21.790465	station	VERIFIED		
+162	2594c83b-54ce-40af-a0c2-a3bc98885099	dablae	char-offset:846	PLACE	http://pleiades.stoa.org/places/844900	Dableis|Dableis, Çayköy	40.269618	30.682355	station	VERIFIED		
+163	69e3b9f6-dcbb-413c-8505-6e348e5ad979	tricensimum	char-offset:852	PLACE	http://pleiades.stoa.org/places/246706	Tricensimum|Tricensimum, Crémadeills	43.1834709	2.4893213	station	VERIFIED	change	
+164	a24e1808-8d0a-4eb0-8392-6d3e5076c160	ad fornolus	char-offset:861	PLACE	http://pleiades.stoa.org/places/197063	*Ad Fornulos|*Ad Fornulos, Prvačina	45.8908528	13.720575	station	VERIFIED	change	
+165	27df7dcf-18af-40d0-9984-af3105aaa878	ceratae	char-offset:869	PLACE	http://pleiades.stoa.org/places/844892	Ceratae|Ceratae, mansio at Beydili	40.188973	30.874479	station	VERIFIED		
+166	650774c6-c10c-4875-93a4-f1149158f933	naisso	char-offset:871	PLACE	http://pleiades.stoa.org/places/207303	Naissus|Naissus, Niš	43.3206	21.8927	settlement	VERIFIED		
+167	070cf779-1102-4cc1-9ec2-ad2e137603c6	hosuerbas	char-offset:889	PLACE	http://pleiades.stoa.org/places/246720	Usuerva|Usuerva, Lézignan-Corbières|Lézignan-Corbières	43.2016515	2.7599705	station	VERIFIED	change	
+168	5ddb43f7-3cc6-4711-ab5f-1eca363bd503	castra	char-offset:891	PLACE	http://pleiades.stoa.org/places/197276	Fluvio Frigido/Castra|Fluvio Frigido/Castra, Ajdovščina	45.889328	13.905216	fort	VERIFIED	change	
+170	9f60238e-2e81-4e79-a8a0-3c93521fe2b2	bithiniae	char-offset:893	PLACE	http://pleiades.stoa.org/places/511189	Bithynia (region)	41.01972392	31.50163508	region	VERIFIED		
+171	401c142d-3551-48cd-b621-c696f98e58ef	redicibus	char-offset:896	PLACE	http://pleiades.stoa.org/places/207373	*Radices|*Radices, Jelašnica?	43.301181	22.050333	station	VERIFIED		
+172	59ab6074-47f6-4bb7-a8c0-8d3eac8ab227	galatiae	char-offset:906	PLACE	http://pleiades.stoa.org/places/619161	Galatia	39.75	32.75	region,province	VERIFIED		
+173	8338f44b-5c7f-43a7-bd8b-166f02f42c42	narbone	char-offset:916	PLACE	http://pleiades.stoa.org/places/246347	Col. Narbo Martius|Col. Narbo Martius, Narbonne|Narbonne	43.184722	3.003611	settlement	VERIFIED	civitas	
+174	bab6dac9-a921-4220-a53b-e2cafc97c825	alpes iuliae	char-offset:923	PLACE	http://pleiades.stoa.org/places/197317	In Alpe Iulia/Ad Pirum|In Alpe Iulia/Ad Pirum, Hrušica	45.86363	14.11198	station,fort	VERIFIED	boundary	
+175	0733577f-34d4-41cc-9e3a-6d906f45460c	vlmo	char-offset:924	PLACE	http://pleiades.stoa.org/places/207526	‘Ulmo’|‘Ulmo’, Ostrovica, Niška Banja	43.334995	22.122538	station	VERIFIED		
+176	2a91424f-9813-420c-b1d3-633283adc1f5	sechar	char-offset:925	PLACE	http://pleiades.stoa.org/places/678403	Sychem|Sychem, Balata	32.21324	35.28252	settlement	VERIFIED		
+178	5ee4d1db-898c-4d71-a944-a5ad629e2b7e	Ad pirum	char-offset:938	PLACE	http://pleiades.stoa.org/places/197317	In Alpe Iulia/Ad Pirum|In Alpe Iulia/Ad Pirum, Hrušica	45.86363	14.11198	station,fort	VERIFIED	summit	
+179	b44b8dbc-6d5e-44e7-8b36-f44b6dd30744	beterris	char-offset:941	PLACE	http://pleiades.stoa.org/places/148056	Col. Baeterrae|Col. Baeterrae, Béziers|Béziers	43.3416	3.2178	amphitheatre,settlement	VERIFIED	civitas	
+180	b453eeff-2329-4917-95f2-d903301f3497	romansiana	char-offset:946	PLACE	http://pleiades.stoa.org/places/207382	Remesiana|Remesiana, Bela Palanka	43.21804	22.31138	settlement	VERIFIED		
+181	e697a9e2-cb6d-4fbf-9b9e-1f81cdf97887	dadastano	char-offset:946	PLACE	http://pleiades.stoa.org/places/844901	Dadastana|Dadastana, Karahisar	40.195974	31.109549	station	VERIFIED		
+182	2e546a75-9bf7-4d60-a0f9-c5fad1b55ea5	arcas	char-offset:953	PLACE	http://pleiades.stoa.org/places/668198	Arca/Herakleia en Phoinike/Caesarea ad Libanum|Arca/Herakleia en Phoinike/Caesarea ad Libanum, Tell 'Arqa	34.53049	36.04677	settlement	VERIFIED		
+183	7c5adbcc-5656-41b9-855b-4982919bfce6	samaritana	char-offset:955	PLACE	http://pleiades.stoa.org/places/678370	Samaria/Sebaste|Samaria/Sebaste/Gabinia,, Sebastiya	32.27633	35.1893	settlement	VERIFIED		
+184	44f72112-a81e-4808-8a1e-11beb0dd2a39	cessarone	char-offset:967	PLACE	http://pleiades.stoa.org/places/147997	Araura/Cessero|Cessero/Araura, Saint-Thibéry|Pont romain, Saint-Thibéry|Saint-Thibéry	43.3951	3.4206	settlement	VERIFIED	halt	
+185	c8fd4a64-789d-465a-ac27-bc9a70ab46ef	trans monte	char-offset:973	PLACE	http://pleiades.stoa.org/places/845086	‘Transmonte’|‘Transmonte’, near Baglıca	40.225726	31.22005	station	VERIFIED		
+186	137f179d-7906-41ca-8efc-67af32346989	latina	char-offset:977	PLACE	http://pleiades.stoa.org/places/207235	Latina|Latina, Telovac, Crnoklište	43.196933	22.408397	station	VERIFIED		
+187	6388f49d-390b-44cc-b380-1aff6404b103	bruttus	char-offset:978	PLACE	http://pleiades.stoa.org/places/668215	Bruttus|Bruttus, al-Abde?	34.516197	35.980539	station	VERIFIED		
+188	a9b2b9ed-f0e3-4584-8e83-d5617a4e9b06	longatico	char-offset:979	PLACE	http://pleiades.stoa.org/places/197357	Longaticum|Longaticum, Logatec	45.91769	14.22982	station	VERIFIED	mansio	
+189	36d4398a-7dae-40b7-b867-39ea7619f3b6	oro domiti	char-offset:996	PLACE	http://pleiades.stoa.org/places/148081	Forum Domitii|Forum Domitii, Les Salles, Montbazin|Montbazin	43.5115174	3.7023926	station	VERIFIED	change	
+190	b2670d45-3b9c-407b-a54e-d919890de882	milia	char-offset:1002	PLACE	http://pleiades.stoa.org/places/845019	Milia|Milia, near Eymir	40.197085	31.342518	station	VERIFIED		
+191	f29a931f-fc35-45e3-b5ae-094992bd774f	turribus	char-offset:1003	PLACE	http://pleiades.stoa.org/places/207521	Turres|Turres, Pirot	43.15771	22.58733	station	VERIFIED		
+192	28e74abe-51ca-426f-88d8-65a5497c9d10	ad nonum	char-offset:1005	PLACE	http://pleiades.stoa.org/places/197076	Ad Nonum|Ad Nonum, Log pri Brezovici	46.00907	14.36629	station	VERIFIED	change	
+193	2829db9a-9c16-40b9-b491-829ecea1543c	iuliopolis	char-offset:1025	PLACE	http://pleiades.stoa.org/places/844935	Gordioukome/Iuliopolis|Gordioukome/Iuliopolis, Sarılar	40.107062	31.6450025	settlement	VERIFIED		
+194	a0d0e5cb-a0a8-488a-bcb0-56972b55b79f	sostantione	char-offset:1027	PLACE	http://pleiades.stoa.org/places/148202	Sextantio|Sextantio/Substantion, Substantion|Castelnau-le-Lez	43.64139	3.89573	bridge,settlement	VERIFIED	change	
+195	2d3c35d6-aa02-45ce-8bd6-817fc48dce4d	triclis	char-offset:1031	PLACE	http://pleiades.stoa.org/places/668392	Trieres|Trieres, el Heri	34.304024	35.714518	settlement	VERIFIED		
+196	e91ef38a-2f97-4446-b3b6-ea24a3669106	translitis	char-offset:1032	PLACE	http://pleiades.stoa.org/places/207509	‘Translitis’|‘Translitis’, Dimitrovgrad	43.01454	22.77965	station	VERIFIED		
+197	72c54630-c8bd-4236-ba97-4ef7cfd9a72e	emona	char-offset:1034	PLACE	http://pleiades.stoa.org/places/197258	Emona|Emona, Ljubljana	46.047361	14.501095	settlement	VERIFIED	civitas	
+198	f571a0d7-f85a-4dc0-8958-2d5dbea1b7ad	hicronpotamum	char-offset:1055	PLACE	http://pleiades.stoa.org/places/844946	*Hieronpotamon|*Hieronpotamon, below Tahir	40.082671	31.690195	settlement	VERIFIED		
+199	5a4072be-bcdc-4096-b924-ec5717078008	ambrosi	char-offset:1056	PLACE	http://pleiades.stoa.org/places/147990	Ambrussum|Ambrussum, Pont-Ambroix (Ambrussum)	43.715393	4.149532	settlement	VERIFIED	change	
+200	332fde5b-2c1e-439b-a5b2-e4d8ee69e75a	bruttos	char-offset:1057	PLACE	http://pleiades.stoa.org/places/668214	Botrys|Botrys, Batroun	34.25516	35.65831	settlement	VERIFIED		
+201	d87e8727-9c9c-45fa-9620-3b87377b8f78	ad quartodecimo	char-offset:1060	PLACE	http://pleiades.stoa.org/places/197082	Ad Quartodecimum|Ad Quartodecimum, Groblje pri Mengšu	46.14973	14.58867	station	VERIFIED	change	
+202	e974a634-5e26-46cd-a6b0-98cd8cc3b07a	ballanstra	char-offset:1061	PLACE	http://pleiades.stoa.org/places/206955	Ballanstra|Ballanstra, Kalotina	42.9940251	22.8681801	station	VERIFIED		
+203	82ea1e6c-592e-4e52-bb30-e3e1ea73630a	nemauso	char-offset:1081	PLACE	http://pleiades.stoa.org/places/148142	Barutel|Carrières de Barutel|Nemausus|Nemausus, Nîmes|Nîmes	43.8864857	4.300122722	amphitheatre,settlement-modern,mine,urban,fort,settlement	VERIFIED	civitas	
+204	818803f6-417b-47a0-b91b-2afeab5214fe	meldia	char-offset:1087	PLACE	http://pleiades.stoa.org/places/207275	Meldia|Meldia, Dragoman	42.921675	22.92984	station	VERIFIED		
+205	39197cb9-740c-424c-a964-81106f9bae2d	agannia	char-offset:1087	PLACE	http://pleiades.stoa.org/places/609447	Lagania/Anastasioupolis|Lagania/Anastasioupolis, Dikmen Hüyük	40.0219715	31.9622515	settlement	VERIFIED		
+206	a2478d70-1197-4eae-86c7-078f715d6d5b	alcobile	char-offset:1088	PLACE	http://pleiades.stoa.org/places/668216	Byblos|Byblos, Byblos/Jbeil	34.119026	35.645732	settlement,port	VERIFIED		
+207	b5ef82f7-a8d1-4286-96ea-b1c2f7a2d0d6	hadrante	char-offset:1091	PLACE	http://pleiades.stoa.org/places/197147	Atrans|Atrans, Trojane	46.188078	14.883019	station	VERIFIED	mansio	
+208	8c40ba47-1db3-4620-95b4-be3975a8da21	ponte aerarium	char-offset:1106	PLACE	http://pleiades.stoa.org/places/148160	Pons Aerarius|Pons Aerarius, Bellegarde|Bellegarde	43.753814	4.5144978	station	VERIFIED	change	
+209	0beff128-176e-462d-98d5-94975d27928f	petrobrogen	char-offset:1112	PLACE	http://pleiades.stoa.org/places/845038	‘Petobrogen’|‘Petobrogen’, near Perli Çiftlik	40.053953	32.016977	station	VERIFIED		
+210	a7a9dadb-56cd-4e69-9d9d-142d0039818f	scretisca	char-offset:1114	PLACE	http://pleiades.stoa.org/places/207435	Scretisca|Scretisca, Kostinbrod	42.8130176	23.2154337	station	VERIFIED		
+211	8ef7b0db-b83b-40aa-bbae-75ea3389a393	heldua	char-offset:1115	PLACE	http://pleiades.stoa.org/places/678177	Heldua|Heldua, Khan el-Khulde	33.807178	35.491876	station	VERIFIED		
+212	802dd306-5223-410a-8590-cb4c227ea29d	italiae	char-offset:1119	PLACE	http://pleiades.stoa.org/places/1052	Italia	42.5	12.5	region	VERIFIED	boundary	
+213	32a10d14-5864-4df8-82e5-c65013b83cee	arelate	char-offset:1139	PLACE	http://pleiades.stoa.org/places/148217	Theline/Col. Arelate/Constantina|Col. Arelate/Theline/Constantina, Arles|Arles	43.67586	4.62266	settlement	VERIFIED	civitas	
+214	64315c3d-621b-4298-bddd-072da9534d36	birito	char-offset:1140	PLACE	http://pleiades.stoa.org/places/678060	Berytus/Laodikeia en te Phoinike/Col. Iulia Augusta Felix|Berytus/Laodikeia en te Phoinike/Col. Iulia Augusta Felix, Beirut	33.897902	35.501176	settlement	VERIFIED		
+215	54e7a228-c553-4bdd-8ebe-dcaac8c1f195	ad medias	char-offset:1146	PLACE	http://pleiades.stoa.org/places/197072	Ad Medias|Ad Medias, Ločica ob Savinji, Polzela	46.263669	15.099633	station	VERIFIED	change	
+216	776189c2-c32d-4feb-bdd1-639f1bec64cc	mnizos	char-offset:1146	PLACE	http://pleiades.stoa.org/places/845020	Mnizos|Mnizos, Balçiçek Çiftliği	40.04443	32.2489715	settlement	VERIFIED		
+217	87b8e61f-36ea-4c16-8813-797138fab28e	serdica	char-offset:1148	PLACE	http://pleiades.stoa.org/places/207439	Serdica|Serdica, Sofia	42.6976489	23.3221545	settlement	VERIFIED		
+218	446e7ebb-f492-4e9d-a566-764e84ad8d4d	parphirion	char-offset:1165	PLACE	http://pleiades.stoa.org/places/678338	Porphyreon Polis|Porphyreon Polis, Khan Nebi Yunas	33.6682	35.4202	settlement	VERIFIED		
+219	82f9e821-955b-4422-8e34-1d8e925e983c	prasmon	char-offset:1169	PLACE	http://pleiades.stoa.org/places/845047	Prasmon|Prasmon, NE Ayas	40.109949	32.249382	station	VERIFIED		
+220	79d75f86-e794-4f82-9615-c1af7396b451	burdigala	char-offset:1172	PLACE	http://pleiades.stoa.org/places/138248	Burdigala|Burdigala, Bordeaux|Bordeaux	44.837789	-0.57918	amphitheatre,settlement	VERIFIED	Summary	
+221	3c7a43ea-f63e-4c2e-ba49-94e576340a5a	sirmium	char-offset:1173	PLACE	http://pleiades.stoa.org/places/207447	Sirmium|Sirmium, Sremska Mitrovica|Sremska Mitrovica	44.96648	19.61017	settlement	VERIFIED		
+222	842e6cfc-7631-4fdb-a36f-a1baec26da75	celeia	char-offset:1175	PLACE	http://pleiades.stoa.org/places/197206	Celeia|Celeia, Celje	46.231018	15.2602936	settlement	VERIFIED	civitas	
+223	801c6efe-7b00-4035-82ed-8be2b1be7259	serdica	char-offset:1181	PLACE	http://pleiades.stoa.org/places/207439	Serdica|Serdica, Sofia	42.6976489	23.3221545	settlement	VERIFIED		
+224	40b05b68-5417-43c6-baf9-0cfdd9183a61	arelate	char-offset:1182	PLACE	http://pleiades.stoa.org/places/148217	Theline/Col. Arelate/Constantina|Col. Arelate/Theline/Constantina, Arles|Arles	43.67586	4.62266	settlement	VERIFIED	Summary	
+225	6fa12d92-1056-4df5-aab0-76d03f86d911	malogordis	char-offset:1194	PLACE	http://pleiades.stoa.org/places/845011	‘Manegordo’|‘Manegordo’, Avdan	40.084044	32.429558	station	VERIFIED		
+226	1e4fc77c-0cc7-4c8c-8df5-725cca2f5980	sidona	char-offset:1195	PLACE	http://pleiades.stoa.org/places/678393	Sidon/Col. Aurelia Pia|Sidon/Col. Aurelia Pia, Saida (Sidon)	33.560243	35.371208	settlement	VERIFIED		
+227	5823311f-c5b2-4681-8e67-0919e4f581cb	hierusalem	char-offset:1201	PLACE	http://pleiades.stoa.org/places/687928	Ierusalem/Hierosolyma/Col. Aelia Capitolina|Ierusalem/Hierosolyma/Col. Aelia Capitolina, Jerusalem	31.776667	35.234167	church-2,settlement,temple-2	VERIFIED		
+228	63d34f51-7f70-4c28-8988-028344a7c3b9	lotodos	char-offset:1207	PLACE	http://pleiades.stoa.org/places/197069	Ad Lotodos|Ad Lotodos, Stranice	46.3629738	15.3644038	station	VERIFIED	change	
+229	5edcb639-87f6-49b1-887a-e37810b519d9	sarepta	char-offset:1218	PLACE	http://pleiades.stoa.org/places/678374	Sarepta/Makra Kome|Sarepta/Makra Kome, Sarepta	33.46431	35.295048	settlement	VERIFIED		
+230	3510ef21-697d-423f-82b6-251dec02326f	cenaxem palidem	char-offset:1225	PLACE	http://pleiades.stoa.org/places/619136	Cenaxis Palus|Cenaxis Palus, Macun Çiftlik? near Etimesgut	39.9844845	32.6625835	station	VERIFIED		
+231	010ab0bf-acab-4d88-aaec-d08016644caf	ragindone	char-offset:1232	PLACE	http://pleiades.stoa.org/places/197467	Ragando|Ragando, Spodnje Grušovje	46.351	15.5	station	VERIFIED	mansio	
+232	209904c7-105b-4324-b7cf-1f7c5ccbdadd	arnagine	char-offset:1250	PLACE	http://pleiades.stoa.org/places/148074	Ernaginum|Ernaginum, Saint-Gabriel	43.7666736	4.6980992	station	VERIFIED	change	
+233	61860f83-c653-48b4-9829-4c30f7b580bc	bethar	char-offset:1254	PLACE	http://pleiades.stoa.org/places/687851	Bethar|Bethar, Battir	31.743201	35.12239	settlement	VERIFIED		
+234	b74e4cd1-b7cc-4fa6-b69e-d5500980a7d4	extuomne	char-offset:1254	PLACE	http://pleiades.stoa.org/places/481835	‘Extuomne’|‘Extuomne’, Kazichene	42.6593666	23.4647832	station	VERIFIED		
+235	c8784307-52ac-4ccd-9106-6589146ca8fa	pultouia	char-offset:1260	PLACE	http://pleiades.stoa.org/places/197460	Pultovia|Pultovia, Stražgonjca	46.40644	15.69058	station	VERIFIED	change	
+236	2689328c-e54e-4272-93f3-16f6ef86a601	anchira galatia	char-offset:1260	PLACE	http://pleiades.stoa.org/places/619103	Ancyra|Ancyra, Ankara	39.944387	32.858128	settlement	VERIFIED		
+237	5e2b22b5-3fa3-487f-99b0-5365ee488203	bellinto	char-offset:1278	PLACE	http://pleiades.stoa.org/places/148019	Bellintum|Bellintum, Graveson/Rognonas	43.883	4.78	station	VERIFIED	change	
+238	9934a551-981a-40d0-831f-7360261cafab	buragara	char-offset:1281	PLACE	http://pleiades.stoa.org/places/481775	Burgaraca|Burgaraca, Lesnovo	42.649254	23.619393	station	VERIFIED		
+239	c69ca714-43a5-4587-8a53-4c0366e5e248	poetouione	char-offset:1287	PLACE	http://pleiades.stoa.org/places/197446	Poetovio|Poetovio, Ptuj	46.4199885	15.8699813	settlement	VERIFIED	civitas	
+240	c2a41c14-8d33-42b2-a7de-ebcd75e9e5f7	nicomedia	char-offset:1295	PLACE	http://pleiades.stoa.org/places/511337	Nicomedia|Nicomedia, İzmit	40.76445	29.923486	settlement	VERIFIED		
+241	454d0b49-6a90-4c02-becf-aa8df17962ac	ad nonum	char-offset:1301	PLACE	http://pleiades.stoa.org/places/679506	Untitled|Nahr Abu-Assad	33.339676	35.250813	bridge	VERIFIED		
+242	c42efe05-9fe6-4ef4-a2af-b3c60122b867	auenione	char-offset:1303	PLACE	http://pleiades.stoa.org/places/148004	Avennio|Avennio, Avignon|Avignon	43.95159	4.80769	settlement	VERIFIED	civitas	
+243	9ee2f5d1-446b-46eb-bc26-ad7d13f8b0d1	anchira galatia	char-offset:1305	PLACE	http://pleiades.stoa.org/places/619103	Ancyra|Ancyra, Ankara	39.944387	32.858128	settlement	VERIFIED		
+244	dec4ce04-b935-4a20-9c05-0b8d8381df9c	sparata	char-offset:1310	PLACE	http://pleiades.stoa.org/places/481998	Sparata|Sparata, Vakarel	42.5593528	23.7097576	station	VERIFIED		
+245	3a5a83c6-f6e9-4186-a3a5-a2b42f6db595	mesopotamiam	char-offset:1315	PLACE	http://pleiades.stoa.org/places/874602	Mesopotamia	37.5	39.5	province	VERIFIED		
+246	866cb769-858f-477f-b829-ccc35b32fb96	cypresseta	char-offset:1328	PLACE	http://pleiades.stoa.org/places/148065	Cypresseta|Cypresseta, Sorgues|Sorgues	44.0125	4.8727	station	VERIFIED	change	
+247	21520ee4-22cf-41f7-9afe-820db6ae92af	pannoniam inferiorem	char-offset:1333	PLACE	http://pleiades.stoa.org/places/981540	Pannonia Inferior	47.5	17.5	province	VERIFIED	boundary	
+248	7255f908-5b97-420b-a191-4c548b632e3b	tyro	char-offset:1335	PLACE	http://pleiades.stoa.org/places/678437	Tyrus/Col. Septimia Severa|Tyrus/Col. Septimia Severa, Tyre (Tyrus)	33.268071	35.209358	circus,settlement	VERIFIED		
+249	b9a51cd8-9e90-40c4-ac0e-c92d7c4593e7	hilica	char-offset:1336	PLACE	http://pleiades.stoa.org/places/481860	Helice|Helice, Ihtiman	42.4382418	23.8161718	station	VERIFIED		
+250	61251f58-d172-435d-8585-a00c1a93d1b0	arausione	char-offset:1355	PLACE	http://pleiades.stoa.org/places/148054	Col. Arausio|Col. Arausio, Orange|Orange	44.138048	4.807393	arch,theatre,settlement	VERIFIED	civitas	
+251	e817c580-751e-4119-810e-8e87cadd3ae5	antiochia	char-offset:1359	PLACE	http://pleiades.stoa.org/places/658381	Antiochia/Theoupolis|Antiochia/Theoupolis, Antakya	36.200663	36.165318	amphitheatre,settlement,urban	VERIFIED		
+252	1fbdbcf1-b39c-45f7-812a-67a8967556f7	soneio	char-offset:1359	PLACE	http://pleiades.stoa.org/places/481996	Soneio|Soneio/Stipon, Trayanovi vrata	42.356859	23.922456	station	VERIFIED		
+253	2804a5c0-2524-41a2-86b0-e9cbb03159ba	ramista	char-offset:1364	PLACE	http://pleiades.stoa.org/places/197468	Ramista|Ramista, Formin, Gorišnica	46.405	16.038	station	VERIFIED	change	
+254	aaa78cbe-e38d-4d3d-a4bc-c2f05e6b804a	tyro	char-offset:1369	PLACE	http://pleiades.stoa.org/places/678437	Tyrus/Col. Septimia Severa|Tyrus/Col. Septimia Severa, Tyre (Tyrus)	33.268071	35.209358	circus,settlement	VERIFIED		
+255	48dfdf16-8c02-4160-9213-6a1cfe806729	delemna	char-offset:1382	PLACE	http://pleiades.stoa.org/places/619161	Galatia	39.75	32.75	region,province	VERIFIED		
+256	d1f39b28-692e-403c-a336-476a944d187e	ad letoce	char-offset:1382	PLACE	http://pleiades.stoa.org/places/167616	Barry|Ad Letoce|Ad Letoce, Gué du Lez|Bollène	44.319455	4.758859	station	VERIFIED	change	
+257	f3101724-2bc1-41f9-abfb-c41a10203e58	daciae	char-offset:1386	PLACE	http://pleiades.stoa.org/places/207065	Dacia	45.5	22.5	region	VERIFIED		
+258	6c87c2f3-bc06-4020-b5db-fc18bd5279e7	milia	char-offset:1390	PLACE	http://pleiades.stoa.org/places/619150	Delemna/Dilimnia|Delemna/Dilimnia, Gölçük?	39.8243105	32.8194405	station	VERIFIED		
+259	42a40292-e8e3-4423-be29-f22e91e6c5b2	aqua viua	char-offset:1391	PLACE	http://pleiades.stoa.org/places/197129	Aqua Viva|Aqua Viva, Petrijanec	46.344	16.233	station	VERIFIED	mansio	
+260	188e9587-08cf-4d17-9fe8-6ae598a9b958	traciae	char-offset:1396	PLACE	http://pleiades.stoa.org/places/981552	Thracia	42.5	22.5	province	VERIFIED		
+261	d4574aeb-d235-4c4b-86e7-5801a59761d6	curueunta	char-offset:1405	PLACE	http://pleiades.stoa.org/places/619167	Gorbeus|Gorbeus, Oğulbey	39.69484	32.87447	settlement	VERIFIED		
+262	56a53ebb-e322-48b2-b42c-c6c5ed94d762	nouem	char-offset:1411	PLACE	http://pleiades.stoa.org/places/167856	Novem Craris|Novem Craris, Le Logis de Berre	44.413686	4.74316	station	VERIFIED	change	
+263	0cb441a3-7801-4be3-bd85-1596ce524638	ponte vcasi	char-offset:1414	PLACE	http://pleiades.stoa.org/places/222149	Pons Ucasi			unlocated	VERIFIED		
+264	3240c07f-7174-4148-9e34-cd9149fe6093	populis	char-offset:1421	PLACE	http://pleiades.stoa.org/places/197454	Populi|Populi, Varaždin	46.31	16.334	station	VERIFIED	change	
+265	aac91be2-8efc-4d10-bbb0-a7d9e776b729	rosolodiaco	char-offset:1432	PLACE	http://pleiades.stoa.org/places/619228	Orsologiakos/Rosolodiacus|Orsologiakos/Rosolodiacus, Deliler Çiftliği	39.588876	32.896893	station	VERIFIED		
+266	8e554f8b-2442-4251-914d-74e897c223ae	alexandroschene	char-offset:1434	PLACE	http://pleiades.stoa.org/places/678013	Alexandroschene|Alexandroschene, İskanderun	33.155659	35.171988	settlement	VERIFIED		
+267	2af93ecd-52b3-4fae-a933-a9cd2e89a37f	acuno	char-offset:1439	PLACE	http://pleiades.stoa.org/places/167627	Dourion|Dourion, Géry, Montélimar|Akousion/Acunum|Akousion/Acunum, Montélimar|Montélimar	44.55356	4.78607	settlement	VERIFIED	halt	
+269	bde07d30-723c-4f39-9918-dfdc63732943	iouia	char-offset:1445	PLACE	http://pleiades.stoa.org/places/197326	Iovia|Iovia, Ludbreg	46.2537624	16.6150889	settlement	VERIFIED	civitas	
+270	ad989f94-40df-49ac-a712-51442caa2e82	aliassum	char-offset:1462	PLACE	http://pleiades.stoa.org/places/619102	Aliassum|Aliassum, probably at Avşar	39.4528865	33.0678125	station	VERIFIED		
+271	cec50446-3d84-4dd2-bded-5ab3daea15a9	bantianis	char-offset:1467	PLACE	http://pleiades.stoa.org/places/167668	Batiana|Batiana, Bances|Umbennum|Umbennum, Étoile-sur-Rhône|Étoile-sur-Rhône	44.706103	4.800244	station	VERIFIED	change	
+272	4bf86770-579e-4948-b887-38e42de1a4e0	ecdeppa	char-offset:1468	PLACE	http://pleiades.stoa.org/places/678128	Ekdippa|Ekdippa, Achziv/ez Zib	33.04858	35.10194	station	VERIFIED		
+273	23217108-327f-47ab-9f89-4a96bbea2e89	sunista	char-offset:1471	PLACE	http://pleiades.stoa.org/places/197522	Sonista|Sonista, Kunovec Breg	46.186	16.766	station	VERIFIED	change	
+275	9f670a8c-fcac-412a-8e3b-1b0ed8017d83	aspona	char-offset:1490	PLACE	http://pleiades.stoa.org/places/619118	Aspona|Aspona, Sarıhüyük/Ankara	39.309426	33.289354	settlement	VERIFIED		
+276	c8c5b8f9-8398-4b9d-8066-9b11a0fabc6c	ptolomaida	char-offset:1494	PLACE	http://pleiades.stoa.org/places/678010	Ake/Ptolemais|Ake/Ptolemais, Acre	32.920744	35.068626	settlement,temple-2	VERIFIED		
+277	ef279e96-eb51-4902-862e-7fbef8a14aea	vmbenno	char-offset:1495	PLACE	http://pleiades.stoa.org/places/167947	Batiana|Batiana, Bances|Umbennum|Umbennum, Étoile-sur-Rhône|Étoile-sur-Rhône	44.706103	4.800244	station	VERIFIED	change	
+279	68a2b732-afaf-4a5f-b994-13e88a9d1f2c	basapare	char-offset:1504	PLACE	http://pleiades.stoa.org/places/216732	Bessapara|Bessapara, Pazardzhik	42.1927654	24.333567	settlement	VERIFIED		
+280	022b2307-e159-4e7c-8da0-69353e4e610b	peritur	char-offset:1505	PLACE	http://pleiades.stoa.org/places/197440	‘Piretis’|‘Piretis’, Draganovec	46.125	16.833	station	VERIFIED	change	
+281	44f7734c-e590-4105-9c4f-3dfba9a2635b	valentia	char-offset:1521	PLACE	http://pleiades.stoa.org/places/167718	Col. Valentia|Col. Valentia, Valence|Valence	44.931632	4.889528	settlement	VERIFIED	civitas	
+282	cffb09ef-1e65-4e26-9619-e50b95b3dd1c	galea	char-offset:1523	PLACE	http://pleiades.stoa.org/places/619162	Galea|Galea, near Büyük Bıyık	39.266152	33.441223	station	VERIFIED		
+284	059ecf6d-0224-44ac-bbb1-dce2b031aaf5	lentolis	char-offset:1530	PLACE	http://pleiades.stoa.org/places/197348	‘Lentulis’|‘Lentulis’, Stari Gradac	45.92436	17.292695	station	VERIFIED	mansio	
+286	9b58dd67-f4d1-4b1a-a2ed-ac6875a26de4	sicaminos	char-offset:1549	PLACE	http://pleiades.stoa.org/places/678404	Sykamina|Sykamina/Hefa/Porphyreon/Calamon/Castra Samaritanorum, Tel Shiqmona, Tell es Samak	32.82451	34.95564	station	VERIFIED		
+287	40298eda-c27b-46c5-89dd-a96d447ae9b3	cerebelliaca	char-offset:1550	PLACE	http://pleiades.stoa.org/places/167705	Cerebelliaca|Cerebelliaca, Ourches	44.80499	5.04122	station	VERIFIED	change	
+288	a7217cd1-d96e-4661-99ae-aef2bc885697	cardono	char-offset:1557	PLACE	http://pleiades.stoa.org/places/197191	‘Cardono’/Iovia|‘Cardono’/Iovia, Gradina	45.854	17.511	fort	VERIFIED	change	
+289	a2ff380f-e9c3-4593-a66f-bf326ae02bad	filopopuli	char-offset:1560	PLACE	http://pleiades.stoa.org/places/216927	Philippopolis/Trimontium|Philippopolis/Trimontium, Plovdiv	42.147439	24.749106	settlement	VERIFIED		
+290	31b73dd9-9f9e-4ccf-8452-9322c2110a72	galatiae	char-offset:1576	PLACE	http://pleiades.stoa.org/places/991393	Galatia	37.5	32.5	province	VERIFIED		
+291	2d2a3d08-6dd3-4940-a470-14c26a77d243	augusta	char-offset:1580	PLACE	http://pleiades.stoa.org/places/167658	Augusta|Augusta, Aouste-sur-Sye|Aouste-sur-Sye	44.71597	5.05739	settlement	VERIFIED	halt	
+292	d7680744-563d-438e-9d5b-b04b96ae981c	cocconis	char-offset:1581	PLACE	http://pleiades.stoa.org/places/197215	‘Cocconis’|‘Cocconis’, Sopje	45.805	17.74	station	VERIFIED	change	
+293	e4236889-819b-4d8c-a018-40ec60d0e99a	mons carmelus	char-offset:1585	PLACE	http://pleiades.stoa.org/places/678084	Carmel M.|Carmel Mons, Mount Carmel	32.74245	35.03845	mountain	VERIFIED		
+294	5c3a12a7-87a4-4950-8e99-3d00cd3f5ac1	cappadociae	char-offset:1588	PLACE	http://pleiades.stoa.org/places/981523	Galatia et Cappadocia	37.5	32.5	province	VERIFIED		
+295	719ff9d8-c678-4a7b-a2c0-7494d31bb2a5	sernota	char-offset:1589	PLACE	http://pleiades.stoa.org/places/216980	Sernota|Sernota, Manole	42.187336	24.932699	station	VERIFIED		
+296	dfece10b-c09b-46df-a025-1dca1125e19f	darentiaca	char-offset:1604	PLACE	http://pleiades.stoa.org/places/167737	Darentiaca|Darentiaca, Saillans	44.697838	5.197155	station	VERIFIED	change	
+297	609c0f7c-a379-4347-8bd0-ddc3878ae045	serota	char-offset:1607	PLACE	http://pleiades.stoa.org/places/197508	Serota|Serota, Virovitica	45.8334097	17.3837765	station	VERIFIED	misplaced|mansio	
+298	d163a105-9e48-43cc-a96d-c4794bcab5b5	parnasso	char-offset:1609	PLACE	http://pleiades.stoa.org/places/619235	Parnassos|Parnassos, Değirmenyolu	39.054632	33.586987	settlement	VERIFIED		
+299	2686dbf0-18d2-480c-9c28-1a6073f5358c	paramuole	char-offset:1613	PLACE	http://pleiades.stoa.org/places/216920	Parambole|Parambole, Belozem	42.198004	25.047069	station	VERIFIED		
+300	ce112770-a926-4d0c-80d0-9370809d3ea0	bolentia	char-offset:1630	PLACE	http://pleiades.stoa.org/places/203108	Bolentia			unlocated	VERIFIED	change	
+301	adf4c0c6-162c-4554-af99-5b72874d1e25	dea vocontiorum	char-offset:1633	PLACE	http://pleiades.stoa.org/places/167716	Col. Dea Vocontiorum|Col. Dea Vocontiorum/Dea Augusta, Die|Die	44.75216	5.37102	settlement	VERIFIED	civitas	
+302	b590f1b3-b5a0-46f2-999a-57b29ad79af8	iogola	char-offset:1636	PLACE	http://pleiades.stoa.org/places/619232	Ozzala/Ozizala|Ozzala/Ozizala, near Üzengilik (contra RE)	38.871019	33.711367	station	VERIFIED		
+303	f6240cb7-5513-4553-88e2-df70fee89569	cillio	char-offset:1641	PLACE	http://pleiades.stoa.org/places/216767	Cillis?|Cillis?, Cherna gora	42.216088	25.2261151	station	VERIFIED		
+304	df25c7a2-19dc-45b0-b60d-8308abaebba6	maurianis	char-offset:1654	PLACE	http://pleiades.stoa.org/places/197370	‘Marinianis’/Magniana|‘Marinianis’/Magniana, Donji Miholjac	45.759	18.161	station	VERIFIED	mansio	
+305	29ca4c2a-38c2-49da-81eb-1819ded3f59c	nitalis	char-offset:1660	PLACE	http://pleiades.stoa.org/places/619220	Nitazi/Nitalis|Nitazi/Nitalis, Kabakülak	38.709571	33.912591	station	VERIFIED		
+306	76e445b6-49a0-49a1-a5b2-805f259ab8a3	carassura	char-offset:1666	PLACE	http://pleiades.stoa.org/places/216750	Carassura|Carassura, Rupkite	42.240488	25.385306	station	VERIFIED		
+307	20580033-3565-4315-b896-9063003dd372	luco	char-offset:1666	PLACE	http://pleiades.stoa.org/places/167815	Lucus Augusti|Lucus Augusti, Luc-en-Diois	44.6157	5.4515	settlement	VERIFIED	halt	
+308	c9300ba5-f019-46c3-ae35-b734c7dea229	syriae	char-offset:1667	PLACE	http://pleiades.stoa.org/places/981550	Syria	37.5	37.5	province	VERIFIED		
+309	5c9553af-529e-4fc2-a4e0-2b7f77f16690	finices	char-offset:1674	PLACE	http://pleiades.stoa.org/places/991410	Phoenice	32.5	37.5	province	VERIFIED		
+310	2ad578ec-af86-4e77-905c-66618751a9b3	palestinae	char-offset:1685	PLACE	http://pleiades.stoa.org/places/687995	Palaestina	31.25	34.75	labeled feature	VERIFIED		
+311	feeccb18-fe1d-4fa7-92a8-68bd6c3b8d42	pannoniam	char-offset:1685	PLACE	http://pleiades.stoa.org/places/981541	Pannonia Superior	48.113346	16.867891	province	VERIFIED	boundary	
+312	834ac171-ed17-4d6b-816f-bab92ebbddca	argustana	char-offset:1688	PLACE	http://pleiades.stoa.org/places/619115	Argustana|Argustana, Yeniyuva, formerly Nurgüz	38.566309	34.032157	station	VERIFIED		
+313	8b961c7f-cbd2-4097-89ab-9af6a03c572e	vologatis	char-offset:1689	PLACE	http://pleiades.stoa.org/places/167978	Vologatae|Vologatae, Beaurières	44.5719477	5.5596675	settlement	VERIFIED	change	
+314	983917e6-6bfa-4a04-8c20-7356557e5c50	arzo	char-offset:1695	PLACE	http://pleiades.stoa.org/places/216714	Arzus|Arzus, Kalugerovo, Simeonovgrad	42.077569	25.870228	station	VERIFIED		
+315	44495217-2d2b-4353-b414-6d94c013b897	caesarea	char-offset:1706	PLACE	http://pleiades.stoa.org/places/678401	Stratonos Pyrgos/Caesarea|Caesarea/Stratonos Pyrgos, Caesarea	32.4987775	34.8912663	settlement	VERIFIED		
+316	8f12ee4b-1319-4778-8242-e203beca8382	serena	char-offset:1715	PLACE	http://pleiades.stoa.org/places/197507	Serena?|Serena?, Viljevo, Našice	45.751	18.064	station	VERIFIED		
+317	cf6a3ecf-1dbc-44c5-9b0d-ba7a02e9195b	hierusalem	char-offset:1715	PLACE	http://pleiades.stoa.org/places/687928	Ierusalem/Hierosolyma/Col. Aelia Capitolina|Ierusalem/Hierosolyma/Col. Aelia Capitolina, Jerusalem	31.776667	35.234167	church-2,settlement,temple-2	VERIFIED		
+318	c6a26907-9f88-43ce-8dd2-360b9c82d062	colonia	char-offset:1717	PLACE	http://pleiades.stoa.org/places/619164	Garsaura/Col. Claudia Archelais/Koloneia|Garsaura/Col. Claudia Archelais/Koloneia, Aksaray	38.374149	34.028835	settlement	VERIFIED		
+319	8f7edfab-84c1-4083-8e7c-8c9c0a465cc7	palae	char-offset:1717	PLACE	http://pleiades.stoa.org/places/501384	Castra Iarba|Castra Rubra/Castra Iarba, Kolarowo, Charmanli	41.933492	26.094954	station	VERIFIED		
+320	883b59f1-4915-4ff8-969a-548073474beb	iudaea	char-offset:1732	PLACE	http://pleiades.stoa.org/places/687934	Iudaea	31.928333	35.238333	region	VERIFIED		
+321	2f4b6388-8b1f-4507-ba58-268583240722	gaura	char-offset:1735	PLACE	http://pleiades.stoa.org/places/167780	Gaura M.|Gaura Mons, Col de Cabre	44.54963	5.59855	mountain	VERIFIED	boundary	
+322	6366154a-cde9-4cdf-bdb2-9cbf4ed09654	castozobra	char-offset:1740	PLACE	http://pleiades.stoa.org/places/222167	Rhamis			unlocated	VERIFIED		
+323	ad019795-3943-4aca-bcb5-9b6b136d8945	vereis	char-offset:1740	PLACE	http://pleiades.stoa.org/places/197576	‘Vereis’|‘Vereis’, Podravski Podgajci	45.731	18.267	station	VERIFIED		
+324	d4cfdba2-3aac-4e24-aa80-08bd6f6a53dc	caesarea palestina	char-offset:1744	PLACE	http://pleiades.stoa.org/places/678401	Stratonos Pyrgos/Caesarea|Caesarea/Stratonos Pyrgos, Caesarea	32.4987775	34.8912663	settlement	VERIFIED		
+325	3f79e3df-e290-4660-830e-5d0ecc0732da	momoasson	char-offset:1748	PLACE	http://pleiades.stoa.org/places/619212	Momasson|Momasson, Gökçe, formerly Mamasun	38.41672	34.167749	station	VERIFIED		
+326	a45aa056-5f66-42d3-9177-fb29f11b3909	cambono	char-offset:1755	PLACE	http://pleiades.stoa.org/places/167697	Cambonum|Cambonum, Font-Vineuse	44.530062	5.684937	station	VERIFIED	change	
+327	aebaac96-0002-479d-9685-511c6256656d	tyro	char-offset:1758	PLACE	http://pleiades.stoa.org/places/678437	Tyrus/Col. Septimia Severa|Tyrus/Col. Septimia Severa, Tyre (Tyrus)	33.268071	35.209358	circus,settlement	VERIFIED		
+328	3a38d171-fc39-4b99-8d52-03f158bb949f	vereis	char-offset:1762	PLACE	http://pleiades.stoa.org/places/197576	‘Vereis’|‘Vereis’, Podravski Podgajci	45.731	18.267	station	VERIFIED		
+329	f0b30527-8d0e-4e00-aaec-9c7cc2470b92	caesarea	char-offset:1763	PLACE	http://pleiades.stoa.org/places/678401	Stratonos Pyrgos/Caesarea|Caesarea/Stratonos Pyrgos, Caesarea	32.4987775	34.8912663	settlement	VERIFIED		
+330	3ed8aff0-ce69-4ef6-8fa8-a09e970ef920	hierusalem	char-offset:1763	PLACE	http://pleiades.stoa.org/places/687928	Ierusalem/Hierosolyma/Col. Aelia Capitolina|Ierusalem/Hierosolyma/Col. Aelia Capitolina, Jerusalem	31.776667	35.234167	church-2,settlement,temple-2	VERIFIED		
+331	fa946326-5041-40ad-b499-317b6fdbbbf0	rhamis	char-offset:1768	PLACE	http://pleiades.stoa.org/places/501381	Bourdepa|Bourdepa, Svilengrad	41.7654876	26.2019433	settlement	VERIFIED		
+332	2ba470cd-bc25-4404-96a3-0341d9222877	anathiango	char-offset:1775	PLACE	http://pleiades.stoa.org/places/619218	Nandianulus/Nazianzos|Nandianulus/Nazianzos, Nenezigözü	38.398047	34.3497935	settlement	VERIFIED		
+333	7f155cb6-77a7-4da9-8b1e-267694cdfb64	monte seleuci	char-offset:1781	PLACE	http://pleiades.stoa.org/places/167836	Mons Seleucus|Mons Seleucus, La Bâtie-Montsaléon	44.457432	5.75141	sanctuary,settlement	VERIFIED	halt	
+334	2248bfc4-564b-4f97-9519-217bfab9375a	ioualia	char-offset:1785	PLACE	http://pleiades.stoa.org/places/197325	Iovalia|Iovalia, Valpovo	45.6589	18.4171	station	VERIFIED		
+335	b6668cfa-27ba-4c12-90e1-c88555be7563	burdista	char-offset:1798	PLACE	http://pleiades.stoa.org/places/501526	Nike|Nike, Havsa/Edirne	41.549461	26.823461	settlement	VERIFIED		
+336	ad950266-11f9-4dc1-b8c1-e0f73a0dc0f5	chusa	char-offset:1805	PLACE	http://pleiades.stoa.org/places/619139	Chusa|Chusa, probably at Yazıköy	38.376942	34.448556	station	VERIFIED		
+337	0c5771e2-3598-4728-a78d-bb34788a3a77	mersella	char-offset:1812	PLACE	http://pleiades.stoa.org/places/197391	Mursella|Mursella, Petrijevci	45.6163502	18.5369372	settlement	VERIFIED		
+338	90980dac-b217-4098-9f25-62559447caa4	dauiano	char-offset:1814	PLACE	http://pleiades.stoa.org/places/167738	Davianum|Davianum, Veynes|Veynes	44.5337	5.8211	station	VERIFIED	change	
+339	ec484b1f-00dd-4146-af63-bdfa9e8ddc87	daphabae	char-offset:1824	PLACE	http://pleiades.stoa.org/places/511428	‘Tarpodizo’|‘Tarpodizo’, Kayova	41.846659	27.354053	station	VERIFIED	misplaced	
+340	aa8966ba-050e-44d4-83ed-b93e802e0aa1	sasima	char-offset:1828	PLACE	http://pleiades.stoa.org/places/619256	Sasima|Sasima, Hasanköy	38.2298035	34.6292035	settlement	VERIFIED		
+341	ee66e19c-1542-44c3-8268-cf108a2342dc	mursa	char-offset:1840	PLACE	http://pleiades.stoa.org/places/197389	Mursa|Mursa, Osijek	45.5600028	18.6758848	settlement	VERIFIED		
+342	aea2e093-6fe6-4854-8578-9ae1094ba0ba	ad finem	char-offset:1841	PLACE	http://pleiades.stoa.org/places/167615	Ad Finem|Ad Finem, La Roche-des-Arnauds|La Roche-des-Arnauds	44.563424	5.958459	station	VERIFIED	change	
+343	eee3727c-405b-4d8d-adb3-d2f5812e11f5	nicae	char-offset:1849	PLACE	http://pleiades.stoa.org/places/511458	‘Urisio’|‘Urisio’, W Bergule	41.41929	27.238012	station	VERIFIED		
+344	80cbce46-fee4-40b5-88cd-0efbf9686f57	andauilis	char-offset:1852	PLACE	http://pleiades.stoa.org/places/619104	Andabalis|Andabalis, Yeniköy, formerly Eski Andaval	38.0394955	34.67349	settlement	VERIFIED		
+345	9e51afe0-4b31-46d2-a400-5a99e0f22b5c	vappinco	char-offset:1867	PLACE	http://pleiades.stoa.org/places/167954	Vappincum|Vappincum, Gap|Gap	44.55823	6.0781	settlement	VERIFIED	halt	
+346	c50afd72-fb50-4b3f-acb4-e7fdf9f3c010	leutuoano	char-offset:1868	PLACE	http://pleiades.stoa.org/places/197065	Ad Labores Pontis Ulcae/‘Leutuoano’|Ad Labores Pontis Ulcae/‘Leutuoano’, Bobota	45.422	18.856	station	VERIFIED		
+347	92cc0e95-b7f2-472a-babb-efb7a04931c8	tarpodizo	char-offset:1875	PLACE	http://pleiades.stoa.org/places/511185	Berg(o)ule/Arkadioupolis|Bergoule/Bergule/Arkadioupolis, Lüleburgaz	41.41621	27.36121	settlement	VERIFIED		
+348	321fbe0b-8d60-4f42-b143-ef4ff7fcda89	catorigas	char-offset:1892	PLACE	http://pleiades.stoa.org/places/167701	Caturigomagus|Caturigomagus, Chorges|Chorges	44.544438	6.275977	station	VERIFIED	halt	
+349	336bb980-a644-439f-ab60-54de4c3c1c07	cibalis	char-offset:1896	PLACE	http://pleiades.stoa.org/places/197207	Cibalae|Cibalae, Vinkovci	45.2910248	18.8010483	settlement	VERIFIED		
+350	20326b1d-1987-43f5-a7e5-7dd84242a869	vrisio	char-offset:1901	PLACE	http://pleiades.stoa.org/places/511331	‘Narco’|‘Narco’, E Bergule	41.346417	27.469038	station	VERIFIED		
+351	4d534dbf-94a7-426e-ba01-7c2192d0dd38	ebreduno	char-offset:1919	PLACE	http://pleiades.stoa.org/places/167750	Eburodunum|Eburodunum, Embrun|Embrun	44.562348	6.495055	settlement	VERIFIED	halt	
+352	46ec39b7-9f1b-4dbe-a120-c2095502f7cc	caelena	char-offset:1922	PLACE	http://pleiades.stoa.org/places/197204	Causilena|Causilena, Orolik	45.215	18.985	station	VERIFIED		
+353	e4ad8cc1-da1d-4114-9181-914a3d5b3c80	virgoles	char-offset:1925	PLACE	http://pleiades.stoa.org/places/511241	Dr(o)usipara|Drousipara/Drusipara, Karıştıran	41.300089	27.543955	settlement	VERIFIED		
+354	128736ff-9698-4b79-ab8b-6d28526e0455	thyana	char-offset:1933	PLACE	http://pleiades.stoa.org/places/648801	Tyana/Col. Aurelia Antoniniana|Tyana/Col. Aurelia Antoniniana, Kemerhisar	37.817319	34.568378	settlement	VERIFIED		
+355	34a078cc-a493-462b-bfbc-114b5281ffcd	vlmo	char-offset:1946	PLACE	http://pleiades.stoa.org/places/207525	‘Ulmo’|‘Ulmo’, Tovarnik	45.1640611	19.1515532	station	VERIFIED		
+356	9d6d08cf-bdb2-4307-9a7c-6d1f2e2d85dc	narco	char-offset:1952	PLACE	http://pleiades.stoa.org/places/511448	‘Tipaso’|‘Tipaso’, NW Çorlu	41.240282	27.693272	station	VERIFIED		
+357	5d6fe103-34e3-47d3-a61b-2fb93e82f5c3	alpes	char-offset:1955	PLACE	http://pleiades.stoa.org/places/167743	Druantium/*Alpis Cottia/Summae Alpes|Druantium/*Alpis Cottia/Summae Alpes, Montgenèvre	44.93098	6.72341	settlement	VERIFIED	boundary	
+358	e3b847b6-c7ee-4848-8671-ba7f1bf0a36f	spaneta	char-offset:1968	PLACE	http://pleiades.stoa.org/places/207460	Spaneta|Spaneta, Bačinci	45.082	19.308	station	VERIFIED		
+359	2a424cc3-146f-4b7e-81e2-6bea3acff2cc	drizupara	char-offset:1976	PLACE	http://pleiades.stoa.org/places/511456	Tzouroulon/Silta?|Tzouroulon/Silta?, Çorlu	41.167358	27.805568	settlement	VERIFIED		
+360	d9249206-e106-4a06-ad57-e414a8607608	ramae	char-offset:1979	PLACE	http://pleiades.stoa.org/places/167881	Rama|Rama, La Roche-de-Rame	44.7505	6.5799	station	VERIFIED	change	
+361	05ecebb0-e117-46da-bc19-49913b2aa049	vedulia	char-offset:1992	PLACE	http://pleiades.stoa.org/places/206995	Budalia|Budalia, Martinci	45.01	19.463	station	VERIFIED		
+362	ca503f9c-c2da-419d-8d64-e885771f554a	faustinopoli	char-offset:1996	PLACE	http://pleiades.stoa.org/places/648608	Col. Faustinopolis/Halala|Col. Faustinopolis/Halala, Başmakçı	37.659399	34.723587	settlement	VERIFIED		
+363	6d5d8de4-a754-45c6-b3a8-42af72c978ff	byrigante	char-offset:2003	PLACE	http://pleiades.stoa.org/places/167691	Brigantio|Brigantio, Briançon|Briançon	44.8969	6.6342	settlement	VERIFIED	halt	
+364	2923064b-a72c-4065-9af8-ef32d4792646	tipso	char-offset:2006	PLACE	http://pleiades.stoa.org/places/511456	Tzouroulon/Silta?|Tzouroulon/Silta?, Çorlu	41.167358	27.805568	settlement	VERIFIED		
+365	3b56dfad-35f4-41b0-96a9-b4f0e12a6bfc	sirmium	char-offset:2019	PLACE	http://pleiades.stoa.org/places/207447	Sirmium|Sirmium, Sremska Mitrovica|Sremska Mitrovica	44.96648	19.61017	settlement	VERIFIED		
+366	ee02066c-62f8-4746-b0c2-4718a859b697	caena	char-offset:2027	PLACE	http://pleiades.stoa.org/places/648592	Caena|Caena, near Ömerli	37.531389	34.842479	station	VERIFIED		
+367	998834ab-7dae-4829-bd31-1949d52bab73	tunorullo	char-offset:2030	PLACE	http://pleiades.stoa.org/places/511184	‘Beodizo’|‘Beodizo’, 9 miles NW Perinthus	41.087065	27.824805	station	VERIFIED		
+368	a6459534-f510-49ae-a3a1-b74f7cb52e03	matronam	char-offset:2046	PLACE	http://pleiades.stoa.org/places/167826	Matrona M.|Matrona Mons, Mont Chaberton	44.9645385	6.7514195	mountain	VERIFIED		
+369	64ee9408-9ffa-4d9c-b895-276fa4d8332e	aquileia	char-offset:2047	PLACE	http://pleiades.stoa.org/places/187290	Aquileia|Aquileia, Aquileia|Aquileia	45.769631	13.370946	church,settlement	VERIFIED		
+370	2d78d219-3925-4161-8d2c-1376bf2a626c	opodando	char-offset:2051	PLACE	http://pleiades.stoa.org/places/648742	Podandus|Podandus, Pozantı/Adana	37.4265802	34.872073	settlement	VERIFIED		
+371	cbcc1b5e-d80b-4c5e-9bf6-7309ce5bfea6	sirmium	char-offset:2057	PLACE	http://pleiades.stoa.org/places/207447	Sirmium|Sirmium, Sremska Mitrovica|Sremska Mitrovica	44.96648	19.61017	settlement	VERIFIED		
+372	fd07308a-1a02-4185-80ef-55734bca00ec	gesdaone	char-offset:2064	PLACE	http://pleiades.stoa.org/places/167778	Gaesao/Tyrium|Gaesao/Tyrium, Cesana Torinese	44.95463	6.79464	settlement	VERIFIED	change	
+373	0b97d1f9-5e45-43ff-bdb4-2a57150d6135	beodizo	char-offset:2065	PLACE	http://pleiades.stoa.org/places/511357	Perinthus/Heraclea|Perinthus/Heraclea, Marmara Ereğlisi Adliyesi	40.97089	27.95454	settlement	VERIFIED		
+374	bb9d0a68-31be-4312-b114-346bef37aaff	pilas	char-offset:2078	PLACE	http://pleiades.stoa.org/places/648670	Kilikiai Pylai|Kilikiai Pylai, Gülek Bogazi	37.28325	34.78691	pass	VERIFIED		
+375	60b27ce7-061b-420c-a656-a9ab7bf4ef75	ad marte	char-offset:2088	PLACE	http://pleiades.stoa.org/places/167617	Ad Martis|Ad Martis, Oulx|Oulx	45.0333246	6.8336348	station	VERIFIED	halt	
+376	e033fc91-88be-43c9-a5fc-9ae662c05d77	heraclea	char-offset:2092	PLACE	http://pleiades.stoa.org/places/511227	Daunion Teichos|Daunion Teichos, near Eski Ereğli	41.053506	28.038408	settlement	VERIFIED		
+377	6d6642e2-4b3c-4eb0-b6df-8013e5601f2b	cappadociae	char-offset:2110	PLACE	http://pleiades.stoa.org/places/628949	Cappadocia	39.25	35.75	labeled feature	VERIFIED		
+378	187123ba-87dc-4752-8b01-9e260f17b29b	segussione	char-offset:2117	PLACE	http://pleiades.stoa.org/places/167919	Segusio|Segusio, Susa|Susa	45.13736	7.04537	settlement	VERIFIED	civitas	
+379	d959b860-668e-40e9-af24-1afb8da9acaa	baunne	char-offset:2121	PLACE	http://pleiades.stoa.org/places/511414	Sely(m)bria/Eudoxiopolis|Selymbria/Selybria/Eudoxiopolis, Silivri	41.080158	28.26829	settlement	VERIFIED		
+380	840b0ae8-8453-4975-98c3-a8353d8396bd	ciliciae	char-offset:2125	PLACE	http://pleiades.stoa.org/places/981514	Cilicia	37.5	32.5	province	VERIFIED		
+381	3f6e921b-9ccc-4bdf-b71e-37193905ad2a	mansucrinae	char-offset:2143	PLACE	http://pleiades.stoa.org/places/648704	Ma(m)psoukrenai|Mampsoukrenai/Mapsoukrenai, Kırıtlar?	37.0733365	34.8858995	station	VERIFIED		
+382	6e9074e0-b7c0-4a62-bb44-59793ffadfbd	salambria	char-offset:2145	PLACE	http://pleiades.stoa.org/places/511201	‘Callum’|‘Callum’, E Selymbria	41.051365	28.418437	station	VERIFIED		
+383	4b269099-f6f2-4863-ae34-daa66d0cd64a	italia	char-offset:2153	PLACE	http://pleiades.stoa.org/places/1052	Italia	42.5	12.5	region	VERIFIED	boundary	
+384	16236623-fcbb-4b92-b856-a04301212194	callum	char-offset:2171	PLACE	http://pleiades.stoa.org/places/511172	Athyras|Athyras, Büyükçekmece	41.034016	28.589971	settlement	VERIFIED		
+385	8a3c1067-64c6-42e0-b761-568241668bf1	tarso	char-offset:2173	PLACE	http://pleiades.stoa.org/places/648789	Tarsus/Antiochia ad Cydnum|Tarsus/Antiochia ad Cydnum, Gözlü Kule	36.91242	34.89592	settlement	VERIFIED		
+386	b70b3a55-3add-462a-abbe-091452bece5e	duodecimum	char-offset:2173	PLACE	http://pleiades.stoa.org/places/167623	Ad XII|Ad XII, San Didero|San Didero	45.13486	7.21734	station	VERIFIED	change	
+387	5236524f-fb00-4819-a681-2e8f0150bed5	atyra	char-offset:2193	PLACE	http://pleiades.stoa.org/places/511397	Rhegion|Rhegion, Küçükçekmece/İstanbul	41.0086579	28.775342	settlement	VERIFIED		
+388	a84330a3-0e45-4ee8-984e-b5c80c18775f	ad fines	char-offset:2201	PLACE	http://pleiades.stoa.org/places/383545	Ad Fines|Ad Fines, Drubiaglio, Avigliana|Avigliana	45.09822	7.41951	station	VERIFIED	halt	
+389	eccb8143-1a35-493f-bbf4-239be3d2b9d8	regio	char-offset:2214	PLACE	http://pleiades.stoa.org/places/520998	Byzantium|Constantinopolis|Byzantium/Constantinopolis, Istanbul	41.012379	28.975926	settlement,urban	VERIFIED		
+390	5599ad4a-8cee-4cf1-8e21-7c7cb9d05701	anchira galatia	char-offset:2227	PLACE	http://pleiades.stoa.org/places/619161	Galatia	39.75	32.75	region,province	VERIFIED		
+391	837ec06b-8caf-4352-8dea-a5fef7faf6a7	ad octauum	char-offset:2228	PLACE	http://pleiades.stoa.org/places/383557	Ad VIII|Ad VIII, Rivoli	45.07054	7.518	station	VERIFIED	change	
+392	0359fec9-d0f9-4441-8628-a637752100fe	constantinopoli	char-offset:2240	PLACE	http://pleiades.stoa.org/places/207439	Serdica|Serdica, Sofia	42.6976489	23.3221545	settlement	VERIFIED		
+393	ae476eb6-e4b8-49d3-b791-9efa4e28a6f2	tarso	char-offset:2243	PLACE	http://pleiades.stoa.org/places/648789	Tarsus/Antiochia ad Cydnum|Tarsus/Antiochia ad Cydnum, Gözlü Kule	36.91242	34.89592	settlement	VERIFIED		
+394	f3c9869e-1483-4879-a02f-60dfd3bc1f56	taurinis	char-offset:2258	PLACE	http://pleiades.stoa.org/places/383580	Augusta Taurinorum|Augusta Taurinorum, Torino|Turin	45.073361	7.685433	settlement,fort	VERIFIED	civitas	
+395	9bd5a8e7-ee65-4a49-a3cb-a356e4d2b92d	serdica	char-offset:2280	PLACE	http://pleiades.stoa.org/places/520998	Byzantium|Constantinopolis|Byzantium/Constantinopolis, Istanbul	41.012379	28.975926	settlement,urban	VERIFIED		
+396	344022b5-4f53-4132-990d-b2782884826e	ad decimum	char-offset:2286	PLACE	http://pleiades.stoa.org/places/383558	Ad X|Ad X, Brandizzo	45.1782962	7.8389259	station	VERIFIED	change	
+397	025f3db0-4474-4042-b450-3ee6f61f0a6d	constantinopoli	char-offset:2288	PLACE	http://pleiades.stoa.org/places/138248	Burdigala|Burdigala, Bordeaux|Bordeaux	44.837789	-0.57918	amphitheatre,settlement	VERIFIED		
+398	a0c76dfc-f53a-4906-bbda-5691ca30100f	quadratis	char-offset:2318	PLACE	http://pleiades.stoa.org/places/383753	Quadrata|Quadrata, Quarino Bianco di Verolengo	45.1911111	7.9693888	station	VERIFIED	halt	
+399	17067890-a800-440b-a9d1-ebd18a503b31	ceste	char-offset:2346	PLACE	http://pleiades.stoa.org/places/383616	Cest(a)e|Cestae/Ceste, Crescentino	45.189906	8.151744	station	VERIFIED	change	
+400	52105467-96aa-4404-97c2-03029267a49b	rigomago	char-offset:2368	PLACE	http://pleiades.stoa.org/places/383759	Rigomagus|Rigomagus, Trino|Trino	45.1931	8.2974	station	VERIFIED	halt	
+401	6dda8071-a610-4ee4-bc28-25c0dee61a38	burdigala	char-offset:2368	PLACE	http://pleiades.stoa.org/places/520998	Byzantium|Constantinopolis|Byzantium/Constantinopolis, Istanbul	41.012379	28.975926	settlement,urban	VERIFIED		
+402	1add8374-b304-4072-987d-fb26e09c550d	constantinopolim	char-offset:2378	PLACE	http://pleiades.stoa.org/places/648789	Tarsus/Antiochia ad Cydnum|Tarsus/Antiochia ad Cydnum, Gözlü Kule	36.91242	34.89592	settlement	VERIFIED		
+403	b5fa3490-1349-431c-a38e-4d89dabf168d	ad medias	char-offset:2396	PLACE	http://pleiades.stoa.org/places/383610	Carbantia/Ad Medias|Carbantia/Ad Medias, Villanova Monferrato	45.18188	8.47943	station	VERIFIED	change	
+404	fef1175d-d7a6-4078-93ad-b00333f6f93b	ad cottias	char-offset:2422	PLACE	http://pleiades.stoa.org/places/383630	Cuttiae|Cuttiae, Cozzo|Cozzo	45.19207	8.61114	station	VERIFIED	change	
+405	e6af88fd-e50a-4a9c-afa6-1a6dec1110ac	laumello	char-offset:2451	PLACE	http://pleiades.stoa.org/places/383690	Laumellum|Laumellum, Lomello|Lomello	45.12266	8.79383	fort	VERIFIED	halt	
+406	f118cbf6-4b53-4709-b4ac-a7a093b13dd3	duriis	char-offset:2478	PLACE	http://pleiades.stoa.org/places/383637	Durriae|Durriae, Dorno|Dorno	45.15496	8.95161	station	VERIFIED	change	
+407	52168413-8f69-4c1a-8141-b84ea61ec9fc	ticino	char-offset:2504	PLACE	http://pleiades.stoa.org/places/383798	Ticinum|Ticinum, Pavia|Pavia	45.1859	9.1566	settlement	VERIFIED	civitas	
+408	b3d395b2-980a-4fdf-91a8-1385e94ca373	ad decimum	char-offset:2529	PLACE	http://pleiades.stoa.org/places/383559	Ad X|Ad X, Cascina Decima, Lacchiarella	45.32437	9.15933	settlement-modern,station	VERIFIED	change	
+409	164d232b-e521-4c15-a4eb-7177a1f35673	mediolanum	char-offset:2556	PLACE	http://pleiades.stoa.org/places/383706	Mediolan(i)um|Mediolanium/Mediolanum, Milano|Milan	45.4637	9.1881	urban,settlement	VERIFIED	civitas	
+411	fe77c843-24b0-48de-aa3a-f0d1a0ec6304	arelate	char-offset:2624	PLACE	http://pleiades.stoa.org/places/148217	Theline/Col. Arelate/Constantina|Col. Arelate/Theline/Constantina, Arles|Arles	43.67586	4.62266	settlement	VERIFIED	summary	
+412	810e4681-f5ba-4b6a-808b-4dfada5aef35	mediolanum	char-offset:2632	PLACE	http://pleiades.stoa.org/places/383706	Mediolan(i)um|Mediolanium/Mediolanum, Milano|Milan	45.4637	9.1881	urban,settlement	VERIFIED	summary	
