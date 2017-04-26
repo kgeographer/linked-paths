@@ -1,4 +1,4 @@
-# elastic.py 
+# elastic.py
 # manage Elasticsearch index for Linked Places
 
 import os, sys, re, codecs, json
@@ -15,8 +15,9 @@ es.indices.create(index='linkedplaces', ignore=400, body=mappings)
 
 # some projects have multiple sets of segments; e.g. incanto
 # project places need to be indexed only once
-projects = ["incanto", "vicarello", "courier", "xuanzang", "roundabout","owtrad"]
-datasets = ["incanto-f", "incanto-j", "vicarello", "courier", "xuanzang", "roundabout","owtrad"]
+projects = ["incanto", "vicarello", "courier", "xuanzang", "roundabout","owtrad","bordeaux"]
+datasets = ["incanto-f", "incanto-j", "vicarello", "courier",
+    "xuanzang", "roundabout","owtrad","bordeaux"]
 
 
 def indexPlaces():
@@ -27,7 +28,7 @@ def indexPlaces():
         finp = codecs.open('../_site/data/index/'+projects[y]+'.jsonl', 'r', 'utf8')
         rawp = finp.readlines()
         finp.close()
-        
+
         # index places
         for x in range(len(rawp)):
             doc = json.loads(rawp[x])
@@ -36,7 +37,7 @@ def indexPlaces():
                 print(res['created'], 'place', doc['id'])
             except:
                 print("error:", sys.exc_info()[0])
-                
+
 
 def indexSegments():
     # SEGMENTS
@@ -45,7 +46,7 @@ def indexSegments():
         fins = codecs.open('../_site/data/index/'+datasets[y]+'_seg.jsonl', 'r', 'utf8')
         raws = fins.readlines()
         fins.close()
-        
+
         # index segments
         for x in range(len(raws)):
             doc = json.loads(raws[x])

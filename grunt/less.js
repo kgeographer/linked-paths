@@ -8,7 +8,6 @@ module.exports = {
 
   dist: {
     src: ['src/stylesheets/main.css','src/stylesheets/typeahead.css'],
-    // src: ['src/stylesheets/index.less','src/stylesheets/typeahead.css'],
     dest: '<%= site %>/style.css'
   }
 

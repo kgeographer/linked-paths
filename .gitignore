@@ -1,12 +1,22 @@
+~*.*
+.DS_Store
+
 /node_modules
 /.grunt
+
 /data/older
+/data/source
+
 /notes
+
 /_site/lib/timeline_2.3.0
+/_site/backup
 
 py/local_settings.py
 py/__pycache__
 py/older
 
-~*.*
-.DS_Store
+/sql
+
+/src/javascripts/older
+/src/stylesheets/older
