@@ -1,0 +1,27 @@
+@prefix : <http://my-domain.org/my-data/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://github.com/kgeographer/topotime/hroutes> a void:Dataset;
+  # MANDATORY
+  dcterms:title "Historical Routes from Topotime";
+
+  # OPTIONAL
+  dcterms:publisher "Karl Grossner";
+  foaf:homepage <https://github.com/kgeographer/topotime>;
+  dcterms:description "A dataset of historical routes.";
+  dcterms:license <http://opendatacommons.org/licenses/by/>;
+  void:subset <https://github.com/kgeographer/topotime/hroutes/amber>;
+  void:subset <https://github.com/kgeographer/topotime/hroutes/incanto>;
+  .
+
+<https://github.com/kgeographer/topotime/hroutes/amber> a void:Dataset;
+  dcterms:title "Amber trade routes throughout history";
+  void:dataDump <https://github.com/kgeographer/topotime/hroutes/amber/pelagios.ttl> ;
+  .
+
+<https://github.com/kgeographer/topotime/hroutes/incantor> a void:Dataset;
+  dcterms:title "Incanto trade routes";
+  void:dataDump <https://github.com/kgeographer/topotime/hroutes/incanto/pelagios.ttl> ;
+.
