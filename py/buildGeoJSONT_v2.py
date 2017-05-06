@@ -1,5 +1,5 @@
 # buildGeoJSONT_v2.py
-# read places and segments csv, output GeoJSON-T for routes, JSONlines for Elasticsearch
+# read places and segments csv, output GeoJSON-T for Linked Places application
 # index schema changed; exact_matches, close_matches
 # rev 2017-04-29 k. grossner
 
@@ -11,7 +11,8 @@ def init():
     #dir = os.getcwd() + '/data/'
     #os.chdir('./py')
     global proj, reader_p, reader_s, finp, fins, fout, foutp, fouts, collection, collectionAttributes, routeidx, exactMatches
-    # owtrad, courier, incanto-j, roundabout, vicarello, xuanzang, bordeaux (incanto-f abandoned for now, flows computed from journeys)
+    # owtrad, courier, incanto-j, roundabout, vicarello, xuanzang, bordeaux 
+    # (incanto-f abandoned for now, flows computed from journeys)
     proj = 'bordeaux'
     data = 'bordeaux'
 
@@ -112,49 +113,6 @@ def createPlaces():
         #if row['lng'] != null:
         collection['features'].append(feat)
 
-    # write places to separate json-l file for index
-    # TODO: perform conflation
-
-    finp.seek(0) # resets dict.reader
-    next(reader_p, None) # skip header
-    for row in reader_p:
-        # TODO find close and exact matches somehow
-        exactMatches = ast.literal_eval(row['exact_matches']) if row['exact_matches'] != '' else []
-        place = {
-            "id": row['place_id'],
-            "representative_title": row['toponym'],
-            "representative_geometry": "",
-            "representative_point": [float(row['lng']),float(row['lat'])],
-            "temporal_bounds_union": collectionAttributes['timespan'][1:-1].split(','),
-            "suggest": parseNames(row),
-            "is_conflation_of": [{
-                "id": row['place_id'],
-                "uri": row['gazetteer_uri'],
-                "source_gazetteer": row['collection'],
-                "title": row['toponym'],
-                "descriptions": [{"description":"", "language":""}],
-                "names": [{"name":row['toponym'], "language":""}],
-                "temporal_bounds": "",
-                "place_types":"",
-                "exact_matches":[],
-                "close_matches":[]
-              }]
-            }
-        for x in range(len(exactMatches)):
-            foo = exactMatches[x]
-            print(foo, type(foo))
-            place['is_conflation_of'][0]['exact_matches'].append(foo)
-
-        #TODO: build a better parseNames to populate "suggest":[]
-
-        places.append(place)
-        #print(json.dumps(place))
-
-    # JSONlines for index
-    # NOTE: demo place index records have been manually edited , do not regenerate
-    for x in range(len(places)):
-        foutp.write(json.dumps(places[x]) + '\n')
-    foutp.close()
 
 def createSegments():
 
