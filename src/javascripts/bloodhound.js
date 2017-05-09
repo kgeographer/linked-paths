@@ -28,7 +28,7 @@ window.segmentSearch = function(obj){
   let html = ''
   var plKeys = Object.keys(obj)
   window.relevantProjects = []
-  // console.log('segmentSearch obj', obj)
+  console.log('segmentSearch obj', obj)
   for(let i = 0; i < plKeys.length; i++){
     // console.log('plKeys[i]', plKeys[i])
     relevantProjects.push(obj[plKeys[i]][0])
@@ -90,8 +90,9 @@ window.segmentSearch = function(obj){
 }
 
 // resolve collection names as they exist in data
-var collections = {"ra":"roundabout","roundabout":"roundabout","courier":"courier","incanto":"incanto",
-  "vb":"vicarello","xuanzang":"xuanzang","owtrad":"owtrad"}
+var collections = {
+  "roundabout":"roundabout","courier":"courier","incanto":"incanto",
+  "vicarello":"vicarello","xuanzang":"xuanzang","owtrad":"owtrad","bordeaux":"bordeaux"}
 
 var toponyms = new Bloodhound({
   datumTokenizer: function(datum) {
@@ -142,7 +143,8 @@ $(".typeahead").on("typeahead:select", function(e,obj){
   // console.log('typeahead obj',obj)
   var placeObj = {};
   for(let i=0;i<obj.data.length;i++){
-    let project = collections[obj.data[i].source_gazetteer];
+    let project = obj.data[i].source_gazetteer;
+    // let project = collections[obj.data[i].source_gazetteer];
     // gather place_ids from 'conflation_of' records
     placeObj[obj.data[i].id] = [project, obj.data[i].title];
   }
