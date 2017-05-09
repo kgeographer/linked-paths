@@ -420,7 +420,7 @@ window.loadLayer = function(dataset) {
     $(":checkbox[value='"+dataset+"']").prop("checked","true")
     isFlow = dataset.slice(-2) == '-f' ? true : false;
     dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
-    features.bboxes.removeFrom(ttmap)
+    if(features.bboxes) {features.bboxes.removeFrom(ttmap)}
     // clear feature arrays
     pointFeatures = [];
     lineFeatures = [];
