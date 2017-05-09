@@ -149,9 +149,10 @@ var mapStyles = {
 }
 
 function stylePoints(feature) {
+  // console.log(feature.toGeoJSON().properties.collection)
   let fill=colorMap[feature.toGeoJSON().properties.collection]
   let rad=feature.toGeoJSON().properties.collection=='owtrad'?2:4;
-  console.log('fill',fill)
+  // console.log('fill',fill)
 	return {
       color: '#000',
       fillColor: fill,
@@ -470,12 +471,14 @@ window.loadLayer = function(dataset) {
 
               var placeFeature = new L.CircleMarker(latlng,stylePoints(layer))
               // var placeFeature = new L.CircleMarker(latlng, mapStyles.places)
-              // console.log(placeFeature)
-              let gazURI = layer.feature.properties.gazetteer_uri
+              console.log('layer.feature.properties',layer.feature.properties)
+              let gazURI = layer.feature.properties.exact_matches.length>0?
+                layer.feature.properties.exact_matches[0].uri:""
 
               var popContent = $('<a href="#" gaz="'+gazURI+'">'+
                 // layer.feature.properties.toponym+'<br/>'+
-                (dataset=='courier'?'TGAZ record':dataset=='vicarello'?'Pleiades record':
+                (dataset=='courier'&&gazURI!=""?'TGAZ record':['vicarello','bordeaux'].indexOf(dataset)>-1?'Pleiades record':
+                // (dataset=='courier'?'TGAZ record':dataset=='vicarello'?'Pleiades record':
                   ['roundabout','xuanzang'].indexOf(dataset)>-1?'Geonames record':'')+'</a>')
                 .click(function(e){
                   ga('send', 'event', ['Map'], ['Gaz lookup'], ['Linked Data']);
