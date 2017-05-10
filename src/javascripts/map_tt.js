@@ -471,7 +471,7 @@ window.loadLayer = function(dataset) {
 
               var placeFeature = new L.CircleMarker(latlng,stylePoints(layer))
               // var placeFeature = new L.CircleMarker(latlng, mapStyles.places)
-              console.log('layer.feature.properties',layer.feature.properties)
+              // console.log('layer.feature.properties',layer.feature.properties)
               let gazURI = layer.feature.properties.exact_matches.length>0?
                 layer.feature.properties.exact_matches[0].uri:""
 
