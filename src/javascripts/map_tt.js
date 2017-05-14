@@ -316,15 +316,12 @@ window.zapLayer = function(dataset) {
   dataset = dataset.slice(-2)[0]=='-' ? dataset.slice(0,-2) : dataset
   $("input:checkbox[value='"+ dataset +"']").prop('checked',false);
   // console.log('want to zap: dataset',dataset)
-  //remove its card from data panel
+  // remove its card from data panel
   $("#lp_"+dataset).remove();
   // remove all div.place-card
   $(".place-card").remove();
   // remove time vis if exists
   $("#tl").html("")
-  // if($("#tlvis_"+dataset)){
-  //   $("#tlvis_"+dataset).remove();
-  // }
   // remove its data from the map
   let name_p = "places_"+dataset;
   let name_s = "segments_"+dataset;
@@ -333,7 +330,11 @@ window.zapLayer = function(dataset) {
   features[name_s].removeFrom(ttmap);
   if ($("#data_layers input:checkbox:checked").length == 0){
     ttmap.setView(L.latLng(32.6948,47.4609),2)
-    features.bboxes.addTo(ttmap)
+    if (features.bboxes) {
+      features.bboxes.addTo(ttmap)
+    } else {
+      location.href = location.origin+location.pathname
+    }
   }
 }
 
@@ -416,238 +417,235 @@ window.makeDate = function(d){
 
 window.loadLayer = function(dataset) {
   console.log('loadLayer()',dataset)
-    $(".loader").show()
-    // check in case layer was loaded programatically
-    $(":checkbox[value='"+dataset+"']").prop("checked","true")
-    isFlow = dataset.slice(-2) == '-f' ? true : false;
-    dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
-    if(features.bboxes) {features.bboxes.removeFrom(ttmap)}
-    // clear feature arrays
-    pointFeatures = [];
-    lineFeatures = [];
-    d3graph.nodes = [];
-    d3graph.links = [];
-    // clear previous layer's events if any
-    eventsObj.events = [];
-    // map id to leaflet layer object
-    window.idToFeature[dataset] = {places:{}, segments:{}}
+  $(".loader").show()
+  // check in case layer was loaded programatically
+  $(":checkbox[value='"+dataset+"']").prop("checked","true")
+  isFlow = dataset.slice(-2) == '-f' ? true : false;
+  dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
+  if(features.bboxes) {features.bboxes.removeFrom(ttmap)}
+  // clear feature arrays
+  pointFeatures = [];
+  lineFeatures = [];
+  d3graph.nodes = [];
+  d3graph.links = [];
+  // clear previous layer's events if any
+  eventsObj.events = [];
+  // map id to leaflet layer object
+  window.idToFeature[dataset] = {places:{}, segments:{}}
 
-    // TODO: resume managing state in window.href
-    // if(searchParams['p'] != undefined){
-    //   $("#results_inset").html('<p>Dataset: '+searchParams['d']+
-    //     '</p><p>Place:'+searchParams['p']+'</p>')
-    // }
+  // TODO: resume managing state in window.href
+  // if(searchParams['p'] != undefined){
+  //   $("#results_inset").html('<p>Dataset: '+searchParams['d']+
+  //     '</p><p>Place:'+searchParams['p']+'</p>')
+  // }
 
-    /*  read a single FeatureCollection of
-        Places (geometry.type == Point), and
-        Routes (geometry.type == GeometryCollection or undefined)
-          - route geometry.geometries[i] == LineString or MultiLineString
-    */
-    let featureLayer = L.mapbox.featureLayer()
-      .loadURL('data/' + dataset + '.geojson')
-      .on('ready', function(){
-        // get Collection attributes into right panel
-        window.collection = featureLayer._geojson
-        // y-axis label for histogram magnitudes
-        var yLabel = collection.attributes.y_label
-        // write dataset card for data panel
-        writeCard(dataset,collection.attributes)
+  /*  read a single FeatureCollection of
+      Places (geometry.type == Point), and
+      Routes (geometry.type == GeometryCollection or undefined)
+        - route geometry.geometries[i] == LineString or MultiLineString
+  */
+  let featureLayer = L.mapbox.featureLayer()
+    .loadURL('data/' + dataset + '.geojson')
+    .on('ready', function(){
+      // get Collection attributes into right panel
+      window.collection = featureLayer._geojson
+      // y-axis label for histogram magnitudes
+      var yLabel = collection.attributes.y_label
+      // write dataset card for data panel
+      writeCard(dataset,collection.attributes)
 
-        window.tlRangeDates = [makeDate(collection.when.timespan[0]),
-          makeDate(collection.when.timespan[3])]
+      window.tlRangeDates = [makeDate(collection.when.timespan[0]),
+        makeDate(collection.when.timespan[3])]
 
-        // set period midpoint for timeline
-        // tlMidpoint = midpoint(collection.when.timespan,'mid')
+      // build separate L.featureGroups for points & lines
+      featureLayer.eachLayer(function(layer){
+        let geomF = layer.feature.geometry
+        // TODO: no when in Places yet
+        // let whenF = layer.feature.when
 
-        // build separate L.featureGroup for points & lines
-        featureLayer.eachLayer(function(layer){
-          let geomF = layer.feature.geometry
-          // TODO: no when in Places yet
-          // let whenF = layer.feature.when
+        // put places features in pointFeatures array
+        if(geomF.type == 'Point') {
+            let latlng = new L.LatLng(geomF.coordinates[1],geomF.coordinates[0])
 
-          // put places features in pointFeatures array
-          if(geomF.type == 'Point') {
-              let latlng = new L.LatLng(geomF.coordinates[1],geomF.coordinates[0])
+            var placeFeature = new L.CircleMarker(latlng,stylePoints(layer))
+            // var placeFeature = new L.CircleMarker(latlng, mapStyles.places)
+            // console.log('layer.feature.properties',layer.feature.properties)
+            let gazURI = layer.feature.properties.exact_matches.length>0?
+              layer.feature.properties.exact_matches[0].uri:""
 
-              var placeFeature = new L.CircleMarker(latlng,stylePoints(layer))
-              // var placeFeature = new L.CircleMarker(latlng, mapStyles.places)
-              // console.log('layer.feature.properties',layer.feature.properties)
-              let gazURI = layer.feature.properties.exact_matches.length>0?
-                layer.feature.properties.exact_matches[0].uri:""
-
-              var popContent = $('<a href="#" gaz="'+gazURI+'">'+
-                // layer.feature.properties.toponym+'<br/>'+
-                (dataset=='courier'&&gazURI!=""?'TGAZ record':['vicarello','bordeaux'].indexOf(dataset)>-1?'Pleiades record':
-                // (dataset=='courier'?'TGAZ record':dataset=='vicarello'?'Pleiades record':
-                  ['roundabout','xuanzang'].indexOf(dataset)>-1?'Geonames record':'')+'</a>')
-                .click(function(e){
-                  ga('send', 'event', ['Map'], ['Gaz lookup'], ['Linked Data']);
-                  // console.log('gonna get and parse gaz json here',gazURI)
-                  $(".loader").show()
-                  $.when(
-                    $.getJSON(gazURI, function(result){
-                      // console.log(result)
-                      $("#gaz_pre").html(JSON.stringify(result,undefined,2))
-                      // $.each(result, function(i, field){
-                      //     $("#gaz_modal .modal-body").append(field + " ");
-                      // })
-                    })
-                  ).done(function(){
-                    $(".loader").hide()
-                    $("#gaz_modal .modal-title").html(gazURI)
-                    $("#gaz_modal").modal(); })
-                })
-              var searchLink = $('<p class="popup-find-links"><a href="#">Find connections</a></p>')
-                .click(function(e){
-                  let placeObj = {};
-                  placeObj[layer.feature.id]= [dataset,layer.feature.properties.toponym];
-                  segmentSearch(placeObj)
-                  // alert('one day soon, this will run a search against the index, '+
-                  //   'with the same results as using the search feature')
-                })
-
-              var toponym = $('<div />').html('<p>'+layer.feature.properties.toponym+'</p>')
-                // .append(popContent)[0]
-                .append(popContent, searchLink)[0];
-
-              placeFeature.bindPopup(toponym)
-              placeFeature.on("click",function(){
-                ga('send', 'event', ['Map'], ['Click place'], ['Map']);
+            var popContent = $('<a href="#" gaz="'+gazURI+'">'+
+              // layer.feature.properties.toponym+'<br/>'+
+              (dataset=='courier'&&gazURI!=""?'TGAZ record':['vicarello','bordeaux'].indexOf(dataset)>-1?'Pleiades record':
+              // (dataset=='courier'?'TGAZ record':dataset=='vicarello'?'Pleiades record':
+                ['roundabout','xuanzang'].indexOf(dataset)>-1?'Geonames record':'')+'</a>')
+              .click(function(e){
+                ga('send', 'event', ['Map'], ['Gaz lookup'], ['Linked Data']);
+                // console.log('gonna get and parse gaz json here',gazURI)
+                $(".loader").show()
+                $.when(
+                  $.getJSON(gazURI, function(result){
+                    // console.log(result)
+                    $("#gaz_pre").html(JSON.stringify(result,undefined,2))
+                    // $.each(result, function(i, field){
+                    //     $("#gaz_modal .modal-body").append(field + " ");
+                    // })
+                  })
+                ).done(function(){
+                  $(".loader").hide()
+                  $("#gaz_modal .modal-title").html(gazURI)
+                  $("#gaz_modal").modal(); })
               })
-              // placeFeature.on("click", function(e){
-              //   alert('this will query the ElasticSearch index...')
-              // })
-              pointFeatures.push(placeFeature)
-              var pid = layer.feature.id
-              idToFeature[dataset].places[pid] = placeFeature
+            var searchLink = $('<p class="popup-find-links"><a href="#">Find connections</a></p>')
+              .click(function(e){
+                let placeObj = {};
+                placeObj[layer.feature.id]= [dataset,layer.feature.properties.toponym];
+                segmentSearch(placeObj)
+                // alert('one day soon, this will run a search against the index, '+
+                //   'with the same results as using the search feature')
+              })
 
-              // add to links for graph viz for some
-              if(["incanto-f","courier"].indexOf(dataset) > -1) {
-                    d3graph.nodes.push({"id":pid, "group":"1"})
-                  }
-          }
+            var toponym = $('<div />').html('<p>'+layer.feature.properties.toponym+'</p>')
+              // .append(popContent)[0]
+              .append(popContent, searchLink)[0];
 
-          // the rest are line features for routes/segments in GeometryCollection
-          else if(geomF.type == 'GeometryCollection') {
-            // console.log('dataset: layer.feature', dataset, layer.feature)
-            //* TODO: create feature for each geometry
-            // dataRows = '<table><hr><td>id</td><td>label</td></hr>'
-            for(let i in geomF.geometries) {
-                let whenObj = geomF.geometries[i].when
-                let feat = {
-                  "type":"Feature",
-                  "geometry": {
-                    "type":geomF.geometries[i].type,
-                    "coordinates":geomF.geometries[i].coordinates
-                    },
-                  "when": whenObj,
-                  "properties": geomF.geometries[i].properties
+            placeFeature.bindPopup(toponym)
+            placeFeature.on("click",function(){
+              ga('send', 'event', ['Map'], ['Click place'], ['Map']);
+            })
+            // placeFeature.on("click", function(e){
+            //   alert('this will query the ElasticSearch index...')
+            // })
+            pointFeatures.push(placeFeature)
+            var pid = layer.feature.id
+            idToFeature[dataset].places[pid] = placeFeature
+
+            // add to links for graph viz for some
+            if(["incanto-f","courier"].indexOf(dataset) > -1) {
+                  d3graph.nodes.push({"id":pid, "group":"1"})
                 }
-                //TODO: what does a turf.bezier feature look like?
-                // var segment = new L.GeoJSON(turf.bezier(feat), {
-                var segment = new L.GeoJSON(feat, {
-                  style: stylePaths(feat,tlRangeDates)
-                  // style: mapStyles.segments
-                }).bindPopup('<b>'+feat.properties.label+'</b><br/>'+
-                  listFeatureProperties(feat.properties,feat.when))
-                segment.on("click", function(e){
-                  ga('send', 'event', ['Map'], ['Click segment'], ['Map']);
-                  var leafletId = e.layer._leaflet_id
-                  // console.log('clicked this',this)
-                  this.setStyle(mapStyles.segments.highlight)
-                  // reset color on timeline
-                  $(".timeline-event-label").removeClass('timeline-segment-highlight')
-                  let date = e.layer.feature.when.timespan[0]
-                  var labelId = '#label-tl-'+(timelineCounter - 1)+'-0-'+
-                    feat.properties.segment_id
-                  console.log('labelId',labelId)
-                  // console.log(idToFeature[dataset].segments)
-                  ttmap.fitBounds(idToFeature[dataset].segments[feat.properties.segment_id].getBounds())
-                }).on("popupclose",function(e){
-                  this.setStyle(mapStyles.segments);
-                  $(".timeline-event-label").removeClass('timeline-segment-highlight')
-                })
-                // map id to map feature
-                lineFeatures.push(segment)
-                // console.log('segment',segment)
-
-                // var sid = feat.properties.route_id
-                var sid = feat.properties.hasOwnProperty('segment_id') ?
-                  feat.properties.segment_id : feat.properties.route_id
-                idToFeature[dataset].segments[sid] = segment
-
-                // add to links for graph viz; skip any with blank target
-                if(feat.properties.source != '' && feat.properties.target != ''
-                    && ["incanto-f","courier"].indexOf(dataset) > -1) {
-                  d3graph.links.push({"id":sid, "source": feat.properties.source,
-                    "target": feat.properties.target, "value": dataset=='incanto-f'?
-                      feat.properties.num_journeys:"1"})
-                }
-
-                //* build event object for time vis
-                if (whenObj != ({} || '')) {
-                  // if (collection.attributes.segmentType == 'journey') {
-                    eventsObj.events.push(buildSegmentEvent(feat));
-                  // }
-                }
-            }
-          }
-        })
-        // featureGroup pairs as layers
-        let name_p = "places_"+dataset
-        let name_s = "segments_"+dataset
-        _.each(lineFeatures, function(l) {l.addTo(ttmap)})
-        features[name_s] = L.featureGroup(lineFeatures).addTo(ttmap)
-        features[name_p] = L.featureGroup(pointFeatures).addTo(ttmap)
-
-        // TODO: reconfigure managing state in window.href
-        if(searchParams['p'] != undefined) {
-          ttmap.setView(idToFeature[dataset].places[searchParams['p']].getLatLng(),8)
-          idToFeature[dataset].places[searchParams['p']].openPopup()
-        } else {
-          ttmap.fitBounds(features[name_p].getBounds())
         }
 
-        // TIME: load timeline for journey(s), histogram for others
-        window.renderThese = []
-        if(['journey','journeys'].indexOf(collection.attributes.segmentType) > -1) {
-          window.grpE = _.groupBy(eventsObj.events, function(e){
-            return e.start.substring(0,4); })
-          _.each(Object.keys(grpE),function(v,k,l){
-            var incr = 0
-            // for each year...
-            _.each(grpE[v],function(v,k,l){
-              let tlDot = {}
-              tlDot['name'] = v.title
-              // if duration, increment days based on #events in year
-              tlDot['start'] = eventsObj.events[0]['duration'] == "?" ?
-                new Date(v.start).addDays(incr) : new Date(v.start)
-              tlDot['end'] = v.end
-              renderThese.push(tlDot)
-              incr += 365/l.length
-            })
-          })
-          // TODO: set grain dynamically somehow
-          if(['xuanzang','incanto'].indexOf(dataset) >0) {grain='year'}
-          if(collection.attributes.segmentType == 'journey') {
-            // console.log('journey')
-            simpleTimeline(dataset,renderThese,tlRangeDates)
-          } else if(isFlow == true){
-            window.yrgroups = _.countBy(renderThese,function(l){
-              return l.start.getFullYear();
-            })
-            // dataset,yrgroups,tlRangeDates,yLabel
-            makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
-            // console.log('render histogram of yrgroups:', yrgroups)
+        // the rest are line features for routes/segments in GeometryCollection
+        else if(geomF.type == 'GeometryCollection') {
+          // console.log('dataset: layer.feature', dataset, layer.feature)
+          //* TODO: create feature for each geometry
+          // dataRows = '<table><hr><td>id</td><td>label</td></hr>'
+          for(let i in geomF.geometries) {
+              let whenObj = geomF.geometries[i].when
+              let feat = {
+                "type":"Feature",
+                "geometry": {
+                  "type":geomF.geometries[i].type,
+                  "coordinates":geomF.geometries[i].coordinates
+                  },
+                "when": whenObj,
+                "properties": geomF.geometries[i].properties
+              }
+              //TODO: what does a turf.bezier feature look like?
+              // var segment = new L.GeoJSON(turf.bezier(feat), {
+              var segment = new L.GeoJSON(feat, {
+                style: stylePaths(feat,tlRangeDates)
+                // style: mapStyles.segments
+              }).bindPopup('<b>'+feat.properties.label+'</b><br/>'+
+                listFeatureProperties(feat.properties,feat.when))
+              segment.on("click", function(e){
+                ga('send', 'event', ['Map'], ['Click segment'], ['Map']);
+                var leafletId = e.layer._leaflet_id
+                // console.log('clicked this',this)
+                this.setStyle(mapStyles.segments.highlight)
+                // reset color on timeline
+                $(".timeline-event-label").removeClass('timeline-segment-highlight')
+                let date = e.layer.feature.when.timespan[0]
+                var labelId = '#label-tl-'+(timelineCounter - 1)+'-0-'+
+                  feat.properties.segment_id
+                console.log('labelId',labelId)
+                // console.log(idToFeature[dataset].segments)
+                ttmap.fitBounds(idToFeature[dataset].segments[feat.properties.segment_id].getBounds())
+              }).on("popupclose",function(e){
+                this.setStyle(mapStyles.segments);
+                $(".timeline-event-label").removeClass('timeline-segment-highlight')
+              })
+              // map id to map feature
+              lineFeatures.push(segment)
+              // console.log('segment',segment)
+
+              // var sid = feat.properties.route_id
+              var sid = feat.properties.hasOwnProperty('segment_id') ?
+                feat.properties.segment_id : feat.properties.route_id
+              idToFeature[dataset].segments[sid] = segment
+
+              // add to links for graph viz; skip any with blank target
+              if(feat.properties.source != '' && feat.properties.target != ''
+                  && ["incanto-f","courier"].indexOf(dataset) > -1) {
+                d3graph.links.push({"id":sid, "source": feat.properties.source,
+                  "target": feat.properties.target, "value": dataset=='incanto-f'?
+                    feat.properties.num_journeys:"1"})
+              }
+
+              //* build event object for time vis
+              if (whenObj != ({} || '')) {
+                // if (collection.attributes.segmentType == 'journey') {
+                  eventsObj.events.push(buildSegmentEvent(feat));
+                // }
+              }
           }
-        } else if (collection.attributes.segmentType == 'hRoutes') {
-          // multiple routes, assuming start/end date range
-          makeHistData(dataset,eventsObj,tlRangeDates,yLabel)
-        } else if (collection.attributes.periods.length > 0 && isFlow == false) {
-          loadPeriods(collection.attributes.periods[0])
-          // makePeriodData(collection.attributes.periods)
         }
       })
+      // featureGroup pairs as layers
+      let name_p = "places_"+dataset
+      let name_s = "segments_"+dataset
+      _.each(lineFeatures, function(l) {l.addTo(ttmap)})
+      features[name_s] = L.featureGroup(lineFeatures).addTo(ttmap)
+      features[name_p] = L.featureGroup(pointFeatures).addTo(ttmap)
+
+      // TODO: reconfigure managing state in window.href
+      if(searchParams['p'] != undefined) {
+        ttmap.setView(idToFeature[dataset].places[searchParams['p']].getLatLng(),8)
+        idToFeature[dataset].places[searchParams['p']].openPopup()
+      } else {
+        ttmap.fitBounds(features[name_p].getBounds())
+      }
+
+      // TIME: load timeline for journey(s), histogram for others
+      window.renderThese = []
+      if(['journey','journeys'].indexOf(collection.attributes.segmentType) > -1) {
+        window.grpE = _.groupBy(eventsObj.events, function(e){
+          return e.start.substring(0,4); })
+        _.each(Object.keys(grpE),function(v,k,l){
+          var incr = 0
+          // for each year...
+          _.each(grpE[v],function(v,k,l){
+            let tlDot = {}
+            tlDot['name'] = v.title
+            // if duration, increment days based on #events in year
+            tlDot['start'] = eventsObj.events[0]['duration'] == "?" ?
+              new Date(v.start).addDays(incr) : new Date(v.start)
+            tlDot['end'] = v.end
+            renderThese.push(tlDot)
+            incr += 365/l.length
+          })
+        })
+        // TODO: set grain dynamically somehow
+        if(['xuanzang','incanto'].indexOf(dataset) >0) {grain='year'}
+        if(collection.attributes.segmentType == 'journey') {
+          // console.log('journey')
+          simpleTimeline(dataset,renderThese,tlRangeDates)
+        } else if(isFlow == true){
+          window.yrgroups = _.countBy(renderThese,function(l){
+            return l.start.getFullYear();
+          })
+          // dataset,yrgroups,tlRangeDates,yLabel
+          makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
+          // console.log('render histogram of yrgroups:', yrgroups)
+        }
+      } else if (collection.attributes.segmentType == 'hRoutes') {
+        // multiple routes, assuming start/end date range
+        makeHistData(dataset,eventsObj,tlRangeDates,yLabel)
+      } else if (collection.attributes.periods.length > 0 && isFlow == false) {
+        loadPeriods(collection.attributes.periods[0])
+        // makePeriodData(collection.attributes.periods)
+      }
+    })
 }
 
 $(".leaflet-popup-content a").click(function(e){

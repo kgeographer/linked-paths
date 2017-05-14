@@ -5,10 +5,8 @@ from index_utils import indexedPlace, matchRecord
 from elasticsearch import Elasticsearch
 
 projects = ['bordeaux','courier','incanto','owtrad','roundabout','vicarello','xuanzang']
-datasets = ["incanto-f", "incanto-j", "vicarello", "courier", "xuanzang", "roundabout","owtrad","bordeaux"]
+datasets = ["incanto-j", "vicarello", "courier", "xuanzang", "roundabout","owtrad","bordeaux"]
 
-#projects = ['bordeaux', 'vicarello']
-#foutp = codecs.open('allPlaces.json', 'w', 'utf8')
 
 def indexPlaces():
     os.chdir("../data/source/")
@@ -77,7 +75,8 @@ def indexPlaces():
         
         # merge names into suggest[] and write out index records
         # TODO: pipe directly into index; writing out is a debug exercise; 
-        fouti = codecs.open('allIndex.json', 'w', 'utf8')    
+        #fouti = codecs.open('allIndex.json', 'w', 'utf8')    
+        fouti = codecs.open('../../_site/data/index/allIndex.json', 'w', 'utf8')    
         for x in range(len(allIndex)):
             allIndex[x].suggest = list(set(allIndex[x].suggest + allIndex[x].is_conflation_of[0]['exact_matches'][0]['names']))
             try:
@@ -108,6 +107,7 @@ def indexPlaces():
                 continue
         print(str(indexed_count)+' indexed; '+str(error_count)+' missed') 
         
+    
     indexEm()
     
     
@@ -130,5 +130,5 @@ def indexSegments():
             except:
                 print("error:",  doc['properties']['segment_id'], sys.exc_info()[0])
     
-#indexPlaces()
-#indexSegments()
+indexPlaces()
+indexSegments()

@@ -13,8 +13,8 @@ def init():
     global proj, reader_p, reader_s, finp, fins, fout, foutp, fouts, collection, collectionAttributes, routeidx, exactMatches
     # owtrad, courier, incanto-j, roundabout, vicarello, xuanzang, bordeaux 
     # (incanto-f abandoned for now, flows computed from journeys)
-    proj = 'bordeaux'
-    data = 'bordeaux'
+    proj = 'incanto'
+    data = 'incanto-j'
 
     finp = codecs.open('../data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
     fins = codecs.open('../data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
@@ -205,9 +205,6 @@ def createSegments():
             collection['features'].append(feat)
             counter += 1
 
-            # segments as JSONlines for index
-
-            #print('new feature: ',counter)
         else:
             # add geometry + properties for each segment within a route
             feat['geometry']['geometries'].append(segment)
