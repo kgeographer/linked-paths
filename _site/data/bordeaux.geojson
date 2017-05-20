@@ -17508,6 +17508,7 @@
     }
   ],
   "attributes": {
+    "lp_id": "lp_bordeaux",
     "description": "",
     "places": "places_bordeaux.csv",
     "contributors": "Pelagios3, K. Grossner",

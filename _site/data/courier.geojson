@@ -64200,6 +64200,7 @@
   ],
   "type": "FeatureCollection",
   "attributes": {
+    "lp_id": "lp_courier",
     "segmentType": "hRouteSystem",
     "title": "Ming Dynasty Courier Routes and Postal Stations",
     "periods": ["fp7wv2s8c"],

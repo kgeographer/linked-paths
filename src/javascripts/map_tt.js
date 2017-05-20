@@ -78,22 +78,6 @@ $(function() {
   })
 });
 
-// position timeline (obs. simile)
-// var midpoint = function(ts,type) {
-//   // console.log('midpoint ts',ts)
-//   if(type == 'start') {
-//     var mid = new Date(ts[0])
-//   } else if(type == 'mid') {
-//     let start = new Date(ts[0])
-//     let end = ts[3] == ('' || undefined) ? new Date(Date.now()) : new Date(ts[3])
-//     var mid = new Date((start.getTime() + end.getTime()) / 2);
-//   }
-//   // console.log(mid)
-//   return mid
-// }
-
-// var resizeTimerID = null;
-
 function onResize() {
     if (resizeTimerID == null) {
         resizeTimerID = window.setTimeout(function() {
@@ -421,6 +405,8 @@ window.loadLayer = function(dataset) {
   // check in case layer was loaded programatically
   $(":checkbox[value='"+dataset+"']").prop("checked","true")
   isFlow = dataset.slice(-2) == '-f' ? true : false;
+  console.log('isFlow',isFlow)
+  // strip -f from incanto-f
   dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
   if(features.bboxes) {features.bboxes.removeFrom(ttmap)}
   // clear feature arrays
@@ -452,6 +438,7 @@ window.loadLayer = function(dataset) {
       // y-axis label for histogram magnitudes
       var yLabel = collection.attributes.y_label
       // write dataset card for data panel
+      console.log(collection.attributes)
       writeCard(dataset,collection.attributes)
 
       window.tlRangeDates = [makeDate(collection.when.timespan[0]),
@@ -636,7 +623,7 @@ window.loadLayer = function(dataset) {
           })
           // dataset,yrgroups,tlRangeDates,yLabel
           makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
-          // console.log('render histogram of yrgroups:', yrgroups)
+          console.log('render histogram of yrgroups:', yrgroups)
         }
       } else if (collection.attributes.segmentType == 'hRoutes') {
         // multiple routes, assuming start/end date range
