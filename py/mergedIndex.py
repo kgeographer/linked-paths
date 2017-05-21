@@ -5,11 +5,13 @@ from index_utils import indexedPlace, matchRecord
 from elasticsearch import Elasticsearch
 
 projects = ['bordeaux','courier','incanto','owtrad','roundabout','vicarello','xuanzang']
-datasets = ["incanto-j", "vicarello", "courier", "xuanzang", "roundabout","owtrad","bordeaux"]
+#projects = ['incanto']
+datasets = ["incanto", "vicarello", "courier", "xuanzang", "roundabout","owtrad","bordeaux"]
 
 
 def indexPlaces():
     os.chdir("../data/source/")
+    #os.chdir("data/source/")
     match_counter = 0
     new_counter = 0
     
@@ -86,7 +88,8 @@ def indexPlaces():
                 print('choked on '+str(allIndex[x].id))
         fouti.close()
         
-        fini = codecs.open('allIndex.json', 'r', 'utf8')
+        fini = codecs.open('../../_site/data/index/allIndex.json', 'r', 'utf8')
+        #fini = codecs.open('../_site/data/index/allIndex.json', 'r', 'utf8')
         rawi = fini.readlines()
         fini.close()
     
@@ -95,7 +98,7 @@ def indexPlaces():
         # index places
         for x in range(len(rawi)):
             doc = json.loads(rawi[x])
-            print(doc['representative_title'])
+            print(doc['representative_title'],doc['id'])
             try:
                 res = es.index(index="linkedplaces", doc_type='place', id=doc['id'], body=doc)
                 if res['created']:
@@ -131,4 +134,4 @@ def indexSegments():
                 print("error:",  doc['properties']['segment_id'], sys.exc_info()[0])
     
 indexPlaces()
-indexSegments()
+#indexSegments()

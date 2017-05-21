@@ -1,5 +1,5 @@
 /*@import "./typeahead.css";*/
-@import "typeahead.css";
+@import "lib/typeahead.css";
 @import "lib/bootstrap.min.css";
 @import "lib/mapbox.css";
 html,

@@ -36,7 +36,7 @@
         "gazetteer_label": "Palo Alto",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=5380748&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=5380748&username=kgeographer&style=full",
             "names": [
               "Palo Alto"
             ]
@@ -64,7 +64,7 @@
         "gazetteer_label": "Fernley",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=5504003&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=5504003&username=kgeographer&style=full",
             "names": [
               "Fernley"
             ]
@@ -92,7 +92,7 @@
         "gazetteer_label": "Delta",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=5538080&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=5538080&username=kgeographer&style=full",
             "names": [
               "Delta"
             ]
@@ -120,7 +120,7 @@
         "gazetteer_label": "Craig",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=5576064&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=5576064&username=kgeographer&style=full",
             "names": [
               "Craig"
             ]
@@ -148,7 +148,7 @@
         "gazetteer_label": "Fort Collins",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=5577147&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=5577147&username=kgeographer&style=full",
             "names": [
               "Fort Collins"
             ]
@@ -176,7 +176,7 @@
         "gazetteer_label": "Denver",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=5419384&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=5419384&username=kgeographer&style=full",
             "names": [
               "Denver"
             ]
@@ -204,7 +204,7 @@
         "gazetteer_label": "Cambridge",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=4931972&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=4931972&username=kgeographer&style=full",
             "names": [
               "Cambridge"
             ]
@@ -232,7 +232,7 @@
         "gazetteer_label": "Paris",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2988507&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2988507&username=kgeographer&style=full",
             "names": [
               "Paris"
             ]
@@ -260,7 +260,7 @@
         "gazetteer_label": "Bourg-en-Bresse",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3031009&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3031009&username=kgeographer&style=full",
             "names": [
               "Bourg-en-Bresse"
             ]
@@ -288,7 +288,7 @@
         "gazetteer_label": "Milan",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3173435&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3173435&username=kgeographer&style=full",
             "names": [
               "Milan"
             ]
@@ -316,7 +316,7 @@
         "gazetteer_label": "Rijeka",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3191648&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3191648&username=kgeographer&style=full",
             "names": [
               "Rijeka"
             ]
@@ -344,7 +344,7 @@
         "gazetteer_label": "Zagreb",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3186886&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3186886&username=kgeographer&style=full",
             "names": [
               "Zagreb"
             ]
@@ -372,7 +372,7 @@
         "gazetteer_label": "Sarajevo",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3191281&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3191281&username=kgeographer&style=full",
             "names": [
               "Sarajevo"
             ]
@@ -400,7 +400,7 @@
         "gazetteer_label": "Mostar",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3194828&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3194828&username=kgeographer&style=full",
             "names": [
               "Mostar"
             ]
@@ -428,7 +428,7 @@
         "gazetteer_label": "Dubrovnik",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3201047&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3201047&username=kgeographer&style=full",
             "names": [
               "Dubrovnik"
             ]
@@ -456,7 +456,7 @@
         "gazetteer_label": "Kotor",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3197538&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3197538&username=kgeographer&style=full",
             "names": [
               "Kotor"
             ]
@@ -484,7 +484,7 @@
         "gazetteer_label": "Split",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3190261&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3190261&username=kgeographer&style=full",
             "names": [
               "Split"
             ]
@@ -512,7 +512,7 @@
         "gazetteer_label": "Trogir",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3188763&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3188763&username=kgeographer&style=full",
             "names": [
               "Trogir"
             ]
@@ -540,7 +540,7 @@
         "gazetteer_label": "Solin",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3190359&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3190359&username=kgeographer&style=full",
             "names": [
               "Solin"
             ]
@@ -568,7 +568,7 @@
         "gazetteer_label": "Ancona",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3183089&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3183089&username=kgeographer&style=full",
             "names": [
               "Ancona"
             ]
@@ -596,7 +596,7 @@
         "gazetteer_label": "Ascoli Piceno",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3182749&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3182749&username=kgeographer&style=full",
             "names": [
               "Ascoli Piceno"
             ]
@@ -624,7 +624,7 @@
         "gazetteer_label": "Madrid",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3117735&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3117735&username=kgeographer&style=full",
             "names": [
               "Madrid"
             ]
@@ -652,7 +652,7 @@
         "gazetteer_label": "Edinburgh",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2650225&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2650225&username=kgeographer&style=full",
             "names": [
               "Edinburgh"
             ]
@@ -680,7 +680,7 @@
         "gazetteer_label": "Bangkok",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=1609350&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=1609350&username=kgeographer&style=full",
             "names": [
               "Bangkok"
             ]
@@ -708,7 +708,7 @@
         "gazetteer_label": "Korenica",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3189076&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3189076&username=kgeographer&style=full",
             "names": [
               "Korenica"
             ]
@@ -736,7 +736,7 @@
         "gazetteer_label": "Sarnano",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3167119&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3167119&username=kgeographer&style=full",
             "names": [
               "Sarnano"
             ]
@@ -764,7 +764,7 @@
         "gazetteer_label": "Grottammare",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3175771&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3175771&username=kgeographer&style=full",
             "names": [
               "Grottammare"
             ]
@@ -792,7 +792,7 @@
         "gazetteer_label": "Offida",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3172104&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3172104&username=kgeographer&style=full",
             "names": [
               "Offida"
             ]
@@ -820,7 +820,7 @@
         "gazetteer_label": "Rome",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3169070&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3169070&username=kgeographer&style=full",
             "names": [
               "Rome"
             ]
@@ -848,7 +848,7 @@
         "gazetteer_label": "Urbino",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3165035&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3165035&username=kgeographer&style=full",
             "names": [
               "Urbino"
             ]
@@ -876,7 +876,7 @@
         "gazetteer_label": "San Marino",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3168070&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3168070&username=kgeographer&style=full",
             "names": [
               "San Marino"
             ]
@@ -904,7 +904,7 @@
         "gazetteer_label": "Rieti",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3169412&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3169412&username=kgeographer&style=full",
             "names": [
               "Rieti"
             ]
@@ -932,7 +932,7 @@
         "gazetteer_label": "Boston",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=4930956&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=4930956&username=kgeographer&style=full",
             "names": [
               "Boston"
             ]
@@ -960,7 +960,7 @@
         "gazetteer_label": "Reykjavik",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3413829&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3413829&username=kgeographer&style=full",
             "names": [
               "Reykjav\u00edk"
             ]
@@ -988,7 +988,7 @@
         "gazetteer_label": "Civitanova Marche",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3170102&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3170102&username=kgeographer&style=full",
             "names": [
               "Civitanova Marche"
             ]
@@ -1016,7 +1016,7 @@
         "gazetteer_label": "Assisi",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3182722&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3182722&username=kgeographer&style=full",
             "names": [
               "Assisi"
             ]
@@ -1044,7 +1044,7 @@
         "gazetteer_label": "Figueres",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3122453&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3122453&username=kgeographer&style=full",
             "names": [
               "Figueres"
             ]
@@ -1072,7 +1072,7 @@
         "gazetteer_label": "M\u00e9rida",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2513917&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2513917&username=kgeographer&style=full",
             "names": [
               "M\u00e9rida"
             ]
@@ -1100,7 +1100,7 @@
         "gazetteer_label": "Sevilla",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2510911&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2510911&username=kgeographer&style=full",
             "names": [
               "Sevilla"
             ]
@@ -1128,7 +1128,7 @@
         "gazetteer_label": "Cordoba",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2519240&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2519240&username=kgeographer&style=full",
             "names": [
               "C\u00f3rdoba"
             ]
@@ -1156,7 +1156,7 @@
         "gazetteer_label": "Granada",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2517117&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2517117&username=kgeographer&style=full",
             "names": [
               "Granada"
             ]
@@ -1184,7 +1184,7 @@
         "gazetteer_label": "Consuegra",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2519277&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2519277&username=kgeographer&style=full",
             "names": [
               "Consuegra"
             ]
@@ -1212,7 +1212,7 @@
         "gazetteer_label": "Toledo",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2510409&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2510409&username=kgeographer&style=full",
             "names": [
               "Toledo"
             ]
@@ -1240,7 +1240,7 @@
         "gazetteer_label": "San Sebastian",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=3110044&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=3110044&username=kgeographer&style=full",
             "names": [
               "Donostia / San Sebasti\u00e1n"
             ]
@@ -1268,7 +1268,7 @@
         "gazetteer_label": "Orl\u00e9ans",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2989317&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2989317&username=kgeographer&style=full",
             "names": [
               "Orl\u00e9ans"
             ]
@@ -1296,7 +1296,7 @@
         "gazetteer_label": "Glasgow",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2648579&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2648579&username=kgeographer&style=full",
             "names": [
               "Glasgow"
             ]
@@ -1324,7 +1324,7 @@
         "gazetteer_label": "Fort William",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2649169&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2649169&username=kgeographer&style=full",
             "names": [
               "Fort William"
             ]
@@ -1352,7 +1352,7 @@
         "gazetteer_label": "Inverness",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2646088&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2646088&username=kgeographer&style=full",
             "names": [
               "Inverness"
             ]
@@ -1380,7 +1380,7 @@
         "gazetteer_label": "Stanley",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2637071&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2637071&username=kgeographer&style=full",
             "names": [
               "Stanley"
             ]
@@ -1408,7 +1408,7 @@
         "gazetteer_label": "Vienna",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2761369&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2761369&username=kgeographer&style=full",
             "names": [
               "Vienna"
             ]
@@ -1436,7 +1436,7 @@
         "gazetteer_label": "Chiang Mai",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=1153671&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=1153671&username=kgeographer&style=full",
             "names": [
               "Chiang Mai"
             ]
@@ -1464,7 +1464,7 @@
         "gazetteer_label": "Nong Khai",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=1608232&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=1608232&username=kgeographer&style=full",
             "names": [
               "Nong Khai"
             ]
@@ -1492,7 +1492,7 @@
         "gazetteer_label": "Frankfurt am Main",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=2925533&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=2925533&username=kgeographer&style=full",
             "names": [
               "Frankfurt am Main"
             ]
@@ -1520,7 +1520,7 @@
         "gazetteer_label": "Doha",
         "exact_matches": [
           {
-            "uri": "http://api.geonames.org/getJSON?geonameId=290030&username=demo&style=full",
+            "uri": "http://api.geonames.org/getJSON?geonameId=290030&username=kgeographer&style=full",
             "names": [
               "Doha"
             ]

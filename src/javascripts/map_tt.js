@@ -242,7 +242,7 @@ var writeCard = function(dataset,attribs){
   let html = writeAbstract(attribs)
   html += "download:" +
     " <a href='#' data='"+dataset+"' type='geojson-t'>GeoJSON-T</a>";
-  if(["incanto-f","courier"].indexOf(dataset) > -1){
+  if(["incanto","courier"].indexOf(dataset) > -1){
     html += "; <a href='#' data='"+dataset+"' type='d3'>D3 graph</a></div>";
   } else {
     html += "</div>";
@@ -281,8 +281,6 @@ var download = function(type, data){
       // console.log('make d3 dataset for '+data+' and load it in force layout somewhere');
       $(".modal-body svg").html('')
       $(".modal-title").html(data)
-      // for now, use data in d3graph{}, built on each loadLayer()
-      // if(["incanto-f","courier"])
       $(".modal-body").html(buildGraph())
       $('#graph_modal').modal('show');
 
@@ -299,7 +297,7 @@ window.zapLayer = function(dataset) {
   // uncheck it
   dataset = dataset.slice(-2)[0]=='-' ? dataset.slice(0,-2) : dataset
   $("input:checkbox[value='"+ dataset +"']").prop('checked',false);
-  // console.log('want to zap: dataset',dataset)
+  console.log('want to zap: dataset',dataset)
   // remove its card from data panel
   $("#lp_"+dataset).remove();
   // remove all div.place-card
@@ -331,13 +329,6 @@ var loadLayers = function(arr) {
   for(let i in loadedIDs){
     if(arr.indexOf(loadedIDs[i]) < 0){
       zapLayer(loadedIDs[i])
-    }
-  }
-  for(let i in arr){
-    if(loadedIDs.indexOf(arr[i]) <0){
-      // console.log('loading',arr[i])
-      // TODO: multiple datasets per project is an issue
-      loadLayer(arr[i]=='incanto'?'incanto-f':arr[i])
     }
   }
 }
@@ -404,10 +395,11 @@ window.loadLayer = function(dataset) {
   $(".loader").show()
   // check in case layer was loaded programatically
   $(":checkbox[value='"+dataset+"']").prop("checked","true")
-  isFlow = dataset.slice(-2) == '-f' ? true : false;
-  console.log('isFlow',isFlow)
+  // isFlow = dataset.slice(-2) == '-j' ? true : false;
+  isFlow = dataset == 'incanto' ? true : false;
+  // console.log('isFlow',isFlow)
   // strip -f from incanto-f
-  dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
+  // dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
   if(features.bboxes) {features.bboxes.removeFrom(ttmap)}
   // clear feature arrays
   pointFeatures = [];
@@ -459,15 +451,15 @@ window.loadLayer = function(dataset) {
             // console.log('layer.feature.properties',layer.feature.properties)
             let gazURI = layer.feature.properties.exact_matches.length>0?
               layer.feature.properties.exact_matches[0].uri:""
-
+            // console.log(gazURI)
             var popContent = $('<a href="#" gaz="'+gazURI+'">'+
               // layer.feature.properties.toponym+'<br/>'+
-              (dataset=='courier'&&gazURI!=""?'TGAZ record':['vicarello','bordeaux'].indexOf(dataset)>-1?'Pleiades record':
-              // (dataset=='courier'?'TGAZ record':dataset=='vicarello'?'Pleiades record':
-                ['roundabout','xuanzang'].indexOf(dataset)>-1?'Geonames record':'')+'</a>')
+              (dataset=='courier'&&gazURI!="" ? 'TGAZ record':
+                ['vicarello','bordeaux'].indexOf(dataset)>-1 ? 'Pleiades record':
+                ['roundabout','xuanzang','incanto'].indexOf(dataset)>-1?'Geonames record':'')+'</a>')
               .click(function(e){
                 ga('send', 'event', ['Map'], ['Gaz lookup'], ['Linked Data']);
-                // console.log('gonna get and parse gaz json here',gazURI)
+                console.log('gonna get and parse gaz json here',gazURI)
                 $(".loader").show()
                 $.when(
                   $.getJSON(gazURI, function(result){
@@ -507,7 +499,7 @@ window.loadLayer = function(dataset) {
             idToFeature[dataset].places[pid] = placeFeature
 
             // add to links for graph viz for some
-            if(["incanto-f","courier"].indexOf(dataset) > -1) {
+            if(["incanto","courier"].indexOf(dataset) > -1) {
                   d3graph.nodes.push({"id":pid, "group":"1"})
                 }
         }
@@ -563,9 +555,9 @@ window.loadLayer = function(dataset) {
 
               // add to links for graph viz; skip any with blank target
               if(feat.properties.source != '' && feat.properties.target != ''
-                  && ["incanto-f","courier"].indexOf(dataset) > -1) {
+                  && ["incanto","courier"].indexOf(dataset) > -1) {
                 d3graph.links.push({"id":sid, "source": feat.properties.source,
-                  "target": feat.properties.target, "value": dataset=='incanto-f'?
+                  "target": feat.properties.target, "value": dataset=='incanto'?
                     feat.properties.num_journeys:"1"})
               }
 
@@ -623,7 +615,7 @@ window.loadLayer = function(dataset) {
           })
           // dataset,yrgroups,tlRangeDates,yLabel
           makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
-          console.log('render histogram of yrgroups:', yrgroups)
+          // console.log('render histogram of yrgroups:', yrgroups)
         }
       } else if (collection.attributes.segmentType == 'hRoutes') {
         // multiple routes, assuming start/end date range

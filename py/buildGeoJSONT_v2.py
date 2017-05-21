@@ -18,7 +18,7 @@ def init():
 
     finp = codecs.open('../data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
     fins = codecs.open('../data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')
-    fout = codecs.open('../_site/data/'+data+'.geojson', 'w', 'utf8')
+    fout = codecs.open('../_site/data/'+proj+'.geojson', 'w', 'utf8')
 
     # NOTE: demo uses manually edited place records
     # output places for index
@@ -112,6 +112,7 @@ def createPlaces():
             feat['properties'][props[x]] = row[props[x]]
         #if row['lng'] != null:
         collection['features'].append(feat)
+        print(str(len(collection['features'])) + ' place features')
 
 
 def createSegments():
@@ -136,7 +137,6 @@ def createSegments():
             coords.append(p2)
         except:
             sys.exit('target id ' + p1 + ' not found')
-        #print(coords)
         return coords
 
     def toGeometry(row):
@@ -216,9 +216,9 @@ def createSegments():
         del leanSegment['coordinates']
         del leanSegment['type']
         leanSegment['type'] = "Feature"
-        #print(leanSegment)
         fouts.write(json.dumps(leanSegment) + '\n')
 
+    print(str(counter) + ' segments generated')
 
     fout.write(json.dumps(collection,indent=2))
     fout.close()

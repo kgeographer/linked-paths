@@ -67,7 +67,7 @@ window.segmentSearch = function(obj){
         $("#results_inset").html(html)
         $(".place-card a").click(function(e){
           ga('send', 'event', ['Search'], ['Choose dataset'], ['Search panel']);
-          window.proj = $(this).attr('project').substring(0,7) == 'incanto'?'incanto-f':$(this).attr('project')
+          window.proj = $(this).attr('project')
           console.log('project',proj)
           // if project/dataset isn't loaded, load it (project !- dataset for incanto)
           window.pcheck = $("input:checkbox[value='"+proj+"']")
@@ -140,7 +140,7 @@ $('#bloodhound .typeahead').typeahead({
 });
 
 $(".typeahead").on("typeahead:select", function(e,obj){
-  // console.log('typeahead obj',obj)
+  console.log('typeahead obj',obj)
   var placeObj = {};
   for(let i=0;i<obj.data.length;i++){
     let project = obj.data[i].source_gazetteer;
