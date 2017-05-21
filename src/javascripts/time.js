@@ -2,7 +2,7 @@
 var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 
 window.makeTimeVis = function(periodArray,pid){
-  console.log('focal period',pid)
+  // console.log('focal period',pid)
   var container = document.getElementById('tl');
   // Configuration for the Timeline
   var options = {

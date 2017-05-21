@@ -194,7 +194,7 @@ window.loadPeriods = function(uri){
   // derive collection uri
   let collUri = uri.substring(0,len-9)+'.json'
   // let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
-  console.log('uri, collUri',uri, collUri)
+  // console.log('uri, collUri',uri, collUri)
   //examples:
   //period https://test.perio.do/fp7wv2s8c.json
   //collection https://test.perio.do/fp7wv.json
@@ -244,8 +244,8 @@ window.loadPeriods = function(uri){
 var writeCard = function(dataset,attribs){
   // write card and replace intro or append to div#data_abstract
   let html = writeAbstract(attribs)
-  html += "download:" +
-    " <a href='#' data='"+dataset+"' type='geojson-t'>GeoJSON-T</a>";
+  html += "<b>Download: </b>" +
+    "<a href='#' data='"+dataset+"' type='geojson-t'>GeoJSON-T</a>";
   if(["incanto","courier"].indexOf(dataset) > -1){
     html += "; <a href='#' data='"+dataset+"' type='d3'>D3 graph</a></div>";
   } else {
@@ -264,17 +264,20 @@ var writeCard = function(dataset,attribs){
 
 // per project, in right panel
 var writeAbstract = function(attribs){
-  console.log(attribs.periods[0])
+  // console.log('attribs.periods',attribs.periods)
   let html = "<div id='"+attribs.lp_id+
     "' class='project-card'><span class='project-card-title'>"+
     attribs.title+"</span>"
-  html += '<p><b>Date</b>: '+attribs.pub_date+'</p>'+
-    '<p><b>Contributor(s)</b>: '+attribs.contributors+'<p>'
-  html += (attribs.periods && attribs.periods.length > 0) ?
+  html += '<p><b>Date</b>: '+attribs.pub_date+'</p>' +
+    '<p><b>Contributor(s)</b>: '
+  for(let i in attribs.contributors) {
+    html += (i < attribs.contributors.length -1) ?
+      attribs.contributors[i]['name'] +'; ' :
+      attribs.contributors[i]['name']
+    }
+  html += '</p>'
+  html += (attribs.periods[0]['name'] != '') ?
     '<p><b>Period(s)</b>: <span>'+attribs.periods[0]['name']+'</span><p>' : ''
-  // html += (attribs.periods && attribs.periods.length > 0) ?
-  //   '<p><b>Period(s)</b>: <span class="span-link" onclick="loadPeriods(\'' +
-  //     attribs.periods[0]['uri']+'\')">'+attribs.periods[0]['name']+'</span><p>' : ''
   html += '<p>'+attribs.description+'</p>'
   return html
 }
@@ -434,7 +437,7 @@ window.loadLayer = function(dataset) {
       window.collection = featureLayer._geojson
       // get dataset attributes into right panel
       window.projConfig = projects[dataset]
-      console.log('projConfig', projConfig)
+      // console.log('projConfig', projConfig)
       // y-axis label for histogram magnitudes
       var yLabel = projConfig.timevis.label
       // write dataset card for data panel
