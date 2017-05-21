@@ -187,7 +187,7 @@ function listFeatureProperties(props,when){
 }
 
 // from Perio.do
-window.loadPeriods = function(uri){
+window.loadPeriods = function(uri,dataset){
   let len = uri.length
   // extract pid
   let pid = uri.substring(len-14,len-5)
@@ -235,7 +235,7 @@ window.loadPeriods = function(uri){
       pd['title'] = p.note
       periodArray.push(pd)
     })
-    makeTimeVis(periodArray,pid)
+    makeTimeVis(periodArray,dataset,pid)
 
     $(".loader").hide()
   })
@@ -312,7 +312,8 @@ window.zapLayer = function(dataset) {
   // remove all div.place-card
   $(".place-card").remove();
   // remove time vis if exists
-  $("#tl").html("")
+  // TODO: dataset id for timevis, remove by id
+  $("#tlvis_"+dataset).remove()
   // remove its data from the map
   let name_p = "places_"+dataset;
   let name_s = "segments_"+dataset;
@@ -592,7 +593,7 @@ window.loadLayer = function(dataset) {
       if(searchParams['p'] != undefined) {
         ttmap.setView(idToFeature[dataset].places[searchParams['p']].getLatLng(),8)
         idToFeature[dataset].places[searchParams['p']].openPopup()
-      } else {
+        } else {
         ttmap.fitBounds(features[name_p].getBounds())
       }
 
@@ -632,7 +633,7 @@ window.loadLayer = function(dataset) {
         makeHistData(dataset,eventsObj,tlRangeDates,yLabel)
       } else if (collection.attributes.periods.length > 0 && isFlow == false) {
         // loadPeriods(collection.attributes.periods[0])
-        loadPeriods(projConfig.periods[0]['uri'])
+        loadPeriods(projConfig.periods[0]['uri'],dataset)
         // makePeriodData(collection.attributes.periods)
       }
     })
