@@ -22,13 +22,14 @@ var years = function(timespan){
 }
 
 window.segmentSearch = function(obj){
+  // console.log('segmentSearch obj', obj)
   ga('send', 'event', ['Search'], ['Select'], ['Search panel']);
   // retrieve all segments associated with a place,
   // populate results_inset
   let html = ''
   var plKeys = Object.keys(obj)
   window.relevantProjects = []
-  console.log('segmentSearch obj', obj)
+  console.log('plKeys', plKeys)
   for(let i = 0; i < plKeys.length; i++){
     // console.log('plKeys[i]', plKeys[i])
     relevantProjects.push(obj[plKeys[i]][0])
@@ -140,7 +141,7 @@ $('#bloodhound .typeahead').typeahead({
 });
 
 $(".typeahead").on("typeahead:select", function(e,obj){
-  console.log('typeahead obj',obj)
+  // console.log('typeahead obj',obj)
   var placeObj = {};
   for(let i=0;i<obj.data.length;i++){
     let project = obj.data[i].source_gazetteer;
@@ -148,7 +149,7 @@ $(".typeahead").on("typeahead:select", function(e,obj){
     // gather place_ids from 'conflation_of' records
     placeObj[obj.data[i].id] = [project, obj.data[i].title];
   }
-  console.log('typeahead placeObj', placeObj)
+  //
   // get segments and display in #results_inset
   segmentSearch(placeObj);
 

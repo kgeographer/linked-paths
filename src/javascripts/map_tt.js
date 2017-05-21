@@ -191,7 +191,7 @@ window.loadPeriods = function(pid){
   let l = pid.length
   // derive collection uri
   let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
-  console.log('pid, collUri',pid, collUri)
+  // console.log('pid, collUri',pid, collUri)
   //period https://test.perio.do/fp7wv2s8c.json
   //collection https://test.perio.do/fp7wv.json
   $.when(
@@ -297,7 +297,7 @@ window.zapLayer = function(dataset) {
   // uncheck it
   dataset = dataset.slice(-2)[0]=='-' ? dataset.slice(0,-2) : dataset
   $("input:checkbox[value='"+ dataset +"']").prop('checked',false);
-  console.log('want to zap: dataset',dataset)
+  // console.log('want to zap: dataset',dataset)
   // remove its card from data panel
   $("#lp_"+dataset).remove();
   // remove all div.place-card
@@ -391,7 +391,7 @@ window.makeDate = function(d){
 }
 
 window.loadLayer = function(dataset) {
-  console.log('loadLayer()',dataset)
+  // console.log('loadLayer()',dataset)
   $(".loader").show()
   // check in case layer was loaded programatically
   $(":checkbox[value='"+dataset+"']").prop("checked","true")
@@ -430,7 +430,7 @@ window.loadLayer = function(dataset) {
       // y-axis label for histogram magnitudes
       var yLabel = collection.attributes.y_label
       // write dataset card for data panel
-      console.log(collection.attributes)
+      // console.log(collection.attributes)
       writeCard(dataset,collection.attributes)
 
       window.tlRangeDates = [makeDate(collection.when.timespan[0]),

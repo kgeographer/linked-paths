@@ -13,8 +13,8 @@ def init():
     global proj, reader_p, reader_s, finp, fins, fout, foutp, fouts, collection, collectionAttributes, routeidx, exactMatches
     # owtrad, courier, incanto-j, roundabout, vicarello, xuanzang, bordeaux 
     # (incanto-f abandoned for now, flows computed from journeys)
-    proj = 'incanto'
-    data = 'incanto-j'
+    proj = 'owtrad'
+    data = 'owtrad'
 
     finp = codecs.open('../data/source/'+proj+'/places_'+proj+'.csv', 'r', 'utf8')
     fins = codecs.open('../data/source/'+proj+'/segments_'+data+'.csv', 'r', 'utf8')

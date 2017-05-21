@@ -1,13 +1,9 @@
 import glob, os, json, csv, codecs, ast, sys
 import index_utils
 from index_utils import indexedPlace, matchRecord
-#from elastic import indexSegments
 from elasticsearch import Elasticsearch
 
 projects = ['bordeaux','courier','incanto','owtrad','roundabout','vicarello','xuanzang']
-#projects = ['incanto']
-datasets = ["incanto", "vicarello", "courier", "xuanzang", "roundabout","owtrad","bordeaux"]
-
 
 def indexPlaces():
     os.chdir("../data/source/")
@@ -15,7 +11,7 @@ def indexPlaces():
     match_counter = 0
     new_counter = 0
     
-    # retrieve all places into allPlaces[]
+    # retrieve all place csv into allPlaces[] json
     allPlaces = []
     for x in range(len(projects)):
         for file in glob.glob('./'+projects[x]+'/places_'+projects[x]+'.csv'):
@@ -117,10 +113,8 @@ def indexPlaces():
 def indexSegments():
     # SEGMENTS
     es = Elasticsearch()
-    for y in range(len(datasets)):
-        #print(datasets[y])
-        #print(os.getcwd())
-        fins = codecs.open('../../_site/data/index/'+datasets[y]+'_seg.jsonl', 'r', 'utf8')
+    for y in range(len(projects)):
+        fins = codecs.open('../../_site/data/index/'+projects[y]+'_seg.jsonl', 'r', 'utf8')
         raws = fins.readlines()
         fins.close()
 
@@ -134,4 +128,4 @@ def indexSegments():
                 print("error:",  doc['properties']['segment_id'], sys.exc_info()[0])
     
 indexPlaces()
-#indexSegments()
+indexSegments()
