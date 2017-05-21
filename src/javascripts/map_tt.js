@@ -186,12 +186,16 @@ function listFeatureProperties(props,when){
   return html;
 }
 
-// from Perio.do, https://test.perio.do/---.json
-window.loadPeriods = function(pid){
-  let l = pid.length
+// from Perio.do
+window.loadPeriods = function(uri){
+  let len = uri.length
+  // extract pid
+  let pid = uri.substring(len-14,len-5)
   // derive collection uri
-  let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
-  // console.log('pid, collUri',pid, collUri)
+  let collUri = uri.substring(0,len-9)+'.json'
+  // let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
+  console.log('uri, collUri',uri, collUri)
+  //examples:
   //period https://test.perio.do/fp7wv2s8c.json
   //collection https://test.perio.do/fp7wv.json
   $.when(
@@ -260,15 +264,17 @@ var writeCard = function(dataset,attribs){
 
 // per project, in right panel
 var writeAbstract = function(attribs){
+  console.log(attribs.periods[0])
   let html = "<div id='"+attribs.lp_id+
     "' class='project-card'><span class='project-card-title'>"+
     attribs.title+"</span>"
-    // attribs.short_title+"</span>"
   html += '<p><b>Date</b>: '+attribs.pub_date+'</p>'+
     '<p><b>Contributor(s)</b>: '+attribs.contributors+'<p>'
-  html += attribs.periods && attribs.periods.length >0 ?
-    '<p><b>Period(s)</b>: <span class="span-link" onclick="loadPeriods(\'' +
-      attribs.periods[0]+'\')"></span><p>' : ''
+  html += (attribs.periods && attribs.periods.length > 0) ?
+    '<p><b>Period(s)</b>: <span>'+attribs.periods[0]['name']+'</span><p>' : ''
+  // html += (attribs.periods && attribs.periods.length > 0) ?
+  //   '<p><b>Period(s)</b>: <span class="span-link" onclick="loadPeriods(\'' +
+  //     attribs.periods[0]['uri']+'\')">'+attribs.periods[0]['name']+'</span><p>' : ''
   html += '<p>'+attribs.description+'</p>'
   return html
 }
@@ -425,13 +431,15 @@ window.loadLayer = function(dataset) {
   let featureLayer = L.mapbox.featureLayer()
     .loadURL('data/' + dataset + '.geojson')
     .on('ready', function(){
-      // get Collection attributes into right panel
       window.collection = featureLayer._geojson
+      // get dataset attributes into right panel
+      window.projConfig = projects[dataset]
+      console.log('projConfig', projConfig)
       // y-axis label for histogram magnitudes
-      var yLabel = collection.attributes.y_label
+      var yLabel = projConfig.timevis.label
       // write dataset card for data panel
-      // console.log(collection.attributes)
-      writeCard(dataset,collection.attributes)
+      // writeCard(dataset,collection.attributes)
+      writeCard(dataset,projConfig)
 
       window.tlRangeDates = [makeDate(collection.when.timespan[0]),
         makeDate(collection.when.timespan[3])]
@@ -586,6 +594,7 @@ window.loadLayer = function(dataset) {
       }
 
       // TIME: load timeline for journey(s), histogram for others
+      // TODO: read config file
       window.renderThese = []
       if(['journey','journeys'].indexOf(collection.attributes.segmentType) > -1) {
         window.grpE = _.groupBy(eventsObj.events, function(e){
@@ -604,8 +613,6 @@ window.loadLayer = function(dataset) {
             incr += 365/l.length
           })
         })
-        // TODO: set grain dynamically somehow
-        // if(['xuanzang','incanto'].indexOf(dataset) > -1) {grain='year'}
         if(collection.attributes.segmentType == 'journey') {
           // console.log('journey')
           simpleTimeline(dataset,renderThese,tlRangeDates)
@@ -621,7 +628,8 @@ window.loadLayer = function(dataset) {
         // multiple routes, assuming start/end date range
         makeHistData(dataset,eventsObj,tlRangeDates,yLabel)
       } else if (collection.attributes.periods.length > 0 && isFlow == false) {
-        loadPeriods(collection.attributes.periods[0])
+        // loadPeriods(collection.attributes.periods[0])
+        loadPeriods(projConfig.periods[0]['uri'])
         // makePeriodData(collection.attributes.periods)
       }
     })
