@@ -1,0 +1,121 @@
+window.projects = {
+	"bordeaux": {
+		"lp_id": "lp_bordeaux",
+		"title": "Itinerary of the Bordeaux Pilgrim",
+		"authors": [{"name": "Anonymous ('The Pilgrim')", "uri":""}],
+		"contributors": [{"name":"Pelagios3", "uri":""},{"name":"K. Grossner", "uri":"http://kgeographer.org"}],
+		"pub_date": "2017",
+		"places": "places_bordeaux.csv",
+		"timespan": ["0333","","","0334","from 333-334CE"],
+		"timevis": {"type":"period-timeline","label":""},
+		"periods": [{"name":"Late Roman", "uri":"https://test.perio.do/gjgrsr3qh.json"}],
+		"references": [
+			{	"name":"THE ANONYMOUS PILGRIM OF BORDEAUX - LATIN TEXT",
+				"type":"seeFurther",
+				"uri":"http://www.christusrex.org/www1/ofm/pilgr/bord/10Bord01Lat.html"}
+		],
+		"languages": ["la"],
+		"description": ""
+	},
+	"courier": {
+		"lp_id": "lp_courier",
+		"title": "Ming Dynasty Courier Routes and Postal Stations",
+		"authors": [{"name":"", "uri":""}],
+		"contributors": [{"name":"Lex Berman (CGA, Harvard Univ)", "uri":""},{"name":"Zhang Wei (Nankai University, Tianjin)", "uri":""}],
+		"pub_date": "2014",
+		"places": "places_courier.csv",
+		"timespan": ["1368","","","1644","Late Ming Dynasty"],
+		"timevis": {"type":"period-timeline","label":""},
+		"periods": [{"name":"Ming Dynasty", "uri":"https://test.perio.do/fp7wv2s8c.json"}],
+		"references": [
+			{	"name":"Ming Dynasty Courier Routes and Postal Stations",
+				"type":"seeFurther",
+				"uri":"https://github.com/kgeographer/topotime/tree/master/data/source/courier/README_Ming_Courier_Routes_Stations_2014.txt"}],
+		"languages": ["zh", "en"],
+		"description": "The Late Ming Dynasty Courier Stations and Routes were compiled primarily from the \"Mingdai Yizhankao\" by YANG Zhengtai, supplemented for some areas with information derived from the 1908 Postal Atlas. The Courier Stations and Routes were developed for use in an online network analyst application, which calculates the shortest route between selected postal stations on the fly:    http://maps.cga.harvard.edu/chinapostoffice/"
+	},
+	"incanto": {
+		"lp_id": "lp_incanto",
+		"title": "Venetian Incanto Trade (Journeys, 1283-1453CE)",
+		"authors": [{"name":"", "uri":""}],
+		"contributors": [{"name":"", "uri":""}],
+		"pub_date": "2016",
+		"places": "places_incanto.csv",
+		"timespan": ["1283","","","1453","between 1283 and 1453CE"],
+		"timevis": {"type":"histogram","label":"Total ships per year"},
+		"periods": [{"name":"Mélanie Fournier (Dalhousie University)", "uri":""},{"name":"Karl Grossner", "uri":"http://kgeographer.org"}],
+		"references": [{"name":"","type":"","uri":""}],
+		"languages": [""],
+		"description": "Segment flows (# of ships) for 842 individual journeys, 1283-1453"
+	},
+	"owtrad": {
+		"lp_id": "lp_owtrad",
+		"title": "Old World Trade Routes",
+		"authors": [{"name":"T. M. Ciolek", "uri":""}],
+		"contributors": [{"name":"T. M. Ciolek", "uri":""}],
+		"pub_date": "2012",
+		"places": "places_owtrad.csv",
+		"timespan": ["-200","","","1820",""],
+		"timevis": {"type":"histogram","label":"Valid segments per century"},
+		"periods": [{"name":"", "uri":""}],
+		"references": [
+			{	"name":"Old World Trade Routes (OWTRAD) Project",
+				"type":"seeFurther",
+				"uri":"http://www.ciolek.com/owtrad.html"
+			}],
+		"languages": [""],
+		"description": "Land, river and maritime trade routes of Eurasia and Africa during the period 4,000 BCE (sic) - circa 1820 CE"
+	},
+	"roundabout": {
+		"lp_id": "lp_roundabout",
+		"title": "Roundabout, A 5-month sojourn of geohumanities computing and tourism",
+		"authors": [{"name":"K. Grossner", "uri":"http://kgeographer.org"}],
+		"contributors": [{"name":"K. Grossner", "uri":"http://kgeographer.org"}],
+		"pub_date": "2017-03",
+		"places": "places_roundabout.csv",
+		"timespan": ["2016-09-10","","","2017-02-12",""],
+		"timevis": {"type":"event-timeline","label":""},
+		"periods": [{"name":"", "uri":""}],
+		"references": [{"name":"Round About (photos)","type":"seeFurther","uri":"https://goo.gl/photos/omyC7fjZDgcjbYN98"}],
+		"languages": ["en"],
+		"description": "An journey expected to be a circumnavigation gets turned around in the Kingdom of Thailand"
+	},
+	"vicarello": {
+		"lp_id": "lp_vicarello",
+		"title": "Vicarello Beakers",
+		"authors": [{"name":"", "uri":""}],
+		"contributors": [{"name":"R. Simon", "uri":"https://www.researchgate.net/profile/Rainer_Simon"}],
+		"pub_date": "2013",
+		"places": "places_vicarello.csv",
+		"timespan": ["0200","","","0400","around 200 - 400 CE"],
+		"timevis": {"type":"period-timeline","label":""},
+		"periods": [{"name":"Roman", "uri":"https://test.perio.do/gjgrs69ws.json"}],
+		"references": [
+			{	"name":"IWP2: Pelagios and the Beakers of Vicarello",
+				"type":"seeAlso",
+				"uri":"http://commons.pelagios.org/2013/10/iwp2-pelagios-and-the-beakers-of-vicarello/"},
+			{	"name":"Vicarello Beakers",
+				"type":"seeAlso",
+				"uri":"http://pelagios.github.io/demos/vicarello-alpha/complete-sequence/"
+			}
+		],
+		"languages": ["la"],
+		"description": "Dated to between 15 BCE and 15 CE, the Vicarello Beakers are four cylindrical vessels made of silver with heights varying between 95-153 mm. They were discovered in the Roman baths at Vicarello, Italy, apparently deposited as a votive offering. Although differing in the details, on the surface of each beaker is engraved the land route between Gades and Rome. They have traditionally been identified as miniature replicas of a milestone probably erected in Gades, perhaps similar in design to the Miliarium Aureum (the Golden Milestone) in Rome."
+	},
+	"xuanzang": {
+		"lp_id": "lp_xuanzang",
+		"title": "The Pilgramage of Xuanzang, 629-645CE",
+		"authors": [{"name":"S. Wriggens", "uri":"http://wherebooksbegin.com/WBB-Success-Stories/Sally-Wriggins.shtml"}],
+		"contributors": [{"name":"Whitney Thorpe", "uri":""},{"name":"K. Grossner", "uri":"http://kgeographer.org"}],
+		"pub_date": "2010",
+		"places": "places_xuanzang.csv",
+		"timespan": ["0629","","","0645",""],
+		"timevis": {"type":"event-timeline","label":""},
+		"periods": [{"name":"", "uri":""}],
+		"references": [
+			{"name":"Xuanzang","type":"seeFurther","uri":"https://en.wikipedia.org/wiki/Xuanzang"},
+			{"name":"The Silk Road journey with Xuanzang","type":"seeFurther","uri":"https://www.amazon.com/Silk-Road-Journey-Xuanzang/dp/0813365996"}],
+		"languages": ["en","zh"],
+		"description": "Data originally extracted by W. Thorpe from Wriggens, S. (2003) 'The Silk Road journey with Xuanzang', Basic Books; edited by Grossner 2010"
+	}
+}

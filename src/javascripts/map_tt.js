@@ -605,7 +605,7 @@ window.loadLayer = function(dataset) {
           })
         })
         // TODO: set grain dynamically somehow
-        if(['xuanzang','incanto'].indexOf(dataset) >0) {grain='year'}
+        // if(['xuanzang','incanto'].indexOf(dataset) > -1) {grain='year'}
         if(collection.attributes.segmentType == 'journey') {
           // console.log('journey')
           simpleTimeline(dataset,renderThese,tlRangeDates)
