@@ -45,14 +45,18 @@ $(function() {
   $(".data-header").html(searchParams['d'])
   // $('#data_layers .checkbox input:checkbox');
   $('#data_layers .checkbox').mouseover(function(e){
-    let dataset = this.childNodes[1].childNodes[0].value
-    idToFeature.bboxes[dataset].setStyle({"weight":3})
-    idToFeature.bboxes[dataset].openPopup();
+    if ($(".checkbox input:checkbox:checked").length == 0){
+      let dataset = this.childNodes[1].childNodes[0].value
+      idToFeature.bboxes[dataset].setStyle({"weight":3})
+      idToFeature.bboxes[dataset].openPopup();
+    }
   })
   $('#data_layers .checkbox').mouseout(function(e){
-    let dataset = this.childNodes[1].childNodes[0].value
-    idToFeature.bboxes[dataset].setStyle({"weight":1})
-    idToFeature.bboxes[dataset].closePopup();
+    if ($(".checkbox input:checkbox:checked").length == 0){
+      let dataset = this.childNodes[1].childNodes[0].value
+      idToFeature.bboxes[dataset].setStyle({"weight":1})
+      idToFeature.bboxes[dataset].closePopup();
+    }
   })
   $("input:checkbox").change(function(){
     if(this.checked == true) {
