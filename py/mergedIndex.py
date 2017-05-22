@@ -47,14 +47,8 @@ def indexPlaces():
             exact = ast.literal_eval(allPlaces[x][7])[0]
             exact['source_gazetteer'] = allPlaces[x][0]
             exact['title'] = allPlaces[x][4]
+            exact['id'] = allPlaces[x][1]
             #print(exact)
-            #exact = str(matchRecord( \
-                ##allPlaces[x][0], \
-                ##allPlaces[x][1], \
-                ##allPlaces[x][2], \
-                ##allPlaces[x][3], \
-                #ast.literal_eval(allPlaces[x][7])[0]
-             #))
             matched.append(exact)
             #print(len(matched), matched[1])
             match_counter += 1
