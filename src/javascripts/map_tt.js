@@ -43,6 +43,17 @@ $(function() {
     $("#data").toggle("fast")
   })
   $(".data-header").html(searchParams['d'])
+  // $('#data_layers .checkbox input:checkbox');
+  $('#data_layers .checkbox').mouseover(function(e){
+    let dataset = this.childNodes[1].childNodes[0].value
+    idToFeature.bboxes[dataset].setStyle({"weight":3})
+    idToFeature.bboxes[dataset].openPopup();
+  })
+  $('#data_layers .checkbox').mouseout(function(e){
+    let dataset = this.childNodes[1].childNodes[0].value
+    idToFeature.bboxes[dataset].setStyle({"weight":1})
+    idToFeature.bboxes[dataset].closePopup();
+  })
   $("input:checkbox").change(function(){
     if(this.checked == true) {
       if(searchParams['p'] == undefined) {
@@ -344,7 +355,9 @@ var loadLayers = function(arr) {
 }
 
 function startMapM(dataset=null){
-  bboxFeatures = []
+  idToFeature['bboxes'] = {}
+  //idToFeature[dataset].places[pid] = placeFeature
+  window.bboxFeatures = []
   // var bboxGroup = L.featureGroup()
   // mapbox.js (non-gl)
   L.mapbox.accessToken = 'pk.eyJ1Ijoia2dlb2dyYXBoZXIiLCJhIjoiUmVralBPcyJ9.mJegAI1R6KR21x_CVVTlqw';
@@ -360,6 +373,7 @@ function startMapM(dataset=null){
       .loadURL('data/bb_all.geojson')
       .on('ready', function(){
         bboxLayer.eachLayer(function(layer){
+          idToFeature['bboxes'][layer.feature.properties.project] = layer
           // console.log(layer.feature.properties.project)
           bboxFeatures.push(layer)
           layer.bindPopup(blurbs[layer.feature.properties.project],{ closeButton: false})

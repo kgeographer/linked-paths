@@ -3,6 +3,7 @@ import index_utils
 from index_utils import indexedPlace, matchRecord
 from elasticsearch import Elasticsearch
 
+#projects = ['vicarello']
 projects = ['bordeaux','courier','incanto','owtrad','roundabout','vicarello','xuanzang']
 
 def indexPlaces():
@@ -21,6 +22,14 @@ def indexPlaces():
                     row = ast.literal_eval(str(rows[y].split(';')))
                     #print(row)
                     if len(row[7]) > 0:
+                        e = ast.literal_eval(row[7])
+                        n = ast.literal_eval(row[7])[0]['names']
+                        b = []
+                        for i in n:
+                            b.extend(i.split(', '))
+                        e[0]['names'] = list(set(b))
+                        row[7] = json.dumps(e)
+                        #print(row)
                         allPlaces.append(row)
     
     # make allIndex[]
@@ -36,6 +45,9 @@ def indexPlaces():
                 .is_conflation_of[0]['exact_matches']
             # append a new exact_matches[] element to it
             exact = ast.literal_eval(allPlaces[x][7])[0]
+            exact['source_gazetteer'] = allPlaces[x][0]
+            exact['title'] = allPlaces[x][4]
+            #print(exact)
             #exact = str(matchRecord( \
                 ##allPlaces[x][0], \
                 ##allPlaces[x][1], \
@@ -76,7 +88,8 @@ def indexPlaces():
         #fouti = codecs.open('allIndex.json', 'w', 'utf8')    
         fouti = codecs.open('../../_site/data/index/allIndex.json', 'w', 'utf8')    
         for x in range(len(allIndex)):
-            allIndex[x].suggest = list(set(allIndex[x].suggest + allIndex[x].is_conflation_of[0]['exact_matches'][0]['names']))
+            allIndex[x].suggest = list(set(allIndex[x].suggest + \
+                                           allIndex[x].is_conflation_of[0]['exact_matches'][0]['names']))
             try:
                 doc = str(allIndex[x])
                 fouti.write(doc + '\n')
@@ -94,7 +107,7 @@ def indexPlaces():
         # index places
         for x in range(len(rawi)):
             doc = json.loads(rawi[x])
-            print(doc['representative_title'],doc['id'])
+            #print(doc['representative_title'],doc['id'])
             try:
                 res = es.index(index="linkedplaces", doc_type='place', id=doc['id'], body=doc)
                 if res['created']:
@@ -104,7 +117,7 @@ def indexPlaces():
                 print("error:", sys.exc_info()[0])
                 error_count +=1
                 continue
-        print(str(indexed_count)+' indexed; '+str(error_count)+' missed') 
+        print(str(indexed_count)+' places indexed; '+str(error_count)+' missed') 
         
     
     indexEm()
@@ -112,6 +125,8 @@ def indexPlaces():
     
 def indexSegments():
     # SEGMENTS
+    idx_count = 0
+    error_count = 0
     es = Elasticsearch()
     for y in range(len(projects)):
         fins = codecs.open('../../_site/data/index/'+projects[y]+'_seg.jsonl', 'r', 'utf8')
@@ -123,9 +138,12 @@ def indexSegments():
             doc = json.loads(raws[x])
             try:
                 res = es.index(index="linkedplaces", doc_type='segment', id=doc['properties']['segment_id'], body=doc)
-                print(res['created'], 'segment', doc['properties']['segment_id'])
+                idx_count +=1
+                #print(res['created'], 'segment', doc['properties']['segment_id'])
             except:
                 print("error:",  doc['properties']['segment_id'], sys.exc_info()[0])
+                idx_count += 1
+    print(str(idx_count)+' segments indexed; '+str(error_count)+' missed')
     
 indexPlaces()
 indexSegments()

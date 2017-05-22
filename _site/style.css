@@ -21,6 +21,55 @@ body {
 .checkbox input[type=checkbox] {
   cursor: pointer;
 }
+.dot-bordeaux {
+  color: #fff;
+  border: 1px solid #666;
+  -webkit-border-radius: 1100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.dot-courier {
+  color: #ff9999;
+  border: 1px solid #666;
+  -webkit-border-radius: 1100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.dot-incanto {
+  color: #ffb366;
+  border: 1px solid #666;
+  -webkit-border-radius: 1100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.dot-owtrad {
+  color: #fff;
+  border: 1px solid #666;
+  -webkit-border-radius: 1100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.dot-roundabout {
+  color: #ffff80;
+  border: 1px solid #666;
+  -webkit-border-radius: 1100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.dot-vicarello {
+  color: #b380ff;
+  border: 1px solid #666;
+  -webkit-border-radius: 1100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.dot-xuanzang {
+  color: #99e699;
+  border: 1px solid #666;
+  -webkit-border-radius: 1100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+}
 #wrapper {
   width: 100%;
   height: 100%;
@@ -203,7 +252,7 @@ div.tooltip {
 .panel table {
   width: 100%;
 }
-.panel i {
+.panel-title i {
   color: #336699;
   cursor: pointer;
   font-size: .9em;

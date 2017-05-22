@@ -1,6 +1,12 @@
-colorMap = {"roundabout":"#ffff80","courier":"#ff9999","incanto":"#ffb366",
-"incanto-j":"#ffb366", "vicarello":"#b380ff","xuanzang":"#99e699","owtrad":"#fff",
-"bordeaux":"#fff"}
+colorMap = {
+  "bordeaux":"#fff",
+  "courier":"#ff9999",
+  "incanto":"#ffb366",
+  "owtrad":"#fff",
+  "roundabout":"#ffff80",
+  "vicarello":"#b380ff",
+  "xuanzang":"#99e699"
+}
 
 blurbs = {
   "courier":"Ming Dynasty Courier Routes, 14-17c CE",
