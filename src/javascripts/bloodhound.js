@@ -24,7 +24,7 @@ var years = function(timespan){
 window.segmentSearch = function(obj){
   console.log('segmentSearch obj', obj)
   //from popup: segmentSearch obj Object {ra0033: Array(3)}
-  //from search:
+  //from search: segmentSearch obj Object {in_60056: Array(2)}
   ga('send', 'event', ['Search'], ['Select'], ['Search panel']);
   // retrieve all segments associated with a place,
   // populate results_inset

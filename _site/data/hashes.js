@@ -1,7 +1,7 @@
 colorMap = {
   "bordeaux":"#fff",
   "courier":"#ff9999",
-  "incanto":"#ffb366",
+  "incanto":"lightblue",
   "owtrad":"#fff",
   "roundabout":"#ffff80",
   "vicarello":"#b380ff",
