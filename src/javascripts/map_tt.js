@@ -489,7 +489,7 @@ window.loadLayer = function(dataset) {
                 ['roundabout','xuanzang','incanto'].indexOf(dataset)>-1?'Geonames record':'')+'</a>')
               .click(function(e){
                 ga('send', 'event', ['Map'], ['Gaz lookup'], ['Linked Data']);
-                console.log('gonna get and parse gaz json here',gazURI)
+                // console.log('gonna get and parse gaz json here',gazURI)
                 $(".loader").show()
                 $.when(
                   $.getJSON(gazURI, function(result){
@@ -507,7 +507,9 @@ window.loadLayer = function(dataset) {
             var searchLink = $('<p class="popup-find-links"><a href="#">Find connections</a></p>')
               .click(function(e){
                 let placeObj = {};
-                placeObj[layer.feature.id]= [dataset,layer.feature.properties.toponym];
+                placeObj[layer.feature.id]= [[dataset,layer.feature.properties.toponym,
+                  layer.feature.id]];
+                // placeObj[payload.id] = [[project, payload.title, payload.id]];
                 segmentSearch(placeObj)
                 // alert('one day soon, this will run a search against the index, '+
                 //   'with the same results as using the search feature')
