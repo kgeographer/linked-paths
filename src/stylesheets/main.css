@@ -1,5 +1,6 @@
 /*@import "./typeahead.css";*/
 @import "./index.less";
+@import "./lib/tabs.css";
 @import "./lib/typeahead.css";
 @import "./lib/bootstrap.min.css";
 @import "./lib/mapbox.css";
