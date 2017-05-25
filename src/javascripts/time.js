@@ -1,7 +1,8 @@
 // visjs.org -> vis-timeline-graph2d.min.js
 var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 
-window.openTab = function(evt, cityName) {
+window.openTab = function(evt,dataset) {
+    console.log('openTab', dataset)
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -18,7 +19,7 @@ window.openTab = function(evt, cityName) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById("t_"+dataset).style.display = "block";
     evt.currentTarget.className += " active";
 }
 

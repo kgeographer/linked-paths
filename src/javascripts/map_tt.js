@@ -79,20 +79,36 @@ $(function() {
   $('.panel-title i').click(function(){
     window.open('http://kgeographer.com/?p=140&preview=true', '', 'width=700');
   })
-  // expand #tl on click
-  // $("#tl").click(function(){
-  //   // e.preventDefault;
-  //   if($(".vis-timeline").length > 0) {
-  //     console.log('clicked #tl')
-  //     window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
-  //     $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight),
-  //       "z-index":40})
-  //   } else {
-  //     console.log('clicked #tl, no timeline')
-  //   }
-  // })
+  $(".tablinks").click(function(e){
+    console.log('creating timevis div for ',this.value)
+  })
 });
 
+window.addTimeDiv = function(dataset){
+  if($("#tltabs").length == 0){
+    let tabdiv = document.createElement('div')
+    tabdiv.id = "tltabs"
+    tabdiv.className = "tab"
+    $("#tl").append(tabdiv)
+    let b = $('<button class="tablinks" onclick="openTab(event,\''+dataset+'\')">'+dataset+'</button>')
+    // let b = $('<button class="tablinks" onclick="console.log(\''+dataset+'\')">'+dataset+'</button>')
+    // let b = $('<input type="button" value="new button"/>');
+    $("#tltabs").append(b)
+    let visdiv = document.createElement('div')
+    visdiv.id = "t_"+dataset
+    visdiv.className = "tabcontent"
+    $("#tl").append(visdiv)
+  } else {
+    let b = $('<button class="tablinks" onclick="openTab(event,\''+dataset+'\')">'+dataset+'</button>')
+    $("#tltabs").append(b)
+    let visdiv = document.createElement('div')
+    visdiv.id = "t_"+dataset
+    visdiv.className = "tabcontent"
+    $("#tl").append(visdiv)
+  }
+  // tltabs/tab
+  // dataset/tabcontent
+}
 function onResize() {
     if (resizeTimerID == null) {
         resizeTimerID = window.setTimeout(function() {
