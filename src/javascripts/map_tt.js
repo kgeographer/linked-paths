@@ -80,17 +80,17 @@ $(function() {
     window.open('http://kgeographer.com/?p=140&preview=true', '', 'width=700');
   })
   // expand #tl on click
-  $("#tl").click(function(){
-    // e.preventDefault;
-    if($(".vis-timeline").length > 0) {
-      console.log('clicked #tl')
-      window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
-      $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight),
-        "z-index":40})
-    } else {
-      console.log('clicked #tl, no timeline')
-    }
-  })
+  // $("#tl").click(function(){
+  //   // e.preventDefault;
+  //   if($(".vis-timeline").length > 0) {
+  //     console.log('clicked #tl')
+  //     window.visHeight = $(".vis-timeline").css("height").slice(0,-2)
+  //     $("#tl").css({"height":visHeight,"top":(window.innerHeight-visHeight),
+  //       "z-index":40})
+  //   } else {
+  //     console.log('clicked #tl, no timeline')
+  //   }
+  // })
 });
 
 function onResize() {
@@ -617,10 +617,17 @@ window.loadLayer = function(dataset) {
         ttmap.fitBounds(features[name_p].getBounds())
       }
 
-      // TIME: load timeline for journey(s), histogram for others
-      // TODO: read config file
+      // TIME
+      // bordeaux: period-timeline
+      // courier: period-timeline
+      // vicarello: period-timeline
+      // incanto: histogram-flow
+      // owtrad: histogram
+      // roundabout: event-timeline
+      // xuanzang: event-timeline
       window.renderThese = []
-      if(['journey','journeys'].indexOf(collection.attributes.segmentType) > -1) {
+      if(["histogram-flow","event-timeline"].indexOf(projConfig.timevis.type) > -1 ) {
+        // roundabout, xuanzang, incanto
         window.grpE = _.groupBy(eventsObj.events, function(e){
           return e.start.substring(0,4); })
         _.each(Object.keys(grpE),function(v,k,l){
@@ -637,26 +644,25 @@ window.loadLayer = function(dataset) {
             incr += 365/l.length
           })
         })
-        if(collection.attributes.segmentType == 'journey') {
-          // console.log('journey')
+
+        if(projConfig.timevis.type == "event-timeline") {
+          // roundabout, xuanzang
           simpleTimeline(dataset,renderThese,tlRangeDates)
-        } else if(isFlow == true){
+          } else {
+          // incanto flows
           window.yrgroups = _.countBy(renderThese,function(l){
             return l.start.getFullYear();
-          })
-          // dataset,yrgroups,tlRangeDates,yLabel
+            })
           makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
-          // console.log('render histogram of yrgroups:', yrgroups)
         }
-      } else if (collection.attributes.segmentType == 'hRoutes') {
-        // multiple routes, assuming start/end date range
-        makeHistData(dataset,eventsObj,tlRangeDates,yLabel)
-      } else if (collection.attributes.periods.length > 0 && isFlow == false) {
-        // loadPeriods(collection.attributes.periods[0])
+      } else if (projConfig.timevis.type == "period-timeline") {
+        // bordeaux, courier, vicarello
         loadPeriods(projConfig.periods[0]['uri'],dataset)
-        // makePeriodData(collection.attributes.periods)
+      } else if (projConfig.timevis.type == "histogram") {
+        // owtrad
+        makeHistData(dataset,eventsObj,tlRangeDates,yLabel)
       }
-    })
+  })
 }
 
 $(".leaflet-popup-content a").click(function(e){

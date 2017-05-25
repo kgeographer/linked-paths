@@ -42,7 +42,7 @@ window.projects = {
 		"pub_date": "2016",
 		"places": "places_incanto.csv",
 		"timespan": ["1283","","","1453","between 1283 and 1453CE"],
-		"timevis": {"type":"histogram","label":"Total ships per year"},
+		"timevis": {"type":"histogram-flow","label":"Total ships per year"},
 		"periods": [{"name":"Mélanie Fournier (Dalhousie University)", "uri":""},{"name":"Karl Grossner", "uri":"http://kgeographer.org"}],
 		"references": [{"name":"","type":"","uri":""}],
 		"languages": [""],
