@@ -309,6 +309,10 @@ var download = function(type, data){
 }
 
 window.zapLayer = function(dataset) {
+  // if < 2 projects loaded, enable checkboxes
+  if($("#data_layers input:checkbox:checked").length < 2){
+    $("input:checkbox:not(:checked)").attr("disabled",false)
+  }
   // uncheck it
   dataset = dataset.slice(-2)[0]=='-' ? dataset.slice(0,-2) : dataset
   $("input:checkbox[value='"+ dataset +"']").prop('checked',false);
@@ -417,6 +421,10 @@ window.makeDate = function(d){
 }
 
 window.loadLayer = function(dataset) {
+  // if two projects loaded, disable checkboxes
+  if($("#data_layers input:checkbox:checked").length == 2){
+    $("input:checkbox:not(:checked)").attr("disabled",true)
+  }
   // console.log('loadLayer()',dataset)
   $(".loader").show()
   // check in case layer was loaded programatically
