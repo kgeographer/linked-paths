@@ -84,32 +84,6 @@ $(function() {
   })
 });
 
-window.addTimeDiv = function(dataset){
-  if($("#tltabs").length == 0){
-    let tabdiv = document.createElement('div')
-    tabdiv.id = "tltabs"
-    tabdiv.className = "tab"
-    $("#tl").append(tabdiv)
-    let b = $('<button id="b_'+dataset+'" class="tablinks" onclick="openTab(event,\''+
-      dataset+'\')">'+dataset+'</button>')
-    // let b = $('<button class="tablinks" onclick="console.log(\''+dataset+'\')">'+dataset+'</button>')
-    // let b = $('<input type="button" value="new button"/>');
-    $("#tltabs").append(b)
-    let visdiv = document.createElement('div')
-    visdiv.id = "t_"+dataset
-    visdiv.className = "tabcontent"
-    $("#tl").append(visdiv)
-  } else {
-    let b = $('<button class="tablinks active" onclick="openTab(event,\''+dataset+'\')">'+dataset+'</button>')
-    $("#tltabs").append(b)
-    let visdiv = document.createElement('div')
-    visdiv.id = "t_"+dataset
-    visdiv.className = "tabcontent"
-    $("#tl").append(visdiv)
-  }
-  // tltabs/tab
-  // dataset/tabcontent
-}
 function onResize() {
     if (resizeTimerID == null) {
         resizeTimerID = window.setTimeout(function() {
@@ -219,7 +193,7 @@ function listFeatureProperties(props,when){
 }
 
 // from Perio.do
-window.loadPeriods = function(uri,dataset){
+window.loadPeriods = function(dataset,uri){
   let len = uri.length
   // extract pid
   let pid = uri.substring(len-14,len-5)
@@ -345,8 +319,12 @@ window.zapLayer = function(dataset) {
   $(".place-card").remove();
   // remove time vis if exists
   // TODO: dataset id for timevis, remove by id
-  $("#tlvis_"+dataset).remove()
-  // $("#b_"+dataset).remove()
+  $("#t_"+dataset).remove()
+  if($("#data_layers input:checkbox:checked").length == 1){
+    let lastProj = $("#data_layers input:checkbox:checked")[0].value
+    document.getElementById("t_"+lastProj).style.display = "block";
+  }
+  $("#b_"+dataset).remove()
 
   // $("#tlvis_"+dataset).remove()
   // remove its data from the map
@@ -645,7 +623,7 @@ window.loadLayer = function(dataset) {
       // owtrad: histogram
       // roundabout: event-timeline
       // xuanzang: event-timeline
-      // addTimeDiv(dataset)
+      addTimeDiv(dataset)
       window.renderThese = []
       if(["histogram-flow","event-timeline"].indexOf(projConfig.timevis.type) > -1 ) {
         // roundabout, xuanzang, incanto
@@ -678,13 +656,47 @@ window.loadLayer = function(dataset) {
         }
       } else if (projConfig.timevis.type == "period-timeline") {
         // bordeaux, courier, vicarello
-        loadPeriods(projConfig.periods[0]['uri'],dataset)
+        loadPeriods(dataset,projConfig.periods[0]['uri'])
       } else if (projConfig.timevis.type == "histogram") {
         // owtrad
         makeHistData(dataset,eventsObj,tlRangeDates,yLabel)
       }
   })
 }
+window.addTimeDiv = function(dataset){
+  // if there's already > 0 tabs, remove active class
+  if($("#tltabs").length > 0){
+    $(".tablinks").removeClass("active")
+    $(".tabcontent").css("display","none")
+  }
+  // add a button to #tltabs, make 'active'
+  let b = $('<button id="b_'+dataset+'" class="tablinks active" onclick="openTab(event,\''+
+    dataset+'\')">'+dataset+'</button>')
+  $("#tltabs").append(b)
+  // add a content div to #tl
+  let tldiv = $('<div id="t_'+dataset+'" class="tabcontent"></div>')
+  $("#tl").append(tldiv)
+  // $(".tabcontent").css("display","none")
+  // $("t_"+dataset).css("display","block")
+  // openTab(event,dataset)
+    // let b = $('<button class="tablinks" onclick="console.log(\''+dataset+'\')">'+dataset+'</button>')
+    // let b = $('<input type="button" value="new button"/>');
+}
+//     let visdiv = document.createElement('div')
+//     visdiv.id = "t_"+dataset
+//     visdiv.className = "tabcontent"
+//     $("#tl").append(visdiv)
+//   } else {
+//     let b = $('<button class="tablinks active" onclick="openTab(event,\''+dataset+'\')">'+dataset+'</button>')
+//     $("#tltabs").append(b)
+//     let visdiv = document.createElement('div')
+//     visdiv.id = "t_"+dataset
+//     visdiv.className = "tabcontent"
+//     $("#tl").append(visdiv)
+//   }
+//   // tltabs/tab
+//   // dataset/tabcontent
+// }
 
 $(".leaflet-popup-content a").click(function(e){
   e.preventDefault();

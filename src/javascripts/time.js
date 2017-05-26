@@ -20,17 +20,20 @@ window.openTab = function(evt,dataset) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
+    // console.log('display:block for ', "t_"+dataset)
+    // $("#t_"+dataset).removeClass("hidden")
     document.getElementById("t_"+dataset).style.display = "block";
-    // evt.currentTarget.className += " active";
+    evt.currentTarget.className += " active";
 
 }
 
 window.makeTimeVis = function(periodArray,dataset,pid){
   console.log('dataset,pid',dataset, pid)
-  var newdiv = document.createElement('div')
-  newdiv.setAttribute("id", "tlvis_"+dataset);
-  var container = document.getElementById('tl');
-  container.appendChild(newdiv)
+  var newdiv = document.getElementById('t_'+dataset)
+  // var newdiv = document.createElement('div')
+  // newdiv.setAttribute("id", "tlvis_"+dataset);
+  // var container = document.getElementById('tl');
+  // container.appendChild(newdiv)
   // Configuration for the Timeline
   var options = {
     autoResize: true,

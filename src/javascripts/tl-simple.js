@@ -68,11 +68,11 @@ window.simpleTimeline = function(dataset,events,tlrange){
     maxdate=maxdate.addYears(1)
   }
   // console.log('mindate,maxdate',mindate,maxdate)
-  var vis = d3.select("#tl ").append("svg:svg")
+  var vis = d3.select("#t_"+dataset).append("svg:svg")
   // var vis = d3.select("#t_"+dataset).append("svg:svg")
     .attr("width", width)
     .attr("height", height)
-    .attr("id", "tlvis_"+dataset);
+    .attr("id", "tsvg_"+dataset);
 
   var xScale = d3.scaleTime()
     // subtract 1 day to account for timezone when grain = day

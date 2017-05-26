@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 /* Style the tab */
 div.tab {
     overflow: hidden;
@@ -30,7 +33,7 @@ div.tab button.active {
 
 /* Style the tab content */
 .tabcontent {
-    display: none;
+    display: block;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
