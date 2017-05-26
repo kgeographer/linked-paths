@@ -90,7 +90,8 @@ window.addTimeDiv = function(dataset){
     tabdiv.id = "tltabs"
     tabdiv.className = "tab"
     $("#tl").append(tabdiv)
-    let b = $('<button class="tablinks" onclick="openTab(event,\''+dataset+'\')">'+dataset+'</button>')
+    let b = $('<button id="b_'+dataset+'" class="tablinks" onclick="openTab(event,\''+
+      dataset+'\')">'+dataset+'</button>')
     // let b = $('<button class="tablinks" onclick="console.log(\''+dataset+'\')">'+dataset+'</button>')
     // let b = $('<input type="button" value="new button"/>');
     $("#tltabs").append(b)
@@ -99,7 +100,7 @@ window.addTimeDiv = function(dataset){
     visdiv.className = "tabcontent"
     $("#tl").append(visdiv)
   } else {
-    let b = $('<button class="tablinks" onclick="openTab(event,\''+dataset+'\')">'+dataset+'</button>')
+    let b = $('<button class="tablinks active" onclick="openTab(event,\''+dataset+'\')">'+dataset+'</button>')
     $("#tltabs").append(b)
     let visdiv = document.createElement('div')
     visdiv.id = "t_"+dataset
@@ -345,6 +346,9 @@ window.zapLayer = function(dataset) {
   // remove time vis if exists
   // TODO: dataset id for timevis, remove by id
   $("#tlvis_"+dataset).remove()
+  // $("#b_"+dataset).remove()
+
+  // $("#tlvis_"+dataset).remove()
   // remove its data from the map
   let name_p = "places_"+dataset;
   let name_s = "segments_"+dataset;
@@ -641,6 +645,7 @@ window.loadLayer = function(dataset) {
       // owtrad: histogram
       // roundabout: event-timeline
       // xuanzang: event-timeline
+      // addTimeDiv(dataset)
       window.renderThese = []
       if(["histogram-flow","event-timeline"].indexOf(projConfig.timevis.type) > -1 ) {
         // roundabout, xuanzang, incanto

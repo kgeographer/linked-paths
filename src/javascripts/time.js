@@ -2,7 +2,8 @@
 var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 
 window.openTab = function(evt,dataset) {
-    console.log('openTab', dataset)
+    window.e = evt
+    // console.log('openTab,evt', evt,dataset)
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -20,7 +21,8 @@ window.openTab = function(evt,dataset) {
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById("t_"+dataset).style.display = "block";
-    evt.currentTarget.className += " active";
+    // evt.currentTarget.className += " active";
+
 }
 
 window.makeTimeVis = function(periodArray,dataset,pid){
