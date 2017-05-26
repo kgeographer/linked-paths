@@ -4,17 +4,24 @@
 /* Style the tab */
 div.tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    /*background-color: yellow;*/
+    /*border: 1px solid #ccc;*/
     background-color: #f1f1f1;
+    height: 20px;
 }
 
 /* Style the buttons inside the tab */
 div.tab button {
     background-color: #ddd;
+    font-size: 75%;
+    font-weight: 600;
+    letter-spacing: 1px;
     /*background-color: inherit;*/
     float: left;
-    border: none;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     outline: none;
     cursor: pointer;
     padding: 4px 6px;
@@ -35,6 +42,6 @@ div.tab button.active {
 .tabcontent {
     display: block;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     border-top: none;
 }

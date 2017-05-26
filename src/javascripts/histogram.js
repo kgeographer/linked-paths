@@ -18,10 +18,10 @@ window.yScale = d3.scaleLinear()
 window.makeHistogram = function(dataset,data,yLabel){
   // console.log('in makeHistogram',dataset,yLabel)
 
-  window.svg_hist = d3.select("#tl").append("svg")
+  window.svg_hist = d3.select("#t_"+dataset).append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-    .attr("id", "tlvis_"+dataset)
+    .attr("id", "tsvg_"+dataset)
   .append("g")
     .attr("transform","translate(" + margin.left + "," + margin.top + ")")
 
