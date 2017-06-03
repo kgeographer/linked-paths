@@ -6,7 +6,7 @@ var margin = {top: 10, right: 0, bottom: 20, left: 40},
   padding_h = 10,
   padding_w = 40;
 
-  // set the ranges
+// set the ranges
 window.xScale = d3.scaleBand()
   .range([0, width])
   .padding(0.05);
@@ -35,10 +35,6 @@ window.makeHistogram = function(dataset,data,yLabel){
     }));
 
   var axisL = d3.axisLeft(yScale)
-    // .tickValues(yScale.domain().filter(function(d,i){
-    //   // console.log(d,i)
-    //   return dataset == 'incanto' ? !(i%10): d
-    // }));
 
   svg_hist.selectAll(".bar")
     .data(data)
@@ -48,8 +44,6 @@ window.makeHistogram = function(dataset,data,yLabel){
     .attr("width", xScale.bandwidth())
     .attr("y", function(d) { return yScale(d.count); })
     .attr("height", function(d) { return height - yScale(d.count); });
-    // .attr("y", function(d) { return yScale(d.count); })
-    // .attr("height", function(d) { return height - yScale(d.count); });
 
   var xAxis = svg_hist.append("g")
     .attr("id","xaxis")
@@ -64,16 +58,13 @@ window.makeHistogram = function(dataset,data,yLabel){
     .attr("y", 20)
     .attr("text-anchor", "left")
     .classed("y_label", true)
-    // .style("font-size", "12px")
-    // .style("color", "#993333")
-    // .style("font-weight", "800")
     .text(yLabel);
 
   $(".loader").hide()
 }
 
 window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
-  console.log('makeFlowHistData',dataset,yLabel)
+  // console.log('makeFlowHistData',dataset,yLabel)
   window.bins = []
   window.range=tlRangeDates
   _.each(yrgroups,function(k,v){
@@ -83,7 +74,7 @@ window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
 }
 
 window.makeHistData = function(dataset,eventsObj,tlRangeDates,yLabel){
-  console.log('makeHistData yLabel',dataset,yLabel)
+  // console.log('makeHistData yLabel',dataset,yLabel)
   window.bins = []
   window.range=tlRangeDates
   var r0 = range[0].getFullYear()
@@ -95,10 +86,7 @@ window.makeHistData = function(dataset,eventsObj,tlRangeDates,yLabel){
   _.each(eventsObj.events,function(e) {
     // console.log(parseInt(v.start),parseInt(v.end))
     _.each(bins, function(b,i){
-      // console.log('b,i:',b,i)
-      // console.log('k,v.start,v.end:',k,e.start,e.end)
       if(b.year >= parseInt(e.start) && b.year <= parseInt(e.end)){
-        // console.log('k,e.start,e.end:',k,e.start,e.end)
         bins[i]['count'] +=1
       }
     })

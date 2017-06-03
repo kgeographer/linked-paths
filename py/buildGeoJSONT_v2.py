@@ -11,7 +11,7 @@ def init():
     #dir = os.getcwd() + '/data/'
     #os.chdir('./py')
     global proj, reader_p, reader_s, finp, fins, fout, foutp, fouts, collection, collectionAttributes, routeidx, exactMatches
-    # owtrad, courier, incanto-j, roundabout, vicarello, xuanzang, bordeaux 
+    # owtrad, courier, incanto, roundabout, vicarello, xuanzang, bordeaux 
     # (incanto-f abandoned for now, flows computed from journeys)
     proj = 'owtrad'
     data = 'owtrad'
@@ -112,7 +112,7 @@ def createPlaces():
             feat['properties'][props[x]] = row[props[x]]
         #if row['lng'] != null:
         collection['features'].append(feat)
-        print(str(len(collection['features'])) + ' place features')
+    print(str(len(collection['features'])) + ' place features')
 
 
 def createSegments():

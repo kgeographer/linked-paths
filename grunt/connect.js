@@ -5,7 +5,8 @@ module.exports = {
   dist: {
     options: {
       base: '<%= site %>',
-      livereload: true
+      livereload: true,
+      port: 7000
     }
   }
 };

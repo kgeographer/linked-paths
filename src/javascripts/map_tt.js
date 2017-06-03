@@ -3,8 +3,6 @@ var url = require('url'),
     moment = require('moment'),
     _ = require('underscore')
 window._ = _
-    // , d3 = require('d3')
-// require('bootstrap')
 require('mapbox.js')
 var turf = require('turf')
 
@@ -20,8 +18,6 @@ window.searchParams = querystring.parse(parsedUrl.search.substring(1));
 window.features = {};
 window.d3graph = {"nodes":[], "links":[]}
 window.idToFeature = {};
-// TODO; simile doesn't handle BCE well
-// window.eventsObj = {'dateTimeFormat': 'Gregorian','events':[ ]};
 window.eventsObj = {'dateTimeFormat': 'iso8601','events':[ ]};
 window.myLayer = {};
 window.pointFeatures = [];
@@ -43,7 +39,6 @@ $(function() {
     $("#data").toggle("fast")
   })
   $(".data-header").html(searchParams['d'])
-  // $('#data_layers .checkbox input:checkbox');
   $('#data_layers .checkbox').mouseover(function(e){
     if ($(".checkbox input:checkbox:checked").length == 0){
       let dataset = this.childNodes[1].childNodes[0].value
@@ -193,7 +188,7 @@ function listFeatureProperties(props,when){
 }
 
 // from Perio.do
-window.loadPeriods = function(dataset,uri){
+var loadPeriods = function(dataset,uri){
   let len = uri.length
   // extract pid
   let pid = uri.substring(len-14,len-5)
@@ -308,7 +303,7 @@ var download = function(type, data){
   }
 }
 
-window.zapLayer = function(dataset) {
+var zapLayer = function(dataset) {
   // if < 2 projects loaded, enable checkboxes
   if($("#data_layers input:checkbox:checked").length < 2){
     $("input:checkbox:not(:checked)").attr("disabled",false)
@@ -407,7 +402,7 @@ function startMapM(dataset=null){
   }
 }
 
-window.makeDate = function(d){
+var makeDate = function(d){
   // console.log('makeDate from:',d)
   // handle all these: "2016-09-10"; "0494-01"; "23"; "-200"
   let arr = d[0]!='-' ? d.split('-') : d.substring(1,d.length).split('-')
@@ -420,20 +415,15 @@ window.makeDate = function(d){
   return date;
 }
 
-window.loadLayer = function(dataset) {
-  // if two projects loaded, disable checkboxes
+var loadLayer = function(dataset) {
+  // if two projects are loaded, disable checkboxes
   if($("#data_layers input:checkbox:checked").length == 2){
     $("input:checkbox:not(:checked)").attr("disabled",true)
   }
-  // console.log('loadLayer()',dataset)
   $(".loader").show()
-  // check in case layer was loaded programatically
+  // check checkbox in case layer was loaded programatically
   $(":checkbox[value='"+dataset+"']").prop("checked","true")
-  // isFlow = dataset.slice(-2) == '-j' ? true : false;
   isFlow = dataset == 'incanto' ? true : false;
-  // console.log('isFlow',isFlow)
-  // strip -f from incanto-f
-  // dataset = dataset.slice(-2)[0] == '-' ? dataset.slice(0,-2) : dataset
   if(features.bboxes) {features.bboxes.removeFrom(ttmap)}
   // clear feature arrays
   pointFeatures = [];
@@ -624,13 +614,10 @@ window.loadLayer = function(dataset) {
       }
 
       // TIME
-      // bordeaux: period-timeline
-      // courier: period-timeline
-      // vicarello: period-timeline
-      // incanto: histogram-flow
-      // owtrad: histogram
-      // roundabout: event-timeline
-      // xuanzang: event-timeline
+      // period-timeline: bordeaux, courier, vicarello
+      // histogram-flow: incanto
+      // histogram: owtrad
+      // event-timeline: roundabout, xuanzang
       addTimeDiv(dataset)
       window.renderThese = []
       if(["histogram-flow","event-timeline"].indexOf(projConfig.timevis.type) > -1 ) {
@@ -684,27 +671,7 @@ window.addTimeDiv = function(dataset){
   // add a content div to #tl
   let tldiv = $('<div id="t_'+dataset+'" class="tabcontent"></div>')
   $("#tl").append(tldiv)
-  // $(".tabcontent").css("display","none")
-  // $("t_"+dataset).css("display","block")
-  // openTab(event,dataset)
-    // let b = $('<button class="tablinks" onclick="console.log(\''+dataset+'\')">'+dataset+'</button>')
-    // let b = $('<input type="button" value="new button"/>');
 }
-//     let visdiv = document.createElement('div')
-//     visdiv.id = "t_"+dataset
-//     visdiv.className = "tabcontent"
-//     $("#tl").append(visdiv)
-//   } else {
-//     let b = $('<button class="tablinks active" onclick="openTab(event,\''+dataset+'\')">'+dataset+'</button>')
-//     $("#tltabs").append(b)
-//     let visdiv = document.createElement('div')
-//     visdiv.id = "t_"+dataset
-//     visdiv.className = "tabcontent"
-//     $("#tl").append(visdiv)
-//   }
-//   // tltabs/tab
-//   // dataset/tabcontent
-// }
 
 $(".leaflet-popup-content a").click(function(e){
   e.preventDefault();

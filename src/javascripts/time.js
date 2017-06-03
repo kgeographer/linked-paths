@@ -3,7 +3,6 @@ var d3 = Object.assign({}, require("d3"), require("d3-scale"));
 
 window.openTab = function(evt,dataset) {
     window.e = evt
-    // console.log('openTab,evt', evt,dataset)
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -20,8 +19,6 @@ window.openTab = function(evt,dataset) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    // console.log('display:block for ', "t_"+dataset)
-    // $("#t_"+dataset).removeClass("hidden")
     document.getElementById("t_"+dataset).style.display = "block";
     evt.currentTarget.className += " active";
 
@@ -30,10 +27,7 @@ window.openTab = function(evt,dataset) {
 window.makeTimeVis = function(periodArray,dataset,pid){
   console.log('dataset,pid',dataset, pid)
   var newdiv = document.getElementById('t_'+dataset)
-  // var newdiv = document.createElement('div')
-  // newdiv.setAttribute("id", "tlvis_"+dataset);
-  // var container = document.getElementById('tl');
-  // container.appendChild(newdiv)
+
   // Configuration for the Timeline
   var options = {
     autoResize: true,
@@ -51,6 +45,5 @@ window.makeTimeVis = function(periodArray,dataset,pid){
   };
   // Create a Timeline
   var timeline = new vis.Timeline(newdiv, periodArray, options)
-  // var timeline = new vis.Timeline(container, periodArray, options)
 
 }

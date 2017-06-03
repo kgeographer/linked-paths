@@ -3,7 +3,7 @@ import index_utils
 from index_utils import indexedPlace, matchRecord
 from elasticsearch import Elasticsearch
 
-#projects = ['vicarello']
+#projects = ['incanto','roundabout']
 projects = ['bordeaux','courier','incanto','owtrad','roundabout','vicarello','xuanzang']
 
 def indexPlaces():
@@ -28,8 +28,11 @@ def indexPlaces():
                         for i in n:
                             b.extend(i.split(', '))
                         e[0]['names'] = list(set(b))
+                        e[0]['id'] = row[1]
+                        e[0]['title'] = row[2]
+                        e[0]['source_gazetteer'] = row[0]
                         row[7] = json.dumps(e)
-                        #print(row)
+                        #print(e)
                         allPlaces.append(row)
     
     # make allIndex[]
@@ -51,6 +54,7 @@ def indexPlaces():
             #print(exact)
             matched.append(exact)
             #print(len(matched), matched[1])
+            print('matched exact',exact)
             match_counter += 1
         else:
             # there's no allIndex[] record with matching uri -> new index record
@@ -80,8 +84,9 @@ def indexPlaces():
         # merge names into suggest[] and write out index records
         # TODO: pipe directly into index; writing out is a debug exercise; 
         #fouti = codecs.open('allIndex.json', 'w', 'utf8')    
-        fouti = codecs.open('../../_site/data/index/allIndex.json', 'w', 'utf8')    
+        fouti = codecs.open('../../_site/data/index/allIndex.json', 'w', 'utf8')  
         for x in range(len(allIndex)):
+            #print('len', len(allIndex[x].is_conflation_of))
             allIndex[x].suggest = list(set(allIndex[x].suggest + \
                                            allIndex[x].is_conflation_of[0]['exact_matches'][0]['names']))
             try:
