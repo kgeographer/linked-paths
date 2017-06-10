@@ -19,7 +19,7 @@ div.tab button {
     float: left;
     border-top: 1px solid #ddd;
     border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    border-right: 2px solid #ddd;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     outline: none;
