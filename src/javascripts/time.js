@@ -25,7 +25,7 @@ window.openTab = function(evt,dataset) {
 }
 
 window.makeTimeVis = function(periodArray,dataset,pid){
-  console.log('dataset,pid',dataset, pid)
+  console.log('periodArray,dataset,pid',periodArray,dataset, pid)
   var newdiv = document.getElementById('t_'+dataset)
 
   // Configuration for the Timeline

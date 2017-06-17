@@ -72,7 +72,7 @@ $(function() {
   $("#tabs").tabs()
   $('[data-toggle="popover"]').popover();
   $('.panel-title i').click(function(){
-    window.open('http://kgeographer.com/?p=140&preview=true', '', 'width=700');
+    window.open('http://kgeographer.com/linked-places-v0-2/', '', 'width=700');
   })
   $(".tablinks").click(function(e){
     console.log('creating timevis div for ',this.value)
