@@ -16,7 +16,7 @@ window.yScale = d3.scaleLinear()
 // make a data object D3 histogram likes
 // year;count
 window.makeHistogram = function(dataset,data,yLabel){
-  // console.log('in makeHistogram',dataset,yLabel)
+  // console.log('in makeHistogram',dataset,data)
 
   window.svg_hist = d3.select("#t_"+dataset).append("svg")
     .attr("width", width + margin.left + margin.right)
