@@ -188,17 +188,17 @@ function listFeatureProperties(props,when){
 }
 
 // from Perio.do
+// uri examples:
+// period https://test.perio.do/fp7wv2s8c.json
+// collection https://test.perio.do/fp7wv.json
 var loadPeriods = function(dataset,uri){
   let len = uri.length
   // derive collection uri
   let collUri = uri.substring(0,len-9)+'.json'
   // extract individual period pid
   let pid = uri.substring(len-14,len-5)
-  // let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
-  // console.log('uri, collUri',uri, collUri)
-  //examples:
-  //period https://test.perio.do/fp7wv2s8c.json
-  //collection https://test.perio.do/fp7wv.json
+  let collLocal = 'data/'+uri.substring(22,len-9)+'.json'
+  console.log(uri,collUri,collLocal)
   $.when(
     $.ajax({
       url: collUri, // get whole collection
@@ -238,8 +238,6 @@ var loadPeriods = function(dataset,uri){
               } else {
                   msg = 'Uncaught Error.\n' + jqXHR.responseText;
               }
-              // window.location.reload()
-              // alert(msg)
           }
     })
   ).done(function(){
