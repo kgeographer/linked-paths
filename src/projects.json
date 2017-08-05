@@ -78,7 +78,7 @@ window.projects = {
 		"periods": [{"name":"", "uri":""}],
 		"references": [{"name":"Round About (photos)","type":"seeFurther","uri":"https://goo.gl/photos/omyC7fjZDgcjbYN98"}],
 		"languages": ["en"],
-		"description": "An journey expected to be a circumnavigation gets turned around in the Kingdom of Thailand"
+		"description": "A journey expected to be a circumnavigation gets turned around in the Kingdom of Thailand"
 	},
 	"vicarello": {
 		"lp_id": "lp_vicarello",

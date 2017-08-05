@@ -46,8 +46,8 @@ body {
 #tl p,
 #timevis p {
   text-align: center;
-  font-size: 2em;
-  color: gainsboro;
+  font-size: 1.5em;
+  color: #993333;
   margin-top: 30px;
 }
 .vis-item .vis-item-overflow {
@@ -172,6 +172,8 @@ div.tooltip {
 .checkbox input[type=checkbox] {
   cursor: pointer;
 }
+@hoards :#
+// legend dots in menu
 .dot {
   border: 1px solid #666;
   -webkit-border-radius: 1100%;

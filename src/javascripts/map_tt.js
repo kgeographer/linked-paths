@@ -9,7 +9,7 @@ var turf = require('turf')
 moment().format();
 // import add'l app JavaScript
 import './bloodhound.js';
-// require('@turf/centroid')
+// reque('@turf/centroid')
 // require('@turf/buffer')
 
 // exposed for debugging
@@ -190,17 +190,16 @@ function listFeatureProperties(props,when){
 // from Perio.do
 var loadPeriods = function(dataset,uri){
   let len = uri.length
-  // extract pid
-  let pid = uri.substring(len-14,len-5)
   // derive collection uri
   let collUri = uri.substring(0,len-9)+'.json'
+  // extract individual period pid
+  let pid = uri.substring(len-14,len-5)
   // let collUri = 'https://test.perio.do/' + pid.substring(0,l-4)+'.json'
   // console.log('uri, collUri',uri, collUri)
   //examples:
   //period https://test.perio.do/fp7wv2s8c.json
   //collection https://test.perio.do/fp7wv.json
   $.when(
-    //
     $.ajax({
       url: collUri, // get whole collection
       // url: uri,
@@ -218,8 +217,30 @@ var loadPeriods = function(dataset,uri){
         window.pdsContext = _.filter(pdefs,function(pdef){
           return pdef.start.in.year <= pidRange[1] && pdef.stop.in.year >= pidRange[0];
         })
-        // console.log('pidRange,pdsRange,pdsRangeYears:',pidRange,pdsRange,pdsRangeYears)
-      }
+      },
+      timeout: 2000,
+      error: function (jqXHR, exception) {
+              var msg = '';
+              if (jqXHR.status === 0) {
+                  $("#t_"+dataset).html('<p>Period data for <b>'+dataset+
+                    '</b> is not available right now, sorry!</p>');
+                  $(".loader").hide()
+              } else if (jqXHR.status == 404) {
+                  msg = 'Requested page not found. [404]';
+              } else if (jqXHR.status == 500) {
+                  msg = 'Internal Server Error [500].';
+              } else if (exception === 'parsererror') {
+                  msg = 'Requested JSON parse failed.';
+              } else if (exception === 'timeout') {
+                  msg = 'Time out error.';
+              } else if (exception === 'abort') {
+                  msg = 'Ajax request aborted.';
+              } else {
+                  msg = 'Uncaught Error.\n' + jqXHR.responseText;
+              }
+              // window.location.reload()
+              // alert(msg)
+          }
     })
   ).done(function(){
     // format for timeline
