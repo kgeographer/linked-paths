@@ -117,5 +117,21 @@ window.projects = {
 			{"name":"The Silk Road journey with Xuanzang","type":"seeFurther","uri":"https://www.amazon.com/Silk-Road-Journey-Xuanzang/dp/0813365996"}],
 		"languages": ["en","zh"],
 		"description": "Data originally extracted by W. Thorpe from Wriggens, S. (2003) 'The Silk Road journey with Xuanzang', Basic Books; edited by Grossner 2010"
+	},
+	"hoards": {
+		"lp_id": "lp_hoards",
+		"title": "",
+		"authors": [{"name":"", "uri":""}],
+		"contributors": [{"name":"Ethan Gruber", "uri":""}],
+		"pub_date": "2017",
+		"places": "places_hoards.csv",
+		"timespan": ["-0055","","","0014",""],
+		"timevis": {"type":"event-timeline","label":""},
+		"periods": [{"name":"", "uri":""}],
+		"references": [
+			{"name":"","type":"","uri":""}
+		],
+		"languages": ["en"],
+		"description": ""
 	}
 }

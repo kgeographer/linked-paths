@@ -1,0 +1,379 @@
+{
+	"type": "FeatureCollection",
+  "when": {
+    "timespan": [
+      "-0055",
+      "",
+      "",
+      "0014",
+      ""
+    ]
+  },
+	"attributes": {
+		"segmentType": "journey",
+		"description": "Hoard distribution for a coin type",
+		"uri": "http://numismatics.org/crro/id/rrc-544.36",
+		"title": "http://numismatics.org/crro/id/rrc-544.36",
+		"timespan": "[-55,,,14,]",
+		"lp_id": "rrc-544.36"
+	},
+	"features": [{
+		"type": "Feature",
+		"label": "Zara (Italy; ZAR)",
+		"id": "http://numismatics.org/chrr/id/ZAR",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [14.26913, 40.85394]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0017",
+				"end": "-0017"
+			}]
+		},
+		"properties": {
+			"toponym": "Hotel Zara (Italy)",
+			"gazetteer_label": "Hotel Zara (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/6486176/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	},
+	{
+		"type": "Feature",
+		"label": "Delos (Greece; DEL)",
+		"id": "http://numismatics.org/chrr/id/DEL",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [25.26778, 37.3925]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0030",
+				"end": "-0030"
+			}]
+		},
+		"properties": {
+			"toponym": "Delos (Greece)",
+			"gazetteer_label": "Delos (Greece)",
+			"gazetteer_uri": "http://www.geonames.org/263090/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Este (Italy; ES2)",
+		"id": "http://numismatics.org/chrr/id/ES2",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [11.66379, 45.22338]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0003",
+				"end": "-0003"
+			}]
+		},
+		"properties": {
+			"toponym": "Este (Italy)",
+			"gazetteer_label": "Este (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/3177337/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Gallignano (Italy; GAL)",
+		"id": "http://numismatics.org/chrr/id/GAL",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [9.83761, 45.43768]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0003",
+				"end": "-0003"
+			}]
+		},
+		"properties": {
+			"toponym": "Gallignano (Italy)",
+			"gazetteer_label": "Gallignano (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/3176372/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Actium (Greece; ACT)",
+		"id": "http://numismatics.org/chrr/id/ACT",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [20.76667, 38.95]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0030",
+				"end": "-0030"
+			}]
+		},
+		"properties": {
+			"toponym": "Áktion (Greece)",
+			"gazetteer_label": "Áktion (Greece)",
+			"gazetteer_uri": "http://www.geonames.org/265389/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Cortijo del Alamo (Spain; ALA)",
+		"id": "http://numismatics.org/chrr/id/ALA",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-3.32275, 37.91997]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0026",
+				"end": "-0026"
+			}]
+		},
+		"properties": {
+			"toponym": "Río Jandulilla (Spain)",
+			"gazetteer_label": "Río Jandulilla (Spain)",
+			"gazetteer_uri": "http://www.geonames.org/2516378/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Aquileia (Italy; AQU)",
+		"id": "http://numismatics.org/chrr/id/AQU",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [13.36779, 45.7683]
+		},
+		"when": {
+			"timespans": [{
+				"start": "0014",
+				"end": "0014"
+			}]
+		},
+		"properties": {
+			"toponym": "Aquileia (Italy)",
+			"gazetteer_label": "Aquileia (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/3182943/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Compito (Italy; COM)",
+		"id": "http://numismatics.org/chrr/id/COM",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [10.55, 43.8]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0054",
+				"end": "-0054"
+			}]
+		},
+		"properties": {
+			"toponym": "Sant'Andrea di Compito (Italy)",
+			"gazetteer_label": "Sant'Andrea di Compito (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/3167483/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Palazzo Canavese (Italy; PCA)",
+		"id": "http://numismatics.org/chrr/id/PCA",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [7.97776, 45.45962]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0003",
+				"end": "-0003"
+			}]
+		},
+		"properties": {
+			"toponym": "Palazzo Canavese (Italy)",
+			"gazetteer_label": "Palazzo Canavese (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/3171636/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Vico Pisano (Italy; PIS)",
+		"id": "http://numismatics.org/chrr/id/PIS",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [10.58111, 43.68724]
+		},
+		"when": {
+			"timespans": [{
+				"start": "0004",
+				"end": "0004"
+			}]
+		},
+		"properties": {
+			"toponym": "Vicopisano (Italy)",
+			"gazetteer_label": "Vicopisano (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/6541096/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Castro de Alvarelhos (Portugal; CDA)",
+		"id": "http://numismatics.org/chrr/id/CDA",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-8.61112, 41.31266]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0026",
+				"end": "-0026"
+			}]
+		},
+		"properties": {
+			"toponym": "Alvarelhos (Portugal)",
+			"gazetteer_label": "Alvarelhos (Portugal)",
+			"gazetteer_uri": "http://www.geonames.org/2742998/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Bourgueil (France; BOU)",
+		"id": "http://numismatics.org/chrr/id/BOU",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [0.16612, 47.28333]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0014",
+				"end": "-0014"
+			}]
+		},
+		"properties": {
+			"toponym": "Bourgueil (France)",
+			"gazetteer_label": "Bourgueil (France)",
+			"gazetteer_uri": "http://www.geonames.org/3030944/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Bagheria (Sicily; BAG)",
+		"id": "http://numismatics.org/chrr/id/BAG",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [13.51236, 38.07892]
+		},
+		"when": {
+			"timespans": [{
+				"start": "0004",
+				"end": "0004"
+			}]
+		},
+		"properties": {
+			"toponym": "Bagheria (Italy)",
+			"gazetteer_label": "Bagheria (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/2525628/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Belmonte del Sannio (Italy; BDS)",
+		"id": "http://numismatics.org/chrr/id/BDS",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [14.42333, 41.82352]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0030",
+				"end": "-0030"
+			}]
+		},
+		"properties": {
+			"toponym": "Belmonte del Sannio (Italy)",
+			"gazetteer_label": "Belmonte del Sannio (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/3182205/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Linares (Spain; LIN)",
+		"id": "http://numismatics.org/chrr/id/LIN",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-3.63602, 38.09519]
+		},
+		"when": {
+			"timespans": [{
+				"start": "0004",
+				"end": "0004"
+			}]
+		},
+		"properties": {
+			"toponym": "Linares (Spain)",
+			"gazetteer_label": "Linares (Spain)",
+			"gazetteer_uri": "http://www.geonames.org/2515045/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Cologna Veneta (Italy; CVE)",
+		"id": "http://numismatics.org/chrr/id/CVE",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [11.38032, 45.30777]
+		},
+		"when": {
+			"timespans": [{
+				"start": "-0026",
+				"end": "-0026"
+			}]
+		},
+		"properties": {
+			"toponym": "Cologna Veneta (Italy)",
+			"gazetteer_label": "Cologna Veneta (Italy)",
+			"gazetteer_uri": "http://www.geonames.org/3178288/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}, {
+		"type": "Feature",
+		"label": "Nice (France; NIC)",
+		"id": "http://numismatics.org/chrr/id/NIC",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [7.26608, 43.70313]
+		},
+		"when": {
+			"timespans": [{
+				"start": "0004",
+				"end": "0004"
+			}]
+		},
+		"properties": {
+			"toponym": "Nice (France)",
+			"gazetteer_label": "Nice (France)",
+			"gazetteer_uri": "http://www.geonames.org/2990440/",
+			"exact_matches": [],
+			"type": "hoard"
+		}
+	}]
+}
