@@ -57,6 +57,7 @@ $(function() {
     if(this.checked == true) {
       if(searchParams['p'] == undefined) {
         ga('send', 'event', ['Layers'], ['Check'], ['Data panel']);
+        $("#tl").show()
         loadLayer(this.value)
       } else {
         location.href = location.origin+location.pathname+'?d='+this.value;
@@ -338,9 +339,13 @@ var zapLayer = function(dataset) {
   // remove time vis if exists
   // TODO: dataset id for timevis, remove by id
   $("#t_"+dataset).remove()
-  if($("#data_layers input:checkbox:checked").length == 1){
+  let numproj = $("#data_layers input:checkbox:checked").length
+  console.log('numproj',numproj)
+  if(numproj == 1){
     let lastProj = $("#data_layers input:checkbox:checked")[0].value
     document.getElementById("t_"+lastProj).style.display = "block";
+  } else if (numproj == 0) {
+    $("#tl").hide()
   }
   $("#b_"+dataset).remove()
 
@@ -454,11 +459,7 @@ var loadLayer = function(dataset) {
   // map id to leaflet layer object
   window.idToFeature[dataset] = {places:{}, segments:{}}
 
-  // TODO: resume managing state in window.href
-  // if(searchParams['p'] != undefined){
-  //   $("#results_inset").html('<p>Dataset: '+searchParams['d']+
-  //     '</p><p>Place:'+searchParams['p']+'</p>')
-  // }
+  // TODO: manage state in window.href
 
   /*  read a single FeatureCollection of
       Places (geometry.type == Point), and
@@ -475,7 +476,6 @@ var loadLayer = function(dataset) {
       // y-axis label for histogram magnitudes
       var yLabel = projConfig.timevis.label
       // write dataset card for data panel
-      // writeCard(dataset,collection.attributes)
       writeCard(dataset,projConfig)
 
       window.tlRangeDates = [makeDate(collection.when.timespan[0]),
@@ -492,27 +492,21 @@ var loadLayer = function(dataset) {
             let latlng = new L.LatLng(geomF.coordinates[1],geomF.coordinates[0])
 
             var placeFeature = new L.CircleMarker(latlng,stylePoints(layer))
-            // var placeFeature = new L.CircleMarker(latlng, mapStyles.places)
             // console.log('layer.feature.properties',layer.feature.properties)
             let gazURI = layer.feature.properties.exact_matches.length>0?
               layer.feature.properties.exact_matches[0].uri:""
             // console.log(gazURI)
             var popContent = $('<a href="#" gaz="'+gazURI+'">'+
-              // layer.feature.properties.toponym+'<br/>'+
               (dataset=='courier'&&gazURI!="" ? 'TGAZ record':
                 ['vicarello','bordeaux'].indexOf(dataset)>-1 ? 'Pleiades record':
                 ['roundabout','xuanzang','incanto'].indexOf(dataset)>-1?'Geonames record':'')+'</a>')
               .click(function(e){
                 ga('send', 'event', ['Map'], ['Gaz lookup'], ['Linked Data']);
-                // console.log('gonna get and parse gaz json here',gazURI)
                 $(".loader").show()
                 $.when(
                   $.getJSON(gazURI, function(result){
                     // console.log(result)
                     $("#gaz_pre").html(JSON.stringify(result,undefined,2))
-                    // $.each(result, function(i, field){
-                    //     $("#gaz_modal .modal-body").append(field + " ");
-                    // })
                   })
                 ).done(function(){
                   $(".loader").hide()
@@ -538,9 +532,10 @@ var loadLayer = function(dataset) {
             placeFeature.on("click",function(){
               ga('send', 'event', ['Map'], ['Click place'], ['Map']);
             })
-            // placeFeature.on("click", function(e){
-            //   alert('this will query the ElasticSearch index...')
-            // })
+            // clear connection results on place popup close
+            placeFeature.on("popupclose", function(){
+              $(".place-card").remove()
+            })
             pointFeatures.push(placeFeature)
             var pid = layer.feature.id
             idToFeature[dataset].places[pid] = placeFeature
