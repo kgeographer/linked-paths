@@ -27,7 +27,7 @@ module.exports = {
       'src/javascripts/graph.js','src/javascripts/histogram.js',
       'src/javascripts/map_tt.js','src/javascripts/periods.js',
       'src/javascripts/time.js','src/javascripts/tl-simple.js',
-      'src/projects.json'
+      'src/projects.json','src/javascripts/tl/*.js'
     ],
     dest: '<%= site %>/script.js'
   }

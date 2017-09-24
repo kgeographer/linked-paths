@@ -13,13 +13,10 @@ window.xScale = d3.scaleBand()
 window.yScale = d3.scaleLinear()
   .range([height, 0]);
 
-makeNiceHistogram = function(){
-  
-}
 // make a data object D3 histogram likes
 // year;count
 window.makeHistogram = function(dataset,data,yLabel){
-  // console.log('in makeHistogram',dataset,data)
+  // console.log('in makeHistogram',dataset,JSON.stringify(data))
 
   window.svg_hist = d3.select("#t_"+dataset).append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -74,6 +71,36 @@ window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
     bins.push({"year":parseInt(v),"count":k});
   })
   makeHistogram(dataset,bins,yLabel)
+}
+window.makeNiceFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
+  // console.log('makeFlowHistData',dataset,yLabel)
+  console.log('# yrgroups',Object.keys(yrgroups).length)
+  window.dataObj = {"title":"Incanto ships per year","buckets":[]}
+  window.buckets = []
+  // window.range=tlRangeDates
+  window.fubarcount=0
+  _.each(yrgroups,function(v,k){
+    let foo = {}
+    foo[k] = v
+    // console.log(k,v)
+    dataObj['buckets'].push(foo);
+  })
+  console.log('# buckets',dataObj['buckets'].length)
+  // console.log(dataObj)
+  // makeHistogram(dataset,dataObj,yLabel)
+  makeNiceHistogram(dataset,dataObj,yLabel)
+}
+
+window.makeNiceHistogram = function(dataset,dataObj,yLabel){
+  // console.log('makeNiceHistorgram() dataObj:',dataObj)
+  // make a histogram container
+  $( "<div class='trs-title'></div>" ).appendTo( "#t_"+dataset);
+  $( "<div id='container'></div>" ).appendTo( "#t_"+dataset);
+  var t = new Pelagios.TimerangeSelector(document.getElementById('container'));
+  t.update(dataObj);
+  t.on('changed', function(evt) {
+    console.log('filter map ', evt);
+  });
 }
 
 window.makeHistData = function(dataset,eventsObj,tlRangeDates,yLabel){

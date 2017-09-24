@@ -661,7 +661,8 @@ var loadLayer = function(dataset) {
           window.yrgroups = _.countBy(renderThese,function(l){
             return l.start.getFullYear();
             })
-          makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
+          makeNiceFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
+          // makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
         }
       } else if (projConfig.timevis.type == "period-timeline") {
         // bordeaux, courier, vicarello
