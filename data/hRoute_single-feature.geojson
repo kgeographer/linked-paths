@@ -1,0 +1,97 @@
+{
+  "type": "FeatureCollection",
+  "features": [ {
+      "type": "Feature",
+      "properties": {
+        "id":"whg_routes",
+        "featureType":"hRoute"},
+      "geometry": {
+        "type": "GeometryCollection",
+        "geometries": [
+          { "type": "Point",
+            "coordinates": [
+              -122.14302,
+              37.44188
+            ],
+           "properties": {
+              "comment": "",
+              "gazetteer_label": "Palo Alto",
+              "exact_matches": [
+                {
+                  "uri": "http://api.geonames.org/getJSON?geonameId=5380748&username=kgeographer&style=full",
+                  "names": ["Palo Alto"]
+                }
+              ],
+              "nights": "",
+              "gazetteer_uri": "http://linkedplaces.org/places/ra0001",
+              "collection": "roundabout",
+              "toponym": "Palo Alto, CA",
+              "id": "ra0001",
+              "label": "Palo Alto, CA"
+            } 
+          },
+          {
+            "type": "Point",
+            "coordinates": [
+              -119.25183,
+              39.60797
+            ],
+            "properties": {
+              "comment": "",
+              "gazetteer_label": "Fernley",
+              "exact_matches": [
+                {
+                  "uri": "http://api.geonames.org/getJSON?geonameId=5504003&username=kgeographer&style=full",
+                  "names": [
+                    "Fernley"
+                  ]
+                }
+              ],
+              "nights": "1",
+              "gazetteer_uri": "http://linkedplaces.org/places/ra0002",
+              "collection": "roundabout",
+              "toponym": "Fernley, NV",
+              "id": "ra0002",
+              "label": "Fernley, NV"
+            }
+          },
+          {
+            "type": "LineString",
+            "properties": {
+              "follows": "",
+              "mode": "auto",
+              "route_id": "6001",
+              "duration": "",
+              "segment_id": "6001-1",
+              "target": "ra0002",
+              "collection": "ra",
+              "source": "ra0001",
+              "label": "Palo Alto > Fernley"
+            },
+            "coordinates": [
+              [
+                -122.14302,
+                37.44188
+              ],
+              [
+                -119.25183,
+                39.60797
+              ]
+            ],
+            "when": {
+              "timespan": [
+                "2016-09-10",
+                "",
+                "",
+                "",
+                ""
+              ],
+              "duration": "",
+              "follows": ""
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
