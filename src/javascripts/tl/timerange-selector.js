@@ -106,7 +106,7 @@ Pelagios.TimerangeSelector = function(c) {
           if (yearFrom > histogramRange.from.getFullYear() || yearTo < histogramRange.to.getFullYear())
             selectionRange = { from: yearFrom, to: yearTo };
         }
-        console.log('selectionRange',selectionRange)
+        // console.log('selectionRange',selectionRange)
         return selectionRange;
       },
 
@@ -225,7 +225,7 @@ Pelagios.TimerangeSelector = function(c) {
       update = function(data) {
         window.buckets = data.buckets
         window.title = data.title
-        console.log('update() data', data)
+        // console.log('update() data', data)
         histogramTitle.html(title)
         if (buckets.length === 0) return;
 
@@ -257,7 +257,7 @@ Pelagios.TimerangeSelector = function(c) {
             barWidth = barSpacing - 3;
 
         histogramRange = { from: minYear, to: maxYear };
-        console.log('histogramRange',histogramRange)
+        // console.log('histogramRange',histogramRange)
         // Relabel
         histogramFromLabel.html(Pelagios.Formatting.formatYear(minYear));
         histogramToLabel.html(Pelagios.Formatting.formatYear(maxYear));
@@ -288,7 +288,7 @@ Pelagios.TimerangeSelector = function(c) {
         // Reset labels & selection
         // histogramRange.from = minYear;
         // histogramRange.to = maxYear;
-        console.log(currentSelection.from, currentSelection.to)
+        // console.log(currentSelection.from, currentSelection.to)
         setSelection(currentSelection.from, currentSelection.to);
 
         // We don't want to handle to many updates - introduce a wait

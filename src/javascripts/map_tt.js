@@ -439,8 +439,29 @@ var makeDate = function(d){
   return date;
 }
 
-var loadLayer = function(dataset) {
-  // if two projects are loaded, disable checkboxes
+// window.filterLayer = function(dataset,range=null) {
+//   // if a range is specified, filter the segment featureGroup
+//   //
+// //   features.segments_incanto.eachLayer(function (layer) {
+// //   layer.eachLayer(function (layer) {
+// //     console.log(layer.feature.properties);
+// //   });
+// // });
+//   console.log(dataset, range)
+//   if(range != null){
+//     console.log('in filterLayer(), filter for range = ', range)
+//     features["segments_incanto"].clearLayers()
+//     features["segments_incanto"].eachLayer(function(layer){
+//       console.log(l)
+//     })
+//   }
+// }
+window.loadLayer = function(dataset,range=null) {
+  if(range != null){
+      console.log('in filterLayer(), filter for range = ', range)
+      features["segments_incanto"].clearLayers()
+  }
+  // console.log(dataset, range)
   if($("#data_layers input:checkbox:checked").length == 2){
     $("input:checkbox:not(:checked)").attr("disabled",true)
   }
@@ -612,12 +633,36 @@ var loadLayer = function(dataset) {
           }
         }
       })
+
       // featureGroup pairs as layers
       let name_p = "places_"+dataset
       let name_s = "segments_"+dataset
-      _.each(lineFeatures, function(l) {l.addTo(ttmap)})
-      features[name_s] = L.featureGroup(lineFeatures).addTo(ttmap)
+      // _.each(lineFeatures, function(l) {l.addTo(ttmap)})
+      features[name_s] = L.featureGroup(lineFeatures)
+
+      if(range != null) {
+        console.log(range.from, range.to)
+        var count = 0
+        features[name_s].eachLayer(function (layer) {
+            layer.eachLayer(function (layer) {
+              let start = parseInt(layer.feature.when.timespan[0]);
+              let end = parseInt(layer.feature.when.timespan[3]);
+              // console.log(start, end)
+              if( start >= range.from && start <= range.to){
+                count +=1
+                console.log(start, end)
+                layer.addTo(ttmap)
+              }
+            })
+        })
+        console.log(count + ' features')
+      } else {
+        console.log('unfiltered')
+        features[name_s].addTo(ttmap)
+      }
+      // features[name_s] = L.featureGroup(lineFeatures).addTo(ttmap)
       features[name_p] = L.featureGroup(pointFeatures).addTo(ttmap)
+
 
       // TODO: reconfigure managing state in window.href
       if(searchParams['p'] != undefined) {

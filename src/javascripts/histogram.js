@@ -74,7 +74,7 @@ window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
 }
 window.makeNiceFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
   // console.log('makeFlowHistData',dataset,yLabel)
-  console.log('# yrgroups',Object.keys(yrgroups).length)
+  // console.log('# yrgroups',Object.keys(yrgroups).length)
   window.dataObj = {"title":"Incanto ships per year","buckets":[]}
   window.buckets = []
   // window.range=tlRangeDates
@@ -85,10 +85,20 @@ window.makeNiceFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
     // console.log(k,v)
     dataObj['buckets'].push(foo);
   })
-  console.log('# buckets',dataObj['buckets'].length)
+  // console.log('# buckets',dataObj['buckets'].length)
   // console.log(dataObj)
   // makeHistogram(dataset,dataObj,yLabel)
   makeNiceHistogram(dataset,dataObj,yLabel)
+}
+
+function matchesFilters(marker) {
+	for(var i = 0; i < appliedfilters.length; i++) {
+		if(!marker.options.data[appliedfilters[i]] ||
+			marker.options.data[appliedfilters[i]] !== data[appliedfilters[i]]) {
+			return false;
+		}
+	}
+	return true;
 }
 
 window.makeNiceHistogram = function(dataset,dataObj,yLabel){
@@ -99,8 +109,9 @@ window.makeNiceHistogram = function(dataset,dataObj,yLabel){
   var t = new Pelagios.TimerangeSelector(document.getElementById('container'));
   t.update(dataObj);
   t.on('changed', function(evt) {
-    console.log('filter map ', evt);
-  });
+    // console.log('filter map ', evt);
+    loadLayer(dataset,evt)
+  })
 }
 
 window.makeHistData = function(dataset,eventsObj,tlRangeDates,yLabel){
