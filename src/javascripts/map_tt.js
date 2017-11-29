@@ -32,6 +32,8 @@ window.isFlow = false;
 
 // on start listeners
 $(function() {
+  // clear all checkboxes
+  $('.checkbox').find('input:checkbox').prop('checked', false);
   // TODO: restore state in href approach (?)
   Object.getOwnPropertyNames(searchParams).length == 0 ?
     startMapM() : startMapM(searchParams['d'],searchParams['p'])
@@ -192,23 +194,26 @@ function listFeatureProperties(props,when){
 // uri examples:
 // period https://test.perio.do/fp7wv2s8c.json
 // collection https://test.perio.do/fp7wv.json
-var loadPeriods = function(dataset,uri){
+var loadPeriods = function(dataset,uri,source){
+  // console.log('loadPeriods(uri)',uri)
   let len = uri.length
   // derive collection uri
-  let collUri = uri.substring(0,len-9)+'.json'
+  if(source == 'remote') {
+    var collUri = uri.substring(0,len-9)+'.json'
+  } else if (source == 'local') {
+    var collUri = 'data/periodo/'+uri.substring(22,len-9)+'.json'
+  }
   // extract individual period pid
-  let pid = uri.substring(len-14,len-5)
-  let collLocal = 'data/'+uri.substring(22,len-9)+'.json'
-  console.log(uri,collUri,collLocal)
+  var pid = uri.substring(len-14,len-5)
+  console.log('source, collUri, pid:', source, collUri, pid)
   $.when(
     $.ajax({
-      url: collUri, // get whole collection
-      // url: uri,
+      url: collUri, // get whole collection, remote or local
       dataType: 'json',
       type: 'get',
       crossDomain: true,
       success: function(data) {
-        // build pdsContext (intersecting periods)
+        // build pdsContext (intersecting periods within collection)
         window.pdefs=data.definitions
         let pidRange = [pdefs['p0'+pid].start.in.year,pdefs['p0'+pid].stop.in.year]
         let pdsRange = [_.min(pdefs, function(pd){ return pd.start.in.year }),
@@ -223,9 +228,10 @@ var loadPeriods = function(dataset,uri){
       error: function (jqXHR, exception) {
               var msg = '';
               if (jqXHR.status === 0) {
-                  $("#t_"+dataset).html('<p>Period data for <b>'+dataset+
-                    '</b> is not available right now, sorry!</p>');
-                  $(".loader").hide()
+                  // $("#t_"+dataset).html('<p>Period data for <b>'+dataset+
+                  //   '</b> is not available right now, sorry!</p>');
+                  // $(".loader").hide()
+                  loadPeriods(dataset,uri,'local')
               } else if (jqXHR.status == 404) {
                   msg = 'Requested page not found. [404]';
               } else if (jqXHR.status == 500) {
@@ -665,7 +671,7 @@ var loadLayer = function(dataset) {
         }
       } else if (projConfig.timevis.type == "period-timeline") {
         // bordeaux, courier, vicarello
-        loadPeriods(dataset,projConfig.periods[0]['uri'])
+        loadPeriods(dataset,projConfig.periods[0]['uri'],'remote')
       } else if (projConfig.timevis.type == "histogram") {
         // owtrad
         makeHistData(dataset,eventsObj,tlRangeDates,yLabel)

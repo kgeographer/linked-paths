@@ -13,9 +13,9 @@ window.xScale = d3.scaleBand()
 window.yScale = d3.scaleLinear()
   .range([height, 0]);
 
-makeNiceHistogram = function(){
-  
-}
+// makeNiceHistogram = function(){
+//
+// }
 // make a data object D3 histogram likes
 // year;count
 window.makeHistogram = function(dataset,data,yLabel){
