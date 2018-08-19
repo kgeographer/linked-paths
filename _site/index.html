@@ -21,22 +21,13 @@
   <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'/>
   <link rel='stylesheet' href='lib/font-awesome/css/font-awesome.min.css'/>
 
-  <!-- <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' /> -->
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
   <!-- for search dropdown -->
   <script id="place-template" type="text/x-handlebars-template">
     <div><strong>{{names}}</strong></div>
   </script>
-  <!-- new analytics method -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31661840-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-31661840-2');
-  </script> -->
 
 </head>
 
@@ -49,7 +40,8 @@
       <div id="tltabs" class="tab"></div>
     </div>
     <div id='data' class="panel">
-      <h3 class="panel-title">Linked Places <i class="fa fa-info-circle" aria-hidden="true"></i></h3>
+      <h3 class="panel-title"><img src="lib/images/LinkedTraces.png" /><i class="fa fa-info-circle" aria-hidden="true"></i></h3>
+      <!-- <h3 class="panel-title">Linked Traces <i class="fa fa-info-circle" aria-hidden="true"></i></h3> -->
       <div id='data_layers' class="panel-body">
         <p class="menu-header">Journeys</p>
         <div class="checkbox">
@@ -93,14 +85,14 @@
         </div>
       </div>
     </div>
-    <div id="search" class="panel left-panel">
+    <!-- <div id="search" class="panel left-panel">
       <div id="bloodhound">
         <input class="typeahead" type="text" placeholder="Search place names">
       </div>
       <div id="results">
         <div id="results_inset"></div>
       </div>
-    </div>
+    </div> -->
     <div class="modal fade" id="graph_modal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">

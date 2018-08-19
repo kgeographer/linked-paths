@@ -101,10 +101,16 @@ var toponyms = new Bloodhound({
   remote: {
     wildcard: encodeURIComponent('%QUERY'),
     url: 'http://localhost:9200/linkedplaces/_suggest?source=' +
-        encodeURIComponent('{"q":{"prefix":"%QUERY","completion":{"field":"suggest"}}}'),
+        '{"q":{"prefix":"%QUERY","completion":{"field":"suggest"}}}',
+        // encodeURIComponent('{"q":{"prefix":"%QUERY","completion":{"field":"suggest"}}}'),
+    prepare: function (query, settings) {
+      settings.type = "POST";
+      settings.contentType = "application/json; charset=UTF-8";
+      console.log(settings)
+      return settings;
+    },
     transform: function(response) {
       return $.map(response.q[0].options, function(place) {
-        // console.log(place)
         return {
           id: place._source.id,
           data: place._source.is_conflation_of,
@@ -115,13 +121,13 @@ var toponyms = new Bloodhound({
     }
   }
 });
-
+//
 var template = Handlebars.compile($("#place-template").html());
 
 $('#bloodhound .typeahead').typeahead({
   hint: true,
   highlight: true,
-  minLength: 1
+  minLength: 3
   },
   {
   name: 'places',
@@ -139,7 +145,8 @@ $('#bloodhound .typeahead').typeahead({
 });
 
 $(".typeahead").on("typeahead:select", function(e,obj){
-  // console.log('typeahead obj',obj)
+  console.log('event listener')
+  //console .log('typeahead obj',obj)
   var placeArr = [];
   var placeObj = {};
   for(let i=0;i<obj.data.length;i++){

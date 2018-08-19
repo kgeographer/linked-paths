@@ -4,6 +4,7 @@
 # i = indexedPlace('owtrad','owt_1022','Frankenau','http://linkedplaces.org/owtrad/places/owt_1022', \
 #   [{"uri":"http://sws.geonames/2779383","names":["Frankenau"]}],16.6,47.450001)
 
+# called from mergedindex.py
 class indexedPlace(object):
     def __init__(self, dataset, id, title, uri, exact, lng, lat):
         self.id = "pl."+id
