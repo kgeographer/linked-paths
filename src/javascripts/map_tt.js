@@ -172,6 +172,7 @@ function stylePaths(feature,range) {
 }
 
 function listFeatureProperties(props,when){
+  // console.log('in listFeatureProperties()')
   let html = "<ul class='ul-segments'>"
   // console.log(JSON.stringify(when.timespan))
   // only non-standard properties
@@ -195,7 +196,7 @@ function listFeatureProperties(props,when){
 // period https://test.perio.do/fp7wv2s8c.json
 // collection https://test.perio.do/fp7wv.json
 var loadPeriods = function(dataset,uri,source){
-  // console.log('loadPeriods(uri)',uri)
+  console.log('loadPeriods(uri)',uri)
   let len = uri.length
   // derive collection uri
   if(source == 'remote') {
@@ -205,7 +206,7 @@ var loadPeriods = function(dataset,uri,source){
   }
   // extract individual period pid
   var pid = uri.substring(len-14,len-5)
-  console.log('source, collUri, pid:', source, collUri, pid)
+  console.log('FUBAR source, collUri, pid:', source, collUri, pid)
   $.when(
     $.ajax({
       url: collUri, // get whole collection, remote or local
@@ -613,6 +614,7 @@ var loadLayer = function(dataset) {
               if (whenObj != ({} || '')) {
                 // if (collection.attributes.segmentType == 'journey') {
                   eventsObj.events.push(buildSegmentEvent(feat));
+                  // console.log(buildSegmentEvent(feat))
                 // }
               }
           }
@@ -662,12 +664,13 @@ var loadLayer = function(dataset) {
         if(projConfig.timevis.type == "event-timeline") {
           // roundabout, xuanzang
           simpleTimeline(dataset,renderThese,tlRangeDates)
-          } else {
+        } else {
           // incanto flows
           window.yrgroups = _.countBy(renderThese,function(l){
             return l.start.getFullYear();
-            })
+          })
           makeFlowHistData(dataset,yrgroups,tlRangeDates,yLabel)
+          console.log('dataset,yrgroups,tlRangeDates,yLabel',dataset,yrgroups,tlRangeDates,yLabel)
         }
       } else if (projConfig.timevis.type == "period-timeline") {
         // bordeaux, courier, vicarello

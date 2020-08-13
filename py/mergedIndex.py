@@ -11,7 +11,7 @@ def indexPlaces():
     #os.chdir("data/source/")
     match_counter = 0
     new_counter = 0
-    
+
     # retrieve all place csv into allPlaces[] json
     allPlaces = []
     for x in range(len(projects)):
@@ -34,15 +34,15 @@ def indexPlaces():
                         row[7] = json.dumps(e)
                         #print(e)
                         allPlaces.append(row)
-    
+
     # make allIndex[]
     allIndex = []
     for x in range(len(allPlaces)):
         matched = {}
         uri = ast.literal_eval(allPlaces[x][7])[0]['uri']
-        
+
         if any(pi for pi in allIndex if pi.is_conflation_of[0]['exact_matches'][0]['uri'] == uri):
-            # there's already record in allIndex[] with a matching exact_match uri -> append this one            
+            # there's already record in allIndex[] with a matching exact_match uri -> append this one
             # grab matched record
             matched = next((pi for pi in allIndex if pi.is_conflation_of[0]['exact_matches'][0]['uri'] == uri), None) \
                 .is_conflation_of[0]['exact_matches']
@@ -68,9 +68,9 @@ def indexPlaces():
                 float(allPlaces[x][5]), \
                 float(allPlaces[x][6])
             ))
-            new_counter += 1            
+            new_counter += 1
     print('matches: ' + str(match_counter) + '; new: ' + str(new_counter))
-    
+
     def indexEm():
         # delete and rebuild linkedplaces index
         es = Elasticsearch()
@@ -80,27 +80,27 @@ def indexPlaces():
         except:
             pass
         es.indices.create(index='linkedplaces', ignore=400, body=mappings)
-        
+
         # merge names into suggest[] and write out index records
-        # TODO: pipe directly into index; writing out is a debug exercise; 
-        #fouti = codecs.open('allIndex.json', 'w', 'utf8')    
-        fouti = codecs.open('../../_site/data/index/allIndex.json', 'w', 'utf8')  
+        # TODO: pipe directly into index; writing out is a debug exercise;
+        #fouti = codecs.open('allIndex.json', 'w', 'utf8')
+        fouti = codecs.open('../../_site/data/index/allIndex.json', 'w', 'utf8')
         for x in range(len(allIndex)):
             #print('len', len(allIndex[x].is_conflation_of))
             allIndex[x].suggest = list(set(allIndex[x].suggest + \
-                                           allIndex[x].is_conflation_of[0]['exact_matches'][0]['names']))
+                allIndex[x].is_conflation_of[0]['exact_matches'][0]['names']))
             try:
                 doc = str(allIndex[x])
                 fouti.write(doc + '\n')
             except:
                 print('choked on '+str(allIndex[x].id))
         fouti.close()
-        
+
         fini = codecs.open('../../_site/data/index/allIndex.json', 'r', 'utf8')
         #fini = codecs.open('../_site/data/index/allIndex.json', 'r', 'utf8')
         rawi = fini.readlines()
         fini.close()
-    
+
         indexed_count = 0
         error_count = 0
         # index places
@@ -116,12 +116,12 @@ def indexPlaces():
                 print("error:", sys.exc_info()[0])
                 error_count +=1
                 continue
-        print(str(indexed_count)+' places indexed; '+str(error_count)+' missed') 
-        
-    
+        print(str(indexed_count)+' places indexed; '+str(error_count)+' missed')
+
+
     indexEm()
-    
-    
+
+
 def indexSegments():
     # SEGMENTS
     idx_count = 0
@@ -143,6 +143,6 @@ def indexSegments():
                 print("error:",  doc['properties']['segment_id'], sys.exc_info()[0])
                 idx_count += 1
     print(str(idx_count)+' segments indexed; '+str(error_count)+' missed')
-    
+
 indexPlaces()
 indexSegments()

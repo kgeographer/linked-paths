@@ -87,61 +87,86 @@ window.segmentSearch = function(obj){
     }
   }
 }
-
 // resolve collection names as they exist in data
 var collections = {
   "roundabout":"roundabout","courier":"courier","incanto":"incanto",
   "vicarello":"vicarello","xuanzang":"xuanzang","owtrad":"owtrad","bordeaux":"bordeaux"}
 
-var toponyms = new Bloodhound({
-  datumTokenizer: function(datum) {
-    return Bloodhound.tokenizers.whitespace(datum.value);
-  },
-  queryTokenizer: Bloodhound.tokenizers.whitespace,
-  remote: {
-    wildcard: encodeURIComponent('%QUERY'),
-    url: 'http://localhost:9200/linkedplaces/_suggest?source=' +
-        '{"q":{"prefix":"%QUERY","completion":{"field":"suggest"}}}',
-        // encodeURIComponent('{"q":{"prefix":"%QUERY","completion":{"field":"suggest"}}}'),
-    prepare: function (query, settings) {
-      settings.type = "POST";
-      settings.contentType = "application/json; charset=UTF-8";
-      console.log(settings)
-      return settings;
+// "http://localhost:9200/linkedplaces/_search?pretty"
+  // -d'{"suggest":{"place-suggest":{"prefix":"den","completion" : {"field" : "suggest"}}}}'
+
+
+  var myHound = new Bloodhound({
+    datumTokenizer: function(datum) {
+      return Bloodhound.tokenizers.whitespace(datum.value);
     },
-    transform: function(response) {
-      return $.map(response.q[0].options, function(place) {
-        return {
-          id: place._source.id,
-          data: place._source.is_conflation_of,
-          value: place._source.representative_title,
-          names: place._source.suggest
-        };
-      });
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: {
+      wildcard: encodeURIComponent('%QUERY'),
+      url: 'http://localhost:9200/linkedplaces/_suggest?source=' +
+          encodeURIComponent('{"sugg":{"prefix":"%QUERY","completion":{"field":"suggest"}}}'),
+      transform: function(response) {
+        return $.map(response.sugg[0].options, function(place) {
+          return {
+            value: place.text
+          };
+        });
+      }
     }
+  });
+
+var urlroot = 'http://localhost:9200/linkedplaces/_search'
+var q_end = '","completion":{"field":"suggest"}}}}'
+
+var toponyms = {
+  url: urlroot + '{"suggest":{"place-suggest":{"prefix":"',
+  prepare: function(query, settings) {
+    settings.method = 'POST'
+    settings.contentType = 'application/json'
+    settings.url +=query + q_end
+    return settings
+  },
+  transform: function(response) {
+    console.log('response',response)
+    // return $.map(response.q[0].options, function(place) {
+    //   return {
+    //     id: place._source.id,
+    //     data: place._source.is_conflation_of,
+    //     value: place._source.representative_title,
+    //     names: place._source.suggest
+    //   };
+    // });
   }
+}
+
+var taSource = new Bloodhound({
+  // datumTokenizer: function(datum) {return Bloodhound.tokenizers.whitespace(datum.value);  },
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('Value'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  identify: function(obj) {
+    return obj.Value;
+  },
+  remote: toponyms
 });
-//
+taSource.initialize(true);
+
 var template = Handlebars.compile($("#place-template").html());
 
 $('#bloodhound .typeahead').typeahead({
-  hint: true,
-  highlight: true,
-  minLength: 3
+    hint: true, highlight: true, minLength: 3
   },
   {
-  name: 'places',
-  limit: 10,
-  display: 'value',
-  source: toponyms,
-  templates: {
-    empty: [
-      '<div class="empty-message">',
-        'no matches',
-      '</div>'
-      ].join('\n'),
-    suggestion: template
-  }
+    name: 'places',
+    limit: 10,
+    display: 'value',
+    source: taSource,
+    // source: toponyms,
+    templates: {
+      empty: [
+        '<div class="empty-message">','no matches','</div>'
+        ].join('\n'),
+      suggestion: template
+    }
 });
 
 $(".typeahead").on("typeahead:select", function(e,obj){
@@ -169,3 +194,27 @@ $(".typeahead").on("typeahead:select", function(e,obj){
   $(".typeahead.tt-input")[0].value = '';
   //
 })
+
+
+// orig. modified to use _search & new ES6 form of suggest completion query
+// var toponyms = new Bloodhound({
+//   datumTokenizer: function(datum) {
+//      return Bloodhound.tokenizers.whitespace(datum.value); },
+//   queryTokenizer: Bloodhound.tokenizers.whitespace,
+//   remote: {
+//     wildcard: encodeURIComponent('%QUERY'),
+//     url: 'http://localhost:9200/linkedplaces/_search?source=' + encodeURIComponent(
+//      '{"suggest":{"place-suggest":{"prefix":"%QUERY","completion":{"field":"suggest"}}}}'
+//     ),
+//     transform: function(response) {
+//       return $.map(response.q[0].options, function(place) {
+//         return {
+//           id: place._source.id,
+//           data: place._source.is_conflation_of,
+//           value: place._source.representative_title,
+//           names: place._source.suggest
+//         };
+//       });
+//     }
+//   }
+// });

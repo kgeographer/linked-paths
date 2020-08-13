@@ -19,7 +19,7 @@ window.yScale = d3.scaleLinear()
 // make a data object D3 histogram likes
 // year;count
 window.makeHistogram = function(dataset,data,yLabel){
-  // console.log('in makeHistogram',dataset,data)
+  console.log('in makeHistogram',dataset,data)
 
   window.svg_hist = d3.select("#t_"+dataset).append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -67,7 +67,7 @@ window.makeHistogram = function(dataset,data,yLabel){
 }
 
 window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
-  // console.log('makeFlowHistData',dataset,yLabel)
+  console.log('makeFlowHistData,tlRangeDates',tlRangeDates,dataset,yLabel)
   window.bins = []
   window.range=tlRangeDates
   _.each(yrgroups,function(k,v){
@@ -77,7 +77,7 @@ window.makeFlowHistData = function(dataset,yrgroups,tlRangeDates,yLabel){
 }
 
 window.makeHistData = function(dataset,eventsObj,tlRangeDates,yLabel){
-  // console.log('makeHistData yLabel',dataset,yLabel)
+  console.log('makeHistData, eventsObj',eventsObj,dataset,yLabel)
   window.bins = []
   window.range=tlRangeDates
   var r0 = range[0].getFullYear()
