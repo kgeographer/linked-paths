@@ -9,8 +9,6 @@ var turf = require('turf')
 moment().format();
 // import add'l app JavaScript
 import './bloodhound.js';
-// reque('@turf/centroid')
-// require('@turf/buffer')
 
 // exposed for debugging
 window.parsedUrl = url.parse(window.location.href, true, true);
@@ -392,13 +390,18 @@ function startMapM(dataset=null){
   window.bboxFeatures = []
   // var bboxGroup = L.featureGroup()
   // mapbox.js (non-gl)
+  // L.mapbox.accessToken = 'pk.eyJ1Ijoia2dlb2dyYXBoZXIiLCJhIjoiUmVralBPcyJ9.mJegAI1R6KR21x_CVVTlqw';
   L.mapbox.accessToken = 'pk.eyJ1Ijoia2dlb2dyYXBoZXIiLCJhIjoiUmVralBPcyJ9.mJegAI1R6KR21x_CVVTlqw';
   // AWMC tiles in mapbox
-  window.ttmap = L.mapbox.map('map', 'isawnyu.map-knmctlkh', {attributionControl: false})
+  //mapbox://styles/kgeographer/ckidglq8l2nra19nzzbl995ue
+  //pk.eyJ1Ijoia2dlb2dyYXBoZXIiLCJhIjoiUmVralBPcyJ9.mJegAI1R6KR21x_CVVTlqw
+  // window.ttmap = L.mapbox.map('map', 'isawnyu.map-knmctlkh', {attributionControl: false})
+  //, 'mapbox/light-v10', {attributionControl: false})
+  window.ttmap = L.mapbox.map('map')
     .setView(L.latLng(40.4165,-3.70256),3)
-  var credits = L.control.attribution().addTo(ttmap);
-  credits.addAttribution('Tiles and Data © 2013 AWMC CC-BY-NC 3.0 ')
-  // window.ttmap = L.mapbox.map('map') // don't load basemap
+    .addLayer(L.mapbox.styleLayer('mapbox://styles/kgeographer/ckidglq8l2nra19nzzbl995ue'));
+  // var credits = L.control.attribution().addTo(ttmap);
+  // credits.addAttribution('Tiles and Data © 2013 AWMC CC-BY-NC 3.0 ')
   if(dataset != null) {loadLayer(dataset);} else {
     // load bboxes
     var bboxLayer = L.mapbox.featureLayer()
