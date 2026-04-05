@@ -1,4 +1,14 @@
 {
+  "type": "FeatureCollection",
+  "when": {
+    "timespan": [
+      "629",
+      "",
+      "",
+      "645",
+      ""
+    ]
+  },
   "attributes": {
     "segmentType": "journey",
     "description": "Data originally extracted by W. Thorpe from Wriggens, S. (2003) 'The Silk Road journey with Xuanzang', Basic Books",
@@ -4787,15 +4797,5 @@
         "route_id": "5001"
       }
     }
-  ],
-  "type": "FeatureCollection",
-  "when": {
-    "timespan": [
-      "629",
-      "",
-      "",
-      "645",
-      ""
-    ]
-  }
+  ]
 }
